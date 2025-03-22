@@ -1,0 +1,596 @@
+<!DOCTYPE HTML>
+<html class="js" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Minor Arth | Mashup albums</title>
+	<meta http-equiv="Content-Type"  content="text/html; charset=utf-8"/>
+	<meta property="og:title"        content="Minor Arth Mashups - Albums"/>
+	<meta property="og:description"  content="Minor Arth | Mashups Albums"/>
+	<meta property="og:url"   content="https://araynaud.github.io/albums/"/>
+	<meta property="og:image"        content="https://araynaud.github.io/albums/mashmaker3/Mashmaker3.jpg"/>
+	<meta property="og:image:width"  content="720"/>
+	<meta property="og:image:height" content="720" />
+	<meta property="og:image:type"   content="image/jpeg"/>
+	<style>
+	@media screen {
+		body{
+			/* background-image: linear-gradient(0deg, #210, #BA9); */
+			background-color: #222;
+			color: white;
+		}
+
+		a, .number { color: #e7d1ac; }
+		p.sources { color: #DDD; }
+
+		div.playlist-template {
+			width: 640px;
+			background-color: #888;
+		}
+
+		div.active {
+			background-color: #004560;
+		}
+	}
+
+	a, .bold { font-weight: bold; cursor: pointer; }
+
+	body {
+		font-family:  Helvetica, sans-serif, 'Tw Cen MT', 'HP Simplified', Arial;
+		text-align: center;
+	}
+
+	.align-left  { text-align: left; }
+	.align-right { text-align: right; }
+	img.icon { float:right; }
+	img.player-image[src] { max-width: 720px; border: solid 8px white;  }
+	div.repeater { max-width: 1400px; }
+
+	div.toolbar > * {
+		vertical-align: middle;
+	}
+
+	a.link-template, a.play-link-template { margin-left: 1em; margin-right: 1em; }
+
+	div.repeater { 	padding-left: 10px; padding-right: 10px; }
+
+	div.playlist-template {
+		font-size: 12pt;
+		cursor: pointer;
+		text-align: left;
+		border: 1px solid #CCC;
+		padding: 2px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	div.playlist-template div.item-textitem-text {
+		vertical-align: middle;
+		display: inline-block;
+	}
+
+	div.playlist-template img.artwork[src] {
+		height: 2in;
+		vertical-align: middle;
+	}
+
+	div.tile-template, div.image-template, div.small-image-template {
+		display: inline-block;
+		vertical-align: top;
+		cursor: pointer;
+	}
+
+	div.tile-template {
+		width: 4in;
+		padding: .25in;
+	}
+
+	div.image-template {
+		width: 40%;
+		margin: 20px;
+	}
+
+	div.image-template img.artwork[src] {
+		width: 100%;
+		max-width: 900px;
+		border: solid 4px white;
+	}
+
+	div.tile-template img.artwork[src] {
+		width: 4in;
+		border: solid 4px white;
+	}
+
+	div.small-image-template img.artwork[src] {
+		width: 3in;
+		transform: rotate(-5deg);
+	}
+
+@media screen {
+	.column {
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.print-only { display: none; }
+}
+	.column.column-2 {
+		width: 48%;
+	}
+
+	.column.column-3 {
+		width: 30%;
+	}
+
+	.column.column-4 {
+		width: 24%;
+	}
+
+	.pre {
+		white-space: pre-line;
+	}
+
+	p {
+		white-space: pre-line;
+		margin-block-start: .5em;
+		margin-block-end: 0em;
+	}
+
+	a { text-decoration: none; }
+	a.logo img { height: 90px; padding-top: 10px; display: inline-block;	}
+	.hidden { display: none; }
+
+	@media print {
+		.no-print { display: none; }
+	}
+	</style>
+</head>
+<body>
+<a class="logo print-only"><img /></a>
+
+<div class="toolbar no-print column">
+	<a class="logo"><img /></a><br/>
+		Show:
+		<select id="view-mode" onchange="refreshList()">
+			<option value="tile-template">tiles</option>
+			<option value="playlist-template.details">playlist with details</option>
+			<option value="image-template">large images</option>
+			<option value="small-image-template">small images</option>
+		</select>
+</div>
+
+<div class="column">
+	<h1><a class="album-title album-link"></a></h1>
+	<h3 id="playlist-links" class="no-print"></h3>
+
+	<div class="repeater"></div>
+	<p></p>
+</div>
+<div class="links"></div>
+
+<div id="templates" class="hidden">
+	<a class="link-template"></a>
+	<a class="play-link-template"></a>
+
+	<div class="category-template">
+		<a class="url">
+			<h2 class="pre title"></h2>
+		</a>
+	</div>
+
+	<div class="separator-template">
+		<hr/>
+	</div>
+
+	<div class="image-template">
+		<a class="url"><img class="artwork"/></a>
+	</div>
+
+	<div class="small-image-template">
+		<a class="url"><img class="artwork"/></a>
+	</div>
+
+	<div class="tile-template">
+		<a class="url">
+			<img class="artwork"/>
+		</a>
+		<a class="url">
+			<p class="pre title"></p>
+		</a>
+		<p class="pre description sources"></p>
+	</div>
+
+	<div class="playlist-template details column">
+		<a class="url"><img class="artwork"/></a>
+		<div class="column item-text bold">
+			<a class="url pre title"></a>
+			<p class="pre description sources"></p>
+		</div>
+	</div>
+</div>
+
+<script>
+
+var items = [
+	{ title: "Collaborative Albums" },
+	{
+		url: "./demondetournement",
+		title: "GORILLAZ - Demon Detournement",
+		description: "Gorillaz - Demon Days | 20th anniversary mashups",
+		artists: "Steff St. Moore / Minor Arth / DoM",
+		image: "./demondetournement/DemonDetournement.jpg",
+		release: "March 2025",
+		nbTracks: 27
+	},
+	{
+		url: "https://audioboots.org/Albums/AcousticUnplugged",
+		title: "AudioBoots Acoustic Unplugged",
+		description: "25 acoustic / unplugged mashups by 9 producers",
+		artists: "Minor Arth / DJ Useo / Chocomang & more... ",
+		image: "https://audioboots.org/Albums/AcousticUnplugged/assets/AudioBoots Unplugged.jpg",
+		release: "June 2023",
+		nbTracks: 25
+	},
+	{
+		url: "https://remix.audio/playlist/2449",
+		title: "Kavinksy Mode EP",
+		description: "KAVINSKY / DEPECHE MODE mashups",
+		artists: "Minor Arth / Instamatic",
+		image: "https://remix.audio/uploads/media/640919013_785528246_1950469825.jpg",
+		release: "November 2023",
+		nbTracks: 4
+	},
+	{ title: "Solo Albums" },
+	{
+		url: "./mashmaker3",
+		title: "The Mashmaker, volume 3",
+		description: "Best of 2023 - 2024",
+		image: "./mashmaker3/Mashmaker3.jpg",
+		release: "December 2024",
+		nbTracks: 18
+	},
+	{
+		url: "./dmvolume1",
+		title: "Some Great Music For The Mashes",
+		description: "DEPECHE MODE mashups volume 1",
+		image: "./dmvolume1/dmmashups-volume1.jpg",
+		release: "June 2024",
+		nbTracks: 22
+	},
+	{
+		url: "./kraftmode",
+		title: "Kraft Mode EP",
+		description: "KRAFTWERK / DEPECHE MODE mashups",
+		image: "https://remix.audio/uploads/media/31169987_570877271_795201279.jpg",
+		release: "April 2024",
+		nbTracks: 4
+	},
+	{
+		url: "./mashmaker2",
+		title: "The Mashmaker, volume 2",
+		description: "Best of 2022 - 2023",
+		image: "./mashmaker2/Mashmaker2.jpg",
+		release: "January 2024",
+		nbTracks: 18
+	},
+	{
+		url: "./mashmaker1",
+		title: "The Mashmaker, volume 1",
+		description: "Best of 2019 - 2022",
+		image: "./mashmaker1/Mashmaker1.jpg",
+		release: "April 2023",
+		nbTracks: 16
+	},
+	{ title: "Friends' Albums" },
+	{
+
+		url: "./ziggystardub",
+		artists: "DoM",
+		title: "DAVID BOWIE / EASY STAR ALL-STARS - The Rise And Fall Of Ziggy Stardub",
+		description: "Ziggy Stardust | Reggae versions",
+		image: "https://remix.audio/uploads/media/60294312_942039511_1511504134.png",
+		release: "April 2023",
+		nbTracks: 12
+	}
+
+];
+
+const LOGO_IMAGE = ""; //"https://audioboots.org/images/AudioBootsFullTransparent.png";
+const LOGO_TITLE = "Minor Arth";
+const LOGO_LINK = "https://araynaud.github.io/albums/";
+
+const ALBUM_TITLE = "Mashup Albums";
+const ALBUM_LINK = "https://araynaud.github.io/albums/";
+
+const ALBUM_ARTIST = "Minor Arth";
+const TRACK_LINK_PATH = "https://remix.audio/track/";
+const AUDIO_PATH = "https://remix.audio/uploads/tracks/";
+const IMAGE_PATH = "https://remix.audio/uploads/media/";
+//const AUDIO_PATH = "";
+//const IMAGE_PATH = "./artwork/";
+const AUDIO_TYPE = ".mp3";
+const IMAGE_TYPE = ".jpg";
+const PLAYER_IMAGE = "./Mashmaker3.jpg";
+
+const isUrl = s => s && s.includes && s.includes("://");
+
+const audioPlayer = document.querySelector("audio#audioPlayer");
+const playlistLinks = document.querySelector("#playlist-links");
+const playlists = document.querySelectorAll("p.playlist-text");
+var playlist = document.querySelector("p.playlist-text");
+var playlistName = "all";
+var imageList = document.querySelector("p.images");
+var trackList = document.querySelector("p.tracks");
+const playerImage = document.querySelector(".player-image");
+const playerLabel = document.querySelector(".player-label");
+const linkContainer = document.querySelector("div.links");
+const logoLinks = document.querySelectorAll("a.logo");
+const logoImages = document.querySelectorAll(".logo img");
+const repeater = document.querySelector("div.repeater");
+const albumTitle = document.querySelector(".album-title");
+const albumLinks = document.querySelectorAll(".album-link");
+const viewMode = document.querySelector("select#view-mode");
+
+var categoryTemplate = document.querySelector(".category-template");
+var template;
+var currentItem = null;
+var currentItemElement = null;
+var currentItemIndex = null;
+
+var links = {
+	"remix.audio": "https://remix.audio/profile/minorarth",
+	"YouTube": "https://www.youtube.com/@MinorArth",
+	"Facebook": "https://www.facebook.com/MinorArthMashups",
+	"AudioBoots": "https://audioboots.org"
+};
+
+var allPlaylists = {};
+allPlaylists.all = items;
+var producers = [];
+
+document.title = ALBUM_TITLE;
+albumTitle.innerText = ALBUM_ARTIST ? ALBUM_ARTIST + " - " + ALBUM_TITLE : ALBUM_TITLE;
+albumLinks.forEach(a => a.href = ALBUM_LINK);
+
+if(!LOGO_IMAGE)
+	logoLinks.forEach(l => l.remove())
+else {
+	logoImages.forEach(i => setImage(i, LOGO_IMAGE));
+	logoLinks.forEach(l => l.href = LOGO_LINK);
+}
+
+displayLinks(linkContainer);
+
+// Audio has ended when this function is executed
+//audioPlayer.addEventListener('ended', playNext, false);
+//window.onresize = () => albumTitle.innerText = innerWidth + " px / ";
+//onresize();
+
+const USE_REMOTE_FILES = isUrl(AUDIO_PATH);
+const USE_LOCAL_FILES = !USE_REMOTE_FILES;
+
+refreshList();
+
+
+function setImage(img, src) {
+	if(!img || !src) return;
+	return img.src = (isUrl(src) || src.includes("/")) ? src : IMAGE_PATH + src;
+}
+
+function setPlaylist(index) {
+	console.log("setPlaylist", index);
+	if(!index) index = Object.keys(allPlaylists)[0];
+	if(index >= playlists.length - 1) index = "all";
+	playlistName = index;
+
+	if(PLAYER_IMAGE) {
+		playerImage.style.display = "inline";
+		setImage(playerImage, PLAYER_IMAGE);
+		//hideBrokenImage(playerImage);
+	}
+
+	if(playlists && playlists.length) {
+		playlist = playlists[index];
+		items = allPlaylists[index];
+	}
+	refreshList();
+}
+
+function hideBrokenImages() {
+	document.querySelectorAll("img.artwork").forEach(hideBrokenImage);
+}
+
+function hideBrokenImage(img) {
+	img.onerror = () => PLAYER_IMAGE ? img.src = setImage(playerImage, PLAYER_IMAGE) : img.style.display = "none";
+}
+
+function shuffle() {
+	items.sort(i => Math.random() - .5);
+	refreshList();
+	return items;
+}
+
+function reverse() {
+	items.sort(i => -1);
+	refreshList();
+	return items;
+}
+
+function reorder() {
+	items.sort( (a,b) => a.n - b.n);
+	refreshList();
+	return items;
+}
+
+function substringBefore(s, sub, last, stringOrEmpty, include, ignoreCase)
+{
+	if(!s) return s;
+
+	var lstr = s;
+	var lsub = sub;
+	if(ignoreCase) {
+		lstr = lstr.toLowerCase();
+		lsub = lsub.toLowerCase();
+	}
+
+	var pos = last ? lstr.lastIndexOf(lsub) : lstr.indexOf(lsub);
+	if(pos < 0)
+		return stringOrEmpty ? "" : s;
+
+	if(include)
+		pos += sub.length;
+	return s.substring(0, pos);
+}
+
+function substringAfter(s, sub, last, stringOrEmpty, include, ignoreCase)
+{
+	if(!s) return s;
+
+	var lstr = s;
+	var lsub = sub;
+	if(ignoreCase) {
+		lstr = lstr.toLowerCase();
+		lsub = lsub.toLowerCase();
+	}
+
+	var pos = last ? lstr.lastIndexOf(lsub) : lstr.indexOf(lsub);
+	if(pos < 0)
+		return stringOrEmpty ? s : "";
+
+	if(!include)
+		pos += sub.length;
+
+	return s.substring(pos);
+}
+
+function displayLinks(container)
+{
+	var linkTemplate = document.querySelector("a.link-template");
+	if(links)
+		for(var key in links) {
+			var link = cloneTemplate(linkTemplate, container);
+			link.innerText = key;
+			link.href = links[key];
+			//link.target = "link";
+		}
+}
+
+function refreshList() {
+	repeater.innerHTML = "";
+	template = document.querySelector("div." + viewMode.value);
+	items.forEach(displayPlaylistItem);
+}
+
+function displayPlaylistItem(item, i) {
+	if(!item.n) item.n = i + 1;
+
+	el = cloneTemplate( item.nbTracks ? template : categoryTemplate, repeater);
+
+	if(el.querySelector(".number"))
+		el.querySelector(".number").innerHTML = item.n;
+	// el.onclick = () => playFile(i);
+
+	var title = el.querySelector(".title");
+	var separator = "\n";
+	var itemTitle = [ item.title, item.artists ].filter(s => s).join(separator);
+	if(title) title.innerHTML = itemTitle;
+
+	var description = el.querySelector(".description");
+	var itemDescription = [ item.description, item.release + " | " + item.nbTracks + " tracks" ].filter(s => s).join(separator);
+	if(description) description.innerHTML = itemDescription;
+
+	var as = el.querySelectorAll("a.url");
+	if(as && item.url) as.forEach(l => l.href = item.url);
+
+	var img = el.querySelector("img.artwork");
+	if(img && item.image) {
+		//hideBrokenImage(img);
+		img.title = itemTitle;
+		setImage(img, item.image);
+	}
+
+	//highlight current item
+	if(item == currentItem) {
+		el.classList.add("active");
+		currentItemIndex = items.indexOf(currentItem);
+		currentItemElement = repeater.childNodes[currentItemIndex];
+	}
+
+	if(item.sources)
+		item.sources.forEach( (s, j) => isUrl(s) && (item.video = s) );
+
+	if(item.sources && el.querySelector(".sources"))
+		item.sources.forEach( (s, j) => el.querySelector(".sources").innerHTML += isUrl(s)? "" : (j ? "\n+ " : "= ") + s );
+
+	if(title && item.video)
+		title.innerHTML += '\n<a onclick="stopPropagation(event)" target="video" href="' + item.video + '">VIDEO</a>';
+
+	if(title && item.links)
+		for(var key in item.links)
+			title.innerHTML += '\n<a onclick="stopPropagation(event)" target="video" href="' + item.links[key] + '">'+ key +'</a>';
+
+	var trackLink = el.querySelector("a.remix-audio");
+	if(trackLink && item.id)
+		trackLink.href = TRACK_LINK_PATH + item.id;
+	else if(trackLink)
+		trackLink.remove();
+}
+
+function cloneTemplate(node, parent)
+{
+	var clone = node.cloneNode();
+	clone.innerHTML = node.innerHTML;
+	if(parent) parent.append(clone);
+	return clone;
+}
+
+function playFile(item)
+{
+	if(typeof item == "number") {
+		currentItemIndex = item;
+		item = items[item];
+	}
+	if(!item) return;
+
+	currentItem = item;
+	playerImage.style.display = "inline";
+	setImage(playerImage, item.image);
+	playerLabel.innerText = playerImage.title = [item.artists,  item.songTitle || item.title].filter(s => s).join("\n");
+	var subdir = playlist ? playlist.dataset.path || playlist.getAttribute("path") : "";
+	subdir = subdir ? subdir = subdir + "/" : "";
+	audioPlayer.src = AUDIO_PATH + subdir + item.file;
+	audioPlayer.controls = true;
+	audioPlayer.play();
+
+	//highlight current playlist item
+	if(currentItemElement)
+		currentItemElement.classList.remove("active");
+	currentItemElement = repeater.childNodes[currentItemIndex];
+	if(currentItemElement)
+		currentItemElement.classList.add("active");
+
+	return currentItem;
+}
+
+function playNext(evt) {
+	console.log("playNext", evt);
+	if(currentItemIndex === null) currentItemIndex = -1;
+	return playFile(++currentItemIndex % items.length || 0);
+}
+
+function playPrevious() {
+	if(currentItemIndex === null) currentItemIndex = 0;
+	var previousIndex = (--currentItemIndex + items.length) % items.length || 0;
+	return playFile(previousIndex);
+}
+
+function stopPropagation(event) {
+	event.stopPropagation();
+}
+
+function m3uPlaylist()
+{
+	return "#EXTM3U\n" + items.map(i => i.file).join("\n");
+}
+</script>
+
+</body>
+</html>
