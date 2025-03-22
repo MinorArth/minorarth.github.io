@@ -1,0 +1,554 @@
+<!DOCTYPE HTML>
+<html class="js" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Kraft Mode mashups</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta property="og:url"   content="https://araynaud.github.io/albums/kraftmode/"/>
+	<meta property="og:image" content="https://araynaud.github.io/albums/kraftmode/StrangeModel.jpg">
+	<meta property="og:image:width" content="720">
+	<meta property="og:image:height" content="720">
+	<meta property="og:image:type" content="image/jpeg">
+
+
+	<style>
+	@media screen {
+		body{
+			/*background-image: linear-gradient(90deg,#48C,#001621);*/
+			background-color: #041004;
+			color: white;
+		}
+
+		a { color: #e7d1ac; }
+		p.sources { color: #DDD; }
+		div.repeater { 	max-width: 1000px;	}
+
+		div.playlist-template {
+			background-color: #001621;
+		}
+	}
+
+	a, .bold { font-weight: bold; cursor: pointer; }
+
+	body {
+		font-family:  Helvetica, sans-serif, 'Tw Cen MT', 'HP Simplified', Arial;
+		text-align: center;
+	}
+
+	.align-left  { text-align: left; }
+	.align-right { text-align: right; }
+
+	div.toolbar audio {	height: 20px; }
+
+	div.toolbar > * {
+		vertical-align: middle;
+	}
+
+	a.link-template, a.play-link-template { margin-left: 1em; margin-right: 1em; }
+
+	div.repeater { 	padding-left: 10px; padding-right: 10px; }
+
+	div.playlist-template {
+		font-size: 12pt;
+		cursor: pointer;
+		text-align: left;
+		border: 1px solid #CCC;
+		padding: 2px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	div.playlist-template div.item-text {
+		vertical-align: middle;
+		display: inline-block;
+	}
+
+	div.playlist-template img[src] {
+		height: .7in;
+		vertical-align: middle;
+	}
+
+	div.tile-template, div.image-template, div.small-image-template {
+		display: inline-block;
+		vertical-align: top;
+		cursor: pointer;
+	}
+
+	div.tile-template {
+		width: 4in;
+		padding: .25in;
+	}
+
+	div.image-template {
+		width: 40%;
+		margin: 20px;
+	}
+
+	div.image-template img[src] {
+		width: 100%;
+		max-width: 900px;
+		border: solid 4px white;
+	}
+
+	div.tile-template img[src] {
+		width: 3in;
+		border: solid 4px white;
+	}
+
+	div.small-image-template img[src] {
+		width: 2in;
+		transform: rotate(-5deg);
+	}
+
+	img.player-image[src] { max-width: 360px;   border: solid 4px white;  }
+
+@media screen {
+	.column {
+		display: inline-block;
+		vertical-align: top;
+	}
+}
+	.column.column-2 {
+		width: 48%;
+	}
+
+	.column.column-3 {
+		width: 30%;
+	}
+
+	.column.column-4 {
+		width: 24%;
+	}
+
+	.pre {
+		white-space: pre-line;
+	}
+
+	p {
+		white-space: pre-line;
+		margin-block-start: .5em;
+		margin-block-end: 0em;
+	}
+
+	a { text-decoration: none; }
+	a.logo img { height: 90px; padding-top: 10px; display: inline-block;	}
+	.hidden { display: none; }
+
+	@media print {
+		.no-print { display: none; }
+	}
+	</style>
+</head>
+<body>
+<div class="toolbar no-print column">
+	<br/>
+	<a target="download" class="album-link">DOWNLOAD ALBUM</a>
+	<br/><br/>
+	<img class="player-image"/>
+	<br/>
+	<br/>
+	<button onclick="playPrevious()" title="Previous track"> &lt;&lt; </button>
+	<audio id="audioPlayer" controls></audio>
+	<button onclick="playNext()" title="Next track"> &gt;&gt; </button>
+	<br/>
+	<div class="bold player-label"></div>
+	<br/>
+	<div class="align-left">
+		Show:
+		<select id="view-mode" onchange="refreshList()">
+			<option value="playlist-template.details">playlist with details</option>
+			<option value="playlist-template">playlist</option>
+			<option value="tile-template">tiles</option>
+			<option value="image-template">large images</option>
+			<option value="small-image-template">small images</option>
+		</select>
+		<br/>
+		<br/>
+		Order:
+		<button onclick="shuffle()" title="Shuffle playlist">Shuffle</button>
+		<button onclick="reverse()" title="Reverse playlist">Reverse</button>
+		<button onclick="reorder()" title="Reset playlist order">Reset</button>
+		<br/><br/>
+	</div>
+</div>
+
+<div class="column">
+	<h1><a target="download" class="album-title album-link"></a></h1>
+	<h3 id="playlist-links" class="noprint"></h3>
+
+	<div class="repeater"></div>
+	<p>Album coordinated by <a href="https://remix.audio/profile/MinorArth">Minor Arth</a>.</p>
+	<div class="links"></div>
+</div>
+
+<div id="templates" class="hidden">
+	<a class="link-template"></a>
+	<a class="play-link-template"></a>
+
+	<div class="image-template">
+		<img class="artwork"/>
+	</div>
+
+	<div class="small-image-template">
+		<img class="artwork"/>
+	</div>
+
+	<div class="tile-template">
+		<img class="artwork"/>
+		<p><i class="number"></i>. <b class="title"></b></p>
+		<p class="sources"></p>
+	</div>
+
+	<div class="playlist-template column0">
+		<img class="artwork"/>
+		<div class="item-text pre"><i class="number"></i>. <b class="title"></b></div>
+	</div>
+
+	<div class="playlist-template details column0">
+		<img class="artwork"/>
+		<div class="item-text pre"><i class="number"></i>. <b class="title"></b>
+		<div class="sources"></div></div>
+	</div>
+
+</div>
+
+<script>
+const LOGO_IMAGE = "";
+const LOGO_TITLE = "";
+const LOGO_LINK = "";
+
+const ALBUM_TITLE = "Kraft Mode EP";
+const ALBUM_LINK = "https://www.mediafire.com/file/5jiy5b2ao3pbn53/MinorArth-KraftModeEP.zip/file";
+const ALBUM_ARTIST = "Minor Arth mashups";
+const AUDIO_PATH = "https://remix.audio/uploads/tracks/";
+const IMAGE_PATH = "https://remix.audio/uploads/media/";
+//const AUDIO_PATH = "";
+//const IMAGE_PATH = "./artwork/";
+const AUDIO_TYPE = ".mp3";
+const IMAGE_TYPE = ".jpg";
+var PLAYER_IMAGE = "";
+
+const isUrl = s => s && s.includes && s.includes("://");
+
+const audioPlayer = document.querySelector("audio#audioPlayer");
+const playlistLinks = document.querySelector("#playlist-links");
+const playlists = document.querySelectorAll("p.playlist-text");
+var playlist = document.querySelector("p.playlist-text");
+var imageList = document.querySelector("p.images");
+var trackList = document.querySelector("p.tracks");
+const playerImage = document.querySelector(".player-image");
+const playerLabel = document.querySelector(".player-label");
+const linkContainer = document.querySelector("div.links");
+const logoLinks = document.querySelectorAll("a.logo");
+const logoImages = document.querySelectorAll(".logo img");
+const repeater = document.querySelector("div.repeater");
+const albumTitle = document.querySelector(".album-title");
+const albumLinks = document.querySelectorAll(".album-link");
+const viewMode = document.querySelector("select#view-mode");
+
+var template;
+var currentItem = null;
+var currentItemIndex = null;
+
+var links = {
+	"Albums": "..",
+	"Facebook": "https://www.facebook.com/MinorArthMashups",
+	"remix.audio": "https://remix.audio/playlist/2733",
+	"YouTube": "https://www.youtube.com/@MinorArth",
+	"AudioBoots": "https://audioboots.org"
+};
+
+var items = [
+	{
+		id: 19402,
+		file: "1508467_1802455964_2010175909.mp3",
+		author: "Minor Arth",
+		title: "Kraftwerk / Depeche Mode / The Stranglers - Strange Model",
+		sources: [
+			"Kraftwerk - The Model | 1978",
+			"Depeche Mode - Strangelove | 1987",
+			"The Stranglers - The European Female | 1982",
+		],
+		video: "https://youtu.be/pz83tO_aTyM",
+		image: "31169987_570877271_795201279.jpg"
+	},
+	{
+		id: 19401,
+		file: "1992192372_47439495_278507144.mp3",
+		author: "Minor Arth",
+		title: "Kraftwerk & Depeche Mode - People Are Numbers",
+		sources: [
+			"Kraftwerk - Numbers | Computer World | 1981",
+			"Depeche Mode - People Are People | 1984"
+		],
+		video: "https://youtu.be/m8zUtJlff_g",
+		image: "1325777255_834725289_978931676.jpg"
+	},
+	{
+		id: 19403,
+		file: "1674492422_1306326625_2003354294.mp3",
+		author: "Minor Arth",
+		title: "Kraftwerk & Depeche Mode - Halo Robots",
+		sources: [
+			"Kraftwerk - The Robots | 1978",
+			"Depeche Mode - Halo | 1990",
+		],
+		video: "https://youtu.be/pz83tO_aTyM",
+		image: "1517760380_736358051_722969622.jpg"
+	},
+	{
+		id: 60537,
+		file: "1565368611_1097620179_285284931.mp3",
+		author: "Minor Arth",
+		title: "Kraftwerk & Depeche Mode - People's Elektro Kardiogramm",
+		sources: [
+			"Kraftwerk - Elektro Kardiogramm | 2003",
+			"Depeche Mode - People Are Good | 2023 + People Are People | 1984"
+		],
+		image: "292822829_232794897_1193554332.jpg"
+	}
+];
+
+PLAYER_IMAGE = items[0].image;
+
+document.title = ALBUM_TITLE;
+albumTitle.innerText = ALBUM_ARTIST ? ALBUM_ARTIST + " - " + ALBUM_TITLE : ALBUM_TITLE;
+albumLinks.forEach(a => a.href = ALBUM_LINK);
+
+logoImages.forEach(i => setImage(i, LOGO_IMAGE));
+logoLinks.forEach(l => l.href = LOGO_LINK);
+displayLinks(linkContainer);
+
+// Audio has ended when this function is executed
+audioPlayer.addEventListener('ended', playNext, false);
+
+if(isUrl(AUDIO_PATH))
+{
+	setImage(playerImage, PLAYER_IMAGE);
+	refreshList();
+}
+else {
+	playlists.forEach(makePlaylistLink);
+	setPlaylist(0);
+}
+
+function setImage(img, src) {
+	if(!img || !src) return;
+	return img.src = (isUrl(src) || src.includes("/")) ? src : IMAGE_PATH + src;
+}
+
+function setPlaylist(index) {
+	if(!index) index = 0;
+
+	if(PLAYER_IMAGE) {
+		playerImage.style.display = "inline";
+		setImage(playerImage, PLAYER_IMAGE);
+		hideBrokenImage(playerImage);
+	}
+
+	playlist = playlists[index];
+	items = playlist?.innerText.trim().split("\n\n");
+	if(items.length == 1) items = playlist?.innerText.trim().split("\n");
+	items = items.map(makePlaylistItem);
+	refreshList();
+}
+
+function hideBrokenImages() {
+	document.querySelectorAll("img.artwork").forEach(hideBrokenImage);
+}
+
+function hideBrokenImage(img) {
+	img.onerror = () => img.style.display = "none";
+}
+
+function shuffle() {
+	items.sort(i => Math.random() - .5);
+	refreshList();
+	return items;
+}
+
+function reverse() {
+	items.sort(i => -1);
+	refreshList();
+	return items;
+}
+
+function reorder() {
+	items.sort( (a,b) => a.n - b.n);
+	refreshList();
+	return items;
+}
+
+function substringBefore(s, sub, last, stringOrEmpty, include, ignoreCase)
+{
+	if(!s) return s;
+
+	var lstr = s;
+	var lsub = sub;
+	if(ignoreCase) {
+		lstr = lstr.toLowerCase();
+		lsub = lsub.toLowerCase();
+	}
+
+	var pos = last ? lstr.lastIndexOf(lsub) : lstr.indexOf(lsub);
+	if(pos < 0)
+		return stringOrEmpty ? "" : s;
+
+	if(include)
+		pos += sub.length;
+	return s.substring(0, pos);
+}
+
+function substringAfter(s, sub, last, stringOrEmpty, include, ignoreCase)
+{
+	if(!s) return s;
+
+	var lstr = s;
+	var lsub = sub;
+	if(ignoreCase) {
+		lstr = lstr.toLowerCase();
+		lsub = lsub.toLowerCase();
+	}
+
+	var pos = last ? lstr.lastIndexOf(lsub) : lstr.indexOf(lsub);
+	if(pos < 0)
+		return stringOrEmpty ? s : "";
+
+	if(!include)
+		pos += sub.length;
+
+	return s.substring(pos);
+}
+
+function displayLinks(container)
+{
+	var linkTemplate = document.querySelector("a.link-template");
+	if(links)
+		for(var key in links) {
+			var link = cloneTemplate(linkTemplate, container);
+			link.innerText = key;
+			link.href = links[key];
+			link.target = "link";
+		}
+}
+
+function makePlaylistLink(pl, i) {
+	if(!pl || !pl.title) return;
+	var linkTemplate = document.querySelector("a.play-link-template");
+	var link = cloneTemplate(linkTemplate, playlistLinks);
+	link.innerText = pl.title;
+	link.onclick = () => setPlaylist(i);
+}
+
+function refreshList() {
+	repeater.innerHTML = "";
+	template = document.querySelector("div." + viewMode.value);
+	items.forEach(displayPlaylistItem);
+}
+
+function makePlaylistItem(item, i) {
+	var lines = item.split("\n").filter(l => l && l.length);
+	var item = {};
+	item.n = i + 1;
+	item.title = lines.shift().trim();
+	item.image = item.title + ".jpg";
+	item.file = item.title + AUDIO_TYPE;
+	item.sources = lines;
+
+	var n = Number(substringBefore(item.title, " - "));
+	if(n && !isNaN(n)) {
+		item.n = n;
+		item.title = substringAfter(item.title, " - ");
+	}
+
+	var parts = item.title.split(" - ");
+	item.songTitle = parts.pop();
+	if(!ALBUM_ARTIST) item.producer = parts.shift();
+	item.artists = parts.join(" / ");
+
+	if(!item.artists && item.songTitle.includes("(")) {
+		item.artists = substringAfter(item.songTitle, "(", true);
+		item.songTitle = item.songTitle.substring(0, par);
+		item.artists = substringBefore(item.songTitle, ")", true);
+	}
+
+	return item;
+}
+
+function displayPlaylistItem(item, i) {
+	el = cloneTemplate(template, repeater);
+	if(!item.n) item.n = i + 1;
+	if(el.querySelector(".number"))
+		el.querySelector(".number").innerHTML = item.n;
+	el.onclick = () => playFile(i);
+
+	var title = el.querySelector(".title");
+	var separator = viewMode.value == "playlist-template" ? "  -  " : "\n";
+	var itemTitle = [ item.artists, item.songTitle || item.title, item.producer ].filter(s => s).join(separator);
+	if(title) title.innerHTML = itemTitle;
+
+	var img = el.querySelector("img.artwork");
+	if(img && item.image) {
+		hideBrokenImage(img);
+		img.title = itemTitle;
+		setImage(img, item.image);
+	}
+
+	if(item.sources)
+		item.sources.forEach( (s, j) => isUrl(s) && (item.video = s) );
+
+	if(item.sources && el.querySelector(".sources"))
+		item.sources.forEach( (s, j) => el.querySelector(".sources").innerHTML += isUrl(s)? "" : (j ? "\n+ " : "= ") + s );
+
+
+	if(item.video && title)
+		title.innerHTML += '\n<a onclick="stopPropagation(event)" target="video" href="' + item.video + '">VIDEO</a>';
+
+}
+
+function cloneTemplate(node, parent)
+{
+	var clone = node.cloneNode();
+	clone.innerHTML = node.innerHTML;
+	if(parent) parent.append(clone);
+	return clone;
+}
+
+function playFile(item)
+{
+	if(typeof item == "number") {
+		currentItemIndex = item;
+		item = items[item];
+	}
+	if(!item) return;
+
+	currentItem = item;
+	playerImage.style.display = "inline";
+	setImage(playerImage, item.image);
+	playerLabel.innerText = playerImage.title = [item.artists,  item.songTitle || item.title, item.producer].filter(s => s).join("\n");
+	var subdir = playlist?.dataset.path || playlist?.getAttribute("path");
+	subdir = subdir ? subdir = subdir + "/" : "";
+	audioPlayer.src = AUDIO_PATH + subdir + item.file;
+	audioPlayer.controls = true;
+	audioPlayer.play();
+	return currentItem;
+}
+
+function playNext(evt) {
+	console.log("playNext", evt);
+	if(currentItemIndex === null) currentItemIndex = -1;
+	return playFile(++currentItemIndex % items.length || 0);
+}
+
+function playPrevious() {
+	if(currentItemIndex === null) currentItemIndex = 0;
+	var previousIndex = (--currentItemIndex + items.length) % items.length || 0;
+	return playFile(previousIndex);
+}
+
+function stopPropagation(event) {
+	event.stopPropagation();
+}
+</script>
+
+</body>
+</html>

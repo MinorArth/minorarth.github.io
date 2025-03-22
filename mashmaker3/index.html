@@ -1,0 +1,833 @@
+<!DOCTYPE HTML>
+<html class="js" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Minor Arth | The Mashmaker | volume 3</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<!-- meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi" /-->
+	<meta property="og:title"        content="The Mashmaker | volume 3 "/>
+	<meta property="og:description"  content="Minor Arth Mashups | Best Of 2023 - 2024"/>
+	<meta property="og:url"          content="https://araynaud.github.io/albums/mashmaker3/"/>
+	<meta property="og:image"        content="https://araynaud.github.io/albums/mashmaker3/Mashmaker3.jpg"/>
+	<meta property="og:image:width"  content="720"/>
+	<meta property="og:image:height" content="720" />
+	<meta property="og:image:type"   content="image/jpeg"/>
+	<style>
+	@media screen {
+		body{
+			/* background-image: linear-gradient(0deg, #210, #BA9); */
+			background-color:  #031;
+			color: white;
+		}
+
+		a, .number { color: #e7d1ac; }
+		p.sources { color: #DDD; }
+
+		div.playlist-template {
+			width: 480px;
+			background-color: #262;
+		}
+
+		div.active {
+			background-color: #004560;
+		}
+	}
+
+	a, .bold { font-weight: bold; cursor: pointer; }
+
+	body {
+		font-family:  Helvetica, sans-serif, 'Tw Cen MT', 'HP Simplified', Arial;
+		text-align: center;
+	}
+
+	.align-left  { text-align: left; }
+	.align-right { text-align: right; }
+	img.icon { float:right; }
+	img.player-image[src] { max-width: 720px; border: solid 8px white;  }
+	div.toolbar audio {	width: 600px; height: 24px; }
+	div.repeater { max-width: 1400px; }
+
+	@media only screen and (max-width: 2140px)
+	{
+		img.player-image[src] { max-width: 600px;   border: solid 6px white;  }
+		div.toolbar audio {	width: 480px; }
+		div.repeater { 	max-width: 1000px;	}
+	}
+
+	@media only screen and (max-width: 1600px)
+	{
+		img.player-image[src] { max-width: 360px;   border: solid 4px white;  }
+		div.toolbar audio {	width: 300px; }
+		div.repeater { 	max-width: 1000px;	}
+	}
+
+	@media only screen and (max-width: 1400px)
+	{
+		div.repeater { 	max-width: 600px;	}
+	}
+
+	div.toolbar > * {
+		vertical-align: middle;
+	}
+
+	a.link-template, a.play-link-template { margin-left: 1em; margin-right: 1em; }
+
+	div.repeater { 	padding-left: 10px; padding-right: 10px; }
+
+	div.playlist-template {
+		font-size: 12pt;
+		cursor: pointer;
+		text-align: left;
+		border: 1px solid #CCC;
+		padding: 2px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	div.playlist-template div.item-text {
+		vertical-align: middle;
+		display: inline-block;
+	}
+
+	div.playlist-template img.artwork[src] {
+		height: .7in;
+		vertical-align: middle;
+	}
+
+	div.tile-template, div.image-template, div.small-image-template {
+		display: inline-block;
+		vertical-align: top;
+		cursor: pointer;
+	}
+
+	div.tile-template {
+		width: 4in;
+		padding: .25in;
+	}
+
+	div.image-template {
+		width: 40%;
+		margin: 20px;
+	}
+
+	div.image-template img.artwork[src] {
+		width: 100%;
+		max-width: 900px;
+		border: solid 4px white;
+	}
+
+	div.tile-template img.artwork[src] {
+		width: 3in;
+		border: solid 4px white;
+	}
+
+	div.small-image-template img.artwork[src] {
+		width: 2in;
+		transform: rotate(-5deg);
+	}
+
+@media screen {
+	.column {
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.print-only { display: none; }
+}
+	.column.column-2 {
+		width: 48%;
+	}
+
+	.column.column-3 {
+		width: 30%;
+	}
+
+	.column.column-4 {
+		width: 24%;
+	}
+
+	.pre {
+		white-space: pre-line;
+	}
+
+	p {
+		white-space: pre-line;
+		margin-block-start: .5em;
+		margin-block-end: 0em;
+	}
+
+	a { text-decoration: none; }
+	a.logo img { height: 90px; padding-top: 10px; display: inline-block;	}
+	.hidden { display: none; }
+
+	@media print {
+		.no-print { display: none; }
+	}
+	</style>
+</head>
+<body>
+	<a class="logo print-only"><img /></a>
+<div class="toolbar no-print column">
+	<a class="logo"><img /></a><br/>
+	<a target="download" class="album-link">DOWNLOAD ALBUM</a>
+	<br/><br/>
+	<img class="player-image"/>
+	<br/>
+	<br/>
+	<button onclick="playPrevious()" title="Previous track"> &lt;&lt; </button>
+	<audio id="audioPlayer" controls></audio>
+	<button onclick="playNext()" title="Next track"> &gt;&gt; </button>
+	<br/>
+	<div class="bold player-label"></div>
+	<br/>
+	<div class="align-left">
+		Show:
+		<select id="view-mode" onchange="refreshList()">
+			<option value="playlist-template">playlist</option>
+			<option value="playlist-template.details">playlist with details</option>
+			<option value="tile-template">tiles</option>
+			<option value="image-template">large images</option>
+			<option value="small-image-template">small images</option>
+		</select>
+		<br/>
+		<br/>
+		Order:
+		<button onclick="shuffle()" title="Shuffle playlist">Shuffle</button>
+		<button onclick="reverse()" title="Reverse playlist">Reverse</button>
+		<button onclick="reorder()" title="Reset playlist order">Reset</button>
+		<br/><br/>
+	</div>
+</div>
+
+<div class="column">
+	<h1><a target="download" class="album-title album-link"></a></h1>
+	<h3 id="playlist-links" class="no-print"></h3>
+
+	<div class="repeater"></div>
+	<p>All tracks mixed by <a href="https://remix.audio/profile/minorarth">Minor Arth</a> in 2023 - 2024.</p>
+</div>
+<div class="links"></div>
+
+<div id="templates" class="hidden">
+	<a class="link-template"></a>
+	<a class="play-link-template"></a>
+
+	<div class="separator-template">
+		<hr/>
+	</div>
+
+	<div class="image-template">
+		<img class="artwork"/>
+	</div>
+
+	<div class="small-image-template">
+		<img class="artwork"/>
+	</div>
+
+	<div class="tile-template">
+		<img class="artwork"/>
+		<a class="remix-audio" target="video" onclick="stopPropagation(event)"><img class="icon no-print" src="remixaudio.png"/></a>
+		<p><i class="number"></i>. <b class="title"></b></p>
+		<p class="sources"></p>
+	</div>
+
+	<div class="playlist-template column">
+		<img class="artwork"/>
+		<a class="remix-audio" target="video" onclick="stopPropagation(event)"><img class="icon no-print" src="remixaudio.png"/></a>
+		<div class="item-text pre"><i class="number"></i>. <b class="title"></b></div>
+	</div>
+
+	<div class="playlist-template details column">
+		<img class="artwork"/>
+		<a class="remix-audio" target="video" onclick="stopPropagation(event)"><img class="icon no-print" src="remixaudio.png"/></a>
+		<div class="item-text pre"><i class="number"></i>. <b class="title"></b>
+		<p class="sources"></p></div>
+	</div>
+
+</div>
+
+<script>
+
+var items = [
+	{
+		"id": 65316,
+		"file": "688307573_994944763_2037949727.mp3",
+		"localFile": "U2 - Tomoyasu Hotei - Battle The Blue Sky.mp3",
+		"author": "Minor Arth",
+		"title": "Battle The Blue Sky | Kill Bill mix",
+		"artists": "U2 / Tomoyasu Hotei",
+		"sources": [ "Hotei - Battle Without Honor Or Humanity | 1999", "U2 - Bullet The Blue Sky | 1987" ],
+		"video": "https://youtu.be/DxEtu0rZvBY",
+		"image": "1357411145_1780532464_205394299.jpg"
+	},
+	{
+		"id": 55929,
+		"file": "1219033719_741030807_1481241104.mp3",
+		"localFile": "Frankie Goes To Hollywood - Relax -- GTA Fatal Error mix.mp3",
+		"author": "Minor Arth",
+		"title": "Relax | GTA Fatal Error mix",
+		"artists": "Frankie Goes To Hollywood / Fatal Error",
+		"sources": [ "Frankie Goes To Hollywood - Relax | 1984",
+			"Fatal Error - Fatal Error | 1988",
+			"Green Velvet & Harvard Bass - Lazer Beams | 2012"
+		],
+		"image": "1908483259_1709103045_111135057.jpg"
+	},
+	{
+		"id": 56387,
+		"file": "14925429_1638651076_545405269.mp3",
+		"localFile": "Blur - Pink Floyd - Emily, There's No Other Play.mp3",
+		"author": "Minor Arth",
+		"title": "Emily, There's No Other Play",
+		"artists": "Blur / Pink Floyd",
+		"sources": [ "Blur - There's No Other Way | 1991", "Pink Floyd - See Emily Play | 1967" ],
+		links: { "B Side": "https://remix.audio/track/56318" },
+		"image": "2083563027_726887975_1926822169.jpg"
+	},
+	{
+		"id": 46625,
+		"file": "777624490_736837566_2059881359.mp3",
+		"localFile": "Khruangbin - The Clash - Maria Calling London.mp3",
+		"author": "Minor Arth",
+		"title": "Maria Calling London",
+		"artists": "Khruangbin / The Clash",
+		"sources": [ "Khruangbin - Maria También | 2015", "The Clash - London Calling | 1979" ],
+		"image": "1939770104_2121287126_1697713501.jpg"
+	},
+	{
+		"id": 48247,
+		"file": "1661876400_754619155_1949467323.mp3",
+		"localFile": "The Smiths - Fontaines DC - Jackie's Big Mouth Strikes Down The Line.mp3",
+		"author": "Minor Arth",
+		"title": "Jackie's Big Mouth Strikes Down The Line",
+		"artists": "The Smiths / Fontaines DC",
+		"sources": [ "The Smiths - Bigmouth Strikes Again | 1986", "Fontaines DC - Jackie Down The Line | 2022" ],
+		"image": "638425603_1716898441_1909934730.jpg"
+	},
+	{
+		"id": 63479,
+		"file": "1676810799_1961087453_2055866504.mp3",
+		"localFile": "The Cure - Foo Fighters - Heaven Under You.mp3",
+		"author": "Minor Arth",
+		"title": "Heaven Under You",
+		"artists": "Foo Fighters / The Cure",
+		"sources": [ "Foo Fighters - Under You | 2023", "The Cure - Just Like Heaven | 1987" ],
+		"image": "1651095853_1791131150_194561761.jpg"
+	},
+	{
+		"id": 70314,
+		"file": "2010238185_2137739537_219213505.mp3",
+		"localFile": "Staind - New Order - It's Been Like Crystal.mp3",
+		"author": "Minor Arth",
+		"title": "It's Been Like Crystal",
+		"artists": "Staind / New Order",
+		"sources": [ "Staind - It's Been A While | 2001", "New Order - Crystal | 2001" ],
+		"image": "1970601236_52168390_1029263857.jpg"
+	},
+	{
+		"id": 66779,
+		"file": "1441812849_1176981539_1662322242.mp3",
+		"localFile": "Paul McCartney - Gorillaz - Long Tailed Clint Eastwood.mp3",
+		"author": "Minor Arth",
+		"title": "Long Tailed Clint Eastwood",
+		"artists": "Gorillaz / Paul McCartney",
+		"sources": [ "Paul McCartney - Long Tailed Winter Bird | 2020", "Gorillaz - Clint Eastwood | 2001" ],
+		"image": "1665465476_558550517_1754934827.jpg"
+	},
+	{
+		"id": 59146,
+		"file": "2124909594_950351964_347818129.mp3",
+		"localFile": "Daft Punk - The Buggles - Video Killed Digital Love.mp3",
+		"author": "Minor Arth",
+		"title": "Video Killed Digital Love",
+		"artists": "Daft Punk / The Buggles",
+		"sources": [ "Daft Punk - Digital Love | 2001", "The Buggles - Video Killed The Radio Star | 1980" ],
+		"image": "333285275_32523534_377834776.jpg"
+	},
+	{
+		"id": 62768,
+		"file": "1851922269_1561119703_1094376618.mp3",
+		"localFile": "Arcade Fire - The B-52s - Rabbit Shack.mp3",
+		"author": "Minor Arth",
+		"title": "Rabbit Shack",
+		"artists": "Arcade Fire / The B-52s",
+		"sources": [ "Arcade Fire - Rabbit Hole | Age Of Anxiety 2 | 2022", "The B-52s - Love Shack | 1989" ],
+		"links": { "Summer Booty 2024": "https://audioboots.org/Albums/SB2024" },
+		"image": "678783498_1418337008_317980991.jpg"
+	},
+
+	{
+		"id": 56646,
+		"file": "1989424467_1849690767_25611228.mp3",
+		"localFile": "Chromatics - Bauhaus - She's In Parties In The Dark.mp3",
+		"author": "Minor Arth",
+		"title": "She's In Parties In The Dark",
+		"artists": "Bauhaus / Chromatics",
+		"sources": [ "Chromatics - Hands In The Dark | 2007", "Bauhaus - She's In Parties | 1983" ],
+		"video": "https://youtu.be/tvgVQ8QKamE",
+		"image": "1030886736_834970239_239296039.jpg"
+	},
+	{
+		"id": 54112,
+		"file": "1110328671_1974987142_518287461.mp3",
+		"localFile": "Benny Benassi - The Rolling Stones - I can get my Satisfaction.mp3",
+		"author": "Minor Arth",
+		"title": "I can get my Satisfaction",
+		"artists": "Benny Benassi / The Rolling Stones",
+		"sources": [ "Benny Benassi - Satisfaction | 2003", "The Rolling Stones - Satisfaction | 1965" ],
+		"image": "329399548_675559546_757022758.jpg"
+	},
+	{
+		"id": 67261,
+		"file": "2025848600_1637262437_2097833007.mp3",
+		"localFile": "Tame Impala - Zombie Nation - Justice - Neverender -- Tryouts mix.mp3",
+		"author": "Minor Arth",
+		"title": "Neverender | Tryouts mix",
+		"artists": "Tame Impala / Zombie Nation / Justice",
+		"sources": [ "Zombie Nation / Tryouts | 2012", "Justice / Tame Impala - Neverender | 2024" ],
+		"image": "127650123_1678949698_1731942285.jpg"
+	},
+
+	{
+		"id": 60714,
+		"file": "1297555536_1564794754_1150085028.mp3",
+		"localFile": "Motor - Iggy Pop - Goldfrapp - The Passenger In My Machine.mp3",
+		"author": "Minor Arth",
+		"title": "The Passenger In My Machine",
+		"artists": "Iggy Pop / Motor / Martin Gore / Goldfrapp",
+		"sources": [ "Motor / Martin Gore - Man-Made Machine | 2012",
+			"Iggy Pop - The Passenger | 1977",
+			"Goldfrapp - Strict Machine | 2003 + Ooh La La | 2005"
+		],
+		"image": "1679237025_542222153_1884917710.jpg"
+	},
+	{
+		"id": 60010,
+		"file": "864296405_985578111_2006813413.mp3",
+		"localFile": "The Beatles - Michel Polnareff - Besoin d'Eleanor Rigby.mp3",
+		"author": "Minor Arth",
+		"title": "Besoin d'Eleanor Rigby",
+		"artists": "Michel Polnareff / The Beatles",
+		"sources": [ "Michel Polnareff - Besoin De Toi | 1990", "The Beatles - Eleanor Rigby | 1966" ],
+		"image": "1136622340_1428352573_946886871.jpg"
+	},
+	{
+		"id": 69215,
+		"file": "1610918221_1181670267_1088066798.mp3",
+		"localFile": "Peggy Lee - KaS Product - Pussy Cat Fever.mp3",
+		"author": "Minor Arth",
+		"title": "Pussy Cat Fever",
+		"artists": "Peggy Lee / KaS Product",
+		"sources": [ "Peggy Lee - Fever | 1961", "KaS Product - Pussy X | 1982" ],
+		"image": "494270352_718629766_939971483.jpg"
+	},
+	{
+		"id": 68228,
+		"file": "1784997339_839067900_1758308276.mp3",
+		"localFile": "Air - Madonna - This Used to Be My Playground Love.mp3",
+		"author": "Minor Arth",
+		"title": "This Used To Be My Playground Love",
+		"artists": "Air / Madonna",
+		"sources": [ "Air - Playground Love / High School Lovers | 2000", "Madonna - This Used To Be My Playground" ],
+		"image": "902896700_456702_1237173205.jpg"
+	},
+	{
+		"id": 41505,
+		"file": "618134551_2099574982_977842570.mp3",
+		"localFile": "Radiohead - Jose Gonzalez - There There In Our Nature.mp3",
+		"author": "Minor Arth",
+		"title": "There, There, In Our Nature",
+		"artists": "Radiohead / José González",
+		"sources": [ "Radiohead - There, There | live 2003", "José González - In Our Nature | 2006" ],
+		"video": "https://youtu.be/rVO3T5eVs2I",
+		"image": "1393928144_1361713747_860723147.jpg"
+	}
+];
+
+const LOGO_IMAGE = ""; //"https://audioboots.org/images/AudioBootsFullTransparent.png";
+const LOGO_TITLE = "Minor Arth";
+const LOGO_LINK = "";
+
+const ALBUM_TITLE = "The Mashmaker, volume 3 | Best of 2023 - 2024";
+const ALBUM_LINK = "https://www.mediafire.com/file/rj0gj52pbeuqw4c/MinorArth-TheMashmaker-volume3.zip/file";
+const ALBUM_ARTIST = "Minor Arth";
+const TRACK_LINK_PATH = "https://remix.audio/track/";
+const AUDIO_PATH = "https://remix.audio/uploads/tracks/";
+const IMAGE_PATH = "https://remix.audio/uploads/media/";
+//const AUDIO_PATH = "";
+//const IMAGE_PATH = "./artwork/";
+const AUDIO_TYPE = ".mp3";
+const IMAGE_TYPE = ".jpg";
+const PLAYER_IMAGE = "./Mashmaker3.jpg";
+
+const isUrl = s => s && s.includes && s.includes("://");
+
+const audioPlayer = document.querySelector("audio#audioPlayer");
+const playlistLinks = document.querySelector("#playlist-links");
+const playlists = document.querySelectorAll("p.playlist-text");
+var playlist = document.querySelector("p.playlist-text");
+var playlistName = "all";
+var imageList = document.querySelector("p.images");
+var trackList = document.querySelector("p.tracks");
+const playerImage = document.querySelector(".player-image");
+const playerLabel = document.querySelector(".player-label");
+const linkContainer = document.querySelector("div.links");
+const logoLinks = document.querySelectorAll("a.logo");
+const logoImages = document.querySelectorAll(".logo img");
+const repeater = document.querySelector("div.repeater");
+const albumTitle = document.querySelector(".album-title");
+const albumLinks = document.querySelectorAll(".album-link");
+const viewMode = document.querySelector("select#view-mode");
+
+var template;
+var currentItem = null;
+var currentItemElement = null;
+var currentItemIndex = null;
+
+var links = {
+	"Albums": "..",
+	"remix.audio": "https://remix.audio/playlist/2557",
+	"YouTube": "https://www.youtube.com/@MinorArth",
+	"Facebook": "https://www.facebook.com/MinorArthMashups",
+	"AudioBoots": "https://audioboots.org"
+};
+
+var allPlaylists = {};
+var producers = [];
+
+document.title = ALBUM_TITLE;
+albumTitle.innerText = ALBUM_ARTIST ? ALBUM_ARTIST + " - " + ALBUM_TITLE : ALBUM_TITLE;
+albumLinks.forEach(a => a.href = ALBUM_LINK);
+
+if(!LOGO_IMAGE)
+	logoLinks.forEach(l => l.remove())
+else {
+	logoImages.forEach(i => setImage(i, LOGO_IMAGE));
+	logoLinks.forEach(l => l.href = LOGO_LINK);
+}
+
+displayLinks(linkContainer);
+
+// Audio has ended when this function is executed
+audioPlayer.addEventListener('ended', playNext, false);
+//window.onresize = () => albumTitle.innerText = innerWidth + " px / ";
+//onresize();
+
+const USE_REMOTE_FILES = isUrl(AUDIO_PATH);
+const USE_LOCAL_FILES = !USE_REMOTE_FILES;
+
+if(USE_REMOTE_FILES)
+{
+	items = items.filter(i => i.file);
+	setImage(playerImage, PLAYER_IMAGE);
+	refreshList();
+}
+else if(items.length)
+{
+	items.forEach(makeLocalPlaylistItem);
+	setImage(playerImage, PLAYER_IMAGE);
+	refreshList();
+}
+else {
+	var pl = Array.from(playlists).map(makePlaylist);
+
+	if(pl.length > 1) {
+		allPlaylists.all = [].concat(...pl);
+		allPlaylists.all.id = "all";
+		allPlaylists.all.title = "All";
+	}
+
+	pl.forEach((p, i) => allPlaylists[p.title || p.id] = p);
+
+	if(!producers){
+		producers = allPlaylists.all.map(i => i.author || i.producer).filter(p => p && !p.includes("&")).sort();
+		producers = new Set(producers);
+	}
+
+	if(producers.length > 1)
+		producers.forEach(p => {
+			allPlaylists[p] = allPlaylists.all.filter(i => (i.author || i.producer || "").includes(p));
+			allPlaylists[p].title = p;
+		});
+
+	Object.keys(allPlaylists).forEach(makePlaylistLink);
+
+	setPlaylist();
+}
+
+function setImage(img, src) {
+	if(!img || !src) return;
+	return img.src = (isUrl(src) || src.includes("/")) ? src : IMAGE_PATH + src;
+}
+
+function setPlaylist(index) {
+	console.log("setPlaylist", index);
+	if(!index) index = Object.keys(allPlaylists)[0];
+	if(index >= playlists.length - 1) index = "all";
+	playlistName = index;
+
+	if(PLAYER_IMAGE) {
+		playerImage.style.display = "inline";
+		setImage(playerImage, PLAYER_IMAGE);
+		hideBrokenImage(playerImage);
+	}
+
+	if(playlists && playlists.length) {
+		playlist = playlists[index];
+		items = allPlaylists[index];
+	}
+	refreshList();
+}
+
+function makePlaylist(playlist) {
+	var items = playlist? playlist.innerText.trim().split("\n\n") : [];
+	if(items.length == 1) items = playlist.innerText.trim().split("\n");
+	items = items.filter(l => l && l.length);
+	items = items.map(makePlaylistItem);
+	items.id = playlist.id;
+	items.title = playlist.title;
+	return items;
+}
+
+function hideBrokenImages() {
+	document.querySelectorAll("img.artwork").forEach(hideBrokenImage);
+}
+
+function hideBrokenImage(img) {
+	img.onerror = () => PLAYER_IMAGE ? img.src = setImage(playerImage, PLAYER_IMAGE) : img.style.display = "none";
+}
+
+function shuffle() {
+	items.sort(i => Math.random() - .5);
+	refreshList();
+	return items;
+}
+
+function reverse() {
+	items.sort(i => -1);
+	refreshList();
+	return items;
+}
+
+function reorder() {
+	items.sort( (a,b) => a.n - b.n);
+	refreshList();
+	return items;
+}
+
+function substringBefore(s, sub, last, stringOrEmpty, include, ignoreCase)
+{
+	if(!s) return s;
+
+	var lstr = s;
+	var lsub = sub;
+	if(ignoreCase) {
+		lstr = lstr.toLowerCase();
+		lsub = lsub.toLowerCase();
+	}
+
+	var pos = last ? lstr.lastIndexOf(lsub) : lstr.indexOf(lsub);
+	if(pos < 0)
+		return stringOrEmpty ? "" : s;
+
+	if(include)
+		pos += sub.length;
+	return s.substring(0, pos);
+}
+
+function substringAfter(s, sub, last, stringOrEmpty, include, ignoreCase)
+{
+	if(!s) return s;
+
+	var lstr = s;
+	var lsub = sub;
+	if(ignoreCase) {
+		lstr = lstr.toLowerCase();
+		lsub = lsub.toLowerCase();
+	}
+
+	var pos = last ? lstr.lastIndexOf(lsub) : lstr.indexOf(lsub);
+	if(pos < 0)
+		return stringOrEmpty ? s : "";
+
+	if(!include)
+		pos += sub.length;
+
+	return s.substring(pos);
+}
+
+function displayLinks(container)
+{
+	var linkTemplate = document.querySelector("a.link-template");
+	if(links)
+		for(var key in links) {
+			var link = cloneTemplate(linkTemplate, container);
+			link.innerText = key;
+			link.href = links[key];
+			//link.target = "link";
+		}
+}
+
+function makePlaylistLink(pl, i) {
+	if(!pl) return;
+	var linkTemplate = document.querySelector("a.play-link-template");
+	var link = cloneTemplate(linkTemplate, playlistLinks);
+	link.innerText = pl;
+	link.onclick = () => setPlaylist(pl);
+}
+
+function refreshList() {
+	repeater.innerHTML = "";
+	template = document.querySelector("div." + viewMode.value);
+	items.forEach(displayPlaylistItem);
+}
+
+function makeLocalPlaylistItem(item, i) {
+	item.n = i + 1;
+	if(item.localFile)
+	{
+		item.file = item.localFile;
+		item.image = item.localFile.replace(AUDIO_TYPE, IMAGE_TYPE);
+	}
+}
+
+function makePlaylistItem(item, i) {
+	var lines = item.split("\n").filter(l => l && l.length);
+	var item = {};
+	item.n = i + 1;
+	item.title = lines.shift().trim();
+	item.image = item.title + IMAGE_TYPE;
+	item.file = item.title + AUDIO_TYPE;
+	item.sources = lines;
+
+	var n = Number(substringBefore(item.title, " - "));
+	if(n && !isNaN(n)) {
+		item.n = n;
+		item.title = substringAfter(item.title, " - ");
+	}
+
+	var parts = item.title.split(" - ");
+	item.songTitle = parts.pop() || "";
+	item.songTitle = item.songTitle.replace(" -- ", " | ");
+	if(!ALBUM_ARTIST) item.producer = parts.shift();
+	item.artists = parts.join(" / ");
+
+	if(!item.artists && item.songTitle.includes("(")) {
+		item.artists = substringAfter(item.songTitle, "(", true);
+		item.artists = substringBefore(item.artists, ")", true);
+	}
+
+	return item;
+}
+
+function displayPlaylistItem(item, i) {
+	if(!item.n) item.n = i + 1;
+
+	el = cloneTemplate(template, repeater);
+	if(el.querySelector(".number"))
+		el.querySelector(".number").innerHTML = item.n;
+	el.onclick = () => playFile(i);
+
+	var title = el.querySelector(".title");
+	var separator = viewMode.value == "playlist-template0" ? "  -  " : "\n";
+	var itemTitle = [ item.artists, item.songTitle || item.title ].filter(s => s).join(separator);
+	if(title) title.innerHTML = itemTitle;
+
+	var img = el.querySelector("img.artwork");
+	if(img && item.image) {
+		hideBrokenImage(img);
+		img.title = itemTitle;
+		setImage(img, item.image);
+	}
+
+	//highlight current item
+	if(item == currentItem) {
+		el.classList.add("active");
+		currentItemIndex = items.indexOf(currentItem);
+		currentItemElement = repeater.childNodes[currentItemIndex];
+	}
+
+	if(item.sources)
+		item.sources.forEach( (s, j) => isUrl(s) && (item.video = s) );
+
+	if(item.sources && el.querySelector(".sources"))
+		item.sources.forEach( (s, j) => el.querySelector(".sources").innerHTML += isUrl(s)? "" : (j ? "\n+ " : "= ") + s );
+
+	if(title && item.video)
+		title.innerHTML += '\n<a onclick="stopPropagation(event)" target="video" href="' + item.video + '">VIDEO</a>';
+
+	if(title && item.links)
+		for(var key in item.links)
+			title.innerHTML += '\n<a onclick="stopPropagation(event)" target="video" href="' + item.links[key] + '">'+ key +'</a>';
+
+	var trackLink = el.querySelector("a.remix-audio");
+	if(trackLink && item.id)
+		trackLink.href = TRACK_LINK_PATH + item.id;
+	else if(trackLink)
+		trackLink.remove();
+}
+
+function cloneTemplate(node, parent)
+{
+	var clone = node.cloneNode();
+	clone.innerHTML = node.innerHTML;
+	if(parent) parent.append(clone);
+	return clone;
+}
+
+function playFile(item)
+{
+	if(typeof item == "number") {
+		currentItemIndex = item;
+		item = items[item];
+	}
+	if(!item) return;
+
+	currentItem = item;
+	playerImage.style.display = "inline";
+	setImage(playerImage, item.image);
+	playerLabel.innerText = playerImage.title = [item.artists,  item.songTitle || item.title].filter(s => s).join("\n");
+	var subdir = playlist ? playlist.dataset.path || playlist.getAttribute("path") : "";
+	subdir = subdir ? subdir = subdir + "/" : "";
+	audioPlayer.src = AUDIO_PATH + subdir + item.file;
+	audioPlayer.controls = true;
+	audioPlayer.play();
+
+	//highlight current playlist item
+	if(currentItemElement)
+		currentItemElement.classList.remove("active");
+	currentItemElement = repeater.childNodes[currentItemIndex];
+	if(currentItemElement)
+		currentItemElement.classList.add("active");
+
+	return currentItem;
+}
+
+function playNext(evt) {
+	console.log("playNext", evt);
+	if(currentItemIndex === null) currentItemIndex = -1;
+	return playFile(++currentItemIndex % items.length || 0);
+}
+
+function playPrevious() {
+	if(currentItemIndex === null) currentItemIndex = 0;
+	var previousIndex = (--currentItemIndex + items.length) % items.length || 0;
+	return playFile(previousIndex);
+}
+
+function stopPropagation(event) {
+	event.stopPropagation();
+}
+
+function playlistToText(num) {
+	var format = num ? (i => (i.n < 10 ? " " : "") + i.n + ". " + i.file) : i => i.file ;
+	return items.map(format).join("\n").replace(/\.mp3/g, "");
+}
+
+function m3uPlaylist()
+{
+	return "#EXTM3U\n" + items.map(i => i.file).join("\n");
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,649 @@
+<!DOCTYPE HTML>
+<html class="js" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Minor Arth | The Mashmaker | volume 1</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<!-- meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi" /-->
+	<meta property="og:title"        content="The Mashmaker | volume 3 "/>
+	<meta property="og:description"  content="Minor Arth Mashups | Best Of 2019 - 2022"/>
+	<meta property="og:url"          content="https://araynaud.github.io/albums/mashmaker1/"/>
+	<meta property="og:image"        content="https://araynaud.github.io/albums/mashmaker1/Mashmaker1.jpg"/>
+	<meta property="og:image:width"  content="720"/>
+	<meta property="og:image:height" content="720" />
+	<meta property="og:image:type"   content="image/jpeg"/>
+	<style>
+	@media screen {
+		body{
+			background-color: #48C;
+			color: white;
+		}
+
+		a { color: #FC0; }
+		p.sources { color: #222; }
+		div.repeater { 	max-width: 1000px;	}
+
+		div.playlist-template {
+			width: 480px;
+			background-color: rgba(100,100,150,.5);
+		}
+	}
+
+	a, .bold { font-weight: bold; cursor: pointer; }
+
+	body {
+		font-family: Helvetica, sans-serif, 'HP Simplified', Arial;
+		text-align: center;
+	}
+
+	.align-left  { text-align: left; }
+	.align-right { text-align: right; }
+
+	div.toolbar audio {	height: 20px; }
+
+	div.toolbar > * {
+		vertical-align: middle;
+	}
+
+	a.play-link-template { margin: 1em; }
+
+	div.repeater { 	padding-left: 10px; padding-right: 10px; }
+
+	div.playlist-template {
+		font-size: 11pt;
+		cursor: pointer;
+		text-align: left;
+		border: 1px solid #CCC;
+		padding: 2px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	div.playlist-template div.item-text {
+		vertical-align: middle;
+		display: inline-block;
+	}
+
+	div.playlist-template img[src] {
+		height: .7in;
+		vertical-align: middle;
+	}
+
+	div.tile-template, div.image-template, div.small-image-template {
+		display: inline-block;
+		vertical-align: top;
+		cursor: pointer;
+	}
+
+	div.tile-template {
+		width: 4in;
+		padding: .25in;
+	}
+
+	div.image-template {
+		width: 40%;
+		margin: 20px;
+	}
+
+	div.image-template img[src] {
+		width: 100%;
+		max-width: 900px;
+		border: solid 10px white;
+	}
+
+	div.tile-template img[src] {
+		width: 3in;
+		border: solid 4px white;
+	}
+
+	div.small-image-template img[src] {
+		width: 240px;
+		transform: rotate(-5deg);
+	}
+
+	img.player-image[src] { max-width: 360px;  border: solid 8px white; }
+
+@media screen {
+	.column {
+		display: inline-block;
+		vertical-align: top;
+	}
+}
+	.column.column-2 {
+		width: 48%;
+	}
+
+	.column.column-3 {
+		width: 30%;
+	}
+
+	.column.column-4 {
+		width: 24%;
+	}
+
+	.pre {
+		white-space: pre-line;
+	}
+
+	p {
+		white-space: pre-line;
+		margin-block-start: .5em;
+		margin-block-end: 0em;
+	}
+
+	a { text-decoration: none; }
+	a.logo img { height: 50px; padding-top: 10px; display: inline-block;	}
+	.hidden { display: none; }
+
+	@media print {
+		.no-print { display: none; }
+	}
+	</style>
+</head>
+<body>
+
+	<h1><a target="download" class="album-title album-link"></a></h1>
+	<h2 id="playlist-links"></h2>
+
+<div class="toolbar no-print column">
+	<a target="download" class="album-link">DOWNLOAD ALBUM</a>
+	<br/><br/>
+	<img class="player-image"/>
+	<br/>
+	<br/>
+	<button onclick="playPrevious()" title="Previous track"> &lt;&lt; </button>
+	<audio id="audioPlayer" controls></audio>
+	<button onclick="playNext()" title="Next track"> &gt;&gt; </button>
+	<br/>
+	<div class="bold player-label"></div>
+	<br/>
+	<div class="align-left">
+		Show:
+		<select id="view-mode" onchange="refreshList()">
+			<option value="playlist-template">playlist</option>
+			<option value="playlist-template.details">playlist with details</option>
+			<option value="tile-template">tiles</option>
+			<option value="image-template">large images</option>
+			<option value="small-image-template">small images</option>
+		</select>
+		<br/>
+		<br/>
+		Order:
+		<button onclick="shuffle()" title="Shuffle playlist">Shuffle</button>
+		<button onclick="reverse()" title="Reverse playlist">Reverse</button>
+		<button onclick="reorder()" title="Reset playlist order">Reset</button>
+		<br/><br/>
+	</div>
+</div>
+<div class="repeater column"></div>
+<p>All tracks mixed by <a href="https://remix.audio/profile/minorarth">Minor Arth</a> in 2019 - 2022.</p>
+<div class="links"></div>
+<!-- a class="logo"><img /></a-->
+
+<div id="templates" class="hidden">
+	<a class="play-link-template"></a>
+
+	<div class="image-template">
+		<img class="artwork"/>
+	</div>
+
+	<div class="small-image-template">
+		<img class="artwork"/>
+	</div>
+
+	<div class="tile-template">
+		<img class="artwork"/>
+		<p><i class="number"></i>. <b class="title"></b></p>
+		<p class="sources"></p>
+	</div>
+
+	<div class="playlist-template column column-2a">
+		<img class="artwork"/>
+		<div class="item-text pre"><i class="number"></i>. <b class="title"></b></div>
+	</div>
+
+	<div class="playlist-template details column column-2">
+		<img class="artwork"/>
+		<div class="item-text pre"><i class="number"></i>. <b class="title"></b>
+		<p class="sources"></p></div>
+	</div>
+
+</div>
+
+<p class="playlist-text hidden" id="Mashmaker1">
+</p>
+
+<script>
+const LOGO_IMAGE = ""; //"https://audioboots.org/images/AudioBootsFullTransparent.png";
+const LOGO_TITLE = "AudioBoots";
+const LOGO_LINK = "https://audioboots.org";
+
+const ALBUM_TITLE = "The Mashmaker, volume 1 | Best of 2019 - 2022";
+const ALBUM_LINK = "https://www.mediafire.com/file/o2vaf1ix7ua3l43/MinorArth-TheMashmaker-volume1.zip/file";
+const ALBUM_ARTIST = "Minor Arth";
+
+const AUDIO_PATH = "https://remix.audio/uploads/tracks/";
+const IMAGE_PATH = "https://remix.audio/uploads/media/";
+//const AUDIO_PATH = "./mp3/";
+//const IMAGE_PATH = "./artwork/";
+const AUDIO_TYPE = ".mp3";
+const IMAGE_TYPE = ".jpg";
+const PLAYER_IMAGE = "./Mashmaker1.jpg";
+
+const isUrl = s => s && s.includes && s.includes("://");
+
+const audioPlayer = document.querySelector("audio#audioPlayer");
+const playlistLinks = document.querySelector("#playlist-links");
+const playlists = document.querySelectorAll("p.playlist-text");
+var playlist = document.querySelector("p.playlist-text");
+var imageList = document.querySelector("p.images");
+var trackList = document.querySelector("p.tracks");
+const playerImage = document.querySelector(".player-image");
+const playerLabel = document.querySelector(".player-label");
+const linkContainer = document.querySelector("div.links");
+const logoLinks = document.querySelectorAll("a.logo");
+const logoImages = document.querySelectorAll(".logo img");
+const repeater = document.querySelector("div.repeater");
+const albumTitle = document.querySelector(".album-title");
+const albumLinks = document.querySelectorAll(".album-link");
+const viewMode = document.querySelector("select#view-mode");
+
+var template;
+var currentItem = null;
+var currentItemIndex = null;
+
+var links = {
+	"Albums": "..",
+	"remix.audio": "https://remix.audio/playlist/2013",
+	"YouTube": "https://www.youtube.com/@MinorArth",
+	"Facebook": "https://www.facebook.com/MinorArthMashups",
+	"AudioBoots": "https://audioboots.org/Albums/Genius"
+};
+
+var items = [
+	{
+		"id": 38209,
+		"file": "1490358168_1630461828_1177745203.mp3",
+		"author": "Minor Arth",
+		"title": "Radiohead & The Districts\nEverything Regrets Its Right Place",
+		"sources": [
+			"The Districts - Cheap Regrets (2020)",
+			"Radiohead - Everything In Its Right Place (2000)"
+		],
+		"image": "731721202_1612277415_29434267.jpg"
+	},
+	{
+		"id": 29822,
+		"file": "603762376_1574176082_1151416963.mp3",
+		"author": "Minor Arth",
+		"title": "John Lennon Cassius Ono Band\nInstant Toop Toop Karma",
+		"sources": [
+			"Cassius - Toop Toop (2006)",
+			"John Lennon & Plastic Ono Band - Instant Karma (1970)"
+		],
+		"image": "284816772_599382899_1720967722.jpg"
+	},
+	{
+		"id": 23459,
+		"file": "29346405_787667296_1696670002.mp3",
+		"author": "Minor Arth",
+		"title": "Madonna, Archive & Joy Division\nRay Of Light | Numb Isolation remix",
+		"sources": [
+			"Joy Division - Isolation (1980)",
+			"Archive - Numb (2002)",
+			"Madonna - Ray Of Light (1998)"
+		],
+		"image": "178928170_1383429789_1868221635.jpg"
+	},
+	{
+		"id": 31855,
+		"file": "1528979317_647567027_1189399584.mp3",
+		"author": "Minor Arth",
+		"title": "Le Tigre & Wet Leg\nWet Deceptacon Dream",
+		"sources": [
+			"Le Tigre - Deceptacon (1999)",
+			"Wet Leg - Wet Dream (2021)"
+		],
+		"image": "906806569_243302690_666385511.jpg"
+	},
+	{
+		"id": 18056,
+		"file": "440126202_751243427_188274085.mp3",
+		"author": "Minor Arth",
+		"title": "U2 & David Bowie\nWith Or Without Heroes",
+		"sources": [
+			"David Bowie - Heroes (1977)",
+			"U2 - With Or Without You (1987)"
+		],
+		"video": "https://youtu.be/4llzRpcHFE0",
+		"image": "693927699_560582344_1020182788.jpg"
+	},
+	{
+		"id": 37202,
+		"file": "1635919363_1391784388_1274229971.mp3",
+		"author": "Minor Arth",
+		"title": "Muse & Lizzo = MUZZO\nAbout Damn Time To Panic",
+		"sources": [
+			"Muse - Panic Station (2012)",
+			"Lizzo - About Damn Time (2022)"
+		],
+		"image": "299804314_2063381995_127778559.jpg"
+	},
+	{
+		"id": 25840,
+		"file": "1412828874_1695785150_47229392.mp3",
+		"author": "Minor Arth",
+		"title": "Happy Oasis Mondays\nKinky Supersonic Afro | Madchester United remix",
+		"sources": [
+			"Happy Mondays - Kinky Afro (1990)",
+			"Oasis - Supersonic (1994)"
+		],
+		"image": "1436690933_1585912070_1702457636.jpg"
+	},
+	{
+		"id": 35944,
+		"file": "1800859680_1718637282_2096555379.mp3",
+		"author": "Minor Arth",
+		"title": "Chromatics / Amy Winehouse / Depeche Mode\nYou Know It's No Good",
+		"video": "https://youtu.be/WKgYMVw8YIo",
+		"sources": [
+			"Chromatics - You're No Good (2019)",
+			"Depeche Mode - It's No Good (1997)",
+			"Amy Winehouse - You Know I'm No Good (2006)"
+		],
+		"image": "963188243_1684664377_1810922753.jpg"
+	},
+	{
+		"id": 33877,
+		"file": "1412695608_1622796642_447282899.mp3",
+		"author": "Minor Arth",
+		"title": "Kate Bush & Mike Oldfield\nRunning Up That North Star",
+		"sources": [
+			"Mike Oldfield - Platinum Finale - North Star (1979)",
+			"Kate Bush - Running Up That Hill (1985)"
+		],
+		"image": "2135287655_1009602573_1694529490.jpg"
+	},
+	{
+		"id": 22765,
+		"file": "2020078869_835874201_887153314.mp3",
+		"author": "Minor Arth",
+		"title": "Everything But Antoni Maiovvi\nMissing From The Sky",
+		"sources": [
+			"Antoni Maiovvi - The Sigh From The Sky Was A Lie Without Doubt (2010)",
+			"Everything But The Girl - Missing (1994)"
+		],
+		"image": "1588068357_262242836_845969269.jpg"
+	},
+	{
+		"id": 38657,
+		"file": "905552972_713420734_614116627.mp3",
+		"author": "Minor Arth",
+		"title": "Tomcraft & Julee Cruise\nInto The Night Light | Twin mix\nHalloween 2022",
+		"sources": [
+			"Tomcraft - Into The Light (2003)",
+			"Julee Cruise - Into The Night (1989)"
+		],
+		"image": "1035664264_1515839882_1206398909.jpg"
+	},
+	{
+		"id": 20416,
+		"file": "1825493367_1644534042_1826265896.mp3",
+		"author": "Minor Arth",
+		"title": "R.E.M. & Curses\nPuttanesca Religion",
+		"sources": [
+			"Curses - Puttanesca (2019)",
+			"R.E.M. - Losing My Religion (1991)"
+		],
+		"image": "856725435_1963062682_81951368.jpg"
+	},
+	{
+		"id": 38466,
+		"file": "1965036700_416909530_1959983059.mp3",
+		"author": "Minor Arth",
+		"title": "PJ Harvey / Kendra Smith / Joy Division\nDown By The Water's Heart And Soul | Halloween 2022",
+		"video": "https://youtu.be/DR5d9AUJuWw",
+		"sources": [
+			"PJ Harvey - Down By The Water (1995)",
+			"Kendra Smith - Heart And Soul (1995 cover)",
+			"Joy Division - Heart And Soul (1980 original)"
+		],
+		"image": "683138273_969142924_1776035552.jpg"
+	},
+	{
+		"id": 22409,
+		"file": "87812575_1648147963_603565814.mp3",
+		"author": "Minor Arth",
+		"title": "Nick Cave & Bertrand Burgalat\nRed Right Hand | Cyclades remix",
+		"video": "https://youtu.be/JIjItf7STOw",
+		"sources": [
+			"Bertrand Burgalat & AS Dragon - Aux Cyclades Electronique (2000)",
+			"Nick Cave & The Bad Seeds - Red Right Hand (1994)"
+		],
+		"image": "96656443_1708642577_526614821.jpg"
+	},
+	{
+		"id": 35309,
+		"file": "1982485505_2101615175_842415416.mp3",
+		"author": "Minor Arth",
+		"title": "The Sisters Of Grace Jokes\nLove Is More A Drug Like Blood\nAudioBoots cover mashups album",
+		"sources": [
+			"Killing Joke - Love Like Blood (1985)",
+			"Grace Jones - Love Is The Drug (1986)",
+			"The Sisters of Mercy - More (1990)"
+		],
+		"image": "852978860_487611578_1195809628.jpg"
+	},
+	{
+		"id": 33470,
+		"file": "875637539_427126916_1827363441.mp3",
+		"author": "Minor Arth",
+		"title": "Jeff Buckley / Leonard Cohen /\nNew Order / Ennio Morricone\nElegia for the Man with a Hallelujah",
+		"sources": [
+			"New Order - Elegia (1985)",
+			"Ennio Morricone - Man with a Harmonica (1968)",
+			"Leonard Cohen - Hallelujah (1984)",
+			"Jeff Buckley - Hallelujah (1994)"
+		],
+		"image": "831121960_1648839432_1027395601.jpg"
+	}
+];
+
+document.title = ALBUM_TITLE;
+albumTitle.innerText = ALBUM_ARTIST ? ALBUM_ARTIST + " - " + ALBUM_TITLE : ALBUM_TITLE;
+albumLinks.forEach(a => a.href = ALBUM_LINK);
+
+logoImages.forEach(i => setImage(i, LOGO_IMAGE));
+logoLinks.forEach(l => l.href = LOGO_LINK);
+displayLinks(linkContainer);
+
+// Audio has ended when this function is executed
+audioPlayer.addEventListener('ended', playNext, false);
+
+if(isUrl(AUDIO_PATH)) {
+	setImage(playerImage, PLAYER_IMAGE);
+	refreshList();
+}
+else {
+	playlists.forEach(makePlaylistLink);
+	setPlaylist(0);
+}
+
+function setImage(img, src) {
+	if(!img || !src) return;
+	return img.src = (isUrl(src) || src.includes("/")) ? src : IMAGE_PATH + src;
+}
+
+function setPlaylist(index) {
+	if(!index) index = 0;
+
+	if(PLAYER_IMAGE) {
+		playerImage.style.display = "inline";
+		setImage(playerImage, PLAYER_IMAGE);
+		hideBrokenImage(playerImage);
+	}
+
+	playlist = playlists[index];
+	items = playlist.innerText.trim().split("\n\n");
+	if(items.length == 1) items = playlist.innerText.trim().split("\n");
+	items = items.map(makePlaylistItem);
+	refreshList();
+}
+
+function hideBrokenImages() {
+	document.querySelectorAll("img.artwork").forEach(hideBrokenImage);
+}
+
+function hideBrokenImage(img) {
+	img.onerror = () => img.style.display = "none";
+}
+
+function shuffle() {
+	items.sort(i => Math.random() - .5);
+	refreshList();
+	return items;
+}
+
+function reverse() {
+	items.sort(i => -1);
+	refreshList();
+	return items;
+}
+
+function reorder() {
+	items.sort( (a,b) => a.n - b.n);
+	refreshList();
+	return items;
+}
+
+function displayLinks(container)
+{
+	var linkTemplate = document.querySelector("a.play-link-template");
+	if(links)
+		for(var key in links) {
+			var link = cloneTemplate(linkTemplate, container);
+			link.innerText = key;
+			link.href = links[key];
+			//link.target = "link";
+		}
+}
+
+function makePlaylistLink(pl, i) {
+	if(!pl || !pl.title) return;
+	var linkTemplate = document.querySelector("a.play-link-template");
+	var link = cloneTemplate(linkTemplate, playlistLinks);
+	link.innerText = pl.title;
+	link.onclick = () => setPlaylist(i);
+}
+
+function refreshList() {
+	repeater.innerHTML = "";
+	template = document.querySelector("div." + viewMode.value);
+	items.forEach(displayPlaylistItem);
+}
+
+function makePlaylistItem(item, i) {
+	var lines = item.split("\n").filter(l => l && l.length);
+	var item = {};
+	item.n = i + 1;
+	item.title = lines.shift().trim();
+	item.image = item.title + ".jpg";
+	item.file = item.title + AUDIO_TYPE;
+	item.sources = lines;
+
+	var dot = item.title.indexOf(" - ");
+	var n = Number(item.title.substring(0, dot));
+	if(n && !isNaN(n)) {
+		item.n = n;
+		item.title = item.title.substring(dot + 3);
+	}
+
+	var parts = item.title.split(" - ");
+	item.songTitle = parts.pop();
+	if(!ALBUM_ARTIST) item.producer = parts.shift();
+	item.artists = parts.join(" / ");
+
+	if(!item.artists && item.songTitle.includes("(")) {
+		var par = item.songTitle.lastIndexOf("(");
+		item.artists = item.songTitle.substring(par+1);
+		item.songTitle = item.songTitle.substring(0, par);
+		var par = item.artists.lastIndexOf(")");
+		item.artists = item.artists.substring(0,par);
+	}
+
+	return item;
+}
+
+function displayPlaylistItem(item, i) {
+	el = cloneTemplate(template, repeater);
+	if(!item.n) item.n = i + 1;
+	if(el.querySelector(".number"))
+		el.querySelector(".number").innerHTML = item.n;
+	el.onclick = () => playFile(i);
+
+	var title = el.querySelector(".title");
+	var separator = viewMode.value == "playlist-template0" ? "  -  " : "\n";
+	var itemTitle = [item.producer, item.artists, item.songTitle || item.title ].filter(s => s).join(separator);
+	if(title) title.innerHTML = itemTitle;
+
+	var img = el.querySelector("img.artwork");
+	if(img && item.image) {
+		hideBrokenImage(img);
+		img.title = itemTitle;
+		setImage(img, item.image);
+	}
+
+	if(item.sources && el.querySelector(".sources"))
+		item.sources.forEach( (s, j) =>	el.querySelector(".sources").innerHTML += isUrl(s)? '\n<a onclick="stopPropagation(event)" target="video" href="' + s + '">VIDEO</a>' : (j ? "\n+ " : "= ") + s);
+
+
+	if(item.video && title)
+		title.innerHTML += '\n<a onclick="stopPropagation(event)" target="video" href="' + item.video + '">VIDEO</a>';
+
+}
+
+function cloneTemplate(node, parent)
+{
+	var clone = node.cloneNode();
+	clone.innerHTML = node.innerHTML;
+	if(parent) parent.append(clone);
+	return clone;
+}
+
+function playFile(item)
+{
+	if(typeof item == "number") {
+		currentItemIndex = item;
+		item = items[item];
+	}
+	if(!item) return;
+
+	currentItem = item;
+	playerImage.style.display = "inline";
+	setImage(playerImage, item.image);
+	playerLabel.innerText = playerImage.title = [item.producer, item.artists,  item.songTitle || item.title].filter(s => s).join("\n");
+	var subdir = playlist.title ? subdir = playlist.title + "/" : "";
+	audioPlayer.src = AUDIO_PATH + subdir + item.file;
+	audioPlayer.controls = true;
+	audioPlayer.play();
+	return currentItem;
+}
+
+function playNext(evt) {
+	console.log("playNext", evt);
+	if(currentItemIndex === null) currentItemIndex = -1;
+	return playFile(++currentItemIndex % items.length || 0);
+}
+
+function playPrevious() {
+	if(currentItemIndex === null) currentItemIndex = 0;
+	var previousIndex = (--currentItemIndex + items.length) % items.length || 0;
+	return playFile(previousIndex);
+}
+
+function stopPropagation(event) {
+	event.stopPropagation();
+}
+</script>
+
+</body>
+</html>
