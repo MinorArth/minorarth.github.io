@@ -283,7 +283,7 @@ var items = {
 		{
 			"id": 39841,
 			"file": "1120974529_1140256527_908575332.mp3",
-			"localFile": "Steff St Moore - Gorillaz - Prince - Controversy People.mp3",
+			"localFile": "Steff St Moore - Gorillaz - Prince - Controversy People",
 			"sources": [
 				"Gorillaz - People",
 				"Prince - Controversy"
