@@ -3,10 +3,11 @@
 <head>
 	<title>DEMON DÉTOURNEMENT</title>
 	<meta http-equiv="Content-Type"  content="text/html; charset=utf-8"/>
+	<meta property="og:site_name"    content="Minor Arth mashups"/>
 	<meta property="og:title"        content="DEMON DÉTOURNEMENT"/>
 	<meta property="og:description"  content="Gorillaz - Demon Days | The 20th Anniversary Mashup Album by Steff's Gorillaz Mashup Project"/>
-	<meta property="og:url"          content="https://araynaud.github.io/albums/demondetournement"/>
-	<meta property="og:image"        content="https://araynaud.github.io/albums/demondetournement/DemonDetournement.jpg"/>
+	<meta property="og:url"          content="https://minorarth.github.io/demondetournement"/>
+	<meta property="og:image"        content="https://minorarth.github.io/demondetournement/DemonDetournement.jpg"/>
 	<meta property="og:image:width"  content="720"/>
 	<meta property="og:image:height" content="720" />
 	<meta property="og:image:type"   content="image/jpeg"/>
@@ -20,8 +21,8 @@
 
 		h1 { margin-bottom: 8px; }
 		a, .number, .duration { color: #e7d1ac; }
-		.duration {padding-top: 4px; padding-right: 4px;}
-		a:active{  color: white; }
+		.padding-tr {padding-top: 4px; padding-right: 4px;}
+		a:active{  color: white; }		
 		p.sources { color: #DDD; }
 
 		div.playlist-template {
@@ -43,7 +44,7 @@
 
 	.align-left  { text-align: left; }
 	.align-right { text-align: right; }
-	.float-right { float: right; text-align: right; }
+	.float-right, img.icon { float: right; text-align: right; }
 
 	img.player-image[src] { max-width: 720px; border: solid 8px white;  }
 	div.toolbar audio {	width: 600px; height: 24px; }
@@ -91,7 +92,7 @@
 		display: inline-block;
 	}
 
-	div.playlist-template img[src] {
+	div.playlist-template img.artwork[src] {
 		height: .7in;
 		vertical-align: middle;
 	}
@@ -112,18 +113,18 @@
 		margin: 20px;
 	}
 
-	div.image-template img[src] {
+	div.image-template img.artwork[src] {
 		width: 100%;
 		max-width: 900px;
 		border: solid 4px white;
 	}
 
-	div.tile-template img[src] {
+	div.tile-template img.artwork[src] {
 		width: 3in;
 		border: solid 4px white;
 	}
 
-	div.small-image-template img[src] {
+	div.small-image-template img.artwork[src] {
 		width: 2in;
 		transform: rotate(-5deg);
 	}
@@ -133,7 +134,7 @@
 		display: inline-block;
 		vertical-align: top;
 	}
-
+	
 	.print-only { display: none; }
 }
 	.column.column-2 {
@@ -171,11 +172,10 @@
 	<a class="logo print-only"><img /></a>
 <div class="toolbar no-print column">
 	<a class="logo"><img /></a><br/>
-	<a target="download" class="album-link">DOWNLOAD ALBUM</a> | 27 tracks
+	<a target="download" class="album-link">DOWNLOAD ALBUM</a>
 	<br/><br/>
 	<img class="player-image"/>
-	<br/>
-	<br/>
+	<br/><br/>
 	<button onclick="playPrevious()" title="Previous track"> &lt;&lt; </button>
 	<audio id="audioPlayer" controls></audio>
 	<button onclick="playNext()" title="Next track"> &gt;&gt; </button>
@@ -238,20 +238,29 @@
 
 	<div class="tile-template">
 		<img class="artwork"/>
-		<i class="duration float-right"></i>
+		<div class="float-right padding-tr">
+			<a class="remix-audio" target="video" onclick="stopPropagation(event)"><img class="icon no-print" src="artwork/remixaudio.png"/></a>
+			<br/><i class="duration"></i>
+		</div>
 		<p><i class="number"></i>. <b class="title"></b></p>
 		<p class="sources"></p>
 	</div>
 
 	<div class="playlist-template column">
 		<img class="artwork"/>
-		<i class="duration float-right"></i>
+		<div class="float-right padding-tr">
+			<a class="remix-audio" target="video" onclick="stopPropagation(event)"><img class="icon no-print" src="artwork/remixaudio.png"/></a>
+			<br/><i class="duration"></i>
+		</div>
 		<div class="item-text pre"><i class="number"></i>. <b class="title"></b></div>
 	</div>
 
 	<div class="playlist-template details column">
 		<img class="artwork"/>
-		<i class="duration float-right"></i>
+		<div class="float-right padding-tr">
+			<a class="remix-audio" target="video" onclick="stopPropagation(event)"><img class="icon no-print" src="artwork/remixaudio.png"/></a>
+			<br/><i class="duration"></i>
+		</div>
 		<div class="item-text pre"><i class="number"></i>. <b class="title"></b>
 		<p class="sources"></p></div>
 	</div>
@@ -259,22 +268,433 @@
 </div>
 
 <script>
-const LOGO_IMAGE = "./SteffsGorillazMashupProject.png";
+var items = [
+	{
+		"title": "Album",
+		"type": "category"
+	},
+	{
+		"n": 1,
+		"title": "Minor Arth - Gorillaz - Prince - Vincent Price - Radiohead - Intro",
+		"image": "Minor Arth - Gorillaz - Prince - Vincent Price - Radiohead - Intro.jpg",
+		"localFile": "Minor Arth - Gorillaz - Prince - Vincent Price - Radiohead - Intro.mp3",
+		"sources": [
+			"Gorillaz - Intro",
+			"Prince - Let's Go Crazy",
+			"Vincent Price - Thriller",
+			"Radiohead - Fitter Happier"
+		],
+		"songTitle": "Intro",
+		"producer": "Minor Arth",
+		"artists": "Gorillaz / Prince / Vincent Price / Radiohead"
+	},
+	{
+		"n": 2,
+		"title": "Steff St Moore & Minor Arth - Gorillaz - Radiohead - Last Lucky Souls",
+		"image": "Steff St Moore & Minor Arth - Gorillaz - Radiohead - Last Lucky Souls.jpg",
+		"localFile": "Steff St Moore & Minor Arth - Gorillaz - Radiohead - Last Lucky Souls.mp3",
+		"sources": [
+			"Gorillaz - Last Living Souls",
+			"Radiohead - Lucky"
+		],
+		"songTitle": "Last Lucky Souls",
+		"producer": "Steff St Moore & Minor Arth",
+		"artists": "Gorillaz / Radiohead"
+	},
+	{
+		"n": 3,
+		"id": 31701,
+		"file": "331654723_1250220683_263260881.mp3",
+		"title": "DoM - Gorillaz - The Clash - Kids With Guns In Brixton",
+		"image": "DoM - Gorillaz - The Clash - Kids With Guns In Brixton.jpg",
+		"localFile": "DoM - Gorillaz - The Clash - Kids With Guns In Brixton.mp3",
+		"sources": [
+			"Gorillaz - Kids With Guns",
+			"The Clash - Guns Of Brixton",
+			"https://youtu.be/lJ_1DWvw-jU"
+		],
+		"songTitle": "Kids With Guns In Brixton",
+		"producer": "DoM",
+		"artists": "Gorillaz / The Clash",
+		"video": "https://youtu.be/lJ_1DWvw-jU"
+	},
+	{
+		"n": 4,
+		"title": "Steff St Moore - Gorillaz - Lady Gaga - O Green Telephone World",
+		"image": "Steff St Moore - Gorillaz - Lady Gaga - O Green Telephone World.jpg",
+		"localFile": "Steff St Moore - Gorillaz - Lady Gaga - O Green Telephone World.mp3",
+		"sources": [
+			"Gorillaz - O Green World",
+			"Lady Gaga - Telephone"
+		],
+		"songTitle": "O Green Telephone World",
+		"producer": "Steff St Moore",
+		"artists": "Gorillaz / Lady Gaga"
+	},
+	{
+		"n": 5,
+		"id": 35483,
+		"file": "259315763_117280260_1864047493.mp3",
+		"title": "Minor Arth - Gorillaz - Grandmaster Flash & The Furious Five - The Message To Dirty Harry",
+		"image": "Minor Arth - Gorillaz - Grandmaster Flash & The Furious Five - The Message To Dirty Harry.jpg",
+		"localFile": "Minor Arth - Gorillaz - Grandmaster Flash & The Furious Five - The Message To Dirty Harry.mp3",
+		"sources": [
+			"Gorillaz - Dirty Harry",
+			"Grandmaster Flash & The Furious Five - The Message"
+		],
+		"songTitle": "The Message To Dirty Harry",
+		"producer": "Minor Arth",
+		"artists": "Gorillaz / Grandmaster Flash & The Furious Five"
+	},
+	{
+		"n": 6,
+		"title": "Steff St Moore - Gorillaz - Michael Jackson - Feel Good Off The Wall",
+		"image": "Steff St Moore - Gorillaz - Michael Jackson - Feel Good Off The Wall.jpg",
+		"localFile": "Steff St Moore - Gorillaz - Michael Jackson - Feel Good Off The Wall.mp3",
+		"sources": [
+			"Gorillaz - Feel Good, Inc.",
+			"Michael Jackson - Off The Wall"
+		],
+		"songTitle": "Feel Good Off The Wall",
+		"producer": "Steff St Moore",
+		"artists": "Gorillaz / Michael Jackson"
+	},
+	{
+		"n": 7,
+		"title": "Minor Arth - Gorillaz - The Cure - Lovesong Del Manana",
+		"image": "Minor Arth - Gorillaz - The Cure - Lovesong Del Manana.jpg",
+		"localFile": "Minor Arth - Gorillaz - The Cure - Lovesong Del Manana.mp3",
+		"sources": [
+			"Gorillaz - El Mañana",
+			"The Cure - Lovesong"
+		],
+		"songTitle": "Lovesong Del Mañana",
+		"producer": "Minor Arth",
+		"artists": "Gorillaz / The Cure"
+	},
+	{
+		"n": 8,
+		"id": 30576,
+		"file": "1763934030_1961094580_971784066.mp3",
+		"title": "Minor Arth - Gorillaz - Dave Gahan - Iggy Pop - Grace Jones - Use Every Planet For Nightclubbing",
+		"image": "Minor Arth - Gorillaz - Dave Gahan - Iggy Pop - Grace Jones - Use Every Planet For Nightclubbing.jpg",
+		"localFile": "Minor Arth - Gorillaz - Dave Gahan - Iggy Pop - Grace Jones - Use Every Planet For Nightclubbing.mp3",
+		"sources": [
+			"Gorillaz - Every Planet We Reach Is Dead",
+			"Iggy Pop & Grace Jones - Nightclubbing",
+			"Dave Gahan - Use You",
+			"Grace Jones - Use Me",
+			"https://youtu.be/dtN6gUHhtlo"
+		],
+		"songTitle": "Use Every Planet For Nightclubbing",
+		"producer": "Minor Arth",
+		"artists": "Gorillaz / Dave Gahan / Iggy Pop / Grace Jones",
+		"video": "https://youtu.be/dtN6gUHhtlo"
+	},
+	{
+		"n": 9,
+		"title": "Steff St Moore - Gorillaz - D'Angelo - MF Has Come",
+		"image": "Steff St Moore - Gorillaz - D'Angelo - MF Has Come.jpg",
+		"localFile": "Steff St Moore - Gorillaz - D'Angelo - MF Has Come.mp3",
+		"sources": [
+			"Gorillaz - November Has Come",
+			"D'Angelo - Sh*t, Damn, Motherf***er"
+		],
+		"songTitle": "MF Has Come",
+		"producer": "Steff St Moore",
+		"artists": "Gorillaz / D'Angelo"
+	},
+	{
+		"n": 10,
+		"id": 40383,
+		"file": "146643899_781326685_827781983.mp3",
+		"title": "Steff St Moore - Gorillaz - Crystal Waters - Gypsy Woman All Alone",
+		"image": "Steff St Moore - Gorillaz - Crystal Waters - Gypsy Woman All Alone.jpg",
+		"localFile": "Steff St Moore - Gorillaz - Crystal Waters - Gypsy Woman All Alone.mp3",
+		"sources": [
+			"Gorillaz - All Alone",
+			"Crystal Waters - Gypsy Woman"
+		],
+		"songTitle": "Gypsy Woman All Alone",
+		"producer": "Steff St Moore",
+		"artists": "Gorillaz / Crystal Waters"
+	},
+	{
+		"n": 11,
+		"title": "Steff St Moore - Gorillaz - Bruce Springsteen - Born To Run In The White Light",
+		"image": "Steff St Moore - Gorillaz - Bruce Springsteen - Born To Run In The White Light.jpg",
+		"localFile": "Steff St Moore - Gorillaz - Bruce Springsteen - Born To Run In The White Light.mp3",
+		"sources": [
+			"Gorillaz - White Light",
+			"Bruce Springsteen - Born To Run"
+		],
+		"songTitle": "Born To Run In The White Light",
+		"producer": "Steff St Moore",
+		"artists": "Gorillaz / Bruce Springsteen"
+	},
+	{
+		"n": 12,
+		"id": 35582,
+		"file": "1503928746_1935336146_1418443366.mp3",
+		"title": "Steff St Moore - Gorillaz - Amy Winehouse - Dare To Go Back To Black",
+		"image": "Steff St Moore - Gorillaz - Amy Winehouse - Dare To Go Back To Black.jpg",
+		"localFile": "Steff St Moore - Gorillaz - Amy Winehouse - Dare To Go Back To Black.mp3",
+		"sources": [
+			"Gorillaz - DARE",
+			"Amy Winehouse - Back To Black"
+		],
+		"songTitle": "Dare To Go Back To Black",
+		"producer": "Steff St Moore",
+		"artists": "Gorillaz / Amy Winehouse"
+	},
+	{
+		"n": 13,
+		"id": 40201,
+		"file": "1340319017_242182282_241613358.mp3",
+		"title": "Steff St Moore - Gorillaz - Ultra Nate - Found A Cure Out Of The Monkey's Head",
+		"image": "Steff St Moore - Gorillaz - Ultra Nate - Found A Cure Out Of The Monkey's Head.jpg",
+		"localFile": "Steff St Moore - Gorillaz - Ultra Nate - Found A Cure Out Of The Monkey's Head.mp3",
+		"sources": [
+			"Gorillaz - Fire Coming Out of a Monkey's Head",
+			"Ultra Naté - Found A Cure"
+		],
+		"songTitle": "Found A Cure Out Of The Monkey's Head",
+		"producer": "Steff St Moore",
+		"artists": "Gorillaz / Ultra Naté"
+	},
+	{
+		"n": 14,
+		"title": "Minor Arth - Bjork - Massive Attack - Gorillaz - Karma Days Lost On Venus",
+		"image": "Minor Arth - Bjork - Massive Attack - Gorillaz - Karma Days Lost On Venus.jpg",
+		"localFile": "Minor Arth - Bjork - Massive Attack - Gorillaz - Karma Days Lost On Venus.mp3",
+		"sources": [
+			"Björk - Venus As A Boy",
+			"Massive Attack - Karmacoma",
+			"Gorillaz - Don't Get Lost in Heaven / Demon Days"
+		],
+		"songTitle": "Karma Days Lost On Venus",
+		"producer": "Minor Arth",
+		"artists": "Bjork / Massive Attack / Gorillaz"
+	},
+	{
+		"title": "Bonus",
+		"type": "category",
+		"n": 16
+	},
+	{
+		"n": 1,
+		"title": "Steff St Moore - Gorillaz - Soul II Soul - Back To Life -- Dirty Harry mix",
+		"image": "Steff St Moore - Gorillaz - Soul II Soul - Back To Life -- Dirty Harry mix.jpg",
+		"localFile": "Steff St Moore - Gorillaz - Soul II Soul - Back To Life -- Dirty Harry mix.mp3",
+		"sources": [
+			"Gorillaz - Dirty Harry",
+			"Soul II Soul - Back To Life"
+		],
+		"songTitle": "Back To Life | Dirty Harry mix",
+		"producer": "Steff St Moore",
+		"artists": "Gorillaz / Soul II Soul"
+	},
+	{
+		"n": 2,
+		"id": 32429,
+		"file": "809728014_1051900646_1255851805.mp3",
+		"title": "Minor Arth - Gorillaz - The Do - Archive - Kids With Fear On Their Shoulders",
+		"image": "Minor Arth - Gorillaz - The Do - Archive - Kids With Fear On Their Shoulders.jpg",
+		"localFile": "Minor Arth - Gorillaz - The Do - Archive - Kids With Fear On Their Shoulders.mp3",
+		"sources": [
+			"Gorillaz - Kids With Guns",
+			"The Do - On My Shoulders",
+			"Archive - Fear There Everywhere"
+		],
+		"songTitle": "Kids With Fear On Their Shoulders",
+		"producer": "Minor Arth",
+		"artists": "Gorillaz / The Do / Archive"
+	},
+	{
+		"n": 3,
+		"id": 37709,
+		"file": "10113748_1637046022_355789952.mp3",
+		"title": "DoM - Neneh Cherry - Gorillaz - Feel Good Woman",
+		"image": "DoM - Neneh Cherry - Gorillaz - Feel Good Woman.jpg",
+		"localFile": "DoM - Neneh Cherry - Gorillaz - Feel Good Woman.mp3",
+		"sources": [
+			"Neneh Cherry - Woman",
+			"Gorillaz - Feel Good, Inc.",
+			"https://youtu.be/xSSu5UOTOgw"
+		],
+		"songTitle": "Feel Good Woman",
+		"producer": "DoM",
+		"artists": "Neneh Cherry / Gorillaz",
+		"video": "https://youtu.be/xSSu5UOTOgw"
+	},
+	{
+		"n": 4,
+		"id": 63064,
+		"file": "1207726596_1413955144_711940888.mp3",
+		"title": "Minor Arth - Gorillaz - The Kinks - Feel Good On A Sunny Afternoon",
+		"image": "Minor Arth - Gorillaz - The Kinks - Feel Good On A Sunny Afternoon.jpg",
+		"localFile": "Minor Arth - Gorillaz - The Kinks - Feel Good On A Sunny Afternoon.mp3",
+		"sources": [
+			"Gorillaz - Feel Good, Inc.",
+			"The Kinks - Sunny Afternoon"
+		],
+		"songTitle": "Feel Good On A Sunny Afternoon",
+		"producer": "Minor Arth",
+		"artists": "Gorillaz / The Kinks"
+	},
+	{
+		"n": 5,
+		"id": 52176,
+		"file": "1848257567_1854779707_650347842.mp3",
+		"title": "DoM - Dolboeb - Gorillaz - Feel Good inc -- Kyoto mix",
+		"image": "DoM - Dolboeb - Gorillaz - Feel Good inc -- Kyoto mix.jpg",
+		"localFile": "DoM - Dolboeb - Gorillaz - Feel Good inc -- Kyoto mix.mp3",
+		"sources": [
+			"Dolboeb - Feel Good, Inc.",
+			"Gorillaz - Feel Good, Inc."
+		],
+		"songTitle": "Feel Good inc | Kyoto mix",
+		"producer": "DoM",
+		"artists": "Dolboeb / Gorillaz"
+	},
+	{
+		"n": 6,
+		"id": 51955,
+		"file": "583847910_1336926808_314685960.mp3",
+		"title": "DoM - Roxy Music - Gorillaz - Feel You inc",
+		"image": "DoM - Roxy Music - Gorillaz - Feel You inc.jpg",
+		"localFile": "DoM - Roxy Music - Gorillaz - Feel You inc.mp3",
+		"sources": [
+			"Roxy Music - Editions of you",
+			"Gorillaz - Feel Good, Inc."
+		],
+		"songTitle": "Feel You inc",
+		"producer": "DoM",
+		"artists": "Roxy Music / Gorillaz"
+	},
+	{
+		"n": 7,
+		"id": 65742,
+		"file": "103422468_1270342973_624900480.mp3",
+		"title": "Minor Arth & DoM - Gorillaz - Depeche Mode - Feel Good Dream",
+		"image": "Minor Arth & DoM - Gorillaz - Depeche Mode - Feel Good Dream.jpg",
+		"localFile": "Minor Arth & DoM - Gorillaz - Depeche Mode - Feel Good Dream.mp3",
+		"sources": [
+			"Gorillaz - Feel Good, Inc.",
+			"Depeche Mode - Dream On"
+		],
+		"songTitle": "Feel Good Dream",
+		"producer": "Minor Arth & DoM",
+		"artists": "Gorillaz / Depeche Mode"
+	},
+	{
+		"n": 8,
+		"id": 28352,
+		"file": "1504794660_2049043336_1255831903.mp3",
+		"title": "Minor Arth - Manu Chao - Gorillaz - Feel Bongo Bong inc",
+		"image": "Minor Arth - Manu Chao - Gorillaz - Feel Bongo Bong inc.jpg",
+		"localFile": "Minor Arth - Manu Chao - Gorillaz - Feel Bongo Bong inc.mp3",
+		"sources": [
+			"Manu Chao - Bongo Bong",
+			"Gorillaz - Feel Good, Inc."
+		],
+		"songTitle": "Feel Bongo Bong inc",
+		"producer": "Minor Arth",
+		"artists": "Manu Chao / Gorillaz"
+	},
+	{
+		"n": 9,
+		"title": "Steff St Moore - Gorillaz - Will Downing - Michelle Manana",
+		"image": "Steff St Moore - Gorillaz - Will Downing - Michelle Manana.jpg",
+		"localFile": "Steff St Moore - Gorillaz - Will Downing - Michelle Manana.mp3",
+		"sources": [
+			"Gorillaz - El Mañana",
+			"Will Downing - Michelle"
+		],
+		"songTitle": "Michelle Mañana",
+		"producer": "Steff St Moore",
+		"artists": "Gorillaz / Will Downing"
+	},
+	{
+		"n": 10,
+		"title": "Minor Arth - Doris Days - Zero 7 - Gorillaz - To Ulrike Manana",
+		"image": "Minor Arth - Doris Days - Zero 7 - Gorillaz - To Ulrike Manana.jpg",
+		"localFile": "Minor Arth - Doris Days - Zero 7 - Gorillaz - To Ulrike Manana.mp3",
+		"sources": [
+			"Doris Days - To Ulrike M. | Zero 7 remix",
+			"Gorillaz - El Mañana"
+		],
+		"songTitle": "To Ulrike Manana",
+		"producer": "Minor Arth",
+		"artists": "Doris Days / Zero 7 / Gorillaz"
+	},
+	{
+		"n": 11,
+		"id": 39841,
+		"file": "1120974529_1140256527_908575332.mp3",
+		"title": "Steff St Moore - Gorillaz - Prince - Controversy People",
+		"image": "Steff St Moore - Gorillaz - Prince - Controversy People.jpg",
+		"localFile": "Steff St Moore - Gorillaz - Prince - Controversy People.mp3",
+		"sources": [
+			"Gorillaz - People",
+			"Prince - Controversy"
+		],
+		"songTitle": "Controversy People",
+		"producer": "Steff St Moore",
+		"artists": "Gorillaz / Prince"
+	},
+	{
+		"n": 12,
+		"id": 28074,
+		"file": "231995035_1942416277_998251740.mp3",
+		"title": "DoM - Gorillaz - Tears For Fears - Dare To Shout",
+		"image": "DoM - Gorillaz - Tears For Fears - Dare To Shout.jpg",
+		"localFile": "DoM - Gorillaz - Tears For Fears - Dare To Shout.mp3",
+		"sources": [
+			"Gorillaz - DARE",
+			"Tears For Fears - Shout"
+		],
+		"songTitle": "Dare To Shout",
+		"producer": "DoM",
+		"artists": "Gorillaz / Tears For Fears"
+	},
+	{
+		"n": 13,
+		"title": "Steff St Moore - Gorillaz - Prince - Don't Get Lost in Automatic Heaven",
+		"image": "Steff St Moore - Gorillaz - Prince - Don't Get Lost in Automatic Heaven.jpg",
+		"localFile": "Steff St Moore - Gorillaz - Prince - Don't Get Lost in Automatic Heaven.mp3",
+		"sources": [
+			"Gorillaz - Don't Get Lost in Heaven / Demon Days",
+			"Prince - Automatic / Let's Go Crazy"
+		],
+		"songTitle": "Don't Get Lost in Automatic Heaven",
+		"producer": "Steff St Moore",
+		"artists": "Gorillaz / Prince"
+	}
+];
+
+const metas = Array.from(document.getElementsByTagName('meta'));
+const meta = {};
+metas.forEach(m => { if(m.attributes.property) meta[m.attributes.property.value.replace(/:/g,"_") ] = m.attributes.content.value });
+
+const LOGO_IMAGE = "./artwork/SteffsGorillazMashupProject.png";
 const LOGO_TITLE = "Steff's Gorillaz Mashup Project";
 const LOGO_LINK = "";
 
-const ALBUM_TITLE = "DEMON DÉTOURNEMENT";
-const ALBUM_DESCRIPTION = "<b>Demon Days</b> | <b>The 20th Anniversary Mashup Album</b>";
+const ALBUM_TITLE = meta.og_title;
+const ALBUM_DESCRIPTION = meta.og_description;
 const ALBUM_LINK = "https://www.mediafire.com/file/04x0peh45n0es2u/Steffs_Gorillaz_Mashup_Project-Demon_Detournement.zip/file";
-
 const ALBUM_ARTIST = "";
+const TRACK_LINK_PATH = "https://remix.audio/track/";
 const AUDIO_PATH = "https://remix.audio/uploads/tracks/";
-const IMAGE_PATH = "https://remix.audio/uploads/media/";
+//const IMAGE_PATH = "https://remix.audio/uploads/media/";
+const IMAGE_PATH = "http://minorart.free.fr/mashup/demondetournement/artwork/";
+
 //const AUDIO_PATH = "";
 //const IMAGE_PATH = "./artwork/";
 const AUDIO_TYPE = ".mp3";
 const IMAGE_TYPE = ".jpg";
-const PLAYER_IMAGE = "./DemonDetournement.jpg";
+const PLAYER_IMAGE = "./artwork/DemonDetournement.jpg";
 
 const isUrl = s => s && s.includes && s.includes("://");
 
@@ -304,156 +724,15 @@ var currentItem = null;
 var currentItemElement = null;
 var currentItemIndex = null;
 
-var links = {
+var links = {	
 	"2025": "#",
+	"Albums": "..",
 	"Mashup Lovers": "https://www.facebook.com/groups/mashuplovers",
 	"Steff St. Moore": "https://remix.audio/profile/SteffStMoore",
 	"DoM": "https://remix.audio/profile/DoM",
 	"Minor Arth": "https://www.youtube.com/@MinorArth",
 	"remix.audio": "https://remix.audio/playlist/2953",
-	"Albums": "..",
 };
-
-var items = [
-	{
-		"id": 35582,
-		"file": "1503928746_1935336146_1418443366.mp3",
-		"author": "Steff St. Moore",
-		"artists": "Gorillaz / Amy Winehouse",
-		"title": "Dare To Go Back To Black",
-		"sources": [ "Gorillaz - DARE", "Amy Winehouse - Back To Black" ],
-		"image": "133587018_669938467_210280669.jpg"
-	},
-	{
-		"id": 31701,
-		"file": "331654723_1250220683_263260881.mp3",
-		"author": "DoM",
-		"artists": "Gorillaz / The Clash",
-		"title": "Kids With Guns In Brixton",
-		"sources": [ "Gorillaz - Kids With Guns", "The Clash - Guns Of Brixton" ],
-		"video": "https://youtu.be/lJ_1DWvw-jU",
-		"image": "782425147_2117447028_33253789.png"
-	},
-	{
-		"id": 35483,
-		"file": "259315763_117280260_1864047493.mp3",
-		"author": "Minor Arth",
-		"artists": "Gorillaz / Grandmaster Flash & The Furious Five",
-		"title": "The Message To Dirty Harry",
-		"sources": [ "Gorillaz - Dirty Harry", "Grandmaster Flash & The Furious Five - The Message" ],
-		"image": "114991946_154100845_1646486748.jpg"
-	},
-	{
-		"id": 37709,
-		"file": "10113748_1637046022_355789952.mp3",
-		"author": "DoM",
-		"artists": "Gorillaz / Neneh Cherry",
-		"title": "Feel Good Woman",
-		"sources": [ "Neneh Cherry - Woman", "Gorillaz - Feel Good, Inc." ],
-		"video": "https://youtu.be/xSSu5UOTOgw",
-		"image": "994043074_1403821893_1764573139.png"
-	},
-	{
-		"id": 63064,
-		"file": "1207726596_1413955144_711940888.mp3",
-		"author": "Minor Arth",
-		"artists": "Gorillaz / The Kinks",
-		"title": "Feel Good On A Sunny Afternoon",
-		"sources": [ "Neneh Cherry - Woman", "Gorillaz - Feel Good, Inc." ],
-		"image": "1549647980_1946119069_1358981353.jpg"
-	},
-	{
-		"id": 30576,
-		"file": "1763934030_1961094580_971784066.mp3",
-		"author": "Minor Arth",
-		"artists": "Gorillaz / Dave Gahan / Iggy Pop / Grace Jones",
-		"title": "Use Every Planet For Nightclubbing",
-		"video": "https://youtu.be/dtN6gUHhtlo",
-		"sources": [ "Gorillaz - Every Planet We Reach Is Dead", "Iggy Pop & Grace Jones - Nightclubbing", "Dave Gahan - Use You",	"Grace Jones - Use Me" ],
-		"image": "2025876028_66837774_151307100.jpg"
-	},
-	{
-		"id": 40383,
-		"file": "146643899_781326685_827781983.mp3",
-		"author": "Steff St. Moore",
-		"artists": "Gorillaz / Crystal Waters",
-		"title": "Gypsy Woman All Alone",
-		"sources": [ "Gorillaz - All Alone", "Crystal Waters - Gypsy Woman" ],
-		"image": "202151294_1386090999_1770820191.jpg"
-	},
-	{
-		"id": 40201,
-		"file": "1340319017_242182282_241613358.mp3",
-		"author": "Steff St. Moore",
-		"artists": "Gorillaz / Ultra Naté",
-		"title": "Found A Cure Out Of The Monkey's Head",
-		"sources": [ "Gorillaz - Fire Coming Out of a Monkey's Head", "Ultra Naté - Found A Cure" ],
-		"image": "298891393_53353507_1973304769.jpg"
-	},
-	{
-		"id": 65742,
-		"file": "103422468_1270342973_624900480.mp3",
-		"author": "DoM",
-		"artists": "Gorillaz / Depeche Mode",
-		"title": "Feel Good Dream",
-		"sources": [ "Gorillaz - Feel Good, Inc.", "Depeche Mode - Dream On" ],
-		"image": "1929680538_1969248603_1822645784.png"
-	},
-	{
-		"id": 28074,
-		"file": "231995035_1942416277_998251740.mp3",
-		"author": "DoM",
-		"artists": "Gorillaz / Tears For Fears",
-		"title": "Dare To Shout",
-		"sources": [ "Gorillaz - DARE", "Tears For Fears - Shout" ],
-		"image": "2135842502_1558730282_1595120159.png"
-	},
-	{
-		"id": 28352,
-		"file": "1504794660_2049043336_1255831903.mp3",
-		"author": "Minor Arth",
-		"artists": "Manu Chao / Gorillaz / De La Soul",
-		"title": "Feel Bongo Bong, inc.",
-		"sources": [ "Manu Chao - Bongo Bong", "Gorillaz - Feel Good, Inc." ],
-		"image": "31400758_441426924_977964779.jpg"
-	},
-	{
-		"id": 32429,
-		"file": "809728014_1051900646_1255851805.mp3",
-		"author": "Minor Arth",
-		"artists": "Gorillaz / The Do / Archive",
-		"title": "Kids With Fear On Their Shoulders",
-		"sources": [ "Gorillaz - Kids With Guns", "The Do - On My Shoulders", "Archive - Fear There & Everywhere" ],
-		"image": "2106684471_1715066127_591642973.jpg"
-	},
-	{
-		"id": 51955,
-		"file": "583847910_1336926808_314685960.mp3",
-		"author": "DoM",
-		"artists": "Roxy Music / Gorillaz / The Clash",
-		"title": "Feel You, inc.",
-		"sources": [ "Roxy Music - Editions Of You", "Gorillaz - Feel Good, Inc." ],
-		"image": "1661907979_1452588314_845696833.png"
-	},
-	{
-		"id": 39841,
-		"file": "1120974529_1140256527_908575332.mp3",
-		"author": "Steff St. Moore",
-		"artists": "Gorillaz / Prince",
-		"title": "Controversy People",
-		"sources": [ "Gorillaz - People", "Prince - Controversy" ],
-		"image": "1337415832_1713721435_619709184.jpg"
-	},
-	{
-		"id": 52176,
-		"file": "1848257567_1854779707_650347842.mp3",
-		"author": "DoM",
-		"artists": "Dolboeb / Gorillaz",
-		"title": "Feel Good inc | Kyoto mix",
-		"sources": [ "Dolboeb - Feel Good, Inc.", "Gorillaz - Feel Good, Inc."],
-		"image": "588511742_125518055_774190998.png"
-	}
-];
 
 var allPlaylists = {};
 allPlaylists.all = items;
@@ -464,8 +743,13 @@ albumTitle.innerText = ALBUM_ARTIST ? ALBUM_ARTIST + " - " + ALBUM_TITLE : ALBUM
 albumDescription.innerHTML = ALBUM_DESCRIPTION;
 albumLinks.forEach(a => a.href = ALBUM_LINK);
 
-logoImages.forEach(i => setImage(i, LOGO_IMAGE));
-logoLinks.forEach(l => l.href = LOGO_LINK);
+if(!LOGO_IMAGE)
+	logoLinks.forEach(l => l.remove())
+else {
+	logoImages.forEach(i => setImage(i, LOGO_IMAGE));
+	logoLinks.forEach(l => l.href = LOGO_LINK);
+}
+
 displayLinks(linkContainer);
 
 // Audio has ended when this function is executed
@@ -474,24 +758,37 @@ audioPlayer.addEventListener('ended', playNext, false);
 audioPlayer.addEventListener('loadedmetadata', () => {
 	if(currentItem.duration) return;
 
-	currentItem.duration  = audioPlayer.duration;
+    currentItem.duration  = audioPlayer.duration;
 
-	if(currentItem.duration && currentItemElement && currentItemElement.querySelector(".duration"))
+	if(currentItem.duration && currentItemElement && currentItemElement.querySelector(".duration"))	
 		currentItemElement.querySelector(".duration").innerHTML = formatTime(currentItem.duration);
-
-	console.log("loadedmetadata", currentItem.n, currentItem.duration);
+		
+	console.log("audioPlayer loadedmetadata", currentItem.n, currentItem.duration);
 });
 
 hiddenPlayer.addEventListener('loadedmetadata', () => {
-	if(!currentItem.duration)
-		currentItem.duration  = hiddenPlayer.duration;
+	if(currentItem.duration) return;
+
+	currentItem.duration  = hiddenPlayer.duration;	
+	console.log("hiddenPlayer loadedmetadata", currentItem.n, currentItem.duration);
 });
 
 //window.onresize = () => albumTitle.innerText = innerWidth + " px / ";
 //onresize();
 
-if(isUrl(AUDIO_PATH))
+const USE_REMOTE_FILES = isUrl(AUDIO_PATH);
+const USE_LOCAL_FILES = !USE_REMOTE_FILES;
+
+if(USE_REMOTE_FILES)
 {
+//	items = items.filter(i => i.file);
+items.forEach();
+	setImage(playerImage, PLAYER_IMAGE);
+	refreshList();
+}
+else if(items.length)
+{
+	items.forEach(makeLocalPlaylistItem);
 	setImage(playerImage, PLAYER_IMAGE);
 	refreshList();
 }
@@ -503,21 +800,24 @@ else {
 		allPlaylists.all.id = "all";
 		allPlaylists.all.title = "All";
 	}
-	pl.forEach((p, i) => allPlaylists[p.title || p.id] = p);
 
-	if(!producers){
-		producers = allPlaylists.all.map(i => i.author || i.producer).filter(p => p && !p.includes("&")).sort();
-		producers = new Set(producers);
-	}
-	producers.forEach(p => {
+	pl.forEach((p, i) => allPlaylists[p.title || p.id] = p);
+}
+
+if(!producers){
+	producers = allPlaylists.all.map(i => i.author || i.producer).filter(p => p && !p.includes("&")).sort();
+	producers = new Set(producers);
+}
+
+if(producers.length > 1)
+	producers.forEach(p => { 
 		allPlaylists[p] = allPlaylists.all.filter(i => (i.author || i.producer || "").includes(p));
 		allPlaylists[p].title = p;
 	});
 
-	Object.keys(allPlaylists).forEach(makePlaylistLink);
+Object.keys(allPlaylists).forEach(makePlaylistLink);
 
-	setPlaylist();
-}
+setPlaylist();
 
 function setImage(img, src) {
 	if(!img || !src) return;
@@ -536,7 +836,9 @@ function setPlaylist(index) {
 		hideBrokenImage(playerImage);
 	}
 
-	playlist = playlists[index];
+	if(playlists && playlists.length)
+		playlist = playlists[index];
+
 	items = allPlaylists[index];
 	refreshList();
 	return items;
@@ -569,7 +871,7 @@ function shuffle() {
 }
 
 function reverse() {
-	items.sort(i => -1);
+	items = items.slice().sort(i => -1);
 	refreshList();
 	return items;
 }
@@ -647,12 +949,21 @@ function refreshList() {
 	totalDuration.innerText = total ?  "Total: " + formatTime(total) : "";
 }
 
+function makeLocalPlaylistItem(item, i) {
+	item.n = i + 1;
+	if(item.localFile)
+	{
+		item.file = item.localFile;
+		item.image = item.localFile.replace(AUDIO_TYPE, IMAGE_TYPE);
+	}
+}
+
 function makePlaylistItem(item, i) {
 	var lines = item.split("\n").filter(l => l && l.length);
 	var item = {};
 	item.n = i + 1;
 	item.title = lines.shift().trim();
-	item.image = item.title + ".jpg";
+	item.image = item.title + IMAGE_TYPE;
 	item.file = item.title + AUDIO_TYPE;
 	item.sources = lines;
 
@@ -670,7 +981,7 @@ function makePlaylistItem(item, i) {
 
 	if(!item.artists && item.songTitle.includes("(")) {
 		item.artists = substringAfter(item.songTitle, "(", true);
-		item.artists = substringBefore(item.songTitle, ")", true);
+		item.artists = substringBefore(item.artists, ")", true);
 	}
 
 	return item;
@@ -679,7 +990,7 @@ function makePlaylistItem(item, i) {
 function displayPlaylistItem(item, i) {
 	if(!item.n) item.n = i + 1;
 
-	el = cloneTemplate(item.file ? template : categoryTemplate, repeater);
+	el = cloneTemplate(item.type == "category" ? categoryTemplate : template, repeater);
 	if(el.querySelector(".number"))
 		el.querySelector(".number").innerHTML = item.n;
 	el.onclick = () => playFile(i);
@@ -711,13 +1022,23 @@ function displayPlaylistItem(item, i) {
 	if(item.sources && el.querySelector(".sources"))
 		item.sources.forEach( (s, j) => el.querySelector(".sources").innerHTML += isUrl(s)? "" : (j ? "\n+ " : "= ") + s );
 
-	if(item.video && title)
+	if(title && item.video)
 		title.innerHTML += '\n<a onclick="stopPropagation(event)" target="video" href="' + item.video + '">VIDEO</a>';
+
+	if(title && item.links)
+		for(var key in item.links)
+			title.innerHTML += '\n<a onclick="stopPropagation(event)" target="video" href="' + item.links[key] + '">'+ key +'</a>';
+
+	var trackLink = el.querySelector("a.remix-audio");
+	if(trackLink && item.id)
+		trackLink.href = TRACK_LINK_PATH + item.id;
+	else if(trackLink)
+		trackLink.remove();
 }
 
 function formatTime(duration)
 {
-	duration = Math.round(duration);
+	duration = Math.round(duration); 
 	var hour = Math.floor(duration / 3600);
 	var min = Math.floor(duration / 60) % 60;
 	if(hour > 0 && min < 10) min = "0" + min;
@@ -754,9 +1075,11 @@ function playFile(item)
 	audioPlayer.play();
 
 	//highlight current playlist item
-	if(currentItemElement)	currentItemElement.classList.remove("active");
+	if(currentItemElement)
+		currentItemElement.classList.remove("active");
 	currentItemElement = repeater.childNodes[currentItemIndex];
-	if(currentItemElement) currentItemElement.classList.add("active");
+	if(currentItemElement)
+		currentItemElement.classList.add("active");
 	if(item.duration && currentItemElement.querySelector(".duration"))	currentItemElement.querySelector(".duration").innerHTML = formatTime(item.duration);
 	return currentItem;
 }
@@ -807,9 +1130,27 @@ function stopPropagation(event) {
 	event.stopPropagation();
 }
 
+function playlistToText(num) {
+	var format = num ? (i => (i.n < 10 ? " " : "") + i.n + ". " + i.file) : i => i.file ;
+	return items.map(format).join("\n").replace(/\.mp3/g, "");
+}
+
 function m3uPlaylist()
 {
 	return "#EXTM3U\n" + items.map(i => i.file).join("\n");
+}
+
+function fetchJsonData(url, variable) {
+	fetch(url)
+		.then(response => {
+			if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+			return response.json();
+		})
+		.then(data => {
+			console.log(data);
+			if(variable) window[variable] = data;
+		})
+		.catch(error => console.error('Failed to fetch data:', error)); 
 }
 </script>
 
