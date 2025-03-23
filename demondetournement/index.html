@@ -5,9 +5,9 @@
 	<meta http-equiv="Content-Type"  content="text/html; charset=utf-8"/>
 	<meta property="og:site_name"    content="Minor Arth mashups"/>
 	<meta property="og:title"        content="DEMON DÉTOURNEMENT"/>
-	<meta property="og:description"  content="Gorillaz - Demon Days | The 20th Anniversary Mashup Album by Steff's Gorillaz Mashup Project"/>
+	<meta property="og:description"  content="Gorillaz - Demon Days | The 20th Anniversary Mashup Album"/>
 	<meta property="og:url"          content="https://minorarth.github.io/demondetournement"/>
-	<meta property="og:image"        content="https://minorarth.github.io/demondetournement/DemonDetournement.jpg"/>
+	<meta property="og:image"        content="https://minorarth.github.io/demondetournement/artwork/DemonDetournement.jpg"/>
 	<meta property="og:image:width"  content="720"/>
 	<meta property="og:image:height" content="720" />
 	<meta property="og:image:type"   content="image/jpeg"/>
@@ -682,24 +682,23 @@ const metas = Array.from(document.getElementsByTagName('meta'));
 const meta = {};
 metas.forEach(m => { if(m.attributes.property) meta[m.attributes.property.value.replace(/:/g,"_") ] = m.attributes.content.value });
 
-const LOGO_IMAGE = "./SteffsGorillazMashupProject.png";
+const LOGO_IMAGE = "./artwork/SteffsGorillazMashupProject.png";
 const LOGO_TITLE = "Steff's Gorillaz Mashup Project";
 const LOGO_LINK = "";
 
-const ALBUM_TITLE = meta.og_title;
+const ALBUM_TITLE = meta.og_title || document.title;
 const ALBUM_DESCRIPTION = meta.og_description;
 const ALBUM_LINK = "https://www.mediafire.com/file/04x0peh45n0es2u/Steffs_Gorillaz_Mashup_Project-Demon_Detournement.zip/file";
 const ALBUM_ARTIST = "";
 const TRACK_LINK_PATH = "https://remix.audio/track/";
 const AUDIO_PATH = "https://remix.audio/uploads/tracks/";
 //const IMAGE_PATH = "https://remix.audio/uploads/media/";
-const IMAGE_PATH = "http://minorart.free.fr/mashup/demondetournement/artwork/";
 
 //const AUDIO_PATH = "";
-//const IMAGE_PATH = "./artwork/";
+const IMAGE_PATH = "./artwork/";
 const AUDIO_TYPE = ".mp3";
 const IMAGE_TYPE = ".jpg";
-const PLAYER_IMAGE = "./DemonDetournement.jpg";
+const PLAYER_IMAGE = "./artwork/DemonDetournement.jpg";
 
 const isUrl = s => s && s.includes && s.includes("://");
 
@@ -729,7 +728,7 @@ var currentItem = null;
 var currentItemElement = null;
 var currentItemIndex = null;
 
-var allPlaylists = {}; // Array.isArray(items) ? { all : items} : items;
+var allPlaylists = {}; // Array.isArray(items) ? { all: items} : items;
 var producers = ["Steff St Moore", "Minor Arth", "DoM"];
 
 albumTitle.innerText = ALBUM_ARTIST ? ALBUM_ARTIST + " - " + ALBUM_TITLE : ALBUM_TITLE;
