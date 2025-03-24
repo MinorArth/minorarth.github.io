@@ -306,6 +306,8 @@ function displayPlaylistItem(item, i) {
 		currentItemIndex = items.indexOf(currentItem);
 		currentItemElement = repeater.childNodes[currentItemIndex];
 	}
+	else if(!item.file)
+		el.classList.add("inactive");
 
 	if(item.duration && el.querySelector(".duration"))
 		el.querySelector(".duration").innerHTML = formatTime(item.duration);

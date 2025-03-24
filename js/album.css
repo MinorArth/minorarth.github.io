@@ -13,11 +13,15 @@
 
 	div.playlist-template {
 		width: 494px;
-		background-color: #001220;
+		background-color: #012;
 	}
 
 	div.active {
-		background-color: #004560;
+		background-color: #053;
+	}
+
+	div.playlist-template.inactive {
+		background-color: #222;
 	}
 }
 
