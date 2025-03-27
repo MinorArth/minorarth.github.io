@@ -109,7 +109,9 @@ function loadPlaylist()
 			allPlaylists[p].title = p;
 		});
 
-	Object.keys(allPlaylists).forEach(makePlaylistLink);
+	var plLinks = Object.keys(allPlaylists);
+	if(plLinks.length > 1)
+		plLinks.forEach(makePlaylistLink);
 
 	setPlaylist();
 	setImage(playerImage, PLAYER_IMAGE);
@@ -433,6 +435,14 @@ function playlistToText(num) {
 function m3uPlaylist()
 {
 	return "#EXTM3U\n" + items.map(i => i.file).join("\n");
+}
+
+function getMeta()
+{
+	const metas = Array.from(document.getElementsByTagName('meta'));
+	const meta = {};
+	metas.forEach(m => { if(m.attributes.property) meta[m.attributes.property.value.replace(/:/g,"_") ] = m.attributes.content.value });
+	return meta;
 }
 
 function fetchJsonData(url, variable, funct) {
