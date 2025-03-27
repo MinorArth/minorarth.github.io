@@ -5,12 +5,14 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<!-- meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi" /-->
 	<meta property="og:title"        content="The Rise And Fall Of Ziggy Stardub"/>
-	<meta property="og:description"  content="DoM | DAVID BOWIE / EASY STAR ALL-STARS | 2023"/>
+	<meta property="og:description"  content="DAVID BOWIE / EASY STAR ALL-STARS | 2023"/>
 	<meta property="og:url"          content="https://minorarth.github.io/ziggystardub"/>
-	<meta property="og:image"        content="https://remix.audio/uploads/media/60294312_942039511_1511504134.png"/>
-	<meta property="og:image:width"  content="1040"/>
-	<meta property="og:image:height" content="1070" />
-	<meta property="og:image:type"   content="image/png"/>
+	<meta property="og:image"        content="https://minorarth.github.io/ziggystardub/ziggystardub.jpg"/>
+	<meta property="og:image:width"  content="720"/>
+	<meta property="og:image:height" content="720" />
+	<meta property="og:image:type"   content="image/jpeg"/>
+
+	<link rel="stylesheet" type="text/css" href="../js/album.css" />
 	<style>
 	@media screen {
 		body{
@@ -19,164 +21,26 @@
 			color: white;
 		}
 
-		a, .number { color: #e7d1ac; }
-		p.sources { color: #DDD; }
-
-		div.playlist-template {
-			width: 480px;
-			background-color: #262;
-		}
-
 		div.active {
 			background-color: #004560;
 		}
 	}
-
-	a, .bold { font-weight: bold; cursor: pointer; }
-
-	body {
-		font-family:  Helvetica, sans-serif, 'Tw Cen MT', 'HP Simplified', Arial;
-		text-align: center;
-	}
-
-	.align-left  { text-align: left; }
-	.align-right { text-align: right; }
-	img.icon { float:right; }
-	img.player-image[src] { max-width: 720px; border: solid 8px white;  }
-	div.toolbar audio {	width: 600px; height: 24px; }
-	div.repeater { max-width: 1400px; }
-
-	@media only screen and (max-width: 2140px)
-	{
-		img.player-image[src] { max-width: 600px;   border: solid 6px white;  }
-		div.toolbar audio {	width: 480px; }
-		div.repeater { 	max-width: 1000px;	}
-	}
-
-	@media only screen and (max-width: 1600px)
-	{
-		img.player-image[src] { max-width: 360px;   border: solid 4px white;  }
-		div.toolbar audio {	width: 300px; }
-		div.repeater { 	max-width: 1000px;	}
-	}
-
-	@media only screen and (max-width: 1400px)
-	{
-		div.repeater { 	max-width: 600px;	}
-	}
-
-	div.toolbar > * {
-		vertical-align: middle;
-	}
-
-	a.link-template, a.play-link-template { margin-left: 1em; margin-right: 1em; }
-
-	div.repeater { 	padding-left: 10px; padding-right: 10px; }
-
-	div.playlist-template {
-		font-size: 12pt;
-		cursor: pointer;
-		text-align: left;
-		border: 1px solid #CCC;
-		padding: 2px;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	div.playlist-template div.item-text {
-		vertical-align: middle;
-		display: inline-block;
-	}
-
-	div.playlist-template img.artwork[src] {
-		height: .7in;
-		vertical-align: middle;
-	}
-
-	div.tile-template, div.image-template, div.small-image-template {
-		display: inline-block;
-		vertical-align: top;
-		cursor: pointer;
-	}
-
-	div.tile-template {
-		width: 4in;
-		padding: .25in;
-	}
-
-	div.image-template {
-		width: 40%;
-		margin: 20px;
-	}
-
-	div.image-template img.artwork[src] {
-		width: 100%;
-		max-width: 900px;
-		border: solid 4px white;
-	}
-
-	div.tile-template img.artwork[src] {
-		width: 3in;
-		border: solid 4px white;
-	}
-
-	div.small-image-template img.artwork[src] {
-		width: 2in;
-		transform: rotate(-5deg);
-	}
-
-@media screen {
-	.column {
-		display: inline-block;
-		vertical-align: top;
-	}
-
-	.print-only { display: none; }
-}
-	.column.column-2 {
-		width: 48%;
-	}
-
-	.column.column-3 {
-		width: 30%;
-	}
-
-	.column.column-4 {
-		width: 24%;
-	}
-
-	.pre {
-		white-space: pre-line;
-	}
-
-	p {
-		white-space: pre-line;
-		margin-block-start: .5em;
-		margin-block-end: 0em;
-	}
-
-	a { text-decoration: none; }
-	a.logo img { height: 90px; padding-top: 10px; display: inline-block;	}
-	.hidden { display: none; }
-
-	@media print {
-		.no-print { display: none; }
-	}
 	</style>
 </head>
 <body>
-	<a class="logo print-only"><img /></a>
+<a class="logo print-only"><img /></a>
+
 <div class="toolbar no-print column">
 	<a class="logo"><img /></a><br/>
 	<a target="download" class="album-link">DOWNLOAD ALBUM</a>
 	<br/><br/>
 	<img class="player-image"/>
-	<br/>
-	<br/>
+	<br/><br/>
 	<button onclick="playPrevious()" title="Previous track"> &lt;&lt; </button>
 	<audio id="audioPlayer" controls></audio>
 	<button onclick="playNext()" title="Next track"> &gt;&gt; </button>
 	<br/>
+	<audio id="hiddenPlayer" class="hidden" controls></audio>
 	<div class="bold player-label"></div>
 	<br/>
 	<div class="align-left">
@@ -188,6 +52,8 @@
 			<option value="image-template">large images</option>
 			<option value="small-image-template">small images</option>
 		</select>
+		<button onclick="loadDurations()" title="Shuffle playlist">Duration</button>
+		<i class="total-duration number"></i>
 		<br/>
 		<br/>
 		Order:
@@ -200,19 +66,27 @@
 
 <div class="column">
 	<h1><a target="download" class="album-title album-link"></a></h1>
+	<div class="album-description"></div>
 	<h3 id="playlist-links" class="no-print"></h3>
 
 	<div class="repeater"></div>
 	<p>All tracks mixed by <a href="https://remix.audio/profile/dom">DoM</a> in 2023.</p>
 </div>
-<div class="links"></div>
+<p class="links"></p>
 
 <div id="templates" class="hidden">
 	<a class="link-template"></a>
 	<a class="play-link-template"></a>
 
+	<div class="category-template">
+		<a class="url">
+			<h3 class="pre title"></h3>
+		</a>
+	</div>
+
 	<div class="separator-template">
 		<hr/>
+		<b class="title"></b>
 	</div>
 
 	<div class="image-template">
@@ -225,27 +99,39 @@
 
 	<div class="tile-template">
 		<img class="artwork"/>
-		<a class="remix-audio" target="video" onclick="stopPropagation(event)"><img class="icon no-print" src="../remixaudio.png"/></a>
+		<div class="float-right padding-tr">
+			<a class="remix-audio" target="video" onclick="stopPropagation(event)"><img class="icon no-print" src="../img/remixaudio.png"/></a>
+			<br/><i class="duration"></i>
+		</div>
 		<p><i class="number"></i>. <b class="title"></b></p>
 		<p class="sources"></p>
 	</div>
 
 	<div class="playlist-template column">
 		<img class="artwork"/>
-		<a class="remix-audio" target="video" onclick="stopPropagation(event)"><img class="icon no-print" src="../remixaudio.png"/></a>
+		<div class="float-right padding-tr">
+			<a class="remix-audio" target="video" onclick="stopPropagation(event)"><img class="icon no-print" src="../img/remixaudio.png"/></a>
+			<br/><i class="duration"></i>
+		</div>
 		<div class="item-text pre"><i class="number"></i>. <b class="title"></b></div>
 	</div>
 
 	<div class="playlist-template details column">
 		<img class="artwork"/>
-		<a class="remix-audio" target="video" onclick="stopPropagation(event)"><img class="icon no-print" src="../remixaudio.png"/></a>
+		<div class="float-right padding-tr">
+			<a class="remix-audio" target="video" onclick="stopPropagation(event)"><img class="icon no-print" src="../img/remixaudio.png"/></a>
+			<br/><i class="duration"></i>
+		</div>
 		<div class="item-text pre"><i class="number"></i>. <b class="title"></b>
 		<p class="sources"></p></div>
 	</div>
-
 </div>
+</body>
 
 <script>
+const metas = Array.from(document.getElementsByTagName('meta'));
+const meta = {};
+metas.forEach(m => { if(m.attributes.property) meta[m.attributes.property.value.replace(/:/g,"_") ] = m.attributes.content.value });
 
 var items = [
 	{
@@ -254,7 +140,7 @@ var items = [
 		"author": "DoM",
 		"artists": "David Bowie / Easy Star All-Stars",
 		"title": "Five Years",
-		"image": "1172782386_1918967401_370936259.png"
+//		"image": "1172782386_1918967401_370936259.png"
 	},
 	{
 		"id": 46771,
@@ -262,7 +148,7 @@ var items = [
 		"author": "DoM",
 		"artists": "David Bowie / Easy Star All-Stars",
 		"title": "Soul Love",
-		"image": "463565586_1668331444_12927823.png"
+//		"image": "463565586_1668331444_12927823.png"
 	},
 	{
 		"id": 48932,
@@ -270,7 +156,7 @@ var items = [
 		"author": "DoM",
 		"artists": "David Bowie / Easy Star All-Stars",
 		"title": "Moonage Daydream",
-		"image": "1551085140_794911258_907588737.png"
+//		"image": "1551085140_794911258_907588737.png"
 	},
 	{
 		"id": 47171,
@@ -278,7 +164,7 @@ var items = [
 		"author": "DoM",
 		"artists": "David Bowie / Easy Star All-Stars",
 		"title": "Starman",
-		"image": "15311195_1245922586_833415230.png"
+//		"image": "15311195_1245922586_833415230.png"
 	},
 	{
 		"id": 47213,
@@ -286,7 +172,7 @@ var items = [
 		"author": "DoM",
 		"artists": "David Bowie / Easy Star All-Stars",
 		"title": "It Ain't Easy",
-		"image": "1864504260_1242736294_1966240777.png"
+//		"image": "1864504260_1242736294_1966240777.png"
 	},
 	{
 		"id": 46733,
@@ -294,7 +180,7 @@ var items = [
 		"author": "DoM",
 		"artists": "David Bowie / Easy Star All-Stars",
 		"title": "Lady Stardust",
-		"image": "1780913108_1107681829_569586499.png"
+//		"image": "1780913108_1107681829_569586499.png"
 	},
 	{
 		"id": 48110,
@@ -302,7 +188,7 @@ var items = [
 		"author": "DoM",
 		"artists": "David Bowie / Easy Star All-Stars",
 		"title": "Star",
-		"image": "1111244097_1052108854_522890341.png"
+//		"image": "1111244097_1052108854_522890341.png"
 	},
 	{
 		"id": 49042,
@@ -310,7 +196,7 @@ var items = [
 		"author": "DoM",
 		"artists": "David Bowie / Easy Star All-Stars",
 		"title": "Hang On To Yourself",
-		"image": "269379845_1526498172_1195980771.png"
+//		"image": "269379845_1526498172_1195980771.png"
 	},
 	{
 		"id": 46931,
@@ -318,7 +204,7 @@ var items = [
 		"author": "DoM",
 		"artists": "David Bowie / Easy Star All-Stars",
 		"title": "Ziggy Stardust",
-		"image": "60294312_942039511_1511504134.png"
+//		"image": "60294312_942039511_1511504134.png"
 	},
 	{
 		"id": 47079,
@@ -326,7 +212,7 @@ var items = [
 		"author": "DoM",
 		"artists": "David Bowie / Easy Star All-Stars",
 		"title": "Suffragette City",
-		"image": "735230696_1710485923_367544524.png"
+//		"image": "735230696_1710485923_367544524.png"
 	},
 	{
 		"id": 48129,
@@ -334,7 +220,7 @@ var items = [
 		"author": "DoM",
 		"artists": "David Bowie / Easy Star All-Stars",
 		"title": "Rock 'N' Roll Suicide",
-		"image": "453602285_376844552_1199895110.png"
+//		"image": "453602285_376844552_1199895110.png"
 	},
 	{
 		"id": 47110,
@@ -342,14 +228,23 @@ var items = [
 		"author": "DoM",
 		"artists": "David Bowie / Easy Star All-Stars",
 		"title": "Lady Stardust | dub version",
-		"image": "2039929813_1512194992_109532775.png"
+//		"image": "2039929813_1512194992_109532775.png"
 	}
 ];
 
-const LOGO_IMAGE = ""; //"https://audioboots.org/images/AudioBootsFullTransparent.png";
+var links = {
+	"Albums": "..",
+	"remix.audio": "https://remix.audio/playlist/2325",
+	"YouTube": "https://www.youtube.com/@DoMmashupscovers",
+	"Facebook": "https://www.facebook.com/DoM.mashupscovers"
+};
+
+const LOGO_IMAGE = ""; 
 const LOGO_TITLE = "DoM";
 const LOGO_LINK = "";
-const ALBUM_TITLE = "DAVID BOWIE - EASY STAR ALL-STARS\nThe Rise And Fall Of Ziggy Stardub";
+
+const ALBUM_TITLE = meta.og_title || document.title;
+const ALBUM_DESCRIPTION = meta.og_description;
 const ALBUM_LINK = "https://remix.audio/playlist/2325";
 const ALBUM_ARTIST = "DoM";
 const TRACK_LINK_PATH = "https://remix.audio/track/";
@@ -359,380 +254,11 @@ const IMAGE_PATH = "https://remix.audio/uploads/media/";
 //const IMAGE_PATH = "./artwork/";
 const AUDIO_TYPE = ".mp3";
 const IMAGE_TYPE = ".jpg";
-const PLAYER_IMAGE = "https://remix.audio/uploads/media/60294312_942039511_1511504134.png";
-
-const isUrl = s => s && s.includes && s.includes("://");
-
-const audioPlayer = document.querySelector("audio#audioPlayer");
-const playlistLinks = document.querySelector("#playlist-links");
-const playlists = document.querySelectorAll("p.playlist-text");
-var playlist = document.querySelector("p.playlist-text");
-var playlistName = "all";
-var imageList = document.querySelector("p.images");
-var trackList = document.querySelector("p.tracks");
-const playerImage = document.querySelector(".player-image");
-const playerLabel = document.querySelector(".player-label");
-const linkContainer = document.querySelector("div.links");
-const logoLinks = document.querySelectorAll("a.logo");
-const logoImages = document.querySelectorAll(".logo img");
-const repeater = document.querySelector("div.repeater");
-const albumTitle = document.querySelector(".album-title");
-const albumLinks = document.querySelectorAll(".album-link");
-const viewMode = document.querySelector("select#view-mode");
-
-var template;
-var currentItem = null;
-var currentItemElement = null;
-var currentItemIndex = null;
-
-var links = {
-	"Albums": "..",
-	"remix.audio": "https://remix.audio/playlist/2325",
-	"YouTube": "https://www.youtube.com/@DoMmashupscovers",
-	"Facebook": "https://www.facebook.com/DoM.mashupscovers",
-	"AudioBoots": "https://audioboots.org"
-};
-
-var allPlaylists = {};
+const PLAYER_IMAGE = "./ZiggyStardub.jpg";
 var producers = [];
-
-document.title = ALBUM_TITLE;
-albumTitle.innerText = ALBUM_ARTIST ? ALBUM_ARTIST + " - " + ALBUM_TITLE : ALBUM_TITLE;
-albumLinks.forEach(a => a.href = ALBUM_LINK);
-
-if(!LOGO_IMAGE)
-	logoLinks.forEach(l => l.remove())
-else {
-	logoImages.forEach(i => setImage(i, LOGO_IMAGE));
-	logoLinks.forEach(l => l.href = LOGO_LINK);
-}
-
-displayLinks(linkContainer);
-
-// Audio has ended when this function is executed
-audioPlayer.addEventListener('ended', playNext, false);
-//window.onresize = () => albumTitle.innerText = innerWidth + " px / ";
-//onresize();
-
-const USE_REMOTE_FILES = isUrl(AUDIO_PATH);
-const USE_LOCAL_FILES = !USE_REMOTE_FILES;
-
-if(USE_REMOTE_FILES)
-{
-	items = items.filter(i => i.file);
-	setImage(playerImage, PLAYER_IMAGE);
-	refreshList();
-}
-else if(items.length)
-{
-	items.forEach(makeLocalPlaylistItem);
-	setImage(playerImage, PLAYER_IMAGE);
-	refreshList();
-}
-else {
-	var pl = Array.from(playlists).map(makePlaylist);
-
-	if(pl.length > 1) {
-		allPlaylists.all = [].concat(...pl);
-		allPlaylists.all.id = "all";
-		allPlaylists.all.title = "All";
-	}
-
-	pl.forEach((p, i) => allPlaylists[p.title || p.id] = p);
-
-	if(!producers){
-		producers = allPlaylists.all.map(i => i.author || i.producer).filter(p => p && !p.includes("&")).sort();
-		producers = new Set(producers);
-	}
-
-	if(producers.length > 1)
-		producers.forEach(p => {
-			allPlaylists[p] = allPlaylists.all.filter(i => (i.author || i.producer || "").includes(p));
-			allPlaylists[p].title = p;
-		});
-
-	Object.keys(allPlaylists).forEach(makePlaylistLink);
-
-	setPlaylist();
-}
-
-function setImage(img, src) {
-	if(!img || !src) return;
-	return img.src = (isUrl(src) || src.includes("/")) ? src : IMAGE_PATH + src;
-}
-
-function setPlaylist(index) {
-	console.log("setPlaylist", index);
-	if(!index) index = Object.keys(allPlaylists)[0];
-	if(index >= playlists.length - 1) index = "all";
-	playlistName = index;
-
-	if(PLAYER_IMAGE) {
-		playerImage.style.display = "inline";
-		setImage(playerImage, PLAYER_IMAGE);
-		hideBrokenImage(playerImage);
-	}
-
-	if(playlists && playlists.length) {
-		playlist = playlists[index];
-		items = allPlaylists[index];
-	}
-	refreshList();
-}
-
-function makePlaylist(playlist) {
-	var items = playlist? playlist.innerText.trim().split("\n\n") : [];
-	if(items.length == 1) items = playlist.innerText.trim().split("\n");
-	items = items.filter(l => l && l.length);
-	items = items.map(makePlaylistItem);
-	items.id = playlist.id;
-	items.title = playlist.title;
-	return items;
-}
-
-function hideBrokenImages() {
-	document.querySelectorAll("img.artwork").forEach(hideBrokenImage);
-}
-
-function hideBrokenImage(img) {
-	img.onerror = () => PLAYER_IMAGE ? img.src = setImage(playerImage, PLAYER_IMAGE) : img.style.display = "none";
-}
-
-function shuffle() {
-	items.sort(i => Math.random() - .5);
-	refreshList();
-	return items;
-}
-
-function reverse() {
-	items.sort(i => -1);
-	refreshList();
-	return items;
-}
-
-function reorder() {
-	items.sort( (a,b) => a.n - b.n);
-	refreshList();
-	return items;
-}
-
-function substringBefore(s, sub, last, stringOrEmpty, include, ignoreCase)
-{
-	if(!s) return s;
-
-	var lstr = s;
-	var lsub = sub;
-	if(ignoreCase) {
-		lstr = lstr.toLowerCase();
-		lsub = lsub.toLowerCase();
-	}
-
-	var pos = last ? lstr.lastIndexOf(lsub) : lstr.indexOf(lsub);
-	if(pos < 0)
-		return stringOrEmpty ? "" : s;
-
-	if(include)
-		pos += sub.length;
-	return s.substring(0, pos);
-}
-
-function substringAfter(s, sub, last, stringOrEmpty, include, ignoreCase)
-{
-	if(!s) return s;
-
-	var lstr = s;
-	var lsub = sub;
-	if(ignoreCase) {
-		lstr = lstr.toLowerCase();
-		lsub = lsub.toLowerCase();
-	}
-
-	var pos = last ? lstr.lastIndexOf(lsub) : lstr.indexOf(lsub);
-	if(pos < 0)
-		return stringOrEmpty ? s : "";
-
-	if(!include)
-		pos += sub.length;
-
-	return s.substring(pos);
-}
-
-function displayLinks(container)
-{
-	var linkTemplate = document.querySelector("a.link-template");
-	if(links)
-		for(var key in links) {
-			var link = cloneTemplate(linkTemplate, container);
-			link.innerText = key;
-			link.href = links[key];
-			//link.target = "link";
-		}
-}
-
-function makePlaylistLink(pl, i) {
-	if(!pl) return;
-	var linkTemplate = document.querySelector("a.play-link-template");
-	var link = cloneTemplate(linkTemplate, playlistLinks);
-	link.innerText = pl;
-	link.onclick = () => setPlaylist(pl);
-}
-
-function refreshList() {
-	repeater.innerHTML = "";
-	template = document.querySelector("div." + viewMode.value);
-	items.forEach(displayPlaylistItem);
-}
-
-function makeLocalPlaylistItem(item, i) {
-	item.n = i + 1;
-	if(item.localFile)
-	{
-		item.file = item.localFile;
-		item.image = item.localFile.replace(AUDIO_TYPE, IMAGE_TYPE);
-	}
-}
-
-function makePlaylistItem(item, i) {
-	var lines = item.split("\n").filter(l => l && l.length);
-	var item = {};
-	item.n = i + 1;
-	item.title = lines.shift().trim();
-	item.image = item.title + IMAGE_TYPE;
-	item.file = item.title + AUDIO_TYPE;
-	item.sources = lines;
-
-	var n = Number(substringBefore(item.title, " - "));
-	if(n && !isNaN(n)) {
-		item.n = n;
-		item.title = substringAfter(item.title, " - ");
-	}
-
-	var parts = item.title.split(" - ");
-	item.songTitle = parts.pop() || "";
-	item.songTitle = item.songTitle.replace(" -- ", " | ");
-	if(!ALBUM_ARTIST) item.producer = parts.shift();
-	item.artists = parts.join(" / ");
-
-	if(!item.artists && item.songTitle.includes("(")) {
-		item.artists = substringAfter(item.songTitle, "(", true);
-		item.artists = substringBefore(item.artists, ")", true);
-	}
-
-	return item;
-}
-
-function displayPlaylistItem(item, i) {
-	if(!item.n) item.n = i + 1;
-
-	el = cloneTemplate(template, repeater);
-	if(el.querySelector(".number"))
-		el.querySelector(".number").innerHTML = item.n;
-	el.onclick = () => playFile(i);
-
-	var title = el.querySelector(".title");
-	var separator = viewMode.value == "playlist-template0" ? "  -  " : "\n";
-	var itemTitle = [ i.author || i.producer, item.artists, item.songTitle || item.title ].filter(s => s).join(separator);
-	if(title) title.innerHTML = itemTitle;
-
-	var img = el.querySelector("img.artwork");
-	if(img && item.image) {
-		hideBrokenImage(img);
-		img.title = itemTitle;
-		setImage(img, item.image);
-	}
-	else if(img)
-		img.remove();
-
-
-	//highlight current item
-	if(item == currentItem) {
-		el.classList.add("active");
-		currentItemIndex = items.indexOf(currentItem);
-		currentItemElement = repeater.childNodes[currentItemIndex];
-	}
-
-	if(item.sources)
-		item.sources.forEach( (s, j) => isUrl(s) && (item.video = s) );
-
-	if(item.sources && el.querySelector(".sources"))
-		item.sources.forEach( (s, j) => el.querySelector(".sources").innerHTML += isUrl(s)? "" : (j ? "\n+ " : "= ") + s );
-
-	if(title && item.video)
-		title.innerHTML += '\n<a onclick="stopPropagation(event)" target="video" href="' + item.video + '">VIDEO</a>';
-
-	if(title && item.links)
-		for(var key in item.links)
-			title.innerHTML += '\n<a onclick="stopPropagation(event)" target="video" href="' + item.links[key] + '">'+ key +'</a>';
-
-	var trackLink = el.querySelector("a.remix-audio");
-	if(trackLink && item.id)
-		trackLink.href = TRACK_LINK_PATH + item.id;
-	else if(trackLink)
-		trackLink.remove();
-}
-
-function cloneTemplate(node, parent)
-{
-	var clone = node.cloneNode();
-	clone.innerHTML = node.innerHTML;
-	if(parent) parent.append(clone);
-	return clone;
-}
-
-function playFile(item)
-{
-	if(typeof item == "number") {
-		currentItemIndex = item;
-		item = items[item];
-	}
-	if(!item) return;
-
-	currentItem = item;
-	playerImage.style.display = "inline";
-	setImage(playerImage, item.image);
-	playerLabel.innerText = playerImage.title = [item.artists,  item.songTitle || item.title].filter(s => s).join("\n");
-	var subdir = playlist ? playlist.dataset.path || playlist.getAttribute("path") : "";
-	subdir = subdir ? subdir = subdir + "/" : "";
-	audioPlayer.src = AUDIO_PATH + subdir + item.file;
-	audioPlayer.controls = true;
-	audioPlayer.play();
-
-	//highlight current playlist item
-	if(currentItemElement)
-		currentItemElement.classList.remove("active");
-	currentItemElement = repeater.childNodes[currentItemIndex];
-	if(currentItemElement)
-		currentItemElement.classList.add("active");
-
-	return currentItem;
-}
-
-function playNext(evt) {
-	console.log("playNext", evt);
-	if(currentItemIndex === null) currentItemIndex = -1;
-	return playFile(++currentItemIndex % items.length || 0);
-}
-
-function playPrevious() {
-	if(currentItemIndex === null) currentItemIndex = 0;
-	var previousIndex = (--currentItemIndex + items.length) % items.length || 0;
-	return playFile(previousIndex);
-}
-
-function stopPropagation(event) {
-	event.stopPropagation();
-}
-
-function playlistToText(num) {
-	var format = num ? (i => (i.n < 10 ? " " : "") + i.n + ". " + i.file) : i => i.file ;
-	return items.map(format).join("\n").replace(/\.mp3/g, "");
-}
-
-function m3uPlaylist()
-{
-	return "#EXTM3U\n" + items.map(i => i.file).join("\n");
-}
 </script>
-
-</body>
+<script src="../js/album.js"></script>
+<script>
+loadPlaylist();
+</script>
 </html>
