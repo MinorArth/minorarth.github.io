@@ -42,9 +42,9 @@ else {
 displayLinks(linkContainer);
 
 // Audio has ended when this function is executed
-audioPlayer.addEventListener('ended', playNext, false);
+audioPlayer?.addEventListener('ended', playNext, false);
 
-audioPlayer.addEventListener('loadedmetadata', () => {
+audioPlayer?.addEventListener('loadedmetadata', () => {
 	if(currentItem.duration) return;
 
 	currentItem.duration  = audioPlayer.duration;
@@ -55,7 +55,7 @@ audioPlayer.addEventListener('loadedmetadata', () => {
 	console.log("audioPlayer loadedmetadata", currentItem.n, currentItem.duration);
 });
 
-hiddenPlayer.addEventListener('loadedmetadata', () => {
+hiddenPlayer?.addEventListener('loadedmetadata', () => {
 	if(currentItem.duration) return;
 
 	currentItem.duration  = hiddenPlayer.duration;	
@@ -128,7 +128,7 @@ function setPlaylist(index) {
 	if(index >= playlists.length - 1) index = "all";
 	playlistName = index;
 
-	if(PLAYER_IMAGE) {
+	if(playerImage && PLAYER_IMAGE) {
 		playerImage.style.display = "inline";
 		setImage(playerImage, PLAYER_IMAGE);
 		hideBrokenImage(playerImage);
@@ -243,8 +243,10 @@ function refreshList() {
 	repeater.innerHTML = "";
 	template = document.querySelector("div." + viewMode.value);
 	items.forEach(displayPlaylistItem);
-	var total = getTotalDuration(items);
-	totalDuration.innerText = total ?  "Total: " + formatTime(total) : "";
+	if(totalDuration) {
+		var total = getTotalDuration(items);
+		totalDuration.innerText = total ?  "Total: " + formatTime(total) : "";
+	}
 }
 
 function makeLocalPlaylistItem(item, i) {
@@ -294,6 +296,13 @@ function displayPlaylistItem(item, i) {
 	var separator = viewMode.value == "playlist-template0" ? "  -  " : "\n";
 	var itemTitle = [ item.artists, item.songTitle || item.title, item.author || item.producer ].filter(s => s).join(separator);
 	if(title) title.innerHTML = itemTitle;
+
+	var description = el.querySelector(".description");
+	var itemDescription = [ item.description, item.release + " | " + item.nbTracks + " tracks" ].filter(s => s).join(separator);
+	if(description) description.innerHTML = itemDescription;
+
+	var link = el.querySelectorAll("a.url");
+	if(link && item.url) link.forEach(l => l.href = item.url);
 
 	var img = el.querySelector("img.artwork");
 	if(img && item.image) {

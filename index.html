@@ -3,6 +3,7 @@
 <head>
 	<title>Minor Arth | Mashup albums</title>
 	<meta http-equiv="Content-Type"  content="text/html; charset=utf-8"/>
+	<!-- meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi" /-->
 	<meta property="og:title"        content="Minor Arth Mashups - Albums"/>
 	<meta property="og:description"  content="Minor Arth | Mashups Albums"/>
 	<meta property="og:url"   content="https://minorarth.github.io/"/>
@@ -159,6 +160,7 @@
 
 <div class="column">
 	<h1><a class="album-title album-link"></a></h1>
+	<div class="album-description"></div>
 	<h3 id="playlist-links" class="no-print"></h3>
 
 	<div class="repeater"></div>
@@ -208,9 +210,8 @@
 </div>
 
 <script>
-
 var items = [
-	{ title: "Collaborative Albums" },
+	{ type: "category", title: "Collaborative Albums" },
 	{
 		url: "./demondetournement",
 		title: "GORILLAZ - Demon Detournement",
@@ -238,7 +239,7 @@ var items = [
 		release: "November 2023",
 		nbTracks: 4
 	},
-	{ title: "Solo Albums" },
+	{ type: "category", title: "Solo Albums" },
 	{
 		url: "./mashmaker3",
 		title: "The Mashmaker, volume 3",
@@ -279,7 +280,7 @@ var items = [
 		release: "April 2023",
 		nbTracks: 16
 	},
-	{ title: "Friends' Albums" },
+	{ type: "category", title: "Friends' Albums" },
 	{
 
 		url: "./ziggystardub",
@@ -290,14 +291,25 @@ var items = [
 		release: "April 2023",
 		nbTracks: 12
 	}
-
 ];
 
-const LOGO_IMAGE = ""; //"https://audioboots.org/images/AudioBootsFullTransparent.png";
+var links = {
+	"remix.audio": "https://remix.audio/profile/minorarth",
+	"YouTube": "https://www.youtube.com/@MinorArth",
+	"Facebook": "https://www.facebook.com/MinorArthMashups",
+	"AudioBoots": "https://audioboots.org"
+};
+
+const metas = Array.from(document.getElementsByTagName('meta'));
+const meta = {};
+metas.forEach(m => { if(m.attributes.property) meta[m.attributes.property.value.replace(/:/g,"_") ] = m.attributes.content.value });
+
+const LOGO_IMAGE = "";
 const LOGO_TITLE = "Minor Arth";
 const LOGO_LINK = "https://minorarth.github.io/";
 
 const ALBUM_TITLE = "Mashup Albums";
+const ALBUM_DESCRIPTION = meta.og_description;
 const ALBUM_LINK = "https://minorarth.github.io/";
 
 const ALBUM_ARTIST = "Minor Arth";
@@ -309,288 +321,13 @@ const IMAGE_PATH = "https://remix.audio/uploads/media/";
 const AUDIO_TYPE = ".mp3";
 const IMAGE_TYPE = ".jpg";
 const PLAYER_IMAGE = "./Mashmaker3.jpg";
-
-const isUrl = s => s && s.includes && s.includes("://");
-
-const audioPlayer = document.querySelector("audio#audioPlayer");
-const playlistLinks = document.querySelector("#playlist-links");
-const playlists = document.querySelectorAll("p.playlist-text");
-var playlist = document.querySelector("p.playlist-text");
-var playlistName = "all";
-var imageList = document.querySelector("p.images");
-var trackList = document.querySelector("p.tracks");
-const playerImage = document.querySelector(".player-image");
-const playerLabel = document.querySelector(".player-label");
-const linkContainer = document.querySelector("div.links");
-const logoLinks = document.querySelectorAll("a.logo");
-const logoImages = document.querySelectorAll(".logo img");
-const repeater = document.querySelector("div.repeater");
-const albumTitle = document.querySelector(".album-title");
-const albumLinks = document.querySelectorAll(".album-link");
-const viewMode = document.querySelector("select#view-mode");
-
-var categoryTemplate = document.querySelector(".category-template");
-var template;
-var currentItem = null;
-var currentItemElement = null;
-var currentItemIndex = null;
-
-var links = {
-	"remix.audio": "https://remix.audio/profile/minorarth",
-	"YouTube": "https://www.youtube.com/@MinorArth",
-	"Facebook": "https://www.facebook.com/MinorArthMashups",
-	"AudioBoots": "https://audioboots.org"
-};
-
-var allPlaylists = {};
-allPlaylists.all = items;
 var producers = [];
-
-document.title = ALBUM_TITLE;
-albumTitle.innerText = ALBUM_ARTIST ? ALBUM_ARTIST + " - " + ALBUM_TITLE : ALBUM_TITLE;
-albumLinks.forEach(a => a.href = ALBUM_LINK);
-
-if(!LOGO_IMAGE)
-	logoLinks.forEach(l => l.remove())
-else {
-	logoImages.forEach(i => setImage(i, LOGO_IMAGE));
-	logoLinks.forEach(l => l.href = LOGO_LINK);
-}
-
-displayLinks(linkContainer);
-
-// Audio has ended when this function is executed
-//audioPlayer.addEventListener('ended', playNext, false);
-//window.onresize = () => albumTitle.innerText = innerWidth + " px / ";
-//onresize();
-
-const USE_REMOTE_FILES = isUrl(AUDIO_PATH);
-const USE_LOCAL_FILES = !USE_REMOTE_FILES;
-
-refreshList();
-
-
-function setImage(img, src) {
-	if(!img || !src) return;
-	return img.src = (isUrl(src) || src.includes("/")) ? src : IMAGE_PATH + src;
-}
-
-function setPlaylist(index) {
-	console.log("setPlaylist", index);
-	if(!index) index = Object.keys(allPlaylists)[0];
-	if(index >= playlists.length - 1) index = "all";
-	playlistName = index;
-
-	if(PLAYER_IMAGE) {
-		playerImage.style.display = "inline";
-		setImage(playerImage, PLAYER_IMAGE);
-		//hideBrokenImage(playerImage);
-	}
-
-	if(playlists && playlists.length) {
-		playlist = playlists[index];
-		items = allPlaylists[index];
-	}
-	refreshList();
-}
-
-function hideBrokenImages() {
-	document.querySelectorAll("img.artwork").forEach(hideBrokenImage);
-}
-
-function hideBrokenImage(img) {
-	img.onerror = () => PLAYER_IMAGE ? img.src = setImage(playerImage, PLAYER_IMAGE) : img.style.display = "none";
-}
-
-function shuffle() {
-	items.sort(i => Math.random() - .5);
-	refreshList();
-	return items;
-}
-
-function reverse() {
-	items.sort(i => -1);
-	refreshList();
-	return items;
-}
-
-function reorder() {
-	items.sort( (a,b) => a.n - b.n);
-	refreshList();
-	return items;
-}
-
-function substringBefore(s, sub, last, stringOrEmpty, include, ignoreCase)
-{
-	if(!s) return s;
-
-	var lstr = s;
-	var lsub = sub;
-	if(ignoreCase) {
-		lstr = lstr.toLowerCase();
-		lsub = lsub.toLowerCase();
-	}
-
-	var pos = last ? lstr.lastIndexOf(lsub) : lstr.indexOf(lsub);
-	if(pos < 0)
-		return stringOrEmpty ? "" : s;
-
-	if(include)
-		pos += sub.length;
-	return s.substring(0, pos);
-}
-
-function substringAfter(s, sub, last, stringOrEmpty, include, ignoreCase)
-{
-	if(!s) return s;
-
-	var lstr = s;
-	var lsub = sub;
-	if(ignoreCase) {
-		lstr = lstr.toLowerCase();
-		lsub = lsub.toLowerCase();
-	}
-
-	var pos = last ? lstr.lastIndexOf(lsub) : lstr.indexOf(lsub);
-	if(pos < 0)
-		return stringOrEmpty ? s : "";
-
-	if(!include)
-		pos += sub.length;
-
-	return s.substring(pos);
-}
-
-function displayLinks(container)
-{
-	var linkTemplate = document.querySelector("a.link-template");
-	if(links)
-		for(var key in links) {
-			var link = cloneTemplate(linkTemplate, container);
-			link.innerText = key;
-			link.href = links[key];
-			//link.target = "link";
-		}
-}
-
-function refreshList() {
-	repeater.innerHTML = "";
-	template = document.querySelector("div." + viewMode.value);
-	items.forEach(displayPlaylistItem);
-}
-
-function displayPlaylistItem(item, i) {
-	if(!item.n) item.n = i + 1;
-
-	el = cloneTemplate( item.nbTracks ? template : categoryTemplate, repeater);
-
-	if(el.querySelector(".number"))
-		el.querySelector(".number").innerHTML = item.n;
-	// el.onclick = () => playFile(i);
-
-	var title = el.querySelector(".title");
-	var separator = "\n";
-	var itemTitle = [ item.title, item.artists ].filter(s => s).join(separator);
-	if(title) title.innerHTML = itemTitle;
-
-	var description = el.querySelector(".description");
-	var itemDescription = [ item.description, item.release + " | " + item.nbTracks + " tracks" ].filter(s => s).join(separator);
-	if(description) description.innerHTML = itemDescription;
-
-	var as = el.querySelectorAll("a.url");
-	if(as && item.url) as.forEach(l => l.href = item.url);
-
-	var img = el.querySelector("img.artwork");
-	if(img && item.image) {
-		//hideBrokenImage(img);
-		img.title = itemTitle;
-		setImage(img, item.image);
-	}
-
-	//highlight current item
-	if(item == currentItem) {
-		el.classList.add("active");
-		currentItemIndex = items.indexOf(currentItem);
-		currentItemElement = repeater.childNodes[currentItemIndex];
-	}
-
-	if(item.sources)
-		item.sources.forEach( (s, j) => isUrl(s) && (item.video = s) );
-
-	if(item.sources && el.querySelector(".sources"))
-		item.sources.forEach( (s, j) => el.querySelector(".sources").innerHTML += isUrl(s)? "" : (j ? "\n+ " : "= ") + s );
-
-	if(title && item.video)
-		title.innerHTML += '\n<a onclick="stopPropagation(event)" target="video" href="' + item.video + '">VIDEO</a>';
-
-	if(title && item.links)
-		for(var key in item.links)
-			title.innerHTML += '\n<a onclick="stopPropagation(event)" target="video" href="' + item.links[key] + '">'+ key +'</a>';
-
-	var trackLink = el.querySelector("a.remix-audio");
-	if(trackLink && item.id)
-		trackLink.href = TRACK_LINK_PATH + item.id;
-	else if(trackLink)
-		trackLink.remove();
-}
-
-function cloneTemplate(node, parent)
-{
-	var clone = node.cloneNode();
-	clone.innerHTML = node.innerHTML;
-	if(parent) parent.append(clone);
-	return clone;
-}
-
-function playFile(item)
-{
-	if(typeof item == "number") {
-		currentItemIndex = item;
-		item = items[item];
-	}
-	if(!item) return;
-
-	currentItem = item;
-	playerImage.style.display = "inline";
-	setImage(playerImage, item.image);
-	playerLabel.innerText = playerImage.title = [item.artists,  item.songTitle || item.title].filter(s => s).join("\n");
-	var subdir = playlist ? playlist.dataset.path || playlist.getAttribute("path") : "";
-	subdir = subdir ? subdir = subdir + "/" : "";
-	audioPlayer.src = AUDIO_PATH + subdir + item.file;
-	audioPlayer.controls = true;
-	audioPlayer.play();
-
-	//highlight current playlist item
-	if(currentItemElement)
-		currentItemElement.classList.remove("active");
-	currentItemElement = repeater.childNodes[currentItemIndex];
-	if(currentItemElement)
-		currentItemElement.classList.add("active");
-
-	return currentItem;
-}
-
-function playNext(evt) {
-	console.log("playNext", evt);
-	if(currentItemIndex === null) currentItemIndex = -1;
-	return playFile(++currentItemIndex % items.length || 0);
-}
-
-function playPrevious() {
-	if(currentItemIndex === null) currentItemIndex = 0;
-	var previousIndex = (--currentItemIndex + items.length) % items.length || 0;
-	return playFile(previousIndex);
-}
-
-function stopPropagation(event) {
-	event.stopPropagation();
-}
-
-function m3uPlaylist()
-{
-	return "#EXTM3U\n" + items.map(i => i.file).join("\n");
-}
 </script>
 
+<script src="./js/album.js"></script>
+
+<script>
+loadPlaylist();
+</script>	
 </body>
 </html>
