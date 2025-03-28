@@ -294,7 +294,9 @@ function displayPlaylistItem(item, i) {
 
 	var title = el.querySelector(".title");
 	var separator = viewMode.value == "playlist-template0" ? "  -  " : "\n";
-	var itemTitle = [ item.artists, item.songTitle || item.title, item.author || item.producer ].filter(s => s).join(separator);
+	var producer = item.author || item.producer;
+	if(producer == ALBUM_ARTIST) producer = "";
+	var itemTitle = [ item.artists, item.songTitle || item.title, producer ].filter(s => s).join(separator);
 	if(title) title.innerHTML = itemTitle;
 
 	var description = el.querySelector(".description");
@@ -373,7 +375,9 @@ function playFile(item)
 	currentItem = item;
 	playerImage.style.display = "inline";
 	setImage(playerImage, item.image);
-	playerLabel.innerText = playerImage.title = [item.artists,  item.songTitle || item.title, item.author || item.producer].filter(s => s).join("\n");
+	var producer = item.author || item.producer;
+	if(producer == ALBUM_ARTIST) producer = "";
+	playerLabel.innerText = playerImage.title = [item.artists,  item.songTitle || item.title, producer].filter(s => s).join("\n");
 	var subdir = playlist ? playlist.dataset.path || playlist.getAttribute("path") : "";
 	subdir = subdir ? subdir = subdir + "/" : "";
 	audioPlayer.src = AUDIO_PATH + subdir + item.file;
