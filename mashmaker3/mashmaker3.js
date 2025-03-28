@@ -7,7 +7,10 @@ var items = [
 		"title": "Battle The Blue Sky | Kill Bill mix",
 		"artists": "U2 / Tomoyasu Hotei",
 		"sources": [ "Hotei - Battle Without Honor Or Humanity | 1999", "U2 - Bullet The Blue Sky | 1987" ],
-		"video": "https://youtu.be/DxEtu0rZvBY",
+		"links": {
+			"Bootie Mashup Top 10, September 2024": "https://bootiemashup.com/bootie-mashup-top-10-september-2024",
+			"VIDEO": "https://youtu.be/DxEtu0rZvBY"
+		},
 		"image": "1357411145_1780532464_205394299.jpg"
 	},
 	{
