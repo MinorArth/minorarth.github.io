@@ -24,9 +24,7 @@
 		p.sources { color: #DDD; }
 
 		div.playlist-template {
-			width: 494px;
 			background-color: #262;
-			border: 1px solid #CCC;
 		}
 
 		div.active {
@@ -140,7 +138,7 @@ const metas = Array.from(document.getElementsByTagName('meta'));
 const meta = {};
 metas.forEach(m => { if(m.attributes.property) meta[m.attributes.property.value.replace(/:/g,"_") ] = m.attributes.content.value });
 
-const LOGO_IMAGE = ""; 
+const LOGO_IMAGE = "";
 const LOGO_TITLE = "Minor Arth";
 const LOGO_LINK = "";
 
