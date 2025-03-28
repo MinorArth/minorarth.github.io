@@ -16,6 +16,10 @@
 		background-color: #023;
 	}
 
+	div.playlist-template .item-text {
+		width: 384px;
+	}
+
 	div.active {
 		background-color: #043;
 	}
