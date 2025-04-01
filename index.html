@@ -3,7 +3,7 @@
 <head>
 	<title>Minor Arth | Mashup albums</title>
 	<meta http-equiv="Content-Type"  content="text/html; charset=utf-8"/>
-	<!-- meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi" /-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi" />
 	<meta property="og:site_name"    content="Minor Arth Mashups"/>
 	<meta property="og:title"        content="Mashup Albums"/>
 	<meta property="og:description"  content="Mashup Albums by Minor Arth"/>
@@ -12,6 +12,8 @@
 	<meta property="og:image:width"  content="720"/>
 	<meta property="og:image:height" content="720" />
 	<meta property="og:image:type"   content="image/jpeg"/>
+
+	<link rel="stylesheet" type="text/css" href="./js/album.css" />
 	<style>
 	@media screen {
 		body{
@@ -33,36 +35,7 @@
 		}
 	}
 
-	a, .bold { font-weight: bold; cursor: pointer; }
-
-	body {
-		font-family:  Helvetica, sans-serif, 'Tw Cen MT', 'HP Simplified', Arial;
-		text-align: center;
-	}
-
-	.align-left  { text-align: left; }
-	.align-right { text-align: right; }
-	img.icon { float:right; }
-	img.player-image[src] { max-width: 720px; border: solid 8px white;  }
-	div.repeater { max-width: 1400px; }
-
-	div.toolbar > * {
-		vertical-align: middle;
-	}
-
-	a.link-template, a.play-link-template { margin-left: 1em; margin-right: 1em; }
-
-	div.repeater { 	padding-left: 10px; padding-right: 10px; }
-
-	div.playlist-template {
-		font-size: 12pt;
-		cursor: pointer;
-		text-align: left;
-		border: 1px solid #CCC;
-		padding: 2px;
-		margin-left: auto;
-		margin-right: auto;
-	}
+	div.repeater { max-width: none; }
 
 	div.playlist-template div.item-textitem-text {
 		vertical-align: middle;
@@ -85,17 +58,6 @@
 		padding: .25in;
 	}
 
-	div.image-template {
-		width: 40%;
-		margin: 20px;
-	}
-
-	div.image-template img.artwork[src] {
-		width: 100%;
-		max-width: 900px;
-		border: solid 4px white;
-	}
-
 	div.tile-template img.artwork[src] {
 		width: 4in;
 		border: solid 4px white;
@@ -105,44 +67,6 @@
 		width: 3in;
 		transform: rotate(-5deg);
 	}
-
-@media screen {
-	.column {
-		display: inline-block;
-		vertical-align: top;
-	}
-
-	.print-only { display: none; }
-}
-	.column.column-2 {
-		width: 48%;
-	}
-
-	.column.column-3 {
-		width: 30%;
-	}
-
-	.column.column-4 {
-		width: 24%;
-	}
-
-	.pre {
-		white-space: pre-line;
-	}
-
-	p {
-		white-space: pre-line;
-		margin-block-start: .5em;
-		margin-block-end: 0em;
-	}
-
-	a { text-decoration: none; }
-	a.logo img { height: 90px; padding-top: 10px; display: inline-block;	}
-	.hidden { display: none; }
-
-	@media print {
-		.no-print { display: none; }
-	}
 	</style>
 </head>
 <body>
@@ -150,24 +74,28 @@
 
 <div class="toolbar no-print column">
 	<a class="logo"><img /></a><br/>
-		Show:
+
+	Show:
 		<select id="view-mode" onchange="refreshList()">
 			<option value="tile-template">tiles</option>
 			<option value="playlist-template.details">playlist with details</option>
 			<option value="image-template">large images</option>
 			<option value="small-image-template">small images</option>
 		</select>
-</div>
+
+		<div class="links"></div>
+
+	</div>
 
 <div class="column">
 	<h1><a class="album-title album-link"></a></h1>
 	<div class="album-description"></div>
 	<h3 id="playlist-links" class="no-print"></h3>
-
+	<p>Videos
+		<iframe width="960" height="540" src="https://www.youtube.com/embed/?listType=playlist&list=PLUq5Z5VhjxM2R3PXlM3ggdT3_Y_nQDisJ" frameborder="0" allowfullscreen></iframe>
+	</p>
 	<div class="repeater"></div>
-	<p></p>
 </div>
-<div class="links"></div>
 
 <div id="templates" class="hidden">
 	<a class="link-template"></a>
