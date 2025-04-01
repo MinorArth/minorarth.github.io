@@ -16,7 +16,8 @@
 	<link rel="stylesheet" type="text/css" href="../js/album.css" />
 </head>
 <body>
-	<a class="logo print-only"><img /></a>
+<a class="logo print-only"><img/></a>
+
 <div class="toolbar no-print column">
 	<a class="logo"><img /></a><br/>
 	<a target="download" class="album-link">DOWNLOAD ALBUM</a>
@@ -55,10 +56,9 @@
 	<h1><a target="download" class="album-title album-link"></a></h1>
 	<div class="album-description"></div>
 	<h3 id="playlist-links" class="no-print"></h3>
-
 	<div class="repeater"></div>
 </div>
-<p class="links"></p>
+<div class="links"></div>
 
 <div id="templates" class="hidden">
 	<a class="link-template"></a>
@@ -95,7 +95,7 @@
 
 	<div class="playlist-template column">
 		<img class="artwork"/>
-		<div class="float-right padding-tr">
+		<div class="float-right padding-tr no-mobile">
 			<a class="remix-audio" target="video" onclick="stopPropagation(event)"><img class="icon no-print" src="../img/remixaudio.png"/></a>
 			<br/><i class="duration"></i>
 		</div>
@@ -104,7 +104,7 @@
 
 	<div class="playlist-template details column">
 		<img class="artwork"/>
-		<div class="float-right padding-tr">
+		<div class="float-right padding-tr no-mobile">
 			<a class="remix-audio" target="video" onclick="stopPropagation(event)"><img class="icon no-print" src="../img/remixaudio.png"/></a>
 			<br/><i class="duration"></i>
 		</div>
@@ -140,7 +140,6 @@ const ALBUM_ARTIST = "";
 const TRACK_LINK_PATH = "https://remix.audio/track/";
 const AUDIO_PATH = "https://remix.audio/uploads/tracks/";
 //const IMAGE_PATH = "https://remix.audio/uploads/media/";
-
 //const AUDIO_PATH = "";
 const IMAGE_PATH = "./artwork/";
 const AUDIO_TYPE = ".mp3";
