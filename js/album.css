@@ -63,6 +63,15 @@ div.repeater { max-width: 1400px; }
 	div.repeater { 	max-width: 600px;	}
 }
 
+@media only screen and (max-width: 800px)
+{
+	img.player-image[src] { max-width: 320px; }
+	div.toolbar audio {	width: 240px; }
+	div.repeater { max-width: none; }
+	div.playlist-template { width: 320px; }
+	div.playlist-template .item-text { width: auto; }
+}
+
 div.toolbar > * {
 	vertical-align: middle;
 }
