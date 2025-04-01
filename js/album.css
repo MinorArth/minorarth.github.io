@@ -42,43 +42,16 @@ body {
 
 img.player-image[src] { max-width: 720px; border: solid 8px white;  }
 div.toolbar audio {	width: 600px; height: 24px; }
-div.repeater { max-width: 1400px; }
 
-@media only screen and (max-width: 2140px)
-{
-	img.player-image[src] { max-width: 600px;   border: solid 6px white;  }
-	div.toolbar audio {	width: 480px; }
-	div.repeater { 	max-width: 1000px;	}
-}
+a.link-template, a.play-link-template { margin-left: 1em; margin-right: 1em; }
 
-@media only screen and (max-width: 1600px)
-{
-	img.player-image[src] { max-width: 360px;   border: solid 4px white;  }
-	div.toolbar audio {	width: 300px; }
-	div.repeater { 	max-width: 1000px;	}
-}
-
-@media only screen and (max-width: 1400px)
-{
-	div.repeater { 	max-width: 600px;	}
-}
-
-@media only screen and (max-width: 800px)
-{
-	img.player-image[src] { max-width: 320px; }
-	div.toolbar audio {	width: 240px; }
-	div.repeater { max-width: none; }
-	div.playlist-template { width: 320px; }
-	div.playlist-template .item-text { width: auto; }
+div.repeater {
+	max-width: 1400px;
 }
 
 div.toolbar > * {
 	vertical-align: middle;
 }
-
-a.link-template, a.play-link-template { margin-left: 1em; margin-right: 1em; }
-
-div.repeater { 	padding-left: 10px; padding-right: 10px; }
 
 div.playlist-template {
 	font-size: 12pt;
@@ -166,6 +139,39 @@ p {
 a { text-decoration: none; }
 a.logo img { height: 90px; padding-top: 10px; display: inline-block;	}
 .hidden { display: none; }
+
+@media only screen and (max-width: 2140px)
+{
+	img.player-image[src] { max-width: 600px;   border: solid 6px white;  }
+	div.toolbar audio {	width: 480px; }
+	div.repeater { 	max-width: 1000px;	}
+}
+
+@media only screen and (max-width: 1600px)
+{
+	img.player-image[src] { max-width: 360px;   border: solid 4px white;  }
+	div.toolbar audio {	width: 300px; }
+	div.repeater { 	max-width: 1000px;	}
+}
+
+@media only screen and (max-width: 1400px)
+{
+	div.repeater { 	max-width: 600px; }
+}
+
+/* Mobile */
+@media only screen and (max-width: 800px)
+{
+	img.player-image[src] { max-width: 320px; }
+	div.toolbar audio {	width: 240px; }
+	div.repeater { max-width: none; }
+	div.playlist-template { width: 340px; font-size: 10pt; }
+	div.playlist-template .item-text { width: auto; }
+	div.playlist-template img.artwork[src] { height: .5in; }
+
+	a.link-template, a.play-link-template { margin-left: .25em; margin-right: .25em; }
+	.no-mobile { display: none; }
+}
 
 @media print {
 	.no-print { display: none; }
