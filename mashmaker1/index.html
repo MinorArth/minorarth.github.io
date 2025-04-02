@@ -10,7 +10,7 @@
 	<meta property="og:url"          content="https://minorarth.github.io/mashmaker1/"/>
 	<meta property="og:image"        content="https://minorarth.github.io/mashmaker1/Mashmaker1.jpg"/>
 	<meta property="og:image:width"  content="720"/>
-	<meta property="og:image:height" content="720" />
+	<meta property="og:image:height" content="720"/>
 	<meta property="og:image:type"   content="image/jpeg"/>
 
 	<link rel="stylesheet" type="text/css" href="../js/album.css" />
@@ -36,6 +36,8 @@
 </head>
 <body>
 <a class="logo print-only"><img/></a>
+<h1><a target="download" class="album-title album-link"></a></h1>
+<div class="album-description"></div>
 
 <div class="toolbar no-print column">
 	<a class="logo"><img /></a><br/>
@@ -72,8 +74,6 @@
 </div>
 
 <div class="column">
-	<h1><a target="download" class="album-title album-link"></a></h1>
-	<div class="album-description"></div>
 	<h3 id="playlist-links" class="no-print"></h3>
 	<div class="repeater"></div>
 </div>
@@ -133,17 +133,14 @@
 </div>
 </body>
 
+<script src="../js/album.js"></script>
 <script>
-const metas = Array.from(document.getElementsByTagName('meta'));
-const meta = {};
-metas.forEach(m => { if(m.attributes.property) meta[m.attributes.property.value.replace(/:/g,"_") ] = m.attributes.content.value });
-
 const LOGO_IMAGE = "";
 const LOGO_TITLE = "Minor Arth";
 const LOGO_LINK = "";
 
-const ALBUM_TITLE = meta.og_title || document.title;
-const ALBUM_DESCRIPTION = meta.og_description;
+const ALBUM_TITLE = getMeta("og_title") || document.title;
+const ALBUM_DESCRIPTION = getMeta("og_description");
 const ALBUM_LINK = "https://www.mediafire.com/file/o2vaf1ix7ua3l43/MinorArth-TheMashmaker-volume1.zip/file";
 const ALBUM_ARTIST = "Minor Arth";
 const TRACK_LINK_PATH = "https://remix.audio/track/";
@@ -355,9 +352,7 @@ var items = [
 		"image": "831121960_1648839432_1027395601.jpg"
 	}
 ];
-</script>
-<script src="../js/album.js"></script>
-<script>
+
 loadPlaylist();
 </script>
 </html>

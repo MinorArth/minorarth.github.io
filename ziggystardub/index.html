@@ -28,7 +28,9 @@
 	</style>
 </head>
 <body>
-<a class="logo print-only"><img /></a>
+<a class="logo print-only"><img/></a>
+<h1><a target="download" class="album-title album-link"></a></h1>
+<div class="album-description"></div>
 
 <div class="toolbar no-print column">
 	<a class="logo"><img /></a><br/>
@@ -65,13 +67,10 @@
 </div>
 
 <div class="column">
-	<h1><a target="download" class="album-title album-link"></a></h1>
-	<div class="album-description"></div>
 	<h3 id="playlist-links" class="no-print"></h3>
-
 	<div class="repeater"></div>
 </div>
-<p class="links"></p>
+<div class="links"></div>
 
 <div id="templates" class="hidden">
 	<a class="link-template"></a>
@@ -127,11 +126,8 @@
 </div>
 </body>
 
+<script src="../js/album.js"></script>
 <script>
-const metas = Array.from(document.getElementsByTagName('meta'));
-const meta = {};
-metas.forEach(m => { if(m.attributes.property) meta[m.attributes.property.value.replace(/:/g,"_") ] = m.attributes.content.value });
-
 var items = [
 	{
 		"id": 48217,
@@ -238,12 +234,12 @@ var links = {
 	"Facebook": "https://www.facebook.com/DoM.mashupscovers"
 };
 
-const LOGO_IMAGE = ""; 
+const LOGO_IMAGE = "";
 const LOGO_TITLE = "DoM";
 const LOGO_LINK = "";
 
-const ALBUM_TITLE = meta.og_title || document.title;
-const ALBUM_DESCRIPTION = meta.og_description;
+const ALBUM_TITLE = getMeta("og_title") || document.title;
+const ALBUM_DESCRIPTION = getMeta("og_description");
 const ALBUM_LINK = "https://remix.audio/playlist/2325";
 const ALBUM_ARTIST = "DoM";
 const TRACK_LINK_PATH = "https://remix.audio/track/";
@@ -255,9 +251,7 @@ const AUDIO_TYPE = ".mp3";
 const IMAGE_TYPE = ".jpg";
 const PLAYER_IMAGE = "./ZiggyStardub.jpg";
 var producers = [];
-</script>
-<script src="../js/album.js"></script>
-<script>
+
 loadPlaylist();
 </script>
 </html>
