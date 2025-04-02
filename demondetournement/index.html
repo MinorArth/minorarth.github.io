@@ -4,7 +4,7 @@
 	<title>DEMON DÉTOURNEMENT</title>
 	<meta http-equiv="Content-Type"  content="text/html; charset=utf-8"/>
 	<meta name="viewport"            content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi" />
-	<meta property="og:site_name"    content="Minor Arth mashups"/>
+	<meta property="og:site_name"    content="Minor Arth mashup"/>
 	<meta property="og:title"        content="DEMON DÉTOURNEMENT"/>
 	<meta property="og:description"  content="Gorillaz - Demon Days | The 20th Anniversary Mashup Album"/>
 	<meta property="og:url"          content="https://minorarth.github.io/demondetournement"/>
@@ -16,13 +16,18 @@
 	<link rel="stylesheet" type="text/css" href="../js/album.css" />
 </head>
 <body>
-<h1 class="float-left"><a href="..">&lt;</a></h1>
-<a class="logo print-only"><img/></a>
-
+<header>
+	<div class="column">
+		<a class="logo"><img/></a>
+	</div>
+	<div class="column">
+		<h1><a target="download" class="album-title album-link"></a></h1>
+		<div class="album-description"></div>
+	</div>
+</header>
+<br/>
 <div class="toolbar no-print column">
-	<a class="logo"><img /></a><br/>
-	<a target="download" class="album-link">DOWNLOAD ALBUM</a>
-	<br/><br/>
+	<h4><a target="download" class="album-link">DOWNLOAD ALBUM</a></h4>
 	<img class="player-image"/>
 	<br/><br/>
 	<button onclick="playPrevious()" title="Previous track"> &lt;&lt; </button>
@@ -54,9 +59,7 @@
 </div>
 
 <div class="column">
-	<h1><a target="download" class="album-title album-link"></a></h1>
-	<div class="album-description"></div>
-	<h3 id="playlist-links" class="no-print"></h3>
+	<h4 id="playlist-links" class="no-print"></h4>
 	<div class="repeater"></div>
 </div>
 <div class="links"></div>
@@ -120,7 +123,7 @@
 <script>
 const LOGO_IMAGE = "./artwork/SteffsGorillazMashupProject.png";
 const LOGO_TITLE = "Steff's Gorillaz Mashup Project";
-const LOGO_LINK = "";
+const LOGO_LINK = "..";
 
 const ALBUM_TITLE = getMeta("og_title") || document.title;
 const ALBUM_DESCRIPTION = getMeta("og_description");

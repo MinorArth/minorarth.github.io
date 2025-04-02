@@ -139,8 +139,8 @@ p {
 
 a { text-decoration: none; }
 a.logo img {
-	max-height: 80px;
-	max-width: 80%;
+	max-height: 90px;
+	max-width: 90%;
 	margin-top: 10px;
 	display: inline-block;	
 }

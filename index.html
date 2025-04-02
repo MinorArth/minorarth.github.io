@@ -1,12 +1,12 @@
 <!DOCTYPE HTML>
 <html class="js" lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<title>Minor Arth Mashup</title>
+	<title>Minor Arth mashup</title>
 	<meta http-equiv="Content-Type"  content="text/html; charset=utf-8"/>
 	<meta name="viewport"            content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi" />
-	<meta property="og:site_name"    content="Minor Arth Mashup"/>
-	<meta property="og:title"        content="Minor Arth Mashup"/>
-	<meta property="og:description"  content="Audio and Video creations by Minor Arth"/>
+	<meta property="og:site_name"    content="Minor Arth mashup"/>
+	<meta property="og:title"        content="Minor Arth mashup"/>
+	<meta property="og:description"  content="Audio and Video creations"/>
 	<meta property="og:url"          content="https://minorarth.github.io"/>
 	<meta property="og:image"        content="https://minorarth.github.io/mashmaker3/artwork/Mashmaker3.jpg"/>
 	<meta property="og:image:width"  content="720"/>
@@ -70,12 +70,17 @@
 	</style>
 </head>
 <body>
-<a class="logo print-only"><img /></a>
-
+<header>
+	<div class="column">
+		<a class="logo"><img/></a>
+	</div>
+	<div class="column">
+		<h1><a target="download" class="album-title album-link"></a></h1>
+		<div class="album-description"></div>
+	</div>
+</header>
 <div class="toolbar no-print column">
 	<div class="links"></div>
-	<a class="logo"><img /></a>
-	<div>
 	Show:
 		<select id="view-mode" onchange="refreshList()">
 			<option value="tile-template">tiles</option>
@@ -83,7 +88,6 @@
 			<option value="image-template">large images</option>
 			<option value="small-image-template">small images</option>
 		</select>
-	</div>
 </div>
 
 <div class="column">
@@ -252,7 +256,7 @@ var links = {
 
 const LOGO_IMAGE = "./img/mam_white.png";
 const LOGO_TITLE = "Minor Arth";
-const LOGO_LINK = "https://minorarth.github.io/";
+const LOGO_LINK = ".";
 
 const ALBUM_TITLE =  getMeta("og_title");
 const ALBUM_DESCRIPTION = getMeta("og_description");
