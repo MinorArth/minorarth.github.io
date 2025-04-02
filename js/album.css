@@ -139,8 +139,8 @@ p {
 
 a { text-decoration: none; }
 a.logo img {
-	max-height: 90px;
-	max-width: 90%;
+	max-height: 80px;
+	max-width: 80%;
 	margin-top: 10px;
 	display: inline-block;	
 }
@@ -169,6 +169,8 @@ a.logo img {
 @media only screen and (max-width: 800px)
 {
 	img.player-image[src] { max-width: 320px; }
+	div.tile-template img.artwork[src] { width: 320px; }
+
 	div.toolbar audio {	width: 240px; }
 	div.repeater { max-width: none; }
 	div.playlist-template { width: 340px; font-size: 10pt; }
