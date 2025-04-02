@@ -34,6 +34,7 @@
 	</style>
 </head>
 <body>
+<h1 class="float-left"><a href="..">&lt;</a></h1>
 <a class="logo print-only"><img/></a>
 <h1><a target="download" class="album-title album-link"></a></h1>
 <div class="album-description"></div>
@@ -134,9 +135,9 @@
 
 <script src="../js/album.js"></script>
 <script>
-const LOGO_IMAGE = "";
+const LOGO_IMAGE = "../img/mam_black.png";
 const LOGO_TITLE = "Minor Arth";
-const LOGO_LINK = "";
+const LOGO_LINK = "..";
 
 const ALBUM_TITLE = getMeta("og_title") || document.title;
 const ALBUM_DESCRIPTION = getMeta("og_description");
@@ -153,11 +154,10 @@ const PLAYER_IMAGE = "./Mashmaker2.jpg";
 var producers = [];
 
 var links = {
-	"Albums": "..",
+	"<": "..",
 	"remix.audio": "https://remix.audio/playlist/2461",
 	"YouTube": "https://www.youtube.com/@MinorArth",
-	"Facebook": "https://www.facebook.com/MinorArthMashups",
-	"AudioBoots": "https://audioboots.org"
+	"Facebook": "https://www.facebook.com/MinorArthMashups"
 };
 
 var items = [

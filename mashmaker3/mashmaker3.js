@@ -198,10 +198,8 @@ var items = [
 ];
 
 var links = {
-	"2024": "#",
-	"Albums": "..",
+	"<": "..",
 	"remix.audio": "https://remix.audio/playlist/2557",
 	"YouTube": "https://www.youtube.com/@MinorArth",
-	"Facebook": "https://www.facebook.com/MinorArthMashups",
-	"AudioBoots": "https://audioboots.org"
+	"Facebook": "https://www.facebook.com/MinorArthMashups"
 };

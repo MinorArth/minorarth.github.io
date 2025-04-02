@@ -38,6 +38,7 @@ body {
 
 .align-left  { text-align: left; }
 .align-right { text-align: right; }
+.float-left  { float: left; text-align: left; }
 .float-right, img.icon { float: right; text-align: right; }
 
 img.player-image[src] { max-width: 720px; border: solid 8px white;  }

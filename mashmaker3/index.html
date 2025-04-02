@@ -10,7 +10,7 @@
 	<meta property="og:url"          content="https://minorarth.github.io/mashmaker3"/>
 	<meta property="og:image"        content="https://minorarth.github.io/mashmaker3/artwork/Mashmaker3.jpg"/>
 	<meta property="og:image:width"  content="720"/>
-	<meta property="og:image:height" content="720" />
+	<meta property="og:image:height" content="720"/>
 	<meta property="og:image:type"   content="image/jpeg"/>
 
 	<link rel="stylesheet" type="text/css" href="../js/album.css" />
@@ -34,7 +34,10 @@
 	</style>
 </head>
 <body>
+<h1 class="float-left"><a href="..">&lt;</a></h1>
 <a class="logo print-only"><img/></a>
+<h1><a target="download" class="album-title album-link"></a></h1>
+<div class="album-description"></div>
 
 <div class="toolbar no-print column">
 	<a class="logo"><img /></a><br/>
@@ -71,8 +74,6 @@
 </div>
 
 <div class="column">
-	<h1><a target="download" class="album-title album-link"></a></h1>
-	<div class="album-description"></div>
 	<h3 id="playlist-links" class="no-print"></h3>
 	<div class="repeater"></div>
 </div>
@@ -135,7 +136,7 @@
 <script src="../js/album.js"></script>
 <script src="./mashmaker3.js"></script>
 <script>
-const LOGO_IMAGE = "";
+const LOGO_IMAGE = "../img/mam_white.png";
 const LOGO_TITLE = "Minor Arth";
 const LOGO_LINK = "";
 

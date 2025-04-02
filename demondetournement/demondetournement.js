@@ -1,6 +1,7 @@
 var links = {
-	"Albums": "..",
+	"<": "..",
 	"remix.audio": "https://remix.audio/playlist/2953",
+	"YouTube": "https://www.youtube.com/watch?v=lJ_1DWvw-jU&list=PLUq5Z5VhjxM3G9EXQPOAmrBcFro3FwwjS&pp=iAQB8AUB",
 	"Mashup Lovers": "https://www.facebook.com/groups/mashuplovers",
 	"Steff St. Moore": "https://remix.audio/profile/SteffStMoore",
 	"DoM": "https://remix.audio/profile/DoM",

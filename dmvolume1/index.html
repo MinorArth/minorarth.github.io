@@ -2,7 +2,7 @@
 <html class="js" lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<title>Minor Arth | Depeche Mode mashups volume 1</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta http-equiv="Content-Type"  content="text/html; charset=utf-8"/>
 	<meta name="viewport"            content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi" />
 	<meta property="og:site_name"    content="Minor Arth mashups"/>
 	<meta property="og:title"        content="Some Great Music For The Mashes"/>
@@ -21,7 +21,6 @@
 			color: white;
 		}
 
-		a, .number { color: #e7d1ac; }
 		p.sources { color: #DDD; }
 
 		div.playlist-template {
@@ -35,6 +34,7 @@
 	</style>
 </head>
 <body>
+<h1 class="float-left"><a href="..">&lt;</a></h1>
 <a class="logo print-only"><img/></a>
 <h1><a target="download" class="album-title album-link"></a></h1>
 <div class="album-description"></div>
@@ -136,9 +136,9 @@
 <script src="../js/album.js"></script>
 <script src="playlist.js"></script>
 <script>
-const LOGO_IMAGE = "";
+const LOGO_IMAGE = "../img/mam_white.png";
 const LOGO_TITLE = "Minor Arth";
-const LOGO_LINK = "";
+const LOGO_LINK = "..";
 
 const ALBUM_TITLE = getMeta("og_title") || document.title;
 const ALBUM_DESCRIPTION = getMeta("og_description");

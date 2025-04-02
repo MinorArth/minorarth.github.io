@@ -35,9 +35,9 @@
 	</style>
 </head>
 <body>
+<h1 class="float-left"><a href="..">&lt;</a>
 <a class="logo print-only"><img/></a>
-<h1><a target="download" class="album-title album-link"></a></h1>
-<div class="album-description"></div>
+</h1>
 
 <div class="toolbar no-print column">
 	<a class="logo"><img /></a><br/>
@@ -74,7 +74,9 @@
 </div>
 
 <div class="column">
-	<h3 id="playlist-links" class="no-print"></h3>
+		<h1><a target="download" class="album-title album-link"></a></h1>
+		<div class="album-description"></div>
+		<h3 id="playlist-links" class="no-print"></h3>
 	<div class="repeater"></div>
 </div>
 <div class="links"></div>
@@ -135,7 +137,7 @@
 
 <script src="../js/album.js"></script>
 <script>
-const LOGO_IMAGE = "";
+const LOGO_IMAGE = "../img/mam_black.png";
 const LOGO_TITLE = "Minor Arth";
 const LOGO_LINK = "";
 
@@ -154,7 +156,7 @@ const PLAYER_IMAGE = "./Mashmaker1.jpg";
 var producers = [];
 
 var links = {
-	"Albums": "..",
+	"<": "..",
 	"remix.audio": "https://remix.audio/playlist/2013",
 	"YouTube": "https://www.youtube.com/@MinorArth",
 	"Facebook": "https://www.facebook.com/MinorArthMashups",
@@ -234,7 +236,7 @@ var items = [
 		"id": 25840,
 		"file": "1412828874_1695785150_47229392.mp3",
 		"author": "Minor Arth",
-		"title": "Happy Oasis Mondays\nKinky Supersonic Afro | Madchester United remix",
+		"title": "Happy Oasis Mondays\nKinky Supersonic Afro",
 		"sources": [
 			"Happy Mondays - Kinky Afro | 1990",
 			"Oasis - Supersonic | 1994"

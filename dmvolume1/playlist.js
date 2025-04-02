@@ -1,5 +1,5 @@
 var links = {
-	"Albums": "..",
+	"<": "..",
 	"remix.audio": "https://remix.audio/playlist/2789",
 	"YouTube": "https://www.youtube.com/watch?v=FD4xU1Oj8pE&list=PLUq5Z5VhjxM1p4sMIlk6zFlnBRW5hJt1r",
 	"Facebook": "https://www.facebook.com/MinorArthMashups",
