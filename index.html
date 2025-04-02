@@ -3,9 +3,10 @@
 <head>
 	<title>Minor Arth | Mashup albums</title>
 	<meta http-equiv="Content-Type"  content="text/html; charset=utf-8"/>
+	<meta name="viewport"            content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi" />
 	<meta property="og:site_name"    content="Minor Arth Mashups"/>
-	<meta property="og:title"        content="Mashup Albums"/>
-	<meta property="og:description"  content="Mashup Albums by Minor Arth"/>
+	<meta property="og:title"        content="Minor Arth Mashups"/>
+	<meta property="og:description"  content="Audio and Video creations by Minor Arth"/>
 	<meta property="og:url"          content="https://minorarth.github.io"/>
 	<meta property="og:image"        content="https://minorarth.github.io/mashmaker3/artwork/Mashmaker3.jpg"/>
 	<meta property="og:image:width"  content="720"/>
@@ -72,8 +73,9 @@
 <a class="logo print-only"><img /></a>
 
 <div class="toolbar no-print column">
-	<a class="logo"><img /></a><br/>
-
+	<div class="links"></div>
+	<a class="logo"><img /></a>
+	<div>
 	Show:
 		<select id="view-mode" onchange="refreshList()">
 			<option value="tile-template">tiles</option>
@@ -81,17 +83,15 @@
 			<option value="image-template">large images</option>
 			<option value="small-image-template">small images</option>
 		</select>
-
-		<div class="links"></div>
-
 	</div>
+</div>
 
 <div class="column">
 	<h1><a class="album-title album-link"></a></h1>
 	<div class="album-description"></div>
 	<h3 id="playlist-links" class="no-print"></h3>
-	<h2>Videos</h2>
-	<iframe width="960" height="540" src="https://www.youtube.com/embed/?listType=playlist&list=PLUq5Z5VhjxM2R3PXlM3ggdT3_Y_nQDisJ" frameborder="0" allowfullscreen></iframe>
+	<h2><a class="url" href="https://www.youtube.com/playlist?list=PLUq5Z5VhjxM2R3PXlM3ggdT3_Y_nQDisJ">Videos</a></h2>
+	<iframe width="960" height="540" src="https://www.youtube.com/embed/?listType=playlist&list=PLUq5Z5VhjxM2R3PXlM3ggdT3_Y_nQDisJ" frameborder="0" allowfullscreen class="no-mobile"></iframe>
 	<div class="repeater"></div>
 </div>
 
@@ -135,7 +135,9 @@
 		</div>
 	</div>
 </div>
+</body>
 
+<script src="./js/album.js"></script>
 <script>
 var items = [
 	{ 
@@ -248,16 +250,12 @@ var links = {
 	"AudioBoots": "https://audioboots.org"
 };
 
-const metas = Array.from(document.getElementsByTagName('meta'));
-const meta = {};
-metas.forEach(m => { if(m.attributes.property) meta[m.attributes.property.value.replace(/:/g,"_") ] = m.attributes.content.value });
-
-const LOGO_IMAGE = "";
+const LOGO_IMAGE = "./demondetournement/artwork/SteffsGorillazMashupProject.png";
 const LOGO_TITLE = "Minor Arth";
 const LOGO_LINK = "https://minorarth.github.io/";
 
-const ALBUM_TITLE = "Mashup Albums";
-const ALBUM_DESCRIPTION = meta.og_description;
+const ALBUM_TITLE =  getMeta("og_title");
+const ALBUM_DESCRIPTION = getMeta("og_description");
 const ALBUM_LINK = "https://minorarth.github.io/";
 
 const ALBUM_ARTIST = "Minor Arth";
@@ -270,12 +268,7 @@ const AUDIO_TYPE = ".mp3";
 const IMAGE_TYPE = ".jpg";
 const PLAYER_IMAGE = "./Mashmaker3.jpg";
 var producers = [];
-</script>
 
-<script src="./js/album.js"></script>
-
-<script>
 loadPlaylist();
 </script>	
-</body>
 </html>
