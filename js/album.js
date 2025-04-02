@@ -1,5 +1,5 @@
-const isUrl = s => s && s.includes && s.includes("://");
-
+const metas = Array.from(document.getElementsByTagName('meta'));
+var meta = {};
 const audioPlayer = document.querySelector("audio#audioPlayer");
 const hiddenPlayer = document.querySelector("audio#hiddenPlayer");
 const playlistLinks = document.querySelector("#playlist-links");
@@ -22,54 +22,55 @@ const viewMode = document.querySelector("select#view-mode");
 const categoryTemplate = document.querySelector(".category-template");
 
 var template;
-var currentItem = null;
+var currentItem = preloadItem = null;
 var currentItemElement = null;
-var currentItemIndex = null;
-
-var allPlaylists = {}; // Array.isArray(items) ? { all: items} : items;
-
-albumTitle.innerText = ALBUM_ARTIST ? ALBUM_ARTIST + " - " + ALBUM_TITLE : ALBUM_TITLE;
-albumDescription.innerHTML = ALBUM_DESCRIPTION;
-albumLinks.forEach(a => a.href = ALBUM_LINK);
-
-if(!LOGO_IMAGE)
-	logoLinks.forEach(l => l.remove())
-else {
-	logoImages.forEach(i => setImage(i, LOGO_IMAGE));
-	logoLinks.forEach(l => l.href = LOGO_LINK);
-}
-
-displayLinks(linkContainer);
-
-// Audio has ended when this function is executed
-audioPlayer?.addEventListener('ended', playNext, false);
-
-audioPlayer?.addEventListener('loadedmetadata', () => {
-	if(currentItem.duration) return;
-
-	currentItem.duration  = audioPlayer.duration;
-
-	if(currentItem.duration && currentItemElement && currentItemElement.querySelector(".duration"))	
-		currentItemElement.querySelector(".duration").innerHTML = formatTime(currentItem.duration);
-		
-	console.log("audioPlayer loadedmetadata", currentItem.n, currentItem.duration);
-});
-
-hiddenPlayer?.addEventListener('loadedmetadata', () => {
-	if(currentItem.duration) return;
-
-	currentItem.duration  = hiddenPlayer.duration;	
-	console.log("hiddenPlayer loadedmetadata", currentItem.n, currentItem.duration);
-});
+var currentItemIndex = preloadItemIndex = null;
+var allPlaylists = {};
 
 //window.onresize = () => albumTitle.innerText = innerWidth + " px / ";
 //onresize();
 
-const USE_REMOTE_FILES = isUrl(AUDIO_PATH);
-const USE_LOCAL_FILES = !USE_REMOTE_FILES;
+const isUrl = s => s && s.includes && s.includes("://");
+const useRemoteAudioFiles = () =>  isUrl(AUDIO_PATH);
+const useLocalAudioFiles  = () => !isUrl(AUDIO_PATH);
 
 function loadPlaylist()
 {
+	albumTitle.innerText = ALBUM_ARTIST ? ALBUM_ARTIST + " - " + ALBUM_TITLE : ALBUM_TITLE;
+	albumDescription.innerHTML = ALBUM_DESCRIPTION;
+	albumLinks.forEach(a => a.href = ALBUM_LINK);
+	
+	if(!LOGO_IMAGE)
+		logoLinks.forEach(l => l.remove())
+	else {
+		logoImages.forEach(i => setImage(i, LOGO_IMAGE));
+		logoLinks.forEach(l => l.href = LOGO_LINK);
+	}
+	
+	displayLinks(linkContainer);
+	
+	// Audio has ended when this function is executed
+	audioPlayer?.addEventListener('ended', playNext, false);
+	
+	audioPlayer?.addEventListener('loadedmetadata', () => {
+		if(currentItem.duration) return;
+	
+		currentItem.duration = audioPlayer.duration;
+	
+		if(currentItem.duration && currentItemElement && currentItemElement.querySelector(".duration"))	
+			currentItemElement.querySelector(".duration").innerHTML = formatTime(currentItem.duration);
+			
+		console.log("audioPlayer loadedmetadata", currentItem.n, currentItem.duration);
+	});
+	
+	hiddenPlayer?.addEventListener('loadedmetadata', () => {
+		if(!preloadItem) return;
+		preloadItem.duration = hiddenPlayer.duration;	
+		console.log("hiddenPlayer loadedmetadata", preloadItem.n, preloadItem.duration);
+		if(preloadItemIndex < items.length)	preloadFile(items[preloadItemIndex++]);
+		else refreshList();
+	});
+
 	if(!Array.isArray(items))
 	{
 		allPlaylists.all = [];
@@ -115,6 +116,14 @@ function loadPlaylist()
 
 	setPlaylist();
 	setImage(playerImage, PLAYER_IMAGE);
+	if(playerImage) playerImage.onclick = togglePlay;
+}
+
+function getMeta(key)
+{
+	if(!meta) meta = {};
+	metas.forEach(m => { if(m.attributes.length > 1) meta[m.attributes[0].value.replace(/[-:]/g,"_") ] = m.attributes[1].value });
+	return key ? meta[key] || "" : meta;
 }
 
 function setImage(img, src) {
@@ -162,7 +171,7 @@ function hideBrokenImage(img) {
 }
 
 function shuffle() {
-	items = items.filter (i => i.file);
+	items = items.filter(i => i.file);
 	items.sort(i => Math.random() - .5);
 	refreshList();
 	return items;
@@ -252,7 +261,7 @@ function refreshList() {
 function makeLocalPlaylistItem(item, i) {
 	item.n = i + 1;
 	if(item.localFile && !item.image) item.image = item.localFile + IMAGE_TYPE;
-	if(USE_LOCAL_FILES && item.localFile && !item.file)  item.file  = item.localFile + AUDIO_TYPE;
+	if(useLocalAudioFiles() && item.localFile && !item.file)  item.file  = item.localFile + AUDIO_TYPE;
 }
 
 function makePlaylistItem(item, i) {
@@ -363,6 +372,13 @@ function cloneTemplate(node, parent)
 	return clone;
 }
 
+function togglePlay()
+{
+	if(!currentItem) playNext();
+	else if(audioPlayer.paused) audioPlayer.play()
+	else audioPlayer.pause();
+}
+
 function playFile(item)
 {
 	if(typeof item == "number") {
@@ -394,19 +410,7 @@ function playFile(item)
 	return currentItem;
 }
 
-//load audio file metadata without playing
-function preloadFile(item)
-{
-	if(!item || !item.file) return;
-
-	currentItem = item;
-	var subdir = playlist ? playlist.dataset.path || playlist.getAttribute("path") : "";
-	subdir = subdir ? subdir = subdir + "/" : "";
-	hiddenPlayer.src = AUDIO_PATH + subdir + item.file;
-}
-
-function playNext(evt) {
-	// console.log("playNext", evt);
+function playNext() {
 	if(currentItemIndex === null) currentItemIndex = -1;
 	return playFile(++currentItemIndex % items.length || 0);
 }
@@ -417,18 +421,22 @@ function playPrevious() {
 	return playFile(previousIndex);
 }
 
+//load audio file metadata without playing
+function preloadFile(item)
+{
+	if(!item) return refreshList();
+	if(!item.file) return preloadFile(items[preloadItemIndex++]);
+
+	preloadItem = item;
+	var subdir = playlist ? playlist.dataset.path || playlist.getAttribute("path") : "";
+	subdir = subdir ? subdir = subdir + "/" : "";
+	hiddenPlayer.src = AUDIO_PATH + subdir + item.file;
+}
+
 function loadDurations()
 {
-	var i = 0;
-	var inter = setInterval(() => {
-		currentItem = items[i++];
-		if(i > items.length) {
-			clearInterval(inter);
-			refreshList();
-		}
-		else if(currentItem && !currentItem.duration)
-			preloadFile(currentItem);
-	}, 400);
+	preloadItemIndex = 0;
+	preloadFile(items[preloadItemIndex]);
 }
 
 function getTotalDuration(items)
@@ -450,24 +458,16 @@ function m3uPlaylist()
 	return "#EXTM3U\n" + items.map(i => i.file).join("\n");
 }
 
-function getMeta()
-{
-	const metas = Array.from(document.getElementsByTagName('meta'));
-	const meta = {};
-	metas.forEach(m => { if(m.attributes.property) meta[m.attributes.property.value.replace(/:/g,"_") ] = m.attributes.content.value });
-	return meta;
-}
-
 function fetchJsonData(url, variable, funct) {
 	fetch(url)
-		.then(response => {
-			if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
-			return response.json();
-		})
-		.then(data => {
-			console.log(data);
-			if(variable) window[variable] = data;
-			if(funct) funct(data);
-		})
-		.catch(error => console.error('Failed to fetch data:', error)); 
+	.then(response => {
+		if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+		return response.json();
+	})
+	.then(data => {
+		console.log(data);
+		if(variable) window[variable] = data;
+		if(funct) funct(data);
+	})
+	.catch(error => console.error('Failed to fetch data:', error)); 
 }
