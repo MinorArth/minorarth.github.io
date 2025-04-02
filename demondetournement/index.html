@@ -10,7 +10,7 @@
 	<meta property="og:url"          content="https://minorarth.github.io/demondetournement"/>
 	<meta property="og:image"        content="https://minorarth.github.io/demondetournement/artwork/DemonDetournement.jpg"/>
 	<meta property="og:image:width"  content="720"/>
-	<meta property="og:image:height" content="720" />
+	<meta property="og:image:height" content="720"/>
 	<meta property="og:image:type"   content="image/jpeg"/>
 
 	<link rel="stylesheet" type="text/css" href="../js/album.css" />
@@ -114,26 +114,15 @@
 </div>
 </body>
 
+<script src="demondetournement.js"></script>
+<script src="../js/album.js"></script>
 <script>
-var links = {
-	"Albums": "..",
-	"Mashup Lovers": "https://www.facebook.com/groups/mashuplovers",
-	"Steff St. Moore": "https://remix.audio/profile/SteffStMoore",
-	"DoM": "https://remix.audio/profile/DoM",
-	"Minor Arth": "https://www.youtube.com/@MinorArth",
-	"remix.audio": "https://remix.audio/playlist/2953",
-};
-
-const metas = Array.from(document.getElementsByTagName('meta'));
-const meta = {};
-metas.forEach(m => { if(m.attributes.property) meta[m.attributes.property.value.replace(/:/g,"_") ] = m.attributes.content.value });
-
 const LOGO_IMAGE = "./artwork/SteffsGorillazMashupProject.png";
 const LOGO_TITLE = "Steff's Gorillaz Mashup Project";
 const LOGO_LINK = "";
 
-const ALBUM_TITLE = meta.og_title || document.title;
-const ALBUM_DESCRIPTION = meta.og_description;
+const ALBUM_TITLE = getMeta("og_title") || document.title;
+const ALBUM_DESCRIPTION = getMeta("og_description");
 const ALBUM_LINK = "https://www.mediafire.com/file/04x0peh45n0es2u/Steffs_Gorillaz_Mashup_Project-Demon_Detournement.zip/file";
 const ALBUM_ARTIST = "";
 const TRACK_LINK_PATH = "https://remix.audio/track/";
@@ -145,10 +134,7 @@ const AUDIO_TYPE = ".mp3";
 const IMAGE_TYPE = ".jpg";
 const PLAYER_IMAGE = "./artwork/DemonDetournement.jpg";
 var producers = ["Steff St Moore", "Minor Arth", "DoM"];
-</script>
-<script src="demondetournement.js"></script>
-<script src="../js/album.js"></script>
-<script>
+
 loadPlaylist();
 </script>
 </html>

@@ -1,3 +1,12 @@
+var links = {
+	"Albums": "..",
+	"remix.audio": "https://remix.audio/playlist/2953",
+	"Mashup Lovers": "https://www.facebook.com/groups/mashuplovers",
+	"Steff St. Moore": "https://remix.audio/profile/SteffStMoore",
+	"DoM": "https://remix.audio/profile/DoM",
+	"Minor Arth": "https://www.youtube.com/@MinorArth",
+};
+
 var items = {
 	"Album": [
 		{
