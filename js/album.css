@@ -183,7 +183,7 @@ a.logo img {
 	div.playlist-template .item-text { width: auto; }
 	div.playlist-template img.artwork[src] { height: .5in; }
 
-	a.link-template, a.play-link-template { margin-left: .5em; margin-right: .5em; }
+	a.link-template, a.play-link-template { margin-left: .25em; margin-right: .25em; }
 	.no-mobile { display: none; }
 }
 
