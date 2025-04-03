@@ -1,3 +1,18 @@
+const LOGO_IMAGE = "./artwork/SteffsGorillazMashupProject.png";
+const LOGO_TITLE = "Steff's Gorillaz Mashup Project";
+const LOGO_LINK = "..";
+const ALBUM_TITLE = getMeta("og_title") || document.title;
+const ALBUM_DESCRIPTION = getMeta("og_description");
+const ALBUM_LINK = "https://www.mediafire.com/file/04x0peh45n0es2u/Steffs_Gorillaz_Mashup_Project-Demon_Detournement.zip/file";
+const ALBUM_ARTIST = "";
+const TRACK_LINK_PATH = "https://remix.audio/track/";
+const AUDIO_PATH = "https://remix.audio/uploads/tracks/";
+const IMAGE_PATH = "./artwork/";
+const AUDIO_TYPE = ".mp3";
+const IMAGE_TYPE = ".jpg";
+const PLAYER_IMAGE = "./artwork/DemonDetournement.jpg";
+var producers = ["Steff St Moore", "Minor Arth", "DoM"];
+
 var links = {
 	"<": "..",
 	"remix.audio": "https://remix.audio/playlist/2953",
@@ -327,3 +342,5 @@ var items = {
 		}
 	]
 };
+
+loadPlaylist();
