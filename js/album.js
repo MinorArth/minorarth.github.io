@@ -26,6 +26,7 @@ var currentItem = preloadItem = null;
 var currentItemElement = null;
 var currentItemIndex = preloadItemIndex = null;
 var allPlaylists = {};
+var producers = [];
 
 //window.onresize = () => albumTitle.innerText = innerWidth + " px / ";
 //onresize();
