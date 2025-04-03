@@ -44,6 +44,7 @@ function loadPlaylist()
 		logoLinks.forEach(l => l.remove())
 	else {
 		logoImages.forEach(i => setImage(i, LOGO_IMAGE));
+		if(LOGO_TITLE) logoLinks.forEach(l => l.title = LOGO_TITLE);
 		logoLinks.forEach(l => l.href = LOGO_LINK);
 	}
 	
