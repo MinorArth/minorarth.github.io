@@ -248,8 +248,8 @@ var items = [
 		"title": "The Things You Said Today",
 		"artists": "The Beatles / Depeche Mode",
 		"sources": [
-			"The Beatles - Things We Said Today | A Hard Days Night | 1963",
-			"Depeche Mode - The Things You Said | Music For The Masses | 1987"
+			"The Beatles - Things We Said Today | 1963",
+			"Depeche Mode - The Things You Said | 1987"
 		],
 		"video": "https://youtu.be/Nq3D8LNCNm0",
 		"image": "893997111_672924943_400995054.jpg"
