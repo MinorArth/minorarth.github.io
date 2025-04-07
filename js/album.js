@@ -301,7 +301,8 @@ function displayPlaylistItem(item, i) {
 	el = cloneTemplate(item.type == "category" ? categoryTemplate : template, repeater);
 	if(el.querySelector(".number"))
 		el.querySelector(".number").innerHTML = item.n;
-	el.onclick = () => playFile(i);
+	if(window.audioPlayer)
+		el.onclick = () => playFile(i);
 
 	var title = el.querySelector(".title");
 	var separator = viewMode.value == "playlist-template0" ? "  -  " : "\n";
