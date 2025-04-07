@@ -1,3 +1,16 @@
+const LOGO_IMAGE = "../img/mam_white.png";
+const LOGO_TITLE = "Minor Arth";
+const LOGO_LINK = "..";
+const ALBUM_TITLE = getMeta("og_title") || document.title;
+const ALBUM_DESCRIPTION = getMeta("og_description");
+const ALBUM_LINK = "https://remix.audio/playlist/2449";
+const ALBUM_ARTIST = "";
+const TRACK_LINK_PATH = "https://remix.audio/track/";
+const AUDIO_PATH = "https://remix.audio/uploads/tracks/";
+const IMAGE_PATH = "https://remix.audio/uploads/media/";
+const AUDIO_TYPE = ".mp3";
+const IMAGE_TYPE = ".jpg";
+
 var links = {
 	"<": "..",
 	"Facebook": "https://www.facebook.com/MinorArthMashups",
@@ -35,7 +48,7 @@ var items = [
 		"file": "846145833_1052099080_2043750842.mp3",
 		"producer": "Instamatic",
 		"artists": "Kavinsky / Depeche Mode",
-		"title": "Instamatic - Kavinsky Mode",
+		"title": "Kavinsky Mode",
 		"sources": [ "Kavinsky - Roadgame | 2013", "Depeche Mode - Behind The Wheel | 1987", "Out Run video game samples" ],
 		"image": "640919013_785528246_1950469825.jpg"
 	},
@@ -50,4 +63,5 @@ var items = [
 	}
 ];
 
-producers = Array.from(new Set(items.map(i => i.producer)));
+const PLAYER_IMAGE = items[2].image;
+loadPlaylist();
