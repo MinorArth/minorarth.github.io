@@ -13,6 +13,7 @@ var items = [
 		"artists": "Kavinsky / Depeche Mode",
 		"title": "Something To Do In Autodrive",
 		"sources": [ "Kavinsky - Testarossa Autodrive | 2006", "Depeche Mode - Something To Do | 1984" ],
+		"video": "https://youtu.be/FD4xU1Oj8pE",
 		"image": "776688174_1168472281_248581402.jpg"
 	},
 	{
@@ -26,6 +27,7 @@ var items = [
 			"Depeche Mode - My Favourite Stranger | 2023",
 			"Depeche Mode - Miles Away / The Truth Is | 2009"
 		],
+		"video": "https://youtu.be/YO4GEpnEsN0",
 		"image": "960573698_1470745835_1436081296.jpg"
 	},
 	{
