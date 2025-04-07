@@ -15,9 +15,7 @@ const PLAYER_IMAGE = "https://audioboots.org/Albums/AcousticUnplugged/assets/Aud
 var links = {
 	"<": "..",
 	"remix.audio": "https://remix.audio/playlist/2306",
-	"YouTube": "https://www.youtube.com/@MinorArth",
-	"Facebook": "https://www.facebook.com/MinorArthMashups",
-	"AudioBoots": "https://audioboots.org/"
+	"Facebook": "https://www.facebook.com/groups/audioboots/"
 };
 
 var items = [
@@ -44,7 +42,7 @@ var items = [
 			"Adele - Set Fire To The Rain | 2011"
 		],
 		"songTitle": "Set Fire Away From Me",
-		"producer": "MasheteMixes",
+		"producer": "Mashete",
 		"artists": "Korn / Adele"
 	},
 	{
@@ -153,7 +151,7 @@ var items = [
 			"Smashing Pumpkins - Today | 1993"
 		],
 		"songTitle": "How You Remind Today",
-		"producer": "MasheteMixes",
+		"producer": "Mashete",
 		"artists": "Nickelback / Smashing Pumpkins"
 	},
 	{
@@ -236,7 +234,7 @@ var items = [
 			"Gala - Freed From Desire | 1996"
 		],
 		"songTitle": "Lips Of Desire",
-		"producer": "MasheteMixes",
+		"producer": "Mashete",
 		"artists": "Hinder / Gala"
 	},
 	{
