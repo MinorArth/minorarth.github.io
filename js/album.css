@@ -1,7 +1,8 @@
 @media screen {
 	body{
-		/*background-image: linear-gradient(150deg,#48C,#001621); */
+		margin: 0px;
 		background-color: #081640;
+		/*background-image: linear-gradient(150deg,#48C,#001621); */
 		color: white;
 	}
 
