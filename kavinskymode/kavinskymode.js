@@ -30,6 +30,15 @@ var items = [
 		"image": "776688174_1168472281_248581402.jpg"
 	},
 	{
+		"id": 53138,
+		"file": "846145833_1052099080_2043750842.mp3",
+		"producer": "Instamatic",
+		"artists": "Kavinsky / Depeche Mode",
+		"title": "Kavinsky Mode",
+		"sources": [ "Kavinsky - Roadgame | 2013", "Depeche Mode - Behind The Wheel | 1987", "Out Run video game samples" ],
+		"image": "640919013_785528246_1950469825.jpg"
+	},
+	{
 		"id": 53524,
 		"file": "707912503_553182076_2086510767.mp3",
 		"producer": "Minor Arth",
@@ -44,15 +53,6 @@ var items = [
 		"image": "960573698_1470745835_1436081296.jpg"
 	},
 	{
-		"id": 53138,
-		"file": "846145833_1052099080_2043750842.mp3",
-		"producer": "Instamatic",
-		"artists": "Kavinsky / Depeche Mode",
-		"title": "Kavinsky Mode",
-		"sources": [ "Kavinsky - Roadgame | 2013", "Depeche Mode - Behind The Wheel | 1987", "Out Run video game samples" ],
-		"image": "640919013_785528246_1950469825.jpg"
-	},
-	{
 		"id": 53231,
 		"file": "1323905345_1088804435_178004740.mp3",
 		"producer": "Minor Arth",
@@ -63,5 +63,5 @@ var items = [
 	}
 ];
 
-const PLAYER_IMAGE = items[2].image;
+const PLAYER_IMAGE = items[1].image;
 loadPlaylist();
