@@ -397,9 +397,15 @@ function playFile(item)
 	var producer = item.author || item.producer;
 	if(producer == ALBUM_ARTIST) producer = "";
 	playerLabel.innerText = playerImage.title = [item.artists,  item.songTitle || item.title, producer].filter(s => s).join("\n");
-	var subdir = playlist ? playlist.dataset.path || playlist.getAttribute("path") : "";
-	subdir = subdir ? subdir = subdir + "/" : "";
-	audioPlayer.src = AUDIO_PATH + subdir + item.file;
+
+	if(isUrl(item.file) || item.file.includes("/"))
+		audioPlayer.src = item.file;
+	else {
+		var subdir = playlist ? playlist.dataset.path || playlist.getAttribute("path") : "";
+		subdir = subdir ? subdir = subdir + "/" : "";
+		audioPlayer.src = AUDIO_PATH + subdir + item.file;
+	}
+
 	audioPlayer.controls = true;
 	audioPlayer.play();
 
