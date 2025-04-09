@@ -143,18 +143,16 @@ var items = [
 	{
 		"file": "https://hearthis.at/vxmfxz7w/dj-useo-mashups-to-knock-your-teeth-out-the-sequel-the-mix-disc-1/stream.mp3?s=Utz",
 		"title": ALBUM_TITLE + " | Disc 1 preview",
-		"producer": "AudioBoots",
 		"image": "1942803553_551002103_629548849.jpg"
 	},
 	{
 		"file": "https://hearthis.at/vxmfxz7w/dj-useo-mashups-to-knock-your-teeth-out-the-sequel-the-mix-disc-2/stream.mp3?s=x2X",
 		"title": ALBUM_TITLE + " | Disc 2 preview",
-		"producer": "AudioBoots",
 		"image": "1942803553_551002103_629548849.jpg"
 	},
 
 ];
 
-producers = Array.from(new Set(items.map(i => i.producer)));
+producers = distinct(items, "producer");
 
 loadPlaylist();
