@@ -328,6 +328,6 @@ var items = [
 	}
 ];
 
-producers = Array.from(new Set(items.map(i => i.producer)));
+producers = distinct(items, "producer");
 
 loadPlaylist();
