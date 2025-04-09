@@ -50,7 +50,8 @@
 </head>
 <body>
 <header>
-	<div class="column">
+	<div class="links float-right"></div>
+	<div class="logo-container float-left">
 		<a class="logo"><img/></a>
 	</div>
 	<div class="column">
@@ -58,16 +59,6 @@
 		<div class="album-description"></div>
 	</div>
 </header>
-<div class="toolbar no-print column">
-	<div class="links"></div>
-	Show:
-		<select id="view-mode" onchange="refreshList()">
-			<option value="tile-template">tiles</option>
-			<option value="playlist-template.details">playlist with details</option>
-			<option value="image-template">large images</option>
-			<option value="small-image-template">small images</option>
-		</select>
-</div>
 
 <div class="column">
 	<h1><a class="album-title album-link"></a></h1>
@@ -75,6 +66,15 @@
 	<h3 id="playlist-links" class="no-print"></h3>
 	<h2><a class="url" href="https://www.youtube.com/playlist?list=PLUq5Z5VhjxM2R3PXlM3ggdT3_Y_nQDisJ">Videos</a></h2>
 	<iframe width="960" height="540" class="no-mobile white-border" frameborder="0" allowfullscreen src="https://www.youtube.com/embed/?listType=playlist&list=PLUq5Z5VhjxM2R3PXlM3ggdT3_Y_nQDisJ"></iframe>
+	<div class="no-print">
+		Show:
+		<select id="view-mode" onchange="refreshList()">
+			<option value="tile-template">tiles</option>
+			<option value="playlist-template.details">playlist with details</option>
+			<option value="image-template">large images</option>
+			<option value="small-image-template">small images</option>
+		</select>
+	</div>
 	<div class="repeater"></div>
 </div>
 
@@ -118,10 +118,33 @@
 		</div>
 	</div>
 </div>
+<div class="links"></div>
 </body>
 
 <script src="./js/album.js"></script>
 <script>
+const LOGO_IMAGE = "./img/mam_white.png";
+const LOGO_TITLE = "Minor Arth";
+const LOGO_LINK = ".";
+
+const ALBUM_TITLE =  getMeta("og_title");
+const ALBUM_DESCRIPTION = getMeta("og_description");
+const ALBUM_LINK = "https://minorarth.github.io/";
+
+const ALBUM_ARTIST = "";
+const TRACK_LINK_PATH = "https://remix.audio/track/";
+const AUDIO_PATH = "https://remix.audio/uploads/tracks/";
+const IMAGE_PATH = "https://remix.audio/uploads/media/";
+const AUDIO_TYPE = ".mp3";
+const IMAGE_TYPE = ".jpg";
+
+var links = {
+	"remix.audio": "https://remix.audio/profile/minorarth",
+	"YouTube": "https://www.youtube.com/@MinorArth",
+	"Facebook": "https://www.facebook.com/MinorArthMashups",
+	"AudioBoots": "https://audioboots.org"
+};
+
 var items = [
 	{ 
 		type: "category",
@@ -230,32 +253,6 @@ var items = [
 		nbTracks: 12
 	}
 ];
-
-var links = {
-	"remix.audio": "https://remix.audio/profile/minorarth",
-	"YouTube": "https://www.youtube.com/@MinorArth",
-	"Facebook": "https://www.facebook.com/MinorArthMashups",
-	"AudioBoots": "https://audioboots.org"
-};
-
-const LOGO_IMAGE = "./img/mam_white.png";
-const LOGO_TITLE = "Minor Arth";
-const LOGO_LINK = ".";
-
-const ALBUM_TITLE =  getMeta("og_title");
-const ALBUM_DESCRIPTION = getMeta("og_description");
-const ALBUM_LINK = "https://minorarth.github.io/";
-
-const ALBUM_ARTIST = "";
-const TRACK_LINK_PATH = "https://remix.audio/track/";
-const AUDIO_PATH = "https://remix.audio/uploads/tracks/";
-const IMAGE_PATH = "https://remix.audio/uploads/media/";
-//const AUDIO_PATH = "";
-//const IMAGE_PATH = "./artwork/";
-const AUDIO_TYPE = ".mp3";
-const IMAGE_TYPE = ".jpg";
-const PLAYER_IMAGE = "";
-var producers = [];
 
 loadPlaylist();
 </script>	
