@@ -10,7 +10,7 @@ var imageList = document.querySelector("p.images");
 var trackList = document.querySelector("p.tracks");
 const playerImage = document.querySelector(".player-image");
 const playerLabel = document.querySelector(".player-label");
-const linkContainer = document.querySelector(".links");
+const linkContainers = document.querySelectorAll(".links");
 const logoLinks = document.querySelectorAll("a.logo");
 const logoImages = document.querySelectorAll(".logo img");
 const repeater = document.querySelector("div.repeater");
@@ -49,7 +49,7 @@ function loadPlaylist()
 		logoLinks.forEach(l => l.href = LOGO_LINK);
 	}
 	
-	displayLinks(linkContainer);
+	displayLinks(linkContainers);
 	
 	// Audio has ended when this function is executed
 	audioPlayer?.addEventListener('ended', playNext, false);
@@ -239,16 +239,18 @@ function substringAfter(s, sub, last, stringOrEmpty, include, ignoreCase)
 	return s.substring(pos);
 }
 
-function displayLinks(container)
+function displayLinks(containers)
 {
 	var linkTemplate = document.querySelector("a.link-template");
-	if(links)
-		for(var key in links) {
-			var link = cloneTemplate(linkTemplate, container);
-			link.innerText = key;
-			link.href = links[key];
-			//link.target = "link";
-		}
+	if(links && containers && containers.length)
+		containers.forEach( container => { 
+			for(var key in links) {
+				var link = cloneTemplate(linkTemplate, container);
+				link.innerText = key;
+				link.href = links[key];
+				//link.target = "link";
+			}
+		});
 }
 
 function makePlaylistLink(pl, i) {
