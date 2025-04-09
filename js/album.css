@@ -1,7 +1,7 @@
 @media screen {
 	body{
 		margin: 0px;
-		background-color: #081640;
+		background-color: #001621;
 		/*background-image: linear-gradient(150deg,#48C,#001621); */
 		color: white;
 	}
@@ -21,7 +21,7 @@
 		width: 384px;
 	}
 
-	div.active {
+	div.active, div.playlist-template.active  {
 		background-color: #043;
 	}
 

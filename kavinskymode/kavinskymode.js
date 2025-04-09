@@ -43,7 +43,7 @@ var items = [
 		"file": "707912503_553182076_2086510767.mp3",
 		"producer": "Minor Arth",
 		"artists": "Kavinsky / Depeche Mode",
-		"title": "My Favourite Stranger Is Miles Away | ProtoVision mix",
+		"title": "My Favourite Stranger Is Miles Away\nProtoVision mix",
 		"sources": [
 			"Kavinsky - ProtoVision | 2013",
 			"Depeche Mode - My Favourite Stranger | 2023",
