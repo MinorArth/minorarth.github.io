@@ -45,7 +45,7 @@ body {
 img.player-image[src] { max-width: 720px; border: solid 8px white;  }
 div.toolbar audio {	width: 600px; height: 24px; }
 
-a.link-template, a.play-link-template { margin-left: 1em; margin-right: 1em; }
+.logo-container, a.link-template, a.play-link-template { margin-left: 1em; margin-right: 1em; }
 
 div.repeater {
 	max-width: 1400px;
