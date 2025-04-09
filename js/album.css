@@ -21,12 +21,12 @@
 		width: 384px;
 	}
 
-	div.active, div.playlist-template.active  {
-		background-color: #043;
-	}
-
 	div.playlist-template.inactive {
 		background-color: #222;
+	}
+
+	div.active {
+		background-color: #043;
 	}
 }
 
