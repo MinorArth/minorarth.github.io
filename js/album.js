@@ -189,6 +189,15 @@ function reorder() {
 	return setPlaylist(playlistName);
 }
 
+const isEmpty = arr => !arr || !arr.length
+
+function distinct(arr, field)
+{
+	if(isEmpty(arr)) return [];
+	var values = arr.filter(i => i[field]).map(i => i[field]);
+	return Array.from(new Set(values));
+}
+
 function substringBefore(s, sub, last, stringOrEmpty, include, ignoreCase)
 {
 	if(!s) return s;
