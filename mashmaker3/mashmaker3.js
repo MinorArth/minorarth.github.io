@@ -1,3 +1,17 @@
+const LOGO_IMAGE = "../img/mam_white.png";
+const LOGO_TITLE = "Minor Arth";
+const LOGO_LINK = "..";
+const ALBUM_TITLE = getMeta("og_title") || document.title;
+const ALBUM_DESCRIPTION = getMeta("og_description");
+const ALBUM_LINK = "https://www.mediafire.com/file/svuy6z9tx3ucomf/MinorArth-DepecheModeMashups-volume1.zip/file";
+const ALBUM_ARTIST = "Minor Arth";
+const TRACK_LINK_PATH = "https://remix.audio/track/";
+const AUDIO_PATH = "https://remix.audio/uploads/tracks/";
+const IMAGE_PATH = "https://remix.audio/uploads/media/";
+const AUDIO_TYPE = ".mp3";
+const IMAGE_TYPE = ".jpg";
+const PLAYER_IMAGE = "./Mashmaker3.jpg";
+
 var items = [
 	{
 		"id": 65316,
@@ -203,3 +217,5 @@ var links = {
 	"YouTube": "https://www.youtube.com/@MinorArth",
 	"Facebook": "https://www.facebook.com/MinorArthMashups"
 };
+
+loadPlaylist();
