@@ -10,7 +10,7 @@ const AUDIO_PATH = "https://remix.audio/uploads/tracks/";
 const IMAGE_PATH = "https://remix.audio/uploads/media/";
 const AUDIO_TYPE = ".mp3";
 const IMAGE_TYPE = ".jpg";
-const PLAYER_IMAGE = "https://audioboots.org/Albums/AcousticUnplugged/assets/AudioBoots%20Unplugged.jpg";
+const PLAYER_IMAGE = getMeta("og_image");
 
 var links = {
 	"<": "..",
