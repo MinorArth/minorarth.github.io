@@ -28,12 +28,17 @@
 	</style>
 </head>
 <body>
-<a class="logo print-only"><img/></a>
-<h1><a target="download" class="album-title album-link"></a></h1>
-<div class="album-description"></div>
+<header>
+	<div class="logo-container float-left">
+		<a class="logo"><img/></a>
+	</div>
+	<div class="column">
+		<h1><a target="download" class="album-title album-link"></a></h1>
+		<div class="album-description"></div>
+	</div>
+</header>
 
 <div class="toolbar no-print column">
-	<a class="logo"><img /></a><br/>
 	<a target="download" class="album-link">DOWNLOAD ALBUM</a>
 	<br/><br/>
 	<img class="player-image"/>
@@ -128,6 +133,28 @@
 
 <script src="../js/album.js"></script>
 <script>
+const LOGO_IMAGE = "../img/mam_white.png";
+const LOGO_TITLE = "Minor Arth mashup";
+const LOGO_LINK = "..";
+const ALBUM_TITLE = getMeta("og_title") || document.title;
+const ALBUM_DESCRIPTION = getMeta("og_description");
+const ALBUM_LINK = "https://remix.audio/playlist/2325";
+const ALBUM_ARTIST = "DoM";
+const TRACK_LINK_PATH = "https://remix.audio/track/";
+const AUDIO_PATH = "https://remix.audio/uploads/tracks/";
+const IMAGE_PATH = "https://remix.audio/uploads/media/";
+const AUDIO_TYPE = ".mp3";
+const IMAGE_TYPE = ".jpg";
+const PLAYER_IMAGE = "./ZiggyStardub.jpg";
+
+
+var links = {
+	"<": "..",
+	"remix.audio": "https://remix.audio/playlist/2325",
+	"YouTube": "https://www.youtube.com/@DoMmashupscovers",
+	"Facebook": "https://www.facebook.com/DoM.mashupscovers"
+};
+
 var items = [
 	{
 		"id": 48217,
@@ -226,31 +253,6 @@ var items = [
 //		"image": "2039929813_1512194992_109532775.png"
 	}
 ];
-
-var links = {
-	"<": "..",
-	"remix.audio": "https://remix.audio/playlist/2325",
-	"YouTube": "https://www.youtube.com/@DoMmashupscovers",
-	"Facebook": "https://www.facebook.com/DoM.mashupscovers"
-};
-
-const LOGO_IMAGE = "";
-const LOGO_TITLE = "DoM";
-const LOGO_LINK = "";
-
-const ALBUM_TITLE = getMeta("og_title") || document.title;
-const ALBUM_DESCRIPTION = getMeta("og_description");
-const ALBUM_LINK = "https://remix.audio/playlist/2325";
-const ALBUM_ARTIST = "DoM";
-const TRACK_LINK_PATH = "https://remix.audio/track/";
-const AUDIO_PATH = "https://remix.audio/uploads/tracks/";
-const IMAGE_PATH = "https://remix.audio/uploads/media/";
-//const AUDIO_PATH = "";
-//const IMAGE_PATH = "./artwork/";
-const AUDIO_TYPE = ".mp3";
-const IMAGE_TYPE = ".jpg";
-const PLAYER_IMAGE = "./ZiggyStardub.jpg";
-var producers = [];
 
 loadPlaylist();
 </script>

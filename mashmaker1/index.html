@@ -36,7 +36,7 @@
 </head>
 <body>
 <header>
-	<div class="column">
+	<div class="logo-container float-left">
 		<a class="logo"><img/></a>
 	</div>
 	<div class="column">
@@ -141,8 +141,7 @@
 <script>
 const LOGO_IMAGE = "../img/mam_black.png";
 const LOGO_TITLE = "Minor Arth";
-const LOGO_LINK = "";
-
+const LOGO_LINK = "..";
 const ALBUM_TITLE = getMeta("og_title") || document.title;
 const ALBUM_DESCRIPTION = getMeta("og_description");
 const ALBUM_LINK = "https://www.mediafire.com/file/o2vaf1ix7ua3l43/MinorArth-TheMashmaker-volume1.zip/file";
@@ -150,12 +149,9 @@ const ALBUM_ARTIST = "Minor Arth";
 const TRACK_LINK_PATH = "https://remix.audio/track/";
 const AUDIO_PATH = "https://remix.audio/uploads/tracks/";
 const IMAGE_PATH = "https://remix.audio/uploads/media/";
-//const AUDIO_PATH = "";
-//const IMAGE_PATH = "./artwork/";
 const AUDIO_TYPE = ".mp3";
 const IMAGE_TYPE = ".jpg";
 const PLAYER_IMAGE = "./Mashmaker1.jpg";
-var producers = [];
 
 var links = {
 	"<": "..",

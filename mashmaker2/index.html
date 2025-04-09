@@ -23,19 +23,14 @@
 
 		a, .number, .duration { color: #C00; }
 		p.sources { color: #444; }
-		div.playlist-template {
-			background-color: #EEE;
-		}
-
-		div.playlist-template.active {
-			background-color: #FFD;
-		}
+		div.playlist-template {	background-color: #EEE; }
+		div.active { background-color: #FFD; }
 	}
 	</style>
 </head>
 <body>
 <header>
-	<div class="column">
+	<div class="logo-container float-left">
 		<a class="logo"><img/></a>
 	</div>
 	<div class="column">
@@ -154,7 +149,6 @@ const IMAGE_PATH = "https://remix.audio/uploads/media/";
 const AUDIO_TYPE = ".mp3";
 const IMAGE_TYPE = ".jpg";
 const PLAYER_IMAGE = "./Mashmaker2.jpg";
-var producers = [];
 
 var links = {
 	"<": "..",
