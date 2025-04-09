@@ -119,14 +119,13 @@ var items = [
 		"image": "1557524785_1977952167_2121016035.jpg"
 	},
 	{
-		"id": 74278,
-		"file": "841735379_631231807_1859074766.mp3",
-		"producer": "Mashete",
-		artists: "The Cardigans / 12 Stones",
-		"title": "My Favourite Crash",
-		"image": "486795513_443327904_470118705.jpg"
+		"id": 74412,
+		"file": "1112346959_327744545_1886838220.mp3",
+		"producer": "Brighton Sonny",
+		artists: "Rammstein / Johnny Cash",
+		"title": "Du Hast Einen Persönlichen Jesus",
+		"image": "1096083782_1377798027_483639529.png"
 	},
-
 	{
 		"id": 74230,
 		"file": "1187801283_1227390058_2114156973.mp3",
@@ -134,6 +133,14 @@ var items = [
 		artists: "Staind / Elton John / Dua Lipa",
 		"title": "Throw Your Sacrifice Away",
 		"image": "1270473291_523048305_1062039907.jpg"
+	},
+	{
+		"id": 74278,
+		"file": "841735379_631231807_1859074766.mp3",
+		"producer": "Mashete",
+		artists: "The Cardigans / 12 Stones",
+		"title": "My Favourite Crash",
+		"image": "486795513_443327904_470118705.jpg"
 	},
 	{
 		"id": 74203,
