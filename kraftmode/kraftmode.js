@@ -54,7 +54,8 @@ var items = [
 		title: "People's Elektro Kardiogramm",
 		sources: [
 			"Kraftwerk - Elektro Kardiogramm | 2003",
-			"Depeche Mode - People Are Good | 2023 + People Are People | 1984"
+			"Depeche Mode - People Are Good | 2023",
+			"Depeche Mode - People Are People | 1984"
 		],
 		image: "292822829_232794897_1193554332.jpg"
 	}
