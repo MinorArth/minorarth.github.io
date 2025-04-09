@@ -19,6 +19,7 @@ var links = {
 };
 
 var items = [
+//	{ type: "category", title: "Disc 1" },
 	{
 		"id": 74261,
 		"file": "1184833961_815216806_1903531812.mp3",
@@ -36,12 +37,44 @@ var items = [
 		"image": "1675909593_1650552207_765610049.jpg"
 	},
 	{
-		"id": 74230,
-		"file": "1187801283_1227390058_2114156973.mp3",
+		"id": 74030,
+		"file": "2033016901_1626588208_547307465.mp3",
+		"producer": "satis5d",
+		artists: "Ratt / The Outfield",
+		"title": "Round and Round Ain't Over",
+		"image": "1942803553_551002103_629548849.jpg"
+	},
+	{
+		"id": 74231,
+		"file": "1097228072_624327015_1172017856.mp3",
+		"producer": "Mashete",
+		artists: "Sum 41 vs Girlschool",
+		"title": "Bomber Over My Head",
+		"image": "238156375_1450290658_754096657.jpg"
+	},
+	{
+		"id": 74088,
+		"file": "1831362246_510968400_704296461.mp3",
+		"producer": "Brighton Sonny",
+		artists: "Limp Bizkit / Saliva",
+		"title": "Rollin’ Rollin’ Boom",
+		"image": "1559652862_1501030426_2051024342.png"
+	},
+	{
+		"id": 74076,
+		"file": "316158735_1558884499_1309871623.mp3",
+		"producer": "DJ Useo",
+		artists: "New Order / Jesus & Mary Chain",
+		"title": "Head On True Faith",
+		"image": "630593282_2084274979_1855853165.jpg"
+	},
+	{
+		"id": 74212,
+		"file": "742480831_1050916389_1021543674.mp3",
 		"producer": "Chocomang",
-		artists: "Staind / Elton John / Dua Lipa",
-		"title": "Throw Your Sacrifice Away",
-		"image": "1270473291_523048305_1062039907.jpg"
+		artists: "Siouxie & The Banshees / Bill Haley & His Comets",
+		"title": "Rock Around A Void",
+		"image": "559647813_1999902743_530723807.jpg"
 	},
 	{
 		"id": 74277,
@@ -50,6 +83,24 @@ var items = [
 		"artists": "Def Leppard / Staind",
 		"title": "Lady Strange Here And Now",
 		"image": "909261143_643144228_575065484.jpg"
+	},
+	{
+		"id": 74157,
+		"file": "231591759_1420282712_187574370.mp3",
+		"producer": "Brighton Sonny",
+		artists: "Linkin Park / Morcheeba",
+		"title": "What I've Done, I Drank Blood Like Lemonade",
+		"image": "1894549820_1700907134_402218055.png"
+	},
+
+//	{ type: "category", title: "Disc 2" },
+	{
+		"id": 74258,
+		"file": "555066364_1185361655_1781795757.mp3",
+		"producer": "Brighton Sonny",
+		artists: "Nine Inch Nails / DJ Shadow",
+		"title": "The Rocket That Fuels",
+		"image": "676699320_603560713_938984371.png"
 	},
 	{
 		"id": 74348,
@@ -68,28 +119,21 @@ var items = [
 		"image": "1557524785_1977952167_2121016035.jpg"
 	},
 	{
-		"id": 74402,
-		"file": "1198280630_1765108267_404894893.mp3",
-		"producer": "Minor Arth",
-		artists: "Ariel Pink's Haunted Graffiti / Joy Division",
-		"title": "The Digital Interzone Is A Lie",
-		"image": "257642114_1807326955_1834772419.jpg"
+		"id": 74278,
+		"file": "841735379_631231807_1859074766.mp3",
+		"producer": "Mashete",
+		artists: "The Cardigans / 12 Stones",
+		"title": "My Favourite Crash",
+		"image": "486795513_443327904_470118705.jpg"
 	},
+
 	{
-		"id": 74258,
-		"file": "555066364_1185361655_1781795757.mp3",
-		"producer": "Brighton Sonny",
-		artists: "Nine Inch Nails / DJ Shadow",
-		"title": "The Rocket That Fuels",
-		"image": "676699320_603560713_938984371.png"
-	},
-	{
-		"id": 74212,
-		"file": "742480831_1050916389_1021543674.mp3",
+		"id": 74230,
+		"file": "1187801283_1227390058_2114156973.mp3",
 		"producer": "Chocomang",
-		artists: "Siouxie & The Banshees / Bill Haley & His Comets",
-		"title": "Rock Around A Void",
-		"image": "559647813_1999902743_530723807.jpg"
+		artists: "Staind / Elton John / Dua Lipa",
+		"title": "Throw Your Sacrifice Away",
+		"image": "1270473291_523048305_1062039907.jpg"
 	},
 	{
 		"id": 74203,
@@ -100,51 +144,12 @@ var items = [
 		"image": "1965990290_1561138925_1899495533.jpg"
 	},
 	{
-		"id": 74157,
-		"file": "231591759_1420282712_187574370.mp3",
-		"producer": "Brighton Sonny",
-		artists: "Linkin Park / Morcheeba",
-		"title": "What I've Done, I Drank Blood Like Lemonade",
-		"image": "1894549820_1700907134_402218055.png"
-	},
-	{
-		"id": 74088,
-		"file": "1831362246_510968400_704296461.mp3",
-		"producer": "Brighton Sonny",
-		artists: "Limp Bizkit / Saliva",
-		"title": "Rollin’ Rollin’ Boom",
-		"image": "1559652862_1501030426_2051024342.png"
-	},
-{
-		"id": 74278,
-		"file": "841735379_631231807_1859074766.mp3",
-		"producer": "Mashete",
-		"title": "MasheteMixes - My Favourite Crash (The Cardigans vs 12 Stones)",
-		"image": "486795513_443327904_470118705.jpg"
-	},
-	{
-		"id": 74076,
-		"file": "316158735_1558884499_1309871623.mp3",
-		"producer": "DJ Useo",
-		artists: "New Order / Jesus & Mary Chain",
-		"title": "Head On True Faith",
-		"image": "630593282_2084274979_1855853165.jpg"
-	},
-	{
-		"id": 74231,
-		"file": "1097228072_624327015_1172017856.mp3",
-		"producer": "Mashete",
-		artists: "Sum 41 vs Girlschool",
-		"title": "Bomber Over My Head",
-		"image": "238156375_1450290658_754096657.jpg"
-	},
-	{
-		"id": 74030,
-		"file": "2033016901_1626588208_547307465.mp3",
-		"producer": "satis5d",
-		artists: "Ratt / The Outfield",
-		"title": "Round and Round Ain't Over",
-		"image": "1942803553_551002103_629548849.jpg"
+		"id": 74402,
+		"file": "1198280630_1765108267_404894893.mp3",
+		"producer": "Minor Arth",
+		artists: "Ariel Pink's Haunted Graffiti / Joy Division",
+		"title": "The Digital Interzone Is A Lie",
+		"image": "257642114_1807326955_1834772419.jpg"
 	},
 	{ type: "category", title: "Album preview" },
 	{
