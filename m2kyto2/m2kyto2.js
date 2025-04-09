@@ -71,7 +71,7 @@ var items = [
 		"id": 74402,
 		"file": "1198280630_1765108267_404894893.mp3",
 		"producer": "Minor Arth",
-		artists: "Ariel Pink's Haunted Graffiti / Joy Division / New Order",
+		artists: "Ariel Pink's Haunted Graffiti / Joy Division",
 		"title": "The Digital Interzone Is A Lie",
 		"image": "257642114_1807326955_1834772419.jpg"
 	},
@@ -103,7 +103,7 @@ var items = [
 		"id": 74203,
 		"file": "859970493_1916625508_1687962000.mp3",
 		"producer": "Chocomang",
-		artists: "Siouxie & The Banshees / Bill Haley & His Comets",
+		artists: "The Clash / Captain Sensible",
 		"title": "Wot Riot",
 		"image": "1965990290_1561138925_1899495533.jpg"
 	},
@@ -119,7 +119,7 @@ var items = [
 		"id": 74088,
 		"file": "1831362246_510968400_704296461.mp3",
 		"producer": "Brighton Sonny",
-		artists: "Limp Bizkit & Saliva",
+		artists: "Limp Bizkit / Saliva",
 		"title": "Rollin’ Rollin’ Boom",
 		"image": "1559652862_1501030426_2051024342.png"
 	},
@@ -136,7 +136,7 @@ var items = [
 		"file": "2033016901_1626588208_547307465.mp3",
 		"producer": "satis5d",
 		artists: "Ratt / The Outfield",
-		"title": "Round and Round Ain't Over (Ratt vs The Outfield)",
+		"title": "Round and Round Ain't Over",
 		"image": "1942803553_551002103_629548849.jpg"
 	},
 	{ type: "category", title: "Album preview" },
