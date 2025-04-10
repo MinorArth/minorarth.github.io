@@ -158,6 +158,14 @@ var items = [
 		"title": "The Digital Interzone Is A Lie",
 		"image": "257642114_1807326955_1834772419.jpg"
 	},
+	{
+		"id": 74446,
+		"file": "1249613109_761354784_1629811885.mp3",
+		"producer": "Chocomang",
+		"artists": "The Stooges / Soundgarden",
+		"title": "No Wave",
+		"image": "305646546_1262247047_1241288889.jpg"
+	},
 	{ type: "category", title: "Album preview" },
 	{
 		"file": "https://hearthis.at/vxmfxz7w/dj-useo-mashups-to-knock-your-teeth-out-the-sequel-the-mix-disc-1/stream.mp3?s=Utz",
@@ -170,8 +178,7 @@ var items = [
 		"artists": "Mashups To Knock Your Teeth Out!",
 		"title":  "The Sequel | Disc 2 preview",
 		"image": "1942803553_551002103_629548849.jpg"
-	},
-
+	}
 ];
 
 producers = distinct(items, "producer");
