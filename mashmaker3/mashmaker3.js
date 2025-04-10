@@ -119,7 +119,7 @@ var items = [
 		"title": "Rabbit Shack",
 		"artists": "Arcade Fire / The B-52s",
 		"sources": [ "Arcade Fire - Rabbit Hole | Age Of Anxiety 2 | 2022", "The B-52s - Love Shack | 1989" ],
-		"links": { "Summer Booty 2024": "https://audioboots.org/Albums/SB2024" },
+		"links": { "AudioBoots Summer Booty 2024": "https://audioboots.org/Albums/SB2024" },
 		"image": "678783498_1418337008_317980991.jpg"
 	},
 

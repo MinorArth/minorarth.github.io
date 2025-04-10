@@ -44,7 +44,7 @@ var items = [
 			"New Order - Temptation | 1982",
 			"Depeche Mode - Just Can't Get Enough | 1981"
 		],
-		"links": { "Summer Booty 2024": "https://audioboots.org/Albums/SB2024" },
+		"links": { "AudioBoots Summer Booty 2024": "https://audioboots.org/Albums/SB2024" },
 		"image": "1502109165_497738085_506679187.jpg"
 	},
 	{
