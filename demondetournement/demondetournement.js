@@ -303,7 +303,7 @@ var items = {
 				"Doris Days - To Ulrike M. | Zero 7 remix",
 				"Gorillaz - El Mañana"
 			],
-			"songTitle": "To Ulrike Manana",
+			"songTitle": "To Ulrike Mañana",
 			"producer": "Minor Arth",
 			"artists": "Doris Days / Zero 7 / Gorillaz"
 		},
