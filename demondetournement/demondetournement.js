@@ -8,10 +8,11 @@ const ALBUM_ARTIST = "";
 const TRACK_LINK_PATH = "https://remix.audio/track/";
 const AUDIO_PATH = "https://remix.audio/uploads/tracks/";
 const IMAGE_PATH = "./artwork/";
+ICON_PATH = "../img/";
 const AUDIO_TYPE = ".mp3";
 const IMAGE_TYPE = ".jpg";
 const PLAYER_IMAGE = "./artwork/DemonDetournement.jpg";
-var producers = ["Steff St Moore", "Minor Arth", "DoM"];
+var producers = [ "Steff St Moore", "Minor Arth", "DoM" ];
 
 var links = {
 	"<": "..",
