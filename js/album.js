@@ -120,8 +120,10 @@ function loadPlaylist()
 		plLinks.forEach(makePlaylistLink);
 
 	setPlaylist();
-	setImage(playerImage, PLAYER_IMAGE);
-	if(playerImage) playerImage.onclick = togglePlay;
+	if(playerImage) {
+		setImage(playerImage, PLAYER_IMAGE);
+		playerImage.onclick = togglePlay;
+	}
 }
 
 function getMeta(key)
