@@ -20,6 +20,8 @@ const albumLinks = document.querySelectorAll(".album-link");
 const totalDuration = document.querySelector(".total-duration");
 const viewMode = document.querySelector("select#view-mode");
 const categoryTemplate = document.querySelector(".category-template");
+const icons = document.querySelectorAll("img.icon");
+var ICON_PATH = "../img/";
 
 var template;
 var currentItem = preloadItem = null;
@@ -40,6 +42,7 @@ function loadPlaylist()
 	albumTitle.innerText = ALBUM_ARTIST ? ALBUM_ARTIST + " - " + ALBUM_TITLE : ALBUM_TITLE;
 	albumDescription.innerHTML = ALBUM_DESCRIPTION;
 	albumLinks.forEach(a => a.href = ALBUM_LINK);
+	displayIcons();
 	
 	if(!LOGO_IMAGE)
 		logoLinks.forEach(l => l.remove())
@@ -189,7 +192,8 @@ function reorder() {
 	return setPlaylist(playlistName);
 }
 
-const isEmpty = arr => !arr || !arr.length
+const isEmpty = arr => !arr || !arr.length;
+const isNotEmpty = arr => arr && arr.length;
 
 function distinct(arr, field)
 {
@@ -239,6 +243,12 @@ function substringAfter(s, sub, last, stringOrEmpty, include, ignoreCase)
 	return s.substring(pos);
 }
 
+function displayIcons()
+{
+	if(isNotEmpty(icons) && isNotEmpty(window.ICON_PATH))
+		icons.forEach(i  => i.src = ICON_PATH + substringAfter(i.src, "/", true, true));	
+}
+
 function displayLinks(containers)
 {
 	var linkTemplate = document.querySelector("a.link-template");
@@ -248,7 +258,6 @@ function displayLinks(containers)
 				var link = cloneTemplate(linkTemplate, container);
 				link.innerText = key;
 				link.href = links[key];
-				//link.target = "link";
 			}
 		});
 }
@@ -274,7 +283,7 @@ function refreshList() {
 function makeLocalPlaylistItem(item, i) {
 	item.n = i + 1;
 	if(item.localFile && !item.image) item.image = item.localFile + IMAGE_TYPE;
-	if(useLocalAudioFiles() && item.localFile && !item.file)  item.file  = item.localFile + AUDIO_TYPE;
+	if(useLocalAudioFiles() && item.localFile)  item.file  = item.localFile + AUDIO_TYPE;
 }
 
 function makePlaylistItem(item, i) {
