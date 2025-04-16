@@ -24,7 +24,6 @@ var items = [
 		type: "category",
 		title: "Collaborative Albums" 
 	},
-/*
 	{
 		url: "./demondetournement",
 		artists: "Gorillaz / Various",
@@ -35,7 +34,6 @@ var items = [
 		release: "April 2025",
 		nbTracks: 27
 	},
-*/
 	{
 		url: "./acoustic-unplugged",
 		title: "AudioBoots Acoustic Unplugged",
