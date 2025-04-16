@@ -15,7 +15,7 @@ const PLAYER_IMAGE = "./dmmashups-volume1.jpg";
 const links = {
 	"<": "..",
 	"remix.audio": "https://remix.audio/playlist/2789",
-	"YouTube": "https://www.youtube.com/watch?v=FD4xU1Oj8pE&list=PLUq5Z5VhjxM1p4sMIlk6zFlnBRW5hJt1r",
+	"DM Mashup Videos": "https://www.youtube.com/watch?v=FD4xU1Oj8pE&list=PLUq5Z5VhjxM1p4sMIlk6zFlnBRW5hJt1r",
 	"Facebook": "https://www.facebook.com/MinorArthMashups",
 	"\nAlbum cover: @StuffByMark": "https://www.stuffbymark.co.uk"
 };
@@ -85,6 +85,7 @@ var items = [
 			"The Cure - Let's Go To Bed | 1983",
 			"Depeche Mode - Master And Servant | 1984"
 		],
+		links: { "Nouvelle Vague / Cure": "https://remix.audio/track/48591", "acoustic version": "../acoustic-unplugged/" },
 		"image": "438473383_727208601_1640531236.jpg"
 	},
 	{
@@ -99,10 +100,8 @@ var items = [
 		],
 		"songTitle": "Photographic Boy",
 		"artists": "Taxi Girl / Depeche Mode",
-		"links": { 
-			"Inverse French version": "https://remix.audio/track/51429", 
-			"VIDEO": "https://youtu.be/WXMIItxcu3M"
-		}
+		"links": { "Inverse French version": "https://remix.audio/track/51429" },
+		"video": "https://youtu.be/WXMIItxcu3M"
 	},
 	{
 		"id": 18311,

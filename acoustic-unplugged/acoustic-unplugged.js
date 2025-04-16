@@ -52,11 +52,12 @@ var items = [
 		"localFile": "03. Minor Arth - Nouvelle Vague - The Cure - Master And Servant Go To Bed.mp3",
 		"sources": [
 			"Nouvelle Vague ft. Martin Gore - Master And Servant | 2009",
-			"The Cure - Let’s Go To Bed / Friday I’m In Love | acoustic 2001"
+			"The Cure - Let's Go To Bed / Friday I'm In Love | acoustic 2001"
 		],
 		"songTitle": "Master And Servant Go To Bed",
+		"artists": "Nouvelle Vague / The Cure",
 		"producer": "Minor Arth",
-		"artists": "Nouvelle Vague / The Cure"
+		"links": { "Depeche Mode /": "../dmvolume1" , "Cure version": "https://remix.audio/track/62446" } 
 	},
 	{
 		image: PLAYER_IMAGE,
