@@ -18,10 +18,10 @@ var links = {
 	"<": "..",
 	"remix.audio": "https://remix.audio/playlist/2953",
 	"Gorillaz Mashup Videos": "https://www.youtube.com/watch?v=lJ_1DWvw-jU&list=PLUq5Z5VhjxM3G9EXQPOAmrBcFro3FwwjS&pp=iAQB8AUB",
+	"Mashup Lovers": "https://www.facebook.com/groups/mashuplovers",
 	"Steff St. Moore": "https://remix.audio/profile/SteffStMoore",
 	"Minor Arth": "https://www.youtube.com/@MinorArth",
-	"DoM": "https://remix.audio/profile/DoM",
-	"Mashup Lovers": "https://www.facebook.com/groups/mashuplovers"
+	"DoM": "https://remix.audio/profile/DoM"
 };
 
 var items = {
