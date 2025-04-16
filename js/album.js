@@ -365,11 +365,16 @@ function displayPlaylistItem(item, i) {
 		item.sources.forEach( (s, j) => el.querySelector(".sources").innerHTML += isUrl(s)? "" : (j ? "\n+ " : "= ") + s );
 
 	if(title && item.video)
-		title.innerHTML += '\n<a onclick="stopPropagation(event)" target="video" href="' + item.video + '">VIDEO</a>';
+		title.innerHTML += `\n<a onclick="stopPropagation(event)" target="video" href="${item.video}">VIDEO</a>`;
 
-	if(title && item.links)
-		for(var key in item.links)
-			title.innerHTML += '\n<a onclick="stopPropagation(event)" target="video" href="' + item.links[key] + '">'+ key +'</a>';
+	if(title && item.links) {
+		var html = "";
+		for(var key in item.links) {
+			var target = isUrl(item.links[key]) ? "video" : "";
+			html += `<a onclick="stopPropagation(event)" target="${target}" href="${item.links[key]}">${key}</a> `;
+		}
+		title.innerHTML+= "\n" + html;
+	}
 
 	var trackLink = el.querySelector("a.remix-audio");
 	if(trackLink && item.id)
