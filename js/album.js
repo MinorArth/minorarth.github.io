@@ -290,7 +290,7 @@ function makeLocalPlaylistItem(item, i) {
 
 	if(useLocalAudioFiles() && item.localFile)
 		item.file  = item.localFile + AUDIO_TYPE;
-	else if(useRemoteAudioFiles() && !item.file && ALBUM_LINK) {
+	else if(useRemoteAudioFiles() && !item.file && !item.type && !item.url && ALBUM_LINK) {
 		item.links = item.links || {};
 		item.links[DL_MESSAGE] = ALBUM_LINK;
 	}
