@@ -30,6 +30,7 @@ var items = {
 			"id": 74709,
 			"file": "612755084_1728405659_391453970.mp3",
 			"localFile": "Minor Arth - Gorillaz - Prince - Vincent Price - Radiohead - Intro",
+			"video": "https://youtu.be/MWKWE_XsGVA",
 			"sources": [
 				"Gorillaz - Intro",
 				"Prince - Let's Go Crazy",
