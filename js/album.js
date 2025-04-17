@@ -21,6 +21,7 @@ const totalDuration = document.querySelector(".total-duration");
 const viewMode = document.querySelector("select#view-mode");
 const categoryTemplate = document.querySelector(".category-template");
 const icons = document.querySelectorAll("img.icon");
+const DL_MESSAGE = "Download to hear this track";
 var ICON_PATH = "../img/";
 
 var template;
@@ -284,8 +285,15 @@ function refreshList() {
 
 function makeLocalPlaylistItem(item, i) {
 	item.n = i + 1;
-	if(item.localFile && !item.image) item.image = item.localFile + IMAGE_TYPE;
-	if(useLocalAudioFiles() && item.localFile)  item.file  = item.localFile + AUDIO_TYPE;
+	if(!item.image && item.localFile)
+		item.image = item.localFile + IMAGE_TYPE;
+
+	if(useLocalAudioFiles() && item.localFile)
+		item.file  = item.localFile + AUDIO_TYPE;
+	else if(useRemoteAudioFiles() && !item.file && ALBUM_LINK) {
+		item.links = item.links || {};
+		item.links[DL_MESSAGE] = ALBUM_LINK;
+	}
 }
 
 function makePlaylistItem(item, i) {
