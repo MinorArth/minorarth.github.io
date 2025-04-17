@@ -27,6 +27,8 @@ var links = {
 var items = {
 	"Album": [
 		{
+			"id": 74709,
+			"file": "612755084_1728405659_391453970.mp3",
 			"localFile": "Minor Arth - Gorillaz - Prince - Vincent Price - Radiohead - Intro",
 			"sources": [
 				"Gorillaz - Intro",
@@ -95,6 +97,8 @@ var items = {
 			"artists": "Gorillaz / Michael Jackson"
 		},
 		{
+			"id": 74708,
+			"file": "1534171093_2106807373_1841257097.mp3",
 			"localFile": "Minor Arth - Gorillaz - The Cure - Lovesong Del Manana",
 			"sources": [
 				"Gorillaz - El Mañana",
