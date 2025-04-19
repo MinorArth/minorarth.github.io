@@ -46,6 +46,14 @@ var items = [
 		"image": "1942803553_551002103_629548849.jpg"
 	},
 	{
+		"id": 74793,
+		"file": "424702027_2111566189_619090401.mp3",
+		"producer": "Chocomang",
+		"artists": "Warum Joe / Indochine",
+		"title": "Le Camionneur du Mékong",
+		"image": "1587888073_172372737_1121001243.jpg"
+	},
+	{
 		"id": 74231,
 		"file": "1097228072_624327015_1172017856.mp3",
 		"producer": "Mashete",
