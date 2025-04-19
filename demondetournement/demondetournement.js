@@ -215,7 +215,11 @@ var items = {
 			],
 			"songTitle": "Kids With Fear On Their Shoulders",
 			"producer": "Minor Arth",
-			"artists": "Gorillaz / The Do / Archive"
+			"artists": "Gorillaz / The Do / Archive",
+			"links": { 
+				"Archive version": "https://remix.audio/track/33074", 
+				"The Do version": "https://remix.audio/track/33075" 
+			}
 		},
 		{
 			"id": 37709,
