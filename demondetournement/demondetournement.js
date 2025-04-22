@@ -42,6 +42,8 @@ var items = {
 			"artists": "Gorillaz / Prince / Vincent Price / Radiohead"
 		},
 		{
+			"id": 74915,
+			"file": "927289459_850521867_413079467.mp3",
 			"localFile": "Steff St Moore & Minor Arth - Gorillaz - Radiohead - Last Lucky Souls",
 			"sources": [
 				"Gorillaz - Last Living Souls",
@@ -73,7 +75,8 @@ var items = {
 			],
 			"songTitle": "O Green Telephone World",
 			"producer": "Steff St Moore",
-			"artists": "Gorillaz / Lady Gaga"
+			"artists": "Gorillaz / Lady Gaga",
+			"links": { "YouTube": "https://youtu.be/mpD7pSiu-7k" }
 		},
 		{
 			"id": 35483,
@@ -94,8 +97,9 @@ var items = {
 				"Michael Jackson - Off The Wall"
 			],
 			"songTitle": "Feel Good Off The Wall",
+			"artists": "Gorillaz / Michael Jackson",
 			"producer": "Steff St Moore",
-			"artists": "Gorillaz / Michael Jackson"
+			"links": { "YouTube": "https://youtu.be/SHGpqfHeO-o" }
 		},
 		{
 			"id": 74708,
@@ -117,8 +121,7 @@ var items = {
 				"Gorillaz - Every Planet We Reach Is Dead",
 				"Iggy Pop & Grace Jones - Nightclubbing",
 				"Dave Gahan - Use You",
-				"Grace Jones - Use Me",
-				"https://youtu.be/dtN6gUHhtlo"
+				"Grace Jones - Use Me"
 			],
 			"songTitle": "Use Every Planet For Nightclubbing",
 			"producer": "Minor Arth",
@@ -201,8 +204,9 @@ var items = {
 				"Soul II Soul - Back To Life"
 			],
 			"songTitle": "Back To Life | Dirty Harry mix",
+			"artists": "Gorillaz / Soul II Soul",
 			"producer": "Steff St Moore",
-			"artists": "Gorillaz / Soul II Soul"
+			"links": { "YouTube": "https://youtu.be/WYKm9kCRPoM" }
 		},
 		{
 			"id": 32429,
@@ -244,8 +248,9 @@ var items = {
 				"The Kinks - Sunny Afternoon"
 			],
 			"songTitle": "Feel Good On A Sunny Afternoon",
+			"artists": "Gorillaz / The Kinks",
 			"producer": "Minor Arth",
-			"artists": "Gorillaz / The Kinks"
+			"links": { "AudioBoots Summer Booty 2024": "https://audioboots.org/Albums/SB2024" }
 		},
 		{
 			"id": 52176,
@@ -303,8 +308,9 @@ var items = {
 				"Will Downing - Michelle"
 			],
 			"songTitle": "Michelle Mañana",
+			"artists": "Gorillaz / Will Downing",
 			"producer": "Steff St Moore",
-			"artists": "Gorillaz / Will Downing"
+			"links": { "YouTube": "https://youtu.be/Bssx5KrhNrk" }
 		},
 		{
 			"localFile": "Minor Arth - Doris Days - Zero 7 - Gorillaz - To Ulrike Manana",
