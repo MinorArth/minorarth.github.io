@@ -26,7 +26,7 @@ var items = [
 	},
 	{
 		url: "./demondetournement",
-		artists: "Gorillaz / Various",
+		artists: "Gorillaz",
 		title: "Demon Détournement",
 		description: "Demon Days | The 20th Anniversary Mashup Album",
 		producer: "Steff St. Moore / Minor Arth / DoM",
@@ -78,7 +78,7 @@ var items = [
 	{
 		url: "./dmvolume1",
 		title: "Some Great Music For The Mashes",
-		artists: "Depeche Mode / Various",
+		artists: "Depeche Mode",
 		description: "Depeche Mode mashups volume 1",
 		image: "./dmvolume1/dmmashups-volume1.jpg",
 		release: "June 2024",
