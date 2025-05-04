@@ -71,8 +71,12 @@ div.playlist-template div.item-text {
 	display: inline-block;
 }
 
+div.playlist-template div.item-text a {
+	margin-inline-end: 1em;
+}
+
 div.playlist-template img.artwork[src] {
-	height: .7in;
+	height: 0.8in;
 	vertical-align: middle;
 }
 
