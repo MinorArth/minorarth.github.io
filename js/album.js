@@ -21,7 +21,7 @@ const totalDuration = document.querySelector(".total-duration");
 const viewMode = document.querySelector("select#view-mode");
 const categoryTemplate = document.querySelector(".category-template");
 const icons = document.querySelectorAll("img.icon");
-const DL_MESSAGE = "Download to hear this track";
+const DL_MESSAGE = "Download Album";
 var ICON_PATH = "../img/";
 
 var template;
