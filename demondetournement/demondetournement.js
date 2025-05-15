@@ -279,8 +279,8 @@ var items = {
 			"artists": "Roxy Music / Gorillaz"
 		},
 		{
-			"id": 65742,
-			"file": "103422468_1270342973_624900480.mp3",
+			"id": 75830,
+			"file": "385348153_1920679167_736910152.mp3",
 			"localFile": "Minor Arth & DoM - Gorillaz - Depeche Mode - Feel Good Dream",
 			"sources": [
 				"Gorillaz - Feel Good, Inc.",
@@ -288,7 +288,8 @@ var items = {
 			],
 			"songTitle": "Feel Good Dream",
 			"producer": "Minor Arth & DoM",
-			"artists": "Gorillaz / Depeche Mode"
+			"artists": "Gorillaz / Depeche Mode",
+			"links": { "DoM version": "https://remix.audio/track/65742" }
 		},
 		{
 			"n": 8,
