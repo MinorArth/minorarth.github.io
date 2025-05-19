@@ -68,6 +68,8 @@ var items = {
 			"video": "https://youtu.be/lJ_1DWvw-jU"
 		},
 		{
+			// "id": 75999,
+			"file": "1578808518_1543641697_600077172.mp3",
 			"localFile": "Steff St Moore - Gorillaz - Lady Gaga - O Green Telephone World",
 			"sources": [
 				"Gorillaz - O Green World",
@@ -76,7 +78,7 @@ var items = {
 			"songTitle": "O Green Telephone World",
 			"producer": "Steff St Moore",
 			"artists": "Gorillaz / Lady Gaga",
-			"links": { "YouTube": "https://youtu.be/mpD7pSiu-7k" }
+			// "links": { "YouTube": "https://youtu.be/mpD7pSiu-7k" }
 		},
 		{
 			"id": 35483,
@@ -91,6 +93,8 @@ var items = {
 			"artists": "Gorillaz / Grandmaster Flash & The Furious Five"
 		},
 		{
+			// "id": 75998,
+			"file": "437153311_54832013_1015990628.mp3",
 			"localFile": "Steff St Moore - Gorillaz - Michael Jackson - Feel Good Off The Wall",
 			"sources": [
 				"Gorillaz - Feel Good, Inc.",
@@ -99,7 +103,7 @@ var items = {
 			"songTitle": "Feel Good Off The Wall",
 			"artists": "Gorillaz / Michael Jackson",
 			"producer": "Steff St Moore",
-			"links": { "YouTube": "https://youtu.be/SHGpqfHeO-o" }
+			// "links": { "YouTube": "https://youtu.be/SHGpqfHeO-o" }
 		},
 		{
 			"id": 74708,
@@ -129,6 +133,8 @@ var items = {
 			"video": "https://youtu.be/dtN6gUHhtlo"
 		},
 		{
+			// "id": 75972,
+			"file": "601653896_946261058_1321463132.mp3",
 			"localFile": "Steff St Moore - Gorillaz - D'Angelo - MF Has Come",
 			"sources": [
 				"Gorillaz - November Has Come",
@@ -151,6 +157,8 @@ var items = {
 			"artists": "Gorillaz / Crystal Waters"
 		},
 		{
+			// "id": 75971,
+			"file": "1107648121_1391566854_1746042303.mp3",
 			"localFile": "Steff St Moore - Gorillaz - Bruce Springsteen - Born To Run In The White Light",
 			"sources": [
 				"Gorillaz - White Light",
@@ -161,8 +169,10 @@ var items = {
 			"artists": "Gorillaz / Bruce Springsteen"
 		},
 		{
+			// "id": 75994,
+			"file": "283624304_1074333323_650043499.mp3",
 			"id": 35582,
-			"file": "1503928746_1935336146_1418443366.mp3",
+			// "file": "1503928746_1935336146_1418443366.mp3",
 			"localFile": "Steff St Moore - Gorillaz - Amy Winehouse - Dare To Go Back To Black",
 			"sources": [
 				"Gorillaz - DARE",
@@ -200,6 +210,8 @@ var items = {
 	],
 	"Bonus": [
 		{
+			// "id": 76000,
+			"file": "532653678_1260639085_175463844.mp3",
 			"localFile": "Steff St Moore - Gorillaz - Soul II Soul - Back To Life -- Dirty Harry mix",
 			"sources": [
 				"Gorillaz - Dirty Harry",
@@ -208,7 +220,7 @@ var items = {
 			"songTitle": "Back To Life | Dirty Harry mix",
 			"artists": "Gorillaz / Soul II Soul",
 			"producer": "Steff St Moore",
-			"links": { "YouTube": "https://youtu.be/WYKm9kCRPoM" }
+			// "links": { "YouTube": "https://youtu.be/WYKm9kCRPoM" }
 		},
 		{
 			"id": 32429,
@@ -292,7 +304,6 @@ var items = {
 			"links": { "DoM version": "https://remix.audio/track/65742" }
 		},
 		{
-			"n": 8,
 			"id": 28352,
 			"file": "1504794660_2049043336_1255831903.mp3",
 			"localFile": "Minor Arth - Manu Chao - Gorillaz - Feel Bongo Bong inc",
@@ -305,6 +316,8 @@ var items = {
 			"artists": "Manu Chao / Gorillaz"
 		},
 		{
+			// "id": 76002,
+			"file": "838911111_710089901_1526681702.mp3",
 			"localFile": "Steff St Moore - Gorillaz - Will Downing - Michelle Manana",
 			"sources": [
 				"Gorillaz - El Mañana",
@@ -313,7 +326,7 @@ var items = {
 			"songTitle": "Michelle Mañana",
 			"artists": "Gorillaz / Will Downing",
 			"producer": "Steff St Moore",
-			"links": { "YouTube": "https://youtu.be/Bssx5KrhNrk" }
+			// "links": { "YouTube": "https://youtu.be/Bssx5KrhNrk" }
 		},
 		{
 			"localFile": "Minor Arth - Doris Days - Zero 7 - Gorillaz - To Ulrike Manana",
@@ -350,6 +363,8 @@ var items = {
 			"artists": "Gorillaz / Tears For Fears"
 		},
 		{
+			// "id": 76003,
+			"file": "407584130_1151349611_2091194948.mp3",
 			"localFile": "Steff St Moore - Gorillaz - Prince - Don't Get Lost in Automatic Heaven",
 			"sources": [
 				"Gorillaz - Don't Get Lost in Heaven / Demon Days",
