@@ -140,7 +140,8 @@ var items = [
 		],
 		"songTitle": "The Roman Killing Moon Holiday",
 		"producer": "Minor Arth",
-		"artists": "Echo & The Bunnymen / Fontaines DC"
+		"artists": "Echo & The Bunnymen / Fontaines DC",
+		"links": { "Inverse electric version": "../mashmaker2" } 
 	},
 	{
 		"id": 48657,
