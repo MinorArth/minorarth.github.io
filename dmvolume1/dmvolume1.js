@@ -148,6 +148,7 @@ var items = [
 			"Depeche Mode - Get the Balance Right | 1982"
 		],
 		"title": "Balance Sans Contrefaçon",
+		"links": { "BOOT OF THE DAY": "https://www.facebook.com/permalink.php?story_fbid=pfbid02de4J2D3FzqEScB7T97ovd33n5w9ohP5SFC4cKFKs4cD3EEX6fpUmo57kZrsv221Fl&id=100063537011274" },
 		"artists": "Mylène Farmer / Depeche Mode"
 	},
 	{
@@ -175,6 +176,7 @@ var items = [
 		],
 		"title": "Something To Do In Autodrive",
 		"artists": "Kavinsky / Depeche Mode",
+		"links": { "BOOT OF THE DAY": "https://www.facebook.com/permalink.php?story_fbid=pfbid034CA4Mm9J6W23MMrhEK95AEjT6gxPozSXxAV2ZRj9zd52NjUFuXiWkajye2k9LyJQl&id=100063537011274" },
 		"video": "https://youtu.be/FD4xU1Oj8pE"
 	},
 	{
@@ -186,7 +188,7 @@ var items = [
 			"Indochine - Canary Bay | 1985",
 			"Depeche Mode - It's Called a Heart | 1985"
 		],
-		"links": { "80s Mashed 7": "https://audioboots.org/Albums/80sMashed7" },
+		"links": { "80s Mashed 7": "https://audioboots.org/Albums/80sMashed7", "BOOT OF THE DAY": "https://www.facebook.com/permalink.php?story_fbid=pfbid0St6UXYLaaGKBEyNCjujm6WiiZz2XpqaW4swoscfDtwm9LM44FoCxFdLMiCXFHL3ql&id=100063537011274" },
 		"title": "A Heart At Canary Bay",
 		"artists": "Indochine / Depeche Mode"
 	},
@@ -251,6 +253,7 @@ var items = [
 			"The Beatles - Things We Said Today | 1963",
 			"Depeche Mode - The Things You Said | 1987"
 		],
+		"links": { "Inverse | The Things We Said Today": "https://remix.audio/track/69552" },
 		"video": "https://youtu.be/Nq3D8LNCNm0",
 		"image": "893997111_672924943_400995054.jpg"
 	},
