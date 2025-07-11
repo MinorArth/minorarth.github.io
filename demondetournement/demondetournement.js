@@ -368,7 +368,6 @@ var items = {
 			"producer": "DoM",
 			"artists": "Gorillaz / Tears For Fears",
 			"links": { "BOOT OF THE DAY": "https://www.facebook.com/permalink.php?story_fbid=pfbid02JT6dJ4B8pYpgT2eGSqSXNu9aQ8HxaKVKkMJMg8LcLtaJXjuQ3DFBBQDqnznAR2zKl&id=100063537011274" }
-
 		},
 		{
 			// "id": 76003,
