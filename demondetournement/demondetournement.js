@@ -116,7 +116,8 @@ var items = {
 			],
 			"songTitle": "Lovesong Del Mañana",
 			"producer": "Minor Arth",
-			"artists": "Gorillaz / The Cure"
+			"artists": "Gorillaz / The Cure",
+			"links": { "BOOT OF THE DAY": "https://www.facebook.com/permalink.php?story_fbid=pfbid02NJvzBf23dQTp33u9Xp9E4h37eYYWX6EessMz21dYTmuB2tSy6qzFRkgZeQiRQecrl&id=100063537011274" }
 		},
 		{
 			"id": 30576,
@@ -252,7 +253,8 @@ var items = {
 			"songTitle": "Feel Good Woman",
 			"producer": "DoM",
 			"artists": "Neneh Cherry / Gorillaz",
-			"video": "https://youtu.be/xSSu5UOTOgw"
+			"video": "https://youtu.be/xSSu5UOTOgw",
+			"links": { "BOOT OF THE DAY": "https://www.facebook.com/permalink.php?story_fbid=pfbid037wvVyb1CnNfqV7ZNz3q8VMHByEHBRcAA2CvmmYCi2RnUmB7fK6y4nMU3oxaWcvhyl&id=100063537011274" }
 		},
 		{
 			"id": 63064,
@@ -265,7 +267,7 @@ var items = {
 			"songTitle": "Feel Good On A Sunny Afternoon",
 			"artists": "Gorillaz / The Kinks",
 			"producer": "Minor Arth",
-			"links": { "AudioBoots Summer Booty 2024": "https://audioboots.org/Albums/SB2024" }
+			"links": { "Summer Booty 2024": "https://audioboots.org/Albums/SB2024", "BOOT OF THE DAY": "https://www.facebook.com/permalink.php?story_fbid=pfbid02RX5dbgtUU3hS7WBN8zrNhNj242ggdYcCM82FtPzmFy72Jv7Qg3ymaCPLfdXgUge6l&id=100063537011274" }
 		},
 		{
 			"id": 52176,
@@ -340,7 +342,7 @@ var items = {
 			"songTitle": "To Ulrike Mañana",
 			"producer": "Minor Arth",
 			"artists": "Doris Days / Zero 7 / Gorillaz",
-			"links": { "AudioBoots Summer Booty 2025": "https://audioboots.org/Albums/SB2025" }
+			"links": { "Summer Booty 2025": "https://audioboots.org/Albums/SB2025" }
 		},
 		{
 			"id": 39841,
@@ -364,7 +366,9 @@ var items = {
 			],
 			"songTitle": "Dare To Shout",
 			"producer": "DoM",
-			"artists": "Gorillaz / Tears For Fears"
+			"artists": "Gorillaz / Tears For Fears",
+			"links": { "BOOT OF THE DAY": "https://www.facebook.com/permalink.php?story_fbid=pfbid02JT6dJ4B8pYpgT2eGSqSXNu9aQ8HxaKVKkMJMg8LcLtaJXjuQ3DFBBQDqnznAR2zKl&id=100063537011274" }
+
 		},
 		{
 			// "id": 76003,
