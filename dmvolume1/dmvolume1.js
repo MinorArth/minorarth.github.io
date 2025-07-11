@@ -83,7 +83,7 @@ var items = [
 			"The Cure - Let's Go To Bed | 1983",
 			"Depeche Mode - Master And Servant | 1984"
 		],
-		links: { "Nouvelle Vague / Cure": "https://remix.audio/track/48591", "acoustic version": "../acoustic-unplugged/" },
+		links: { "Nouvelle Vague / Cure acoustic version": "../acoustic-unplugged/" },
 		"image": "438473383_727208601_1640531236.jpg"
 	},
 	{

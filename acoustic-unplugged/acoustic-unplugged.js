@@ -30,7 +30,8 @@ var items = [
 		],
 		"songTitle": "Bad Promises",
 		"producer": "Chocomang",
-		"artists": "U2 / Simple Minds / KT Tunstall"
+		"artists": "U2 / Simple Minds / KT Tunstall",
+		"links": { "BOOT OF THE DAY": "https://www.facebook.com/permalink.php?story_fbid=pfbid02L4N2D8ifeez5nVZFHQHy82qpFH7CdkACVsiByh3hyB1KHUHv6jeY4BLU2NKypJrfl&id=100063537011274" }
 	},
 	{
 		"id": 48636,
@@ -57,7 +58,7 @@ var items = [
 		"songTitle": "Master And Servant Go To Bed",
 		"artists": "Nouvelle Vague / The Cure",
 		"producer": "Minor Arth",
-		"links": { "Depeche Mode /": "../dmvolume1" , "Cure version": "https://remix.audio/track/62446" } 
+		"links": { "Depeche Mode / Cure": "../dmvolume1", "BOOT OF THE DAY": "https://www.facebook.com/permalink.php?story_fbid=pfbid02T2LBCoV1gmxipz7VfyH7uttnWFtG4JLPHDRHWWRxrHis5ub77V7xQSzYEUTBAAQpl&id=100063537011274" } 
 	},
 	{
 		image: PLAYER_IMAGE,
@@ -127,7 +128,8 @@ var items = [
 		],
 		"songTitle": "The Protection Reason",
 		"producer": "Chocomang",
-		"artists": "Hoobastank / Massive Attack / Tracey Thorn"
+		"artists": "Hoobastank / Massive Attack / Tracey Thorn",
+		"links": { "BOOT OF THE DAY": "https://www.facebook.com/permalink.php?story_fbid=pfbid0HZLJkSyE3ZJ6F5Gzg2dvkVhj68RPuqV8ZEim4Q75AB8vSBce9bJc88Dae1XGpDJxl&id=100063537011274" }
 	},
 	{
 		"id": 48799,
@@ -326,7 +328,8 @@ var items = [
 		],
 		"songTitle": "Come As You Are",
 		"producer": "Minor Arth",
-		"artists": "Emilie Simon / Kurt Cobain"
+		"artists": "Emilie Simon / Nirvana / Kurt Cobain",
+		"links": { "BOOT OF THE DAY": "" }
 	}
 ];
 
