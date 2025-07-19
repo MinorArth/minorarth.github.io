@@ -77,6 +77,7 @@ div.playlist-template div.item-text a {
 
 div.playlist-template img.artwork[src] {
 	height: 0.8in;
+	max-width: 0.8in;
 	vertical-align: middle;
 }
 
