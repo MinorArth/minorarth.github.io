@@ -20,7 +20,7 @@ var links = {
 };
 
 var items = [
-//	{ type: "category", title: "Disc 1" },
+	{ type: "category", title: "Disc 1" },
 	{
 		"id": 74261,
 		"file": "1184833961_815216806_1903531812.mp3",
@@ -44,6 +44,14 @@ var items = [
 		"artists": "Ratt / The Outfield",
 		"title": "Round and Round Ain't Over",
 		"image": "1942803553_551002103_629548849.jpg"
+	},
+	{
+		"id": 75138,
+		"file": "1904498453_584517236_1846215279.mp3",
+		"producer": "ToToM",
+		"artists": "Jane's Addiction / Fleetwood Mac",
+		"title": "Ted's Chain",
+		"image": "1725532076_2134738654_1723793616.jpg"
 	},
 	{
 		"id": 74793,
@@ -78,6 +86,14 @@ var items = [
 		"image": "630593282_2084274979_1855853165.jpg"
 	},
 	{
+		"id": 75139,
+		"file": "987193874_2092176691_451459372.mp3",
+		"producer": "ToToM",
+		"artists": "Yungblud / Joy Division",
+		"title": "Parents Living in the Ice Age",
+		"image": "190915777_1047390244_1771471405.jpg"
+	},
+	{
 		"id": 74212,
 		"file": "742480831_1050916389_1021543674.mp3",
 		"producer": "Chocomang",
@@ -101,8 +117,16 @@ var items = [
 		"title": "What I've Done, I Drank Blood Like Lemonade",
 		"image": "1894549820_1700907134_402218055.png"
 	},
+	{
+		"id": 75140,
+		"file": "1248367143_1002085118_1120505533.mp3",
+		"producer": "ToToM",
+		"artists": "Gossip / Rammstein",
+		"title": "Show your 8th Wonder",
+		"image": "2050986530_1673470579_1121591371.jpg"
+	},
 
-//	{ type: "category", title: "Disc 2" },
+	{ type: "category", title: "Disc 2" },
 	{
 		"id": 74258,
 		"file": "555066364_1185361655_1781795757.mp3",
@@ -118,6 +142,14 @@ var items = [
 		"artists": "Foreigner / Selena Gomez",
 		"title": "Hot Blooded Love",
 		"image": "1875043593_1866051411_1005931960.png"
+	},
+	{
+		"id": 75141,
+		"file": "323139369_1654503832_1176491673.mp3",
+		"producer": "ToToM",
+		"artists": "The Beatles / Fall Out Boy",
+		"title": "I Don't Fix Holes",
+		"image": "1559950185_29655209_2073749371.jpg"
 	},
 	{
 		"id": 74232,
@@ -144,12 +176,28 @@ var items = [
 		"image": "1270473291_523048305_1062039907.jpg"
 	},
 	{
+		"id": 75143,
+		"file": "1793008372_1806341172_2081242420.mp3",
+		"producer": "ToToM",
+		"artists": "Green Day / Make-Up",
+		"title": "Pegasus Case",
+		"image": "1440269790_1672984265_722592490.jpg"
+	},
+	{
 		"id": 74278,
 		"file": "841735379_631231807_1859074766.mp3",
 		"producer": "Mashete",
 		"artists": "The Cardigans / 12 Stones",
 		"title": "My Favourite Crash",
 		"image": "486795513_443327904_470118705.jpg"
+	},
+	{
+		"id": 75144,
+		"file": "1949442704_327386385_1279090745.mp3",
+		"producer": "ToToM",
+		"artists": "Smashing Pumpkins / CCR / NIN",
+		"title": "The End is the Beginning of The End of the Jungle Run",
+		"image": "921164665_1589760749_959120077.jpg"
 	},
 	{
 		"id": 74203,
@@ -168,6 +216,14 @@ var items = [
 		"image": "257642114_1807326955_1834772419.jpg"
 	},
 	{
+		"id": 75145,
+		"file": "1691797052_1248137161_1727867454.mp3",
+		"producer": "ToToM",
+		"artists": "Jefferson Airplane / Iggy Pop",
+		"title": "Lust for the White Rabbit Life",
+		"image": "1673362074_1663803649_1913527746.jpg"
+	},
+	{
 		"id": 74446,
 		"file": "1249613109_761354784_1629811885.mp3",
 		"producer": "Chocomang",
@@ -175,6 +231,7 @@ var items = [
 		"title": "No Wave",
 		"image": "305646546_1262247047_1241288889.jpg"
 	},
+
 	{ type: "category", title: "Album preview" },
 	{
 		"file": "https://hearthis.at/vxmfxz7w/dj-useo-mashups-to-knock-your-teeth-out-the-sequel-the-mix-disc-1/stream.mp3?s=Utz",
