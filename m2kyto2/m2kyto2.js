@@ -20,7 +20,7 @@ var links = {
 };
 
 var items = [
-	{ type: "category", title: "Disc 1" },
+//	{ type: "category", title: "Disc 1" },
 	{
 		"id": 74261,
 		"file": "1184833961_815216806_1903531812.mp3",
@@ -126,7 +126,7 @@ var items = [
 		"image": "2050986530_1673470579_1121591371.jpg"
 	},
 
-	{ type: "category", title: "Disc 2" },
+//	{ type: "category", title: "Disc 2" },
 	{
 		"id": 74258,
 		"file": "555066364_1185361655_1781795757.mp3",
