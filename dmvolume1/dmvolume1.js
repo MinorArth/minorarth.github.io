@@ -149,7 +149,8 @@ var items = [
 			"Depeche Mode - Get the Balance Right | 1982"
 		],
 		"title": "Balance Sans Contrefaçon",
-		"links": { "BOOT OF THE DAY": "https://www.facebook.com/permalink.php?story_fbid=pfbid02de4J2D3FzqEScB7T97ovd33n5w9ohP5SFC4cKFKs4cD3EEX6fpUmo57kZrsv221Fl&id=100063537011274" },
+		"links": { "BOOT OF THE DAY": "https://www.facebook.com/permalink.php?story_fbid=pfbid02de4J2D3FzqEScB7T97ovd33n5w9ohP5SFC4cKFKs4cD3EEX6fpUmo57kZrsv221Fl&id=100063537011274", "Inverse French version": "https://remix.audio/track/51839" },
+
 		"artists": "Mylène Farmer / Depeche Mode"
 	},
 	{
