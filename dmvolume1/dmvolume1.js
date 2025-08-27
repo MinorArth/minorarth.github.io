@@ -124,7 +124,8 @@ var items = [
 			"Yello - Lost Again | 1983",
 			"Depeche Mode - Leave In Silence | 1982"
 		],
-		"image": "2077564270_856786567_1690330215.jpg"
+		"image": "2077564270_856786567_1690330215.jpg",
+		"video": "https://youtu.be/RUkcI7_oleI"
 	},
 	{
 		"id": 66290,
