@@ -35,6 +35,15 @@ var items = [
 		nbTracks: 27
 	},
 	{
+		url: "./ah2025",
+		title: "AudioBoots Halloween 2025",
+		description: "41 new Halloween mashups!",
+		producer: "DJ Useo / Chocomang / Minor Arth / ... ",
+		image: "https://i.postimg.cc/kgwYBwwv/audioboots-halloween-2025-front.jpg",
+		release: "October 2025",
+		nbTracks: 41
+	},
+	{
 		url: "./acoustic-unplugged",
 		title: "AudioBoots Acoustic Unplugged",
 		description: "25 acoustic / unplugged mashups by 9 producers",
