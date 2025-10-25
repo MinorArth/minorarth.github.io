@@ -60,6 +60,7 @@ var items = {
 			"producer": "Brighton Sonny",
 			"artists": "Lady Gaga / All Time Low / Blackbear",
 			"title": "Monster Monster Monsters",
+			"links": {"Halloween Booootie 12": "https://bootiemashup.com/mix-tapes/halloween-booootie-12-2025" },
 			"image": "95070989_1901786684_700257613.png"
 		},
 		{
@@ -75,7 +76,7 @@ var items = {
 			"file": "522493157_925565409_427727535.mp3",
 			"producer": "Brighton Sonny",
 			"artists": "Lady Gaga / Lana Del Rey",
-			"title": "Marry the Monsters (Brighton Sonny mashup)",
+			"title": "Marry the Monsters",
 			"image": "836817819_1296318803_1380605576.png"
 		},
 		{
