@@ -94,7 +94,7 @@ var items = {
 			"artists": "Gorillaz / Grandmaster Flash & The Furious Five"
 		},
 		{
-			// "id": 75998,
+			"id": 75998,
 			"file": "437153311_54832013_1015990628.mp3",
 			"localFile": "Steff St Moore - Gorillaz - Michael Jackson - Feel Good Off The Wall",
 			"sources": [
@@ -103,8 +103,7 @@ var items = {
 			],
 			"songTitle": "Feel Good Off The Wall",
 			"artists": "Gorillaz / Michael Jackson",
-			"producer": "Steff St Moore",
-			// "links": { "YouTube": "https://youtu.be/SHGpqfHeO-o" }
+			"producer": "Steff St Moore"
 		},
 		{
 			"id": 74708,
@@ -135,7 +134,7 @@ var items = {
 			"video": "https://youtu.be/dtN6gUHhtlo"
 		},
 		{
-			// "id": 75972,
+			"id": 75972,
 			"file": "601653896_946261058_1321463132.mp3",
 			"localFile": "Steff St Moore - Gorillaz - D'Angelo - MF Has Come",
 			"sources": [
@@ -159,7 +158,7 @@ var items = {
 			"artists": "Gorillaz / Crystal Waters"
 		},
 		{
-			// "id": 75971,
+			"id": 75971,
 			"file": "1107648121_1391566854_1746042303.mp3",
 			"localFile": "Steff St Moore - Gorillaz - Bruce Springsteen - Born To Run In The White Light",
 			"sources": [
@@ -212,7 +211,7 @@ var items = {
 	],
 	"Bonus": [
 		{
-			// "id": 76000,
+			"id": 76000,
 			"file": "532653678_1260639085_175463844.mp3",
 			"localFile": "Steff St Moore - Gorillaz - Soul II Soul - Back To Life -- Dirty Harry mix",
 			"sources": [
@@ -319,7 +318,7 @@ var items = {
 			"artists": "Manu Chao / Gorillaz"
 		},
 		{
-			// "id": 76002,
+			"id": 76002,
 			"file": "838911111_710089901_1526681702.mp3",
 			"localFile": "Steff St Moore - Gorillaz - Will Downing - Michelle Manana",
 			"sources": [
@@ -370,7 +369,7 @@ var items = {
 			"links": { "BOOT OF THE DAY": "https://www.facebook.com/permalink.php?story_fbid=pfbid02JT6dJ4B8pYpgT2eGSqSXNu9aQ8HxaKVKkMJMg8LcLtaJXjuQ3DFBBQDqnznAR2zKl&id=100063537011274" }
 		},
 		{
-			// "id": 76003,
+			"id": 76003,
 			"file": "407584130_1151349611_2091194948.mp3",
 			"localFile": "Steff St Moore - Gorillaz - Prince - Don't Get Lost in Automatic Heaven",
 			"sources": [
