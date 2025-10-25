@@ -89,6 +89,14 @@ var items = {
 			"links": { "Wednesday video": "https://youtu.be/1m3Xct6_BEM" }
 		},
 		{
+			"id": 82137,
+			"file": "1064265315_1123864231_75309748.mp3",
+			"producer": "Giac",
+			"artists": "Rockwell / Deodato",
+			"title": "S.O.S. (Fire In The Sky's Watching Me)",
+			"image": "1256134028_1389675718_1926762854.jpg"
+		},
+		{
 			"id": 81639,
 			"file": "1042238091_975999283_1710950049.mp3",
 			"producer": "DJ Useo",
