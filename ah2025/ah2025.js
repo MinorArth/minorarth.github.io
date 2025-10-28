@@ -47,6 +47,14 @@ var items = {
 			"image": "1049762337_1036241531_954898949.png"
 		},
 		{
+			"id": 82207,
+			"file": "1875890582_1508605963_1073084559.mp3",
+			"producer": "Giac",
+			"artists": "Michael Jackson / Rockwell",
+			"title": "Somebody's Watching Thriller",
+			"image": "1860433685_125100196_709489226.jpg"
+		},
+		{
 			"id": 81672,
 			"file": "1691749916_297710047_551516965.mp3",
 			"producer": "Mashete",
