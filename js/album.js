@@ -164,9 +164,12 @@ function makePlaylist(playlist) {
 	if(items.length == 1) items = playlist.innerText.trim().split("\n");
 	items = items.filter(l => l && l.length);
 	items = items.map(makePlaylistItem);
-	items.id = playlist.id;
-	items.title = playlist.title;
-	items.unshift({title: playlist.title});
+	if(playlist.id) items.id = playlist.id;
+
+	if(playlist.title) {
+		items.title = playlist.title;
+		items.unshift({ type: "category", title: playlist.title });
+	}
 	return items;
 }
 
