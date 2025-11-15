@@ -38,6 +38,7 @@ var items = [];
 const isUrl = s => s && s.includes && s.includes("://");
 const useRemoteAudioFiles = () =>  isUrl(AUDIO_PATH);
 const useLocalAudioFiles  = () => !isUrl(AUDIO_PATH);
+const isObject = o => typeof(o) == 'object';
 
 function loadPlaylist()
 {
@@ -78,7 +79,7 @@ function loadPlaylist()
 		else refreshList();
 	});
 
-	if(!Array.isArray(items))
+	if(isObject(items))
 	{
 		allPlaylists.all = [];
 		for(var key in items) {
