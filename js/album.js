@@ -38,7 +38,7 @@ var items = [];
 const isUrl = s => s && s.includes && s.includes("://");
 const useRemoteAudioFiles = () =>  isUrl(AUDIO_PATH);
 const useLocalAudioFiles  = () => !isUrl(AUDIO_PATH);
-const isObject = o => typeof(o) == 'object';
+const isObject = o => o && typeof(o) == 'object' && !Array.isArray(o);
 
 function loadPlaylist()
 {
