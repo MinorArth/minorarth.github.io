@@ -102,18 +102,6 @@ var items = {
 			"artists": "Duran Duran / Depeche Mode"
 		},
 		{
-			"id": 21683,
-			"image": "Depeche Mode - Garbage - Mercy Crush.jpg",
-			"file": "Depeche Mode - Garbage - Mercy Crush.mp3",
-			"sources": [
-				"Depeche Mode - Mercy In You | 1993",
-				"Garbage - #1 Crush | 1995" 
-			],
-			"songTitle": "Mercy Crush",
-			"artists": "Depeche Mode / Garbage",
-			"video": "https://youtu.be/RDwHZ9A_aww"
-		},
-		{
 			"image": "Mesh - Depeche Mode - New Dress -- Defender mix.jpg",
 			"file": "Mesh - Depeche Mode - New Dress -- Defender mix.mp3",
 			"sources": [ 
@@ -134,6 +122,16 @@ var items = {
 			],
 			"songTitle": "Angel In Your Room",
 			"artists": "Massive Attack / Depeche Mode"
+		},
+		{
+			"image": "Garbage - Depeche Mode - The World Is Not Enough When I Lose Myself.jpg",
+			"file": "Garbage - Depeche Mode - The World Is Not Enough When I Lose Myself.mp3",
+			"sources": [
+				"Garbage - The World Is Not Enough | 1999",
+				"Depeche Mode - Only When I Lose Myself | 1998"
+			],
+			"songTitle": "The World Is Not Enough When I Lose Myself",
+			"artists": "Garbage / Depeche Mode"
 		},
 		{
 			"id": 82023,
@@ -213,6 +211,18 @@ var items = {
 			"artists": "DNA / Depeche Mode"
 		},
 		{
+			"id": 21683,
+			"image": "Depeche Mode - Garbage - Mercy Crush.jpg",
+			"file": "Depeche Mode - Garbage - Mercy Crush.mp3",
+			"sources": [
+				"Depeche Mode - Mercy In You | 1993",
+				"Garbage - #1 Crush | 1995" 
+			],
+			"songTitle": "Mercy Crush",
+			"artists": "Depeche Mode / Garbage",
+			"video": "https://youtu.be/RDwHZ9A_aww"
+		},
+		{
 			"id": 58017,
 			"image": "Massive Attack - Depeche Mode - Harm's No Good.jpg",
 			"file": "Massive Attack - Depeche Mode - Harm's No Good.mp3",
@@ -223,27 +233,6 @@ var items = {
 			"songTitle": "Harm's No Good",
 			"artists": "Massive Attack / Depeche Mode",
 			"video": "https://youtu.be/rUCIN33QyyM"
-		},
-		{
-			"image": "Garbage - Depeche Mode - The World Is Not Enough When I Lose Myself.jpg",
-			"file": "Garbage - Depeche Mode - The World Is Not Enough When I Lose Myself.mp3",
-			"sources": [
-				"Garbage - The World Is Not Enough | 1999",
-				"Depeche Mode - Only When I Lose Myself | 1998"
-			],
-			"songTitle": "The World Is Not Enough When I Lose Myself",
-			"artists": "Garbage / Depeche Mode"
-		},
-		{
-			"image": "Depeche Mode - David Bowie - I'm Afraid Of A Gun.jpg",
-			"file": "Depeche Mode - David Bowie - I'm Afraid Of A Gun.mp3",
-			"sources": [
-				"Depeche Mode - Barrel Of A Gun | 1997",
-				"David Bowie - I'm Afraid Of Americans | 1997"
-			],
-			"songTitle": "I'm Afraid Of A Gun",
-			"artists": "Depeche Mode / David Bowie",
-			"video": "https://youtu.be/XdMTSEDxo0M"
 		},
 		{
 			"id": 83021,
@@ -257,6 +246,17 @@ var items = {
 			"songTitle": "I Feel The Levee Break",
 			"artists": "Led Zeppelin / Depeche Mode",
 			"video": "https://youtu.be/_TcU5wb0Vsc"
+		},
+		{
+			"image": "Depeche Mode - David Bowie - I'm Afraid Of A Gun.jpg",
+			"file": "Depeche Mode - David Bowie - I'm Afraid Of A Gun.mp3",
+			"sources": [
+				"Depeche Mode - Barrel Of A Gun | 1997",
+				"David Bowie - I'm Afraid Of Americans | 1997"
+			],
+			"songTitle": "I'm Afraid Of A Gun",
+			"artists": "Depeche Mode / David Bowie",
+			"video": "https://youtu.be/XdMTSEDxo0M"
 		},
 		{
 			"image": "Type O Negative - Depeche Mode - One Caress To Death.jpg",
