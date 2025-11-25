@@ -181,8 +181,9 @@ var items = {
 			"image": "Didier Marouani - Depeche Mode - Little 15 -- Space Opera mix.jpg",
 			"file": "Didier Marouani - Depeche Mode - Little 15 -- Space Opera mix.mp3",
 			"sources": [
-				"Didier Marouani - Space Opera Part 1 | 1987",
-				"Depeche Mode - Little 15 + Pimpf | 1987"
+				"Didier Marouani - Space Opera Part 1 | 1988",
+				"Depeche Mode - Little 15 | 1987",
+				"Depeche Mode - Pimpf | 1987"
 			],
 			"songTitle": "Little 15 | Space Opera mix",
 			"artists": "Didier Marouani / Depeche Mode"
