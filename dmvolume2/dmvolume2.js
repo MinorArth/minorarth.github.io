@@ -92,6 +92,16 @@ var items = {
 			"artists": "Dido / Depeche Mode"
 		},
 		{
+			"image": "Garbage - Depeche Mode - The World Is Not Enough When I Lose Myself.jpg",
+			"file": "Garbage - Depeche Mode - The World Is Not Enough When I Lose Myself.mp3",
+			"sources": [
+				"Garbage - The World Is Not Enough | 1999",
+				"Depeche Mode - Only When I Lose Myself | 1998"
+			],
+			"songTitle": "The World Is Not Enough When I Lose Myself",
+			"artists": "Garbage / Depeche Mode"
+		},
+		{
 			"image": "Duran Duran - Depeche Mode - Here Is A Prayer To Save The House.jpg",
 			"file": "Duran Duran - Depeche Mode - Here Is A Prayer To Save The House.mp3",
 			"sources": [
@@ -122,16 +132,6 @@ var items = {
 			],
 			"songTitle": "Angel In Your Room",
 			"artists": "Massive Attack / Depeche Mode"
-		},
-		{
-			"image": "Garbage - Depeche Mode - The World Is Not Enough When I Lose Myself.jpg",
-			"file": "Garbage - Depeche Mode - The World Is Not Enough When I Lose Myself.mp3",
-			"sources": [
-				"Garbage - The World Is Not Enough | 1999",
-				"Depeche Mode - Only When I Lose Myself | 1998"
-			],
-			"songTitle": "The World Is Not Enough When I Lose Myself",
-			"artists": "Garbage / Depeche Mode"
 		},
 		{
 			"id": 82023,
