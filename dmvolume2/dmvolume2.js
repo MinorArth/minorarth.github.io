@@ -14,7 +14,8 @@ const PLAYER_IMAGE = "./artwork/dmmashups-volume2.jpg";
 
 const links = {
 	"<": "..",
-	"remix.audio": "https://remix.audio/playlist/2789",
+	"DM Mashups vol. 1": "../dmvolume1",
+	"remix.audio": "https://remix.audio/playlist/2790",
 	"DM Mashup Videos": "https://www.youtube.com/watch?v=FD4xU1Oj8pE&list=PLUq5Z5VhjxM1p4sMIlk6zFlnBRW5hJt1r",
 	"Facebook": "https://www.facebook.com/MinorArthMashups"
 };
@@ -157,7 +158,8 @@ var items = {
 			"file": "1133357380_686093585_496239563.mp3",
 			"sources": [
 				"Erik Satie - Gnossienne No. 1",
-				"Depeche Mode - It Doesn't Matter Two | 1986" ],
+				"Depeche Mode - It Doesn't Matter Two | 1986"
+			],
 			"songTitle": "It Doesn't Matter Two | Gnossienne 1 mix",
 			"artists": "Erik Satie / Depeche Mode"
 		},
@@ -288,8 +290,7 @@ var items = {
 				"Depeche Mode - Policy Of Truth | 1990"
 			],
 			"songTitle": "Everybody's Got To Learn The Truth",
-			"artists": "The Korgis / Depeche Mode",
-			"video": ""
+			"artists": "The Korgis / Depeche Mode"
 		},
 		{
 			"image": "Elton John - Depeche Mode - Song For Sometimes.jpg",
