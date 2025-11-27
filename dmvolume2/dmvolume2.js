@@ -6,7 +6,7 @@ const ALBUM_DESCRIPTION = getMeta("og_description");
 const ALBUM_LINK = "https://www.mediafire.com/file/1oe1bgtr6v6uo9x/MinorArth-DepecheModeMashups-volume2.zip/file";
 const ALBUM_ARTIST = "Minor Arth";
 const TRACK_LINK_PATH = "https://remix.audio/track/";
-const AUDIO_PATH = "";
+const AUDIO_PATH = "https://remix.audio/uploads/tracks/";
 const IMAGE_PATH = "./artwork/";
 const AUDIO_TYPE = ".mp3";
 const IMAGE_TYPE = ".jpg";
@@ -23,7 +23,7 @@ var items = {
 	"Part 1": [
 		{
 			"image": "The Alan Parsons Project - Depeche Mode - Nothing -- Sirius mix.jpg",
-			"file": "The Alan Parsons Project - Depeche Mode - Nothing -- Sirius mix.mp3",
+			"localFile": "The Alan Parsons Project - Depeche Mode - Nothing -- Sirius mix.mp3",
 			"sources": [ 
 				"The Alan Parsons Project - Sirius | 1982", 
 				"Sirius | Disco Demolition remix | 2017",
@@ -35,7 +35,8 @@ var items = {
 		{
 			"id": 34091,
 			"image": "Depeche Mode - Kate Bush - Running Stripped.jpg",
-			"file": "Depeche Mode - Kate Bush - Running Stripped.mp3",
+			"localFile": "Depeche Mode - Kate Bush - Running Stripped.mp3",
+			"file": "1925052501_1082957309_712549437.mp3",
 			"sources": [	
 				"Depeche Mode - Stripped | 1986",
 				"Kate Bush - Running Up That Hill | 1985", 
@@ -48,7 +49,8 @@ var items = {
 		{
 			"id": 18641,
 			"image": "The Cure - Depeche Mode - Burn In My Shoes.jpg",
-			"file": "The Cure - Depeche Mode - Burn In My Shoes.mp3",
+			"localFile": "The Cure - Depeche Mode - Burn In My Shoes.mp3",
+			"file": "539992854_1095328202_1685599627.mp3",
 			"sources": [
 				"The Cure - Burn | 1994",
 				"Depeche Mode - Walking In My Shoes | 1993"
@@ -60,11 +62,12 @@ var items = {
 		{
 			"id": 78339,
 			"image": "Hans Zimmer - Depeche Mode - Never Let Me Down Behind The Wheel -- F1 mix.jpg",
-			"file": "Hans Zimmer - Depeche Mode - Never Let Me Down Behind The Wheel -- F1 mix.mp3",
+			"localFile": "Hans Zimmer - Depeche Mode - Never Let Me Down Behind The Wheel -- F1 mix.mp3",
+			"file": "916359693_589447145_1828530525.mp3",
 			"sources": [
-			"Hans Zimmer - F1 | 2025",
-			"Depeche Mode - Never Let Me Down Again | 1987",
-			"Depeche Mode - Behind The Wheel | 1987"
+				"Hans Zimmer - F1 | 2025",
+				"Depeche Mode - Never Let Me Down Again | 1987",
+				"Depeche Mode - Behind The Wheel | 1987"
 			],
 			"songTitle": "Never Let Me Down Behind The Wheel | F1 mix",
 			"artists": "Hans Zimmer / Depeche Mode"
@@ -72,7 +75,8 @@ var items = {
 		{
 			"id": 21884,
 			"image": "David Bowie - Depeche Mode - A Question Of Time And Space, Boy.jpg",
-			"file": "David Bowie - Depeche Mode - A Question Of Time And Space, Boy.mp3",
+			"localFile": "David Bowie - Depeche Mode - A Question Of Time And Space, Boy.mp3",
+			"file": "122331518_765031649_2131110985.mp3",
 			"sources": [
 				"David Bowie - Hallo Spaceboy | 1995",
 				"Depeche Mode - A Question Of Time | 1986"
@@ -83,7 +87,7 @@ var items = {
 		},
 		{
 			"image": "Dido - Depeche Mode - Enjoy The Silence -- Hunter mix.jpg",
-			"file": "Dido - Depeche Mode - Enjoy The Silence -- Hunter mix.mp3",
+			"localFile": "Dido - Depeche Mode - Enjoy The Silence -- Hunter mix.mp3",
 			"sources": [
 				"Dido - Hunter | 1999", 
 				"Depeche Mode - Enjoy The Silence | 1990"
@@ -93,7 +97,7 @@ var items = {
 		},
 		{
 			"image": "Garbage - Depeche Mode - The World Is Not Enough When I Lose Myself.jpg",
-			"file": "Garbage - Depeche Mode - The World Is Not Enough When I Lose Myself.mp3",
+			"localFile": "Garbage - Depeche Mode - The World Is Not Enough When I Lose Myself.mp3",
 			"sources": [
 				"Garbage - The World Is Not Enough | 1999",
 				"Depeche Mode - Only When I Lose Myself | 1998"
@@ -103,7 +107,7 @@ var items = {
 		},
 		{
 			"image": "Duran Duran - Depeche Mode - Here Is A Prayer To Save The House.jpg",
-			"file": "Duran Duran - Depeche Mode - Here Is A Prayer To Save The House.mp3",
+			"localFile": "Duran Duran - Depeche Mode - Here Is A Prayer To Save The House.mp3",
 			"sources": [
 				"Duran Duran - Save A Prayer | 1982",
 				"Depeche Mode - Here Is The House | 1986"
@@ -113,19 +117,19 @@ var items = {
 		},
 		{
 			"image": "Mesh - Depeche Mode - New Dress -- Defender mix.jpg",
-			"file": "Mesh - Depeche Mode - New Dress -- Defender mix.mp3",
+			"localFile": "Mesh - Depeche Mode - New Dress -- Defender mix.mp3",
 			"sources": [ 
 				"mesh - My Defender | 1999",
 				"Depeche Mode - New Dress | 1986"
 			],
 			"songTitle": "New Dress | Defender mix",
 			"artists": "Mesh / Depeche Mode",
-			"video": "https://youtu.be/oUPM8ObPLWY"
+			"video": "https://youtu.be/8JjinVvgMnQ"
 		},
 		{
 			"id": 18106,
 			"image": "Massive Attack - Depeche Mode - Angel In Your Room.jpg",
-			"file": "Massive Attack - Depeche Mode - Angel In Your Room.mp3",
+			"localFile": "Massive Attack - Depeche Mode - Angel In Your Room.mp3",
 			"sources": [
 				"Massive Attack - Angel | 1998",
 				"Depeche Mode - In Your Room | 1993"
@@ -136,7 +140,8 @@ var items = {
 		{
 			"id": 82023,
 			"image": "Danny Elfman - Depeche Mode - Wednesday's Dressed In Black.jpg",
-			"file": "Danny Elfman - Depeche Mode - Wednesday's Dressed In Black.mp3",
+			"localFile": "Danny Elfman - Depeche Mode - Wednesday's Dressed In Black.mp3",
+			"file": "160234334_579328652_1618604042.mp3",
 			"sources": [
 				"Danny Elfman - Wednesday theme | 2022",
 				"Depeche Mode - Dressed In Black | 1986"
@@ -148,7 +153,8 @@ var items = {
 		{
 			"id": 61518,
 			"image": "Erik Satie - Depeche Mode - It Doesn't Matter Two -- Gnossienne 1 mix.jpg",
-			"file": "Erik Satie - Depeche Mode - It Doesn't Matter Two -- Gnossienne 1 mix.mp3",
+			"localFile": "Erik Satie - Depeche Mode - It Doesn't Matter Two -- Gnossienne 1 mix.mp3",
+			"file": "1133357380_686093585_496239563.mp3",
 			"sources": [
 				"Erik Satie - Gnossienne No. 1",
 				"Depeche Mode - It Doesn't Matter Two | 1986" ],
@@ -159,7 +165,7 @@ var items = {
 	"Part 2": [
 		{
 			"image": "Isaac Hayes - Depeche Mode - Halo -- Shaft mix.jpg",
-			"file": "Isaac Hayes - Depeche Mode - Halo -- Shaft mix.mp3",
+			"localFile": "Isaac Hayes - Depeche Mode - Halo -- Shaft mix.mp3",
 			"sources": [
 				"Isaac Hayes - Shaft theme | 1971",
 				"Depeche Mode - Halo | 1990"
@@ -169,7 +175,7 @@ var items = {
 		},
 		{
 			"image": "The Hu - Depeche Mode - Yuve Yu Jesus.jpg",
-			"file": "The Hu - Depeche Mode - Yuve Yu Jesus.mp3",
+			"localFile": "The Hu - Depeche Mode - Yuve Yu Jesus.mp3",
 			"sources": [
 				"The Hu - Yuve Yuve Yu | 2016",
 				"Depeche Mode - Personal Jesus | 1989",
@@ -179,7 +185,7 @@ var items = {
 		},
 		{
 			"image": "Didier Marouani - Depeche Mode - Little 15 -- Space Opera mix.jpg",
-			"file": "Didier Marouani - Depeche Mode - Little 15 -- Space Opera mix.mp3",
+			"localFile": "Didier Marouani - Depeche Mode - Little 15 -- Space Opera mix.mp3",
 			"sources": [
 				"Didier Marouani - Space Opera Part 1 | 1988",
 				"Depeche Mode - Little 15 | 1987",
@@ -191,7 +197,8 @@ var items = {
 		{
 			"id": 18059,
 			"image": "U2 - Depeche Mode - Lemon In My Eyes.jpg",
-			"file": "U2 - Depeche Mode - Lemon In My Eyes.mp3",
+			"localFile": "U2 - Depeche Mode - Lemon In My Eyes.mp3",
+			"file": "34747308_1944492979_271738510.mp3",
 			"sources": [
 				"U2 - Lemon | 1993",
 				"Depeche Mode - World In My Eyes | 1990"
@@ -203,7 +210,8 @@ var items = {
 		{
 			"id": 80150,
 			"image": "DNA - Depeche Mode - Serenissima Of Sin.jpg",
-			"file": "DNA - Depeche Mode - Serenissima Of Sin.mp3",
+			"localFile": "DNA - Depeche Mode - Serenissima Of Sin.mp3",
+			"file": "899354791_689222421_1729546956.mp3",
 			"sources": [
 				"DNA - La Serenissima | 1990",
 				"Depeche Mode - Sea Of Sin | 1990"
@@ -214,7 +222,8 @@ var items = {
 		{
 			"id": 21683,
 			"image": "Depeche Mode - Garbage - Mercy Crush.jpg",
-			"file": "Depeche Mode - Garbage - Mercy Crush.mp3",
+			"localFile": "Depeche Mode - Garbage - Mercy Crush.mp3",
+			"file": "1498603540_1748788629_434699911.mp3",
 			"sources": [
 				"Depeche Mode - Mercy In You | 1993",
 				"Garbage - #1 Crush | 1995" 
@@ -226,7 +235,8 @@ var items = {
 		{
 			"id": 58017,
 			"image": "Massive Attack - Depeche Mode - Harm's No Good.jpg",
-			"file": "Massive Attack - Depeche Mode - Harm's No Good.mp3",
+			"localFile": "Massive Attack - Depeche Mode - Harm's No Good.mp3",
+			"file": "1900343156_1049001071_817223581.mp3",
 			"sources": [
 				"Massive Attack / Shara Nelson - Safe From Harm | 1991",
 				"Depeche Mode - It's No Good | 1997"
@@ -238,7 +248,8 @@ var items = {
 		{
 			"id": 83021,
 			"image": "Led Zeppelin - Depeche Mode - I Feel The Levee Break.jpg",
-			"file": "Led Zeppelin - Depeche Mode - I Feel The Levee Break.mp3",
+			"localFile": "Led Zeppelin - Depeche Mode - I Feel The Levee Break.mp3",
+			"file": "1251425531_1647542854_269303261.mp3",
 			"sources": [
 				"Led Zeppelin - When The Levee Breaks | 1971",
 				"Depeche Mode - I Feel You | 1993",
@@ -250,7 +261,7 @@ var items = {
 		},
 		{
 			"image": "Depeche Mode - David Bowie - I'm Afraid Of A Gun.jpg",
-			"file": "Depeche Mode - David Bowie - I'm Afraid Of A Gun.mp3",
+			"localFile": "Depeche Mode - David Bowie - I'm Afraid Of A Gun.mp3",
 			"sources": [
 				"Depeche Mode - Barrel Of A Gun | 1997",
 				"David Bowie - I'm Afraid Of Americans | 1997"
@@ -261,7 +272,7 @@ var items = {
 		},
 		{
 			"image": "Type O Negative - Depeche Mode - One Caress To Death.jpg",
-			"file": "Type O Negative - Depeche Mode - One Caress To Death.mp3",
+			"localFile": "Type O Negative - Depeche Mode - One Caress To Death.mp3",
 			"sources": [
 				"Type O Negative - Love You To Death | 1996",
 				"Depeche Mode - One Caress | 1993"
@@ -271,7 +282,7 @@ var items = {
 		},
 		{
 			"image": "The Korgis - Depeche Mode - Everybody's Got To Learn The Truth.jpg",
-			"file": "The Korgis - Depeche Mode - Everybody's Got To Learn The Truth.mp3",
+			"localFile": "The Korgis - Depeche Mode - Everybody's Got To Learn The Truth.mp3",
 			"sources": [
 				"The Korgis - Everybody's Got To Learn Sometime | 1980",
 				"Depeche Mode - Policy Of Truth | 1990"
@@ -282,7 +293,7 @@ var items = {
 		},
 		{
 			"image": "Elton John - Depeche Mode - Song For Sometimes.jpg",
-			"file": "Elton John - Depeche Mode - Song For Sometimes.mp3",
+			"localFile": "Elton John - Depeche Mode - Song For Sometimes.mp3",
 			"sources": [
 				"Elton John - Song For Guy | 1977",
 				"Depeche Mode - Sometimes | 1986",
