@@ -22,7 +22,17 @@ var links = {
 var items = [
 	{ 
 		type: "category",
-		title: "Collaborative Albums" 
+		title: "Latest" 
+	},
+	{
+		url: "./dmvolume2",
+		title: "Ultra Faith And Violation",
+		artists: "Depeche Mode",
+		description: "Depeche Mode mashups volume 2",
+		producer: "Minor Arth",
+		image: "./dmvolume2/artwork/dmmashups-volume2.jpg",
+		release: "November 2025",
+		nbTracks: 24
 	},
 	{
 		url: "./demondetournement",
@@ -33,6 +43,10 @@ var items = [
 		image: "./demondetournement/artwork/DemonDetournement.jpg",
 		release: "April 2025",
 		nbTracks: 27
+	},
+	{ 
+		type: "category",
+		title: "Collaborative Albums" 
 	},
 	{
 		url: "./ah2025",
@@ -89,6 +103,7 @@ var items = [
 		title: "Some Great Music For The Mashes",
 		artists: "Depeche Mode",
 		description: "Depeche Mode mashups volume 1",
+		producer: "Minor Arth",
 		image: "./dmvolume1/dmmashups-volume1.jpg",
 		release: "June 2024",
 		nbTracks: 22
@@ -97,6 +112,7 @@ var items = [
 		url: "./kraftmode",
 		title: "Kraft Mode EP",
 		artists: "Kraftwerk / Depeche Mode",
+		producer: "Minor Arth",
 		image: "https://remix.audio/uploads/media/31169987_570877271_795201279.jpg",
 		release: "April 2024",
 		nbTracks: 4
