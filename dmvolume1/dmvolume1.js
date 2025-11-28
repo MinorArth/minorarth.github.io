@@ -14,6 +14,7 @@ const PLAYER_IMAGE = "./dmmashups-volume1.jpg";
 
 const links = {
 	"<": "..",
+	"DM Mashups vol. 2": "../dmvolume2",
 	"remix.audio": "https://remix.audio/playlist/2789",
 	"DM Mashup Videos": "https://www.youtube.com/watch?v=FD4xU1Oj8pE&list=PLUq5Z5VhjxM1p4sMIlk6zFlnBRW5hJt1r",
 	"Facebook": "https://www.facebook.com/MinorArthMashups",
