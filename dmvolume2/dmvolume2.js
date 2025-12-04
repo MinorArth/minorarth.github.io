@@ -25,8 +25,10 @@ const links = {
 var items = {
 	"Part 1": [
 		{
+			"id": 83613,
 			"image": "The Alan Parsons Project - Depeche Mode - Nothing -- Sirius mix.jpg",
 			"localFile": "The Alan Parsons Project - Depeche Mode - Nothing -- Sirius mix.mp3",
+			"file": "2123747766_875254152_215530944.mp3",
 			"sources": [ 
 				"The Alan Parsons Project - Sirius | 1982", 
 				"Sirius | Disco Demolition remix | 2017",
