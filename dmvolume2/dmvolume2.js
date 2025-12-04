@@ -234,7 +234,7 @@ var items = {
 			],
 			"songTitle": "Mercy Crush",
 			"artists": "Depeche Mode / Garbage",
-			"video": "https://youtu.be/RDwHZ9A_aww"
+			"video": "https://youtu.be/VSx2kZ3fRlI"
 		},
 		{
 			"id": 58017,
@@ -247,7 +247,7 @@ var items = {
 			],
 			"songTitle": "Harm's No Good",
 			"artists": "Massive Attack / Depeche Mode",
-			"video": "https://youtu.be/rUCIN33QyyM"
+			"video": "https://youtu.be/8AtPH5C1qdc"
 		},
 		{
 			"id": 83021,
