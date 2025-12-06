@@ -55,7 +55,7 @@ var items = {
 			"id": 18641,
 			"image": "The Cure - Depeche Mode - Burn In My Shoes.jpg",
 			"localFile": "The Cure - Depeche Mode - Burn In My Shoes.mp3",
-			// "file": "539992854_1095328202_1685599627.mp3",
+			"file": "539992854_1095328202_1685599627.mp3",
 			"sources": [
 				"The Cure - Burn | 1994",
 				"Depeche Mode - Walking In My Shoes | 1993"
@@ -68,7 +68,7 @@ var items = {
 			"id": 78339,
 			"image": "Hans Zimmer - Depeche Mode - Never Let Me Down Behind The Wheel -- F1 mix.jpg",
 			"localFile": "Hans Zimmer - Depeche Mode - Never Let Me Down Behind The Wheel -- F1 mix.mp3",
-			// "file": "916359693_589447145_1828530525.mp3",
+			"file": "916359693_589447145_1828530525.mp3",
 			"sources": [
 				"Hans Zimmer - F1 | 2025",
 				"Depeche Mode - Never Let Me Down Again | 1987",
@@ -206,7 +206,7 @@ var items = {
 			"id": 18059,
 			"image": "U2 - Depeche Mode - Lemon In My Eyes.jpg",
 			"localFile": "U2 - Depeche Mode - Lemon In My Eyes.mp3",
-			// "file": "34747308_1944492979_271738510.mp3",
+			"file": "34747308_1944492979_271738510.mp3",
 			"sources": [
 				"U2 - Lemon | 1993",
 				"Depeche Mode - World In My Eyes | 1990"
