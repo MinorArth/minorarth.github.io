@@ -228,7 +228,7 @@ var items = {
 			"artists": "DNA / Depeche Mode"
 		},
 		{
-			"id": 21683,
+			"id": 83613,
 			"image": "Depeche Mode - Garbage - Mercy Crush.jpg",
 			"localFile": "Depeche Mode - Garbage - Mercy Crush.mp3",
 			"file": "1498603540_1748788629_434699911.mp3",
@@ -238,13 +238,13 @@ var items = {
 			],
 			"songTitle": "Mercy Crush",
 			"artists": "Depeche Mode / Garbage",
-			"video": "https://youtu.be/VSx2kZ3fRlI"
+			"video": "https://youtu.be/S_fdlsUJuz8" 
 		},
 		{
 			"id": 58017,
 			"image": "Massive Attack - Depeche Mode - Harm's No Good.jpg",
 			"localFile": "Massive Attack - Depeche Mode - Harm's No Good.mp3",
-			"file": "1900343156_1049001071_817223581.mp3",
+			"file": "1121077605_1335658993_1298417421.mp3",
 			"sources": [
 				"Massive Attack / Shara Nelson - Safe From Harm | 1991",
 				"Depeche Mode - It's No Good | 1997"
