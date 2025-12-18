@@ -16,7 +16,7 @@ const links = {
 	"<": "..",
 	"DM volume 1": "../dmvolume1",
 	"volume 2": "",
-	"FLAC version": "https://mega.nz/folder/QxVglBCY#t7g1p9OZGuhoAApYMyxNWg/folder/dgEwTB7S",
+	"Mega": "https://mega.nz/folder/QxVglBCY#t7g1p9OZGuhoAApYMyxNWg",
 	"remix.audio": "https://remix.audio/playlist/2790",
 	"DM Mashup Videos": "https://www.youtube.com/watch?v=FD4xU1Oj8pE&list=PLUq5Z5VhjxM1p4sMIlk6zFlnBRW5hJt1r",
 	"Facebook": "https://www.facebook.com/MinorArthMashups"
