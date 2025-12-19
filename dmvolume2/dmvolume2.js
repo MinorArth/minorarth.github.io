@@ -14,8 +14,7 @@ const PLAYER_IMAGE = "./artwork/dmmashups-volume2.jpg";
 
 const links = {
 	"<": "..",
-	"DM volume 1": "../dmvolume1",
-	"volume 2": "",
+	"DM Mashups vol. 1": "../dmvolume1",
 	"Mega": "https://mega.nz/folder/QxVglBCY#t7g1p9OZGuhoAApYMyxNWg",
 	"remix.audio": "https://remix.audio/playlist/2790",
 	"DM Mashup Videos": "https://www.youtube.com/watch?v=FD4xU1Oj8pE&list=PLUq5Z5VhjxM1p4sMIlk6zFlnBRW5hJt1r",
