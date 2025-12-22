@@ -34,7 +34,8 @@ var items = {
 				"Depeche Mode - Nothing | 1987" 
 			],
 			"songTitle": "Nothing | Sirius mix",
-			"artists": "The Alan Parsons Project / Depeche Mode"
+			"artists": "The Alan Parsons Project / Depeche Mode",
+			"links": { "Desireless French version": "https://remix.audio/track/79582" }
 		},
 		{
 			"id": 34091,
@@ -130,7 +131,9 @@ var items = {
 			],
 			"songTitle": "New Dress | Defender mix",
 			"artists": "Mesh / Depeche Mode",
-			"video": "https://youtu.be/8JjinVvgMnQ"
+			"video": "https://youtu.be/8JjinVvgMnQ",
+			"links": { "Download": "https://mega.nz/folder/QxVglBCY#t7g1p9OZGuhoAApYMyxNWg/folder/Fl8zAIrK" }
+
 		},
 		{
 			"id": 84141,
