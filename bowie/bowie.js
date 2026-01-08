@@ -80,7 +80,8 @@ var items = [
 		"producer": "Minor Arth",
 		"artists": "The Cure / David Bowie",
 		"title": "Where Are We Alone ? | A-side",
-		"image": "1771811344_457015449_1562397315.jpg"
+		"image": "1771811344_457015449_1562397315.jpg",
+		"video": "https://youtu.be/-1ZVJaXQIso"
 	},
 	{
 		"id": 68059,
