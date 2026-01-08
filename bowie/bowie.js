@@ -21,6 +21,16 @@ const links = {
 
 var items = [
 	{
+		"id": 18056,
+		"file": "440126202_751243427_188274085.mp3",
+		"producer": "Minor Arth",
+		"artists": "U2 / David Bowie",
+		"title": "With Or Without Heroes",
+		"image": "693927699_560582344_1020182788.jpg",
+		"video": "https://youtu.be/4llzRpcHFE0",
+		"links": { "The Mashmaker, volume 1": "../mashmaker1" }
+	},
+	{
 		"id": 84910,
 		"file": "1322039203_1789861087_1519769869.mp3",
 		"producer": "Minor Arth",
@@ -30,22 +40,13 @@ var items = [
 		"video": "https://youtu.be/CLNil-TOSYU"
 	},
 	{
-		"id": 18056,
-		"file": "440126202_751243427_188274085.mp3",
-		"producer": "Minor Arth",
-		"artists": "U2 / David Bowie",
-		"title": "With Or Without Heroes",
-		"image": "693927699_560582344_1020182788.jpg",
-		"links": { "The Mashmaker, volume 1": "/mashmaker1" }
-	},
-	{
 		"id": 41926,
 		"file": "620088673_1624293685_67726702.mp3",
 		"producer": "Minor Arth",
 		"artists": "My Robot Friend / David Bowie",
 		"title": "Dead Lazarus",
 		"image": "230173176_1964376101_931889302.jpg",
-		"links": { "The Mashmaker, volume 2": "/mashmaker2" }
+		"links": { "The Mashmaker, volume 2": "../mashmaker2" }
 	},
 	{
 		"id": 74047,
@@ -54,7 +55,7 @@ var items = [
 		"artists": "David Bowie / The Vibrators",
 		"title": "Suffragette In Moscow",
 		"image": "1675909593_1650552207_765610049.jpg",
-		"links": { "Mashups To Knock Your Teeth Out! The Sequel": "/m2kyto2" }
+		"links": { "Mashups To Knock Your Teeth Out! The Sequel": "../m2kyto2" }
 	},
 	{
 		"id": 21884,
