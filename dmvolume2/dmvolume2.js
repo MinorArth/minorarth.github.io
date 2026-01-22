@@ -88,7 +88,8 @@ var items = {
 			],
 			"songTitle": "A Question Of Time And Space, Boy",
 			"artists": "David Bowie / Depeche Mode",
-			"video": "https://youtu.be/Gz4_Tn0pmf0"
+			"video": "https://youtu.be/Gz4_Tn0pmf0",
+			"links": { "Bowie mashups": "../bowie" }
 		},
 		{
 			"image": "Dido - Depeche Mode - Enjoy The Silence -- Hunter mix.jpg",
@@ -273,15 +274,18 @@ var items = {
 			"video": "https://youtu.be/_TcU5wb0Vsc"
 		},
 		{
+			"id": 85448,
 			"image": "Depeche Mode - David Bowie - I'm Afraid Of A Gun.jpg",
 			"localFile": "Depeche Mode - David Bowie - I'm Afraid Of A Gun.mp3",
+			"file": "367556997_925809171_1383487804.mp3",
 			"sources": [
 				"Depeche Mode - Barrel Of A Gun | 1997",
 				"David Bowie - I'm Afraid Of Americans | 1997"
 			],
 			"songTitle": "I'm Afraid Of A Gun",
 			"artists": "Depeche Mode / David Bowie",
-			"video": "https://youtu.be/XdMTSEDxo0M"
+			"video": "https://youtu.be/XdMTSEDxo0M",
+			"links": { "Bowie mashups": "../bowie" }
 		},
 		{
 			"image": "Type O Negative - Depeche Mode - One Caress To Death.jpg",
