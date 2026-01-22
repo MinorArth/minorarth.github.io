@@ -63,7 +63,25 @@ var items = [
 		"producer": "Minor Arth",
 		"artists": "David Bowie / Depeche Mode",
 		"title": "A Question of Time and Space, Boy",
+		"sources": [
+			"David Bowie - Hallo Spaceboy | 1995",
+			"Depeche Mode - A Question Of Time | 1986"
+		],
 		"image": "2109137829_1544444479_953500093.jpg",
+		"links": { "DM Mashups vol. 2": "../dmvolume2" }
+	},
+	{
+		"id": 85448,
+		"image": "1199936640_244568952_355819890.jpg",
+		"localFile": "Depeche Mode - David Bowie - I'm Afraid Of A Gun.mp3",
+		"file": "367556997_925809171_1383487804.mp3",
+		"sources": [
+			"Depeche Mode - Barrel Of A Gun | 1997",
+			"David Bowie - I'm Afraid Of Americans | 1997"
+		],
+		"title": "I'm Afraid Of A Gun",
+		"artists": "Depeche Mode / David Bowie",
+		"video": "https://youtu.be/XdMTSEDxo0M",
 		"links": { "DM Mashups vol. 2": "../dmvolume2" }
 	},
 	{
