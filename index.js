@@ -38,7 +38,6 @@ var items = [
 		url: "./bowie",
 		title: "Bowie mashups",
 		artists: "David Bowie",
-		producer: "Minor Arth / DoM",
 		image: "https://remix.audio/uploads/media/230173176_1964376101_931889302.jpg",
 		release: "January 2026",
 		nbTracks: 11
