@@ -58,6 +58,14 @@ var items = [
 		"links": { "Mashups To Knock Your Teeth Out! The Sequel": "../m2kyto2" }
 	},
 	{
+		"id": 21280,
+		"file": "1812169889_1444601210_684444154.mp3",
+		"producer": "Minor Arth",
+		"artists": "New Order / David Bowie",
+		"title": "Doubts Even In America",
+		"image": "1580021039_1097068330_1769703466.jpg"
+	},
+	{
 		"id": 21884,
 		"file": "122331518_765031649_2131110985.mp3",
 		"producer": "Minor Arth",
@@ -73,24 +81,27 @@ var items = [
 	{
 		"id": 85448,
 		"image": "1199936640_244568952_355819890.jpg",
-		"localFile": "Depeche Mode - David Bowie - I'm Afraid Of A Gun.mp3",
 		"file": "367556997_925809171_1383487804.mp3",
+		"title": "I'm Afraid Of A Gun",
+		"artists": "Depeche Mode / David Bowie",
 		"sources": [
 			"Depeche Mode - Barrel Of A Gun | 1997",
 			"David Bowie - I'm Afraid Of Americans | 1997"
 		],
-		"title": "I'm Afraid Of A Gun",
-		"artists": "Depeche Mode / David Bowie",
 		"video": "https://youtu.be/XdMTSEDxo0M",
 		"links": { "DM Mashups vol. 2": "../dmvolume2" }
 	},
 	{
-		"id": 21280,
-		"file": "1812169889_1444601210_684444154.mp3",
+		"id": 85548,
+		"file": "822455746_916862877_1327306942.mp3",
 		"producer": "Minor Arth",
-		"artists": "New Order / David Bowie",
-		"title": "Doubts Even In America",
-		"image": "1580021039_1097068330_1769703466.jpg"
+		"artists": "David Bowie / Depeche Mode",
+		"title": "I'm Afraid Of A Gun | Live 2000 mix",
+		"sources": [
+			"Depeche Mode - Barrel Of A Gun | 1997",
+			"David Bowie - I'm Afraid Of Americans | 1997"
+		],
+		"image": "331628801_1287202809_1629842957.jpg"
 	},
 	{
 		"id": 67938,
