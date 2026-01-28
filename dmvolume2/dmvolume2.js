@@ -285,7 +285,7 @@ var items = {
 			"songTitle": "I'm Afraid Of A Gun",
 			"artists": "Depeche Mode / David Bowie",
 			"video": "https://youtu.be/XdMTSEDxo0M",
-			"links": { "Live 2000": "https://remix.audio/track/85548", "GTA Los Santos": "", "Bowie mashups": "../bowie" }
+			"links": { "GTA Los Santos / Live 2000": "https://remix.audio/explore/filter/afraidofagun", "Bowie mashups": "../bowie" }
 		},
 		{
 			"image": "Type O Negative - Depeche Mode - One Caress To Death.jpg",
