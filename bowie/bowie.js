@@ -66,6 +66,23 @@ var items = [
 		"image": "1580021039_1097068330_1769703466.jpg"
 	},
 	{
+		"id": 67938,
+		"file": "1640991633_618105502_1289807020.mp3",
+		"producer": "Minor Arth",
+		"artists": "The Cure / David Bowie",
+		"title": "Where Are We Alone ? | A-side",
+		"image": "1771811344_457015449_1562397315.jpg",
+		"video": "https://youtu.be/-1ZVJaXQIso"
+	},
+	{
+		"id": 68059,
+		"file": "1146550625_1446892185_1681616626.mp3",
+		"producer": "Minor Arth",
+		"artists": "David Bowie / The Cure",
+		"title": "Are We Alone Now ? | B-side",
+		"image": "314914331_1500557708_1570668891.jpg"
+	},
+	{
 		"id": 21884,
 		"file": "122331518_765031649_2131110985.mp3",
 		"producer": "Minor Arth",
@@ -104,21 +121,12 @@ var items = [
 		"image": "331628801_1287202809_1629842957.jpg"
 	},
 	{
-		"id": 67938,
-		"file": "1640991633_618105502_1289807020.mp3",
+		"id": 85690,
+		"file": "1034640986_157561151_638042603.mp3",
 		"producer": "Minor Arth",
-		"artists": "The Cure / David Bowie",
-		"title": "Where Are We Alone ? | A-side",
-		"image": "1771811344_457015449_1562397315.jpg",
-		"video": "https://youtu.be/-1ZVJaXQIso"
-	},
-	{
-		"id": 68059,
-		"file": "1146550625_1446892185_1681616626.mp3",
-		"producer": "Minor Arth",
-		"artists": "David Bowie / The Cure",
-		"title": "Are We Alone Now ? | B-side",
-		"image": "314914331_1500557708_1570668891.jpg"
+		"artists": "Oh No / David Bowie / Depeche Mode",
+		"title": "I'm Afraid Of A Gun | GTA Los Santos mix",
+		"image": "321498858_1606175332_1992495788.jpg"
 	}
 ];
 
