@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html class="js" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Minor Arth | Mash Celebration</title>
+	<meta http-equiv="Content-Type"  content="text/html; charset=utf-8"/>
+	<meta name="viewport"            content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi" />
+	<meta property="og:site_name"    content="Minor Arth mashup"/>
+	<meta property="og:title"        content="Mash Celebration"/>
+	<meta property="og:description"  content="DEPECHE MODE | Black Celebration | The 40th anniversary mashup album"/>
+	<meta property="og:url"   content="https://minorarth.github.io/dmmashcelebration/"/>
+	<meta property="og:image" content="https://minorarth.github.io/dmmashcelebration/artwork/dmmashups-volume2.jpg"/>
+	<meta property="og:image:width"  content="720"/>
+	<meta property="og:image:height" content="720"/>
+	<meta property="og:image:type"   content="image/jpeg"/>
+
+	<link rel="stylesheet" type="text/css" href="../js/album.css" />
+	<style>
+	@media screen {
+		body{
+			background-color: black; /* linear-gradient(-135deg, #202020, #000000);*/
+			color: white;
+		}
+
+		p.sources { color: #DDD; }
+
+		div.playlist-template {
+			background-color: #0667bc;
+		}
+
+		div.active {
+			background-color: #05ad48;
+		}
+	}
+	</style>
+</head>
+<body>
+<header>
+	<div class="logo-container float-left">
+		<a class="logo"><img/></a>
+	</div>
+	<div class="column">
+		<h1><a target="download" class="album-title album-link"></a></h1>
+		<div class="album-description"></div>
+	</div>
+</header>
+
+<div class="toolbar no-print column">
+	<h4><a target="download" class="album-link">DOWNLOAD ALBUM</a></h4>
+	<img class="player-image"/>
+	<br/><br/>
+	<button onclick="playPrevious()" title="Previous track"> &lt;&lt; </button>
+	<audio id="audioPlayer" controls></audio>
+	<button onclick="playNext()" title="Next track"> &gt;&gt; </button>
+	<br/>
+	<audio id="hiddenPlayer" class="hidden" controls></audio>
+	<div class="bold player-label"></div>
+	<br/>
+	<div class="align-left">
+		Show:
+		<select id="view-mode" onchange="refreshList()">
+			<option value="playlist-template">playlist</option>
+			<option value="playlist-template.details">playlist with details</option>
+			<option value="tile-template">tiles</option>
+			<option value="image-template">large images</option>
+			<option value="small-image-template">small images</option>
+		</select>
+		<button onclick="loadDurations()" title="Shuffle playlist">Duration</button>
+		<i class="total-duration number"></i>
+		<br/>
+		<br/>
+		Order:
+		<button onclick="shuffle()" title="Shuffle playlist">Shuffle</button>
+		<button onclick="reverse()" title="Reverse playlist">Reverse</button>
+		<button onclick="reorder()" title="Reset playlist order">Reset</button>
+		<br/><br/>
+	</div>
+</div>
+
+<div class="column">
+	<h4 id="playlist-links" class="no-print"></h4>
+	<div class="repeater align-left"></div>
+	<h2><a class="url no-print" href="https://www.youtube.com/playlist?list=PLUq5Z5VhjxM1eFfOKF9tPH2_nXl4-7kYX">Videos</a></h2>
+	<iframe width="960" height="540" class="no-print no-mobile white-border" frameborder="0" allowfullscreen src="https://www.youtube.com/embed/?listType=playlist&list=PLUq5Z5VhjxM3tR-VUzvwbJN5PrfT9ha5-"></iframe>
+</div>
+<br/><br/>
+<div class="links"></div>
+
+<div id="templates" class="hidden">
+	<a class="link-template"></a>
+	<a class="play-link-template"></a>
+
+	<div class="category-template align-center">
+		<a class="url">
+			<h3 class="pre title"></h3>
+		</a>
+	</div>
+
+	<div class="separator-template">
+		<hr/>
+		<b class="title"></b>
+	</div>
+
+	<div class="image-template">
+		<img class="artwork"/>
+	</div>
+
+	<div class="small-image-template">
+		<img class="artwork"/>
+	</div>
+
+	<div class="tile-template align-center">
+		<img class="artwork"/>
+		<div class="float-right padding-tr">
+			<a class="remix-audio" target="video" onclick="stopPropagation(event)"><img class="icon no-print" src="../img/remixaudio.png"/></a>
+			<br/><i class="duration"></i>
+		</div>
+		<p><i class="number"></i>. <b class="title"></b></p>
+		<p class="sources"></p>
+	</div>
+
+	<div class="playlist-template column">
+		<img class="artwork"/>
+		<div class="float-right padding-tr no-mobile">
+			<a class="remix-audio" target="video" onclick="stopPropagation(event)"><img class="icon no-print" src="../img/remixaudio.png"/></a>
+			<br/><i class="duration"></i>
+		</div>
+		<div class="item-text pre"><i class="number"></i>. <b class="title"></b></div>
+	</div>
+
+	<div class="playlist-template details column">
+		<img class="artwork"/>
+		<div class="float-right padding-tr no-mobile">
+			<a class="remix-audio" target="video" onclick="stopPropagation(event)"><img class="icon no-print" src="../img/remixaudio.png"/></a>
+			<br/><i class="duration"></i>
+		</div>
+		<div class="item-text pre"><i class="number"></i>. <b class="title"></b>
+		<p class="sources"></p></div>
+	</div>
+</div>
+</body>
+
+<script src="../js/album.js"></script>
+<script src="mashcelebration.js"></script>
+</html>

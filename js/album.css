@@ -37,6 +37,7 @@ body {
 	text-align: center;
 }
 
+.align-center{ text-align: center; }
 .align-left  { text-align: left; }
 .align-right { text-align: right; }
 .float-left  { float: left; text-align: left; }
