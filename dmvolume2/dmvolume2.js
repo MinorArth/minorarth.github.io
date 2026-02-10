@@ -298,6 +298,8 @@ var items = {
 			"artists": "Type O Negative / Depeche Mode"
 		},
 		{
+			"id": 86309,
+			"file": "907033917_813841206_289790538.mp3",
 			"image": "The Korgis - Depeche Mode - Everybody's Got To Learn The Truth.jpg",
 			"localFile": "The Korgis - Depeche Mode - Everybody's Got To Learn The Truth.mp3",
 			"sources": [
@@ -305,7 +307,8 @@ var items = {
 				"Depeche Mode - Policy Of Truth | 1990"
 			],
 			"songTitle": "Everybody's Got To Learn The Truth",
-			"artists": "The Korgis / Depeche Mode"
+			"artists": "The Korgis / Depeche Mode",
+			"video": "https://youtu.be/UOpZ-wO-DBY"
 		},
 		{
 			"image": "Elton John - Depeche Mode - Song For Sometimes.jpg",
