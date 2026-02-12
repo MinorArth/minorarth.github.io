@@ -3,7 +3,7 @@ const LOGO_TITLE = "Minor Arth";
 const LOGO_LINK = "..";
 const ALBUM_TITLE = getMeta("og_title") || document.title;
 const ALBUM_DESCRIPTION = getMeta("og_description");
-const ALBUM_LINK = "https://www.mediafire.com/file/1oe1bgtr6v6uo9x/MinorArth-DepecheModeMashups-volume2.zip/file";
+const ALBUM_LINK = "https://www.mediafire.com/file/3osfosv74453ums/MinorArth-DMmashCelebration.zip/file";
 const ALBUM_ARTIST = "Minor Arth";
 const TRACK_LINK_PATH = "https://remix.audio/track/";
 const AUDIO_PATH = "https://remix.audio/uploads/tracks/";
@@ -157,7 +157,7 @@ var items = {
 			"songTitle": "New Dress | Defender mix",
 			"artists": "Mesh / Depeche Mode",
 			"video": "https://youtu.be/8JjinVvgMnQ",
-			"links": { "Download": "https://mega.nz/folder/QxVglBCY#t7g1p9OZGuhoAApYMyxNWg/folder/Fl8zAIrK" }
+			"links": { "Download": "https://mega.nz/folder/QxVglBCY#t7g1p9OZGuhoAApYMyxNWg/folder/IpNljJhK" }
 		}
 	],
 	"Bonus": [
