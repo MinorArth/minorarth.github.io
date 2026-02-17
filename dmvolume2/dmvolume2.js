@@ -188,6 +188,8 @@ var items = {
 			"artists": "Isaac Hayes / Depeche Mode"
 		},
 		{
+			"id": 86605,
+			"file": "577250028_1316890818_510530154.mp3",
 			"image": "The Hu - Depeche Mode - Yuve Yu Jesus.jpg",
 			"localFile": "The Hu - Depeche Mode - Yuve Yu Jesus.mp3",
 			"sources": [
