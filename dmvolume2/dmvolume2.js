@@ -193,7 +193,7 @@ var items = {
 			"image": "The Hu - Depeche Mode - Yuve Yu Jesus.jpg",
 			"localFile": "The Hu - Depeche Mode - Yuve Yu Jesus.mp3",
 			"sources": [
-				"The Hu - Yuve Yuve Yu | 2016",
+				"The Hu - Yuve Yuve Yu | 2019",
 				"Depeche Mode - Personal Jesus | 1989",
 			],
 			"songTitle": "Yuve Yu Jesus",
