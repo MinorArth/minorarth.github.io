@@ -65,7 +65,7 @@ var items = [
 		"id": 74231,
 		"file": "1097228072_624327015_1172017856.mp3",
 		"producer": "Mashete",
-		"artists": "Sum 41 vs Girlschool",
+		"artists": "Sum 41 / Girlschool",
 		"title": "Bomber Over My Head",
 		"image": "238156375_1450290658_754096657.jpg"
 	},
