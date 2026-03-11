@@ -164,9 +164,9 @@ var items = {
 	],
 	"Bonus": [
 		{ 
-			"title": "But Not Tonight | So Electric mix",
+			"title": "But Not Tonight | Electric mix",
 			"artists": "Lifelike / Depeche Mode", 
-			"localFile": "Lifelike - Depeche Mode - But Not Tonight -- So Electric mix",
+			"localFile": "Lifelike - Depeche Mode - But Not Tonight -- Electric mix",
 			"sources": [
 				"Lifelike - So Electric | 2007",
 				"Depeche Mode - But Not Tonight | 1986"
