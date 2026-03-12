@@ -11,7 +11,7 @@ const AUDIO_PATH = "https://remix.audio/uploads/tracks/";
 const IMAGE_PATH = "./artwork/";
 const AUDIO_TYPE = ".mp3";
 const IMAGE_TYPE = ".jpg";
-const PLAYER_IMAGE = "./artwork/Duran Duran - Depeche Mode - Here Is A Prayer To Save The House.jpg";
+const PLAYER_IMAGE = "./artwork/MashCelebration.jpg";
 
 const links = {
 	"<": "..",
@@ -127,6 +127,8 @@ var items = {
 			"artists": "Duran Duran / Depeche Mode"
 		},
 		{
+			"id": 87934,
+			"file": "1078097066_1662116751_261994532.mp3",
 			"artists": "Glass Animals / Depeche Mode",
 			"title": "World Full Of Black Mambo",
 			"sources": [
