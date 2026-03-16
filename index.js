@@ -28,7 +28,7 @@ var items = [
 		url: "./dmmashcelebration",
 		title: "Mash Celebration",
 		artists: "Depeche Mode",
-		description: "Black Celebration | The 40th anniversary mashup album",
+		description: "Black Celebration | 40th anniversary mashup album",
 		producer: "Minor Arth",
 		image: "./dmmashcelebration/artwork/MashCelebration.jpg",
 		release: "March 2026",
