@@ -16,7 +16,7 @@ const PLAYER_IMAGE = "./artwork/MashCelebration.jpg";
 const links = {
 	"<": "..",
 	"DM Mashups vol. 1": "../dmvolume1",
-	"Mega": "https://mega.nz/folder/QxVglBCY#t7g1p9OZGuhoAApYMyxNWg",
+	"Mega": "https://mega.nz/folder/QxVglBCY#t7g1p9OZGuhoAApYMyxNWg/folder/IpNljJhK",
 	"remix.audio": "https://remix.audio/playlist/2790",
 	"DM Mashup Videos": "https://www.youtube.com/watch?v=FD4xU1Oj8pE&list=PLUq5Z5VhjxM1p4sMIlk6zFlnBRW5hJt1r",
 	"Facebook": "https://www.facebook.com/MinorArthMashups"
@@ -165,7 +165,9 @@ var items = {
 		}
 	],
 	"Bonus": [
-		{ 
+		{
+			"id": 88158,
+			"file": "991612982_1287573219_608079381.mp3",
 			"title": "But Not Tonight | Electric mix",
 			"artists": "Lifelike / Depeche Mode", 
 			"localFile": "Lifelike - Depeche Mode - But Not Tonight -- Electric mix",
@@ -175,9 +177,11 @@ var items = {
 			],
 			"producer": "Minor Arth" 
 		},
-		{ 
+		{
 			"id": 18043,
-			"file": "1932556923_1535933902_1083244237.mp3",
+//			"file": "1932556923_1535933902_1083244237.mp3",
+//			"id": 88159,
+			"file": "1736637181_242876389_2077957925.mp3",
 			"localFile": "G Tom Mac - Depeche Mode - The Lost Boys Celebration",
 			"title": "The Lost Boys Celebration",
 			"artists": "Depeche Mode / G Tom Mac",
