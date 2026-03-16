@@ -25,14 +25,14 @@ var items = [
 		title: "Latest" 
 	},
 	{
-		url: "./dmvolume2",
-		title: "Ultra Faith And Violation",
+		url: "./dmmashcelebration",
+		title: "Mash Celebration",
 		artists: "Depeche Mode",
-		description: "Depeche Mode mashups volume 2",
+		description: "Black Celebration | The 40th anniversary mashup album",
 		producer: "Minor Arth",
-		image: "./dmvolume2/artwork/dmmashups-volume2.jpg",
-		release: "November 2025",
-		nbTracks: 24
+		image: "./dmmashcelebration/artwork/MashCelebration.jpg",
+		release: "March 2026",
+		nbTracks: 14
 	},
 	{
 		url: "./bowie",
@@ -43,6 +43,20 @@ var items = [
 		nbTracks: 11
 	},
 	{
+		url: "./dmvolume2",
+		title: "Ultra Faith And Violation",
+		artists: "Depeche Mode",
+		description: "Depeche Mode mashups volume 2",
+		producer: "Minor Arth",
+		image: "./dmvolume2/artwork/dmmashups-volume2.jpg",
+		release: "November 2025",
+		nbTracks: 24
+	},
+	{ 
+		type: "category",
+		title: "Collaborative Albums" 
+	},
+	{
 		url: "./demondetournement",
 		artists: "Gorillaz",
 		title: "Demon Détournement",
@@ -51,10 +65,6 @@ var items = [
 		image: "./demondetournement/artwork/DemonDetournement.jpg",
 		release: "April 2025",
 		nbTracks: 27
-	},
-	{ 
-		type: "category",
-		title: "Collaborative Albums" 
 	},
 	{
 		url: "./ah2025",
