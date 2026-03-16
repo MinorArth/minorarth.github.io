@@ -17,7 +17,7 @@ const links = {
 	"<": "..",
 	"DM Mashups vol. 1": "../dmvolume1",
 	"Mega": "https://mega.nz/folder/QxVglBCY#t7g1p9OZGuhoAApYMyxNWg/folder/IpNljJhK",
-	"remix.audio": "https://remix.audio/playlist/2790",
+	"remix.audio": "https://remix.audio/playlist/3597",
 	"DM Mashup Videos": "https://www.youtube.com/watch?v=FD4xU1Oj8pE&list=PLUq5Z5VhjxM1p4sMIlk6zFlnBRW5hJt1r",
 	"Facebook": "https://www.facebook.com/MinorArthMashups"
 };
