@@ -108,13 +108,15 @@ function loadPlaylist()
 	}
 
 	if(isEmpty(producers)){
-		producers = allPlaylists.all.map(i => i.author || i.producer).filter(p => p && !p.includes("&")).sort();
-		producers = Array.from(new Set(producers));
+		producers = allPlaylists.all.map(i => i.producer && i.producer.split(/\/|&/).map(i => i && i.trim()) ); //.filter(p => p && !p.includes("&")).sort();
+		var prod = [];
+		producers.forEach(p => p && (prod = prod.concat(...p)));
+		producers = Array.from(new Set(prod)); //.sort();
 	}
 
 	if(producers.length > 1)
 		producers.forEach(p => { 
-			allPlaylists[p] = allPlaylists.all.filter(i => (i.author || i.producer || "").includes(p));
+			allPlaylists[p] = allPlaylists.all.filter(i => (i.producer || "").includes(p));
 			allPlaylists[p].title = p;
 		});
 
@@ -347,15 +349,15 @@ function parseTitle(title, item)
 	if(!item.title) item.title = title;
 
 	var parts = title.split(" - ");
-	item.songTitle = parts.pop() || "";
-	item.songTitle = item.songTitle.replace(" -- ", " | ");
+	item.title = parts.pop() || "";
+	item.title = item.title.replace(" -- ", " | ");
 	if(!ALBUM_ARTIST) item.producer = parts.shift();
 	item.artists = parts.join(" / ");
 
-	if(!item.artists && item.songTitle.includes("(")) {
-		item.artists = substringAfter(item.songTitle, "(", true);
+	if(!item.artists && item.title.includes("(")) {
+		item.artists = substringAfter(item.title, "(", true);
 		item.artists = substringBefore(item.artists, ")", true);
-		item.songTitle = substringBefore(item.songTitle, "(", true);
+		item.title = substringBefore(item.title, "(", true);
 	}
 
 	return item;
@@ -372,9 +374,8 @@ function displayPlaylistItem(item, i) {
 
 	var title = el.querySelector(".title");
 	var separator = viewMode.value == "playlist-template0" ? "  -  " : "\n";
-	var producer = item.author || item.producer;
-	if(producer == ALBUM_ARTIST) producer = "";
-	var itemTitle = [ item.artists, item.songTitle || item.title, producer ].filter(s => s).join(separator);
+	if(item.producer == ALBUM_ARTIST) item.producer = "";
+	var itemTitle = [ item.artists, item.songTitle || item.title, item.producer ].filter(s => s).join(separator);
 	if(title) title.innerHTML = itemTitle;
 
 	var description = el.querySelector(".description");
