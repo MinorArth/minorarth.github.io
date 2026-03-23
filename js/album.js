@@ -107,9 +107,9 @@ function loadPlaylist()
 		pl.forEach((p, i) => allPlaylists[p.title || p.id] = p);
 	}
 
-	if(!producers){
+	if(isEmpty(producers)){
 		producers = allPlaylists.all.map(i => i.author || i.producer).filter(p => p && !p.includes("&")).sort();
-		producers = new Set(producers);
+		producers = Array.from(new Set(producers));
 	}
 
 	if(producers.length > 1)
@@ -299,6 +299,10 @@ function makeLocalPlaylistItem(item, i) {
 		item.links = item.links || {};
 		item.links[DL_MESSAGE] = ALBUM_LINK;
 	}
+
+	if(!item.title)
+		parseTitle(item.localFile, item);
+
 }
 
 function makePlaylistItem(item, i) {
@@ -325,6 +329,31 @@ function makePlaylistItem(item, i) {
 	if(!item.artists && item.songTitle.includes("(")) {
 		item.artists = substringAfter(item.songTitle, "(", true);
 		item.artists = substringBefore(item.artists, ")", true);
+	}
+
+	return item;
+}
+
+function parseTitle(title, item)
+{
+	var n = Number(substringBefore(title, " - "));
+	if(n && !isNaN(n)) {
+		item.n = n;
+		title = substringAfter(title, " - ");
+	}
+	
+	if(!item.title) item.title = title;
+
+	var parts = title.split(" - ");
+	item.songTitle = parts.pop() || "";
+	item.songTitle = item.songTitle.replace(" -- ", " | ");
+	if(!ALBUM_ARTIST) item.producer = parts.shift();
+	item.artists = parts.join(" / ");
+
+	if(!item.artists && item.songTitle.includes("(")) {
+		item.artists = substringAfter(item.songTitle, "(", true);
+		item.artists = substringBefore(item.artists, ")", true);
+		item.songTitle = substringBefore(item.songTitle, "(", true);
 	}
 
 	return item;
@@ -441,7 +470,7 @@ function playFile(item)
 	if(isUrl(item.file) || item.file.includes("/"))
 		audioPlayer.src = item.file;
 	else {
-		var subdir = playlist ? playlist.dataset.path || playlist.getAttribute("path") : "";
+		var subdir = playlist ? playlist.dataset.path || playlist.getAttribute("path") : item.subdir || "";
 		subdir = subdir ? subdir = subdir + "/" : "";
 		audioPlayer.src = AUDIO_PATH + subdir + item.file;
 	}
@@ -477,7 +506,7 @@ function preloadFile(item)
 	if(!item.file) return preloadFile(items[preloadItemIndex++]);
 
 	preloadItem = item;
-	var subdir = playlist ? playlist.dataset.path || playlist.getAttribute("path") : "";
+	var subdir = playlist ? playlist.dataset.path || playlist.getAttribute("path") : item.subdir || "";
 	subdir = subdir ? subdir = subdir + "/" : "";
 	hiddenPlayer.src = AUDIO_PATH + subdir + item.file;
 }
