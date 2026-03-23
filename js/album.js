@@ -300,7 +300,7 @@ function makeLocalPlaylistItem(item, i) {
 		item.links[DL_MESSAGE] = ALBUM_LINK;
 	}
 
-	if(!item.title)
+	if(!item.title && !item.songTitle)
 		parseTitle(item.localFile, item);
 
 }
@@ -336,6 +336,8 @@ function makePlaylistItem(item, i) {
 
 function parseTitle(title, item)
 {
+	if(!title) return item;
+
 	var n = Number(substringBefore(title, " - "));
 	if(n && !isNaN(n)) {
 		item.n = n;
