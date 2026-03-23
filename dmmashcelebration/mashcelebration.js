@@ -172,7 +172,6 @@ var items = {
 				"Lifelike - So Electric | 2007",
 				"Depeche Mode - But Not Tonight | 1986"
 			],
-			"producer": "Minor Arth" 
 		},
 		{
 			"id": 18043,
@@ -182,7 +181,7 @@ var items = {
 			"localFile": "G Tom Mac - Depeche Mode - The Lost Boys Celebration",
 			"title": "The Lost Boys Celebration",
 			"artists": "Depeche Mode / G Tom Mac",
-			"producer": "LeeDM101 mashup | Minor Arth video",
+			"producer": "LeeDM101 / Minor Arth",
 			"video": "https://youtu.be/pMhay9FZUCc",
 			"sources": [
 				"Depeche Mode - Black Celebration | 1986",
@@ -193,7 +192,6 @@ var items = {
 			"id": 84389,
 			"file": "1407196516_468822454_1273909259.mp3",
 			"localFile": "Kyle Dixon - Michael Stein - Depeche Mode - Pink Floyd - My Favourite Stranger Things",
-			"producer": "Minor Arth",
 			"artists": "Kyle Dixon / Michael Stein / Depeche Mode / Pink Floyd",
 			"title": "My Favourite Stranger Things",
 			"sources": [
