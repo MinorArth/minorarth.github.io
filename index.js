@@ -38,6 +38,7 @@ var items = [
 		url: "./bowie",
 		title: "Bowie mashups",
 		artists: "David Bowie",
+		producer: "Minor Arth",
 		image: "https://remix.audio/uploads/media/230173176_1964376101_931889302.jpg",
 		release: "January 2026",
 		nbTracks: 11
@@ -70,16 +71,25 @@ var items = [
 		url: "./ah2025",
 		title: "AudioBoots Halloween 2025",
 		description: "41 new Halloween mashups!",
-		producer: "DJ Useo / Chocomang / Minor Arth / ... ",
+		producer: "AudioBoots",
 		image: "https://i.postimg.cc/kgwYBwwv/audioboots-halloween-2025-front.jpg",
 		release: "October 2025",
 		nbTracks: 41
 	},
 	{
+		url: "m2kyto2",
+		title: "Mashups To Knock Your Teeth Out! The Sequel",
+		description: "The raw energy of punk rock, the gritty vibes of grunge, and the powerful riffs of metal in 43 brand-new tracks by 10 producers",
+		producer: "AudioBoots",
+		image: "https://audioboots.org/Albums/M2KYTO2/assets/album_cover.jpg",
+		release: "March 2025",
+		nbTracks: 43
+	},
+	{
 		url: "./acoustic-unplugged",
 		title: "AudioBoots Acoustic Unplugged",
 		description: "25 acoustic / unplugged mashups by 9 producers",
-		producer: "Minor Arth / DJ Useo / Chocomang / ... ",
+		producer: "AudioBoots",
 		image: "https://audioboots.org/Albums/AcousticUnplugged/assets/AudioBoots Unplugged.jpg",
 		release: "June 2023",
 		nbTracks: 25
@@ -93,6 +103,7 @@ var items = [
 		title: "The Mashmaker, volume 3",
 		description: "Best of 2023 - 2024",
 		image: "./mashmaker3/Mashmaker3.jpg",
+		producer: "Minor Arth",
 		release: "December 2024",
 		nbTracks: 18
 	},
@@ -101,6 +112,7 @@ var items = [
 		title: "The Mashmaker, volume 2",
 		description: "Best of 2022 - 2023",
 		image: "./mashmaker2/Mashmaker2.jpg",
+		producer: "Minor Arth",
 		release: "January 2024",
 		nbTracks: 18
 	},
@@ -109,6 +121,7 @@ var items = [
 		title: "The Mashmaker, volume 1",
 		description: "Best of 2019 - 2022",
 		image: "./mashmaker1/Mashmaker1.jpg",
+		producer: "Minor Arth",
 		release: "April 2023",
 		nbTracks: 16
 	},
@@ -147,15 +160,6 @@ var items = [
 	{
 		type: "category",
 		title: "Friends' Albums" 
-	},
-	{
-		url: "m2kyto2",
-		title: "Mashups To Knock Your Teeth Out! The Sequel",
-		description: "The raw energy of punk rock, the gritty vibes of grunge, and the powerful riffs of metal in 43 brand-new tracks by 10 producers",
-		producer: "AudioBoots",
-		image: "https://audioboots.org/Albums/M2KYTO2/assets/album_cover.jpg",
-		release: "March 2025",
-		nbTracks: 43
 	},
 	{
 		url: "./ziggystardub",
