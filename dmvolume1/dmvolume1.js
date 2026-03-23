@@ -25,7 +25,6 @@ var items = [
 	{
 		"id": 40384,
 		"file": "324915837_547706520_1154582295.mp3",
-		"author": "Minor Arth",
 		"title": "Everything Lifts Me Up",
 		"image": "471523792_571946680_386698616.jpg",
 		"sources": [
@@ -37,7 +36,6 @@ var items = [
 	{
 		"id": 64700,
 		"file": "521829124_1884578772_541958666.mp3",
-		"author": "Minor Arth",
 		"title": "Just Can't Get Temptation",
 		"artists": "New Order / Depeche Mode",
 		"sources": [
@@ -50,7 +48,6 @@ var items = [
 	{
 		"id": 18107,
 		"file": "1211742334_1857274291_1842666095.mp3",
-		"author": "Minor Arth",
 		"image": "1763003201_1123673197_196675649.jpg",
 		"sources": [
 			"Tears For Fears - Never Shout Again | 1985",
@@ -63,7 +60,6 @@ var items = [
 	{
 		"id": 19402,
 		"file": "1508467_1802455964_2010175909.mp3",
-		"author": "Minor Arth",
 		"title": "Strange Model",
 		"image": "31169987_570877271_795201279.jpg",
 		"artists": "Kraftwerk / Depeche Mode / The Stranglers",
@@ -77,7 +73,6 @@ var items = [
 	{
 		"id": 62446,
 		"file": "1809322800_633998506_184053351.mp3",
-		"author": "Minor Arth",
 		"artists": "The Cure / Depeche Mode",
 		"title": "Master And Servant Go To Bed",
 		"sources": [
@@ -90,7 +85,6 @@ var items = [
 	{
 		"id": 51278,
 		"file": "1120979652_755243373_1511517317.mp3",
-		"author": "Minor Arth",
 		"image": "568306564_672843720_1722267045.jpg",
 		"sources": [
 			"Taxi Girl - Cherchez Le Garçon | 1980",
@@ -104,7 +98,6 @@ var items = [
 	{
 		"id": 18311,
 		"file": "1036391139_1726185446_1785178290.mp3",
-		"author": "Minor Arth",
 		"image": "1601254446_1897991313_212754089.jpg",
 		"sources": [
 			"The Rolling Stones - Gimme Shelter | 1969",
@@ -118,7 +111,6 @@ var items = [
 	{
 		"id": 68423,
 		"file": "563353933_1226507571_31415805.mp3",
-		"author": "Minor Arth",
 		"artists": "Yello / Depeche Mode",
 		"title": "Lost Again In Silence",
 		"sources": [
@@ -131,7 +123,6 @@ var items = [
 	{
 		"id": 66290,
 		"file": "571413028_353465432_238058580.mp3",
-		"author": "Minor Arth",
 		"artists": "Yeah Yeah Yeahs / Depeche Mode",
 		"title": "The Sun, The Wolf And The Rainfall",
 		"sources": [
@@ -143,7 +134,6 @@ var items = [
 	{
 		"id": 51708,
 		"file": "1043273729_684282083_2008796406.mp3",
-		"author": "Minor Arth",
 		"image": "1917008411_1442662475_374910206.jpg",
 		"sources": [
 			"Mylène Farmer - Sans Contrefaçon | 1987",
@@ -157,7 +147,6 @@ var items = [
 	{
 		"id": 19401,
 		"file": "1992192372_47439495_278507144.mp3",
-		"author": "Minor Arth",
 		"image": "1325777255_834725289_978931676.jpg",
 		"sources": [
 			"Kraftwerk - Numbers | Computer World | 1981",
@@ -170,7 +159,6 @@ var items = [
 	{
 		"id": 53038,
 		"file": "1528258040_172576223_2130344446.mp3",
-		"author": "Minor Arth",
 		"image": "776688174_1168472281_248581402.jpg",
 		"sources": [
 			"Kavinsky - Testarossa Autodrive | 2007",
@@ -185,7 +173,6 @@ var items = [
 	{
 		"id": 59410,
 		"file": "459760669_1107128209_1821248495.mp3",
-		"author": "Minor Arth",
 		"image": "1209501321_242983412_110846060.jpg",
 		"sources": [
 			"Indochine - Canary Bay | 1985",
@@ -198,7 +185,6 @@ var items = [
 	{
 		"id": 65880,
 		"file": "771720424_218872985_137092706.mp3",
-		"author": "Minor Arth",
 		"artists": "Berlin / Depeche Mode",
 		"title": "Take My Lust Away",
 		"sources": [
@@ -210,7 +196,6 @@ var items = [
 	{
 		"id": 18124,
 		"file": "327004920_1108003792_1817607154.mp3",
-		"author": "Minor Arth",
 		"image": "538570564_1250100579_1044768237.jpg",
 		"sources": [
 			"Curses - Surrender | Jennifer Cardini remix | 2019",
@@ -223,7 +208,6 @@ var items = [
 	{
 		"id": 34466,
 		"file": "880225046_1980996943_302683165.mp3",
-		"author": "Minor Arth",
 		"image": "1074895215_811649611_1245966278.jpg",
 		"sources": [
 			"Chromatics - Looking For Love | 2012",
@@ -236,7 +220,6 @@ var items = [
 	{
 		"id": 63256,
 		"file": "306360670_1429166301_10578311.mp3",
-		"author": "Minor Arth",
 		"title": "Bulletproof Policy Of Truth",
 		"artists": "The Silencers / Depeche Mode",
 		"sources": [
@@ -249,7 +232,6 @@ var items = [
 	{
 		"id": 69997,
 		"file": "181226506_1463388239_1188404288.mp3",
-		"author": "Minor Arth",
 		"title": "The Things You Said Today",
 		"artists": "The Beatles / Depeche Mode",
 		"sources": [
@@ -263,7 +245,6 @@ var items = [
 	{
 		"id": 19403,
 		"file": "1674492422_1306326625_2003354294.mp3",
-		"author": "Minor Arth",
 		"image": "1517760380_736358051_722969622.jpg",
 		"sources": [
 			"Kraftwerk - The Robots | 1978",
@@ -276,7 +257,6 @@ var items = [
 	{
 		"id": 78083,
 		"file": "341658949_1328178205_1439436524.mp3",
-		"author": "Minor Arth",
 		"image": "1697337059_946053160_98557722.jpg",
 		"artists": "Jean-Michel Jarre / Depeche Mode",
 		"sources": [
@@ -289,7 +269,6 @@ var items = [
 	{
 		"id": 19836,
 		"file": "232555895_1951216380_819161131.mp3",
-		"author": "Minor Arth",
 		"image": "1355645944_1124524783_860623310.jpg",
 		"sources": [
 			"Pink Floyd - One Of These Days | 1971",
@@ -302,8 +281,6 @@ var items = [
 	{
 		"id": 29114,
 		"file": "240896625_1196354146_1178044280.mp3",
-		"author": "Minor Arth",
-		"title": "Depeche Mode & Sebastien Tellier - Little 15 | Amour & Violence remix",
 		"image": "301411327_792073574_746777260.jpg",
 		"sources": [
 			"Sébastien Tellier - L'Amour et la Violence | 2008",

@@ -28,7 +28,6 @@ var items = {
 			"id": 18124,
 			"file": "327004920_1108003792_1817607154.mp3",
 			"localFile": "Curses - Depeche Mode - Surrender Celebration",
-			"author": "Minor Arth",
 //			"image": "https://remix.audio/uploads/media/538570564_1250100579_1044768237.jpg",
 			"sources": [
 				"Curses - Surrender | Jennifer Cardini remix | 2019",
@@ -42,7 +41,6 @@ var items = {
 			"id": 34466,
 			"file": "880225046_1980996943_302683165.mp3",
 			"localFile": "Chromatics - Depeche Mode - Love On The Windscreen",
-			"author": "Minor Arth",
 //			"image": "https://remix.audio/uploads/media/1074895215_811649611_1245966278.jpg",
 			"sources": [
 				"Chromatics - Looking For Love | 2012",
@@ -56,7 +54,6 @@ var items = {
 			"id": 65880,
 			"file": "771720424_218872985_137092706.mp3",
 			"localFile": "Berlin - Depeche Mode - Take My Lust Away",
-			"author": "Minor Arth",
 			"artists": "Berlin / Depeche Mode",
 			"title": "Take My Lust Away",
 			"sources": [
