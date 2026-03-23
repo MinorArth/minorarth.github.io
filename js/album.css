@@ -31,6 +31,7 @@
 }
 
 a, .bold { font-weight: bold; cursor: pointer; }
+.nowrap, .no-wrap { white-space: nowrap; }
 
 body {
 	font-family:  Helvetica, sans-serif, 'Tw Cen MT', 'HP Simplified', Arial;
