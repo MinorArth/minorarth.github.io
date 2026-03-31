@@ -16,8 +16,9 @@ const PLAYER_IMAGE = "./MashingTooMuchTV.jpg";
 
 const links = {
 	"<": "..",
-	"remix.audio": "https://remix.audio/playlist/3597",
-	"Facebook": "https://www.facebook.com/MinorArthMashups"
+	"remix.audio": "https://remix.audio/playlist/3624",
+	"AudioBoots": "https://audioboots.org/forum/",
+	"Facebook": "https://www.facebook.com/groups/audioboots"
 };
 
 var items = {
