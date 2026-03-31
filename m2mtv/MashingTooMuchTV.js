@@ -152,6 +152,7 @@ var items = {
 		"id": 88850,
 		"file": "1856891924_978634562_1180317064.mp3",
 		"localFile": "16 - Chocomang - How to Save through a Periscope ( The Fray vs Papa Roach )",
+		"image": "578354692_763997096_22279421.jpg",
 		"sources": [
 			"The Fray - How to Save a Life | Grey's Anatomy | 2005",
 			"Papa Roach - Periscope | 2017"
