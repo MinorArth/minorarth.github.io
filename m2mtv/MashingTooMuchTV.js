@@ -73,7 +73,10 @@ var items = {
 		]
 	},
 	{
+		"id": 88954,
+		"file": "2098572642_1075509264_321240148.mp3",
 		"localFile": "07 - DoM - At Last in Twin Peaks ( Etta James vs Angelo Badalamenti )",
+		"image": "1619508290_1427927586_1673972156.png",
 		"sources": [
 			"Angelo Badalamenti - Twin Peaks Theme | Twin Peaks | 1990",
 			"Etta James - At Last | 1960"
@@ -273,7 +276,10 @@ var items = {
 		]
 	},
 	{
+		"id": 88964,
+		"file": "1565915931_1537454560_914128256.mp3",
 		"localFile": "14 - Chocomang - Running Happy 2026 ( Airbourne vs Pharrell Williams )",
+		"image": "472996528_1763271748_432185071.jpg",
 		"sources": [
 			"Airbourne - Runnin' Wild | 2007",
 			"Pharrell Williams - Happy | Despicable Me 2 | 2013"
