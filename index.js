@@ -58,6 +58,15 @@ var items = [
 		title: "Collaborative Albums" 
 	},
 	{
+		url: "./m2mtv",
+		title: "Mashing Too Much TV",
+		description: "The Movie and TV soundtrack compilation | 2026",
+		producer: "AudioBoots",
+		image: "./m2mtv/MashingTooMuchTV.jpg",
+		release: "March 2026",
+		nbTracks: 35
+	},
+	{
 		url: "./demondetournement",
 		artists: "Gorillaz",
 		title: "Demon Détournement",

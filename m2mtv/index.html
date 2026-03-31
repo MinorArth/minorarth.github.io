@@ -1,0 +1,343 @@
+<!DOCTYPE HTML>
+<html class="js" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>AudioBoots | Mashing Too Much TV</title>
+	<meta http-equiv="Content-Type"  content="text/html; charset=utf-8"/>
+	<meta name="viewport"            content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi" />
+	<meta property="og:site_name"    content="Minor Arth mashup"/>
+	<meta property="og:title"        content="AudioBoots Mashing Too Much TV"/>
+	<meta property="og:description"  content="The Movie and TV soundtrack compilation | 2026"/>
+	<meta property="og:url"   content="https://minorarth.github.io/m2mtv/"/>
+	<meta property="og:image" content="https://minorarth.github.io/m2mtv/covers/audioboots mashing too much tv front.jpg"/>
+	<meta property="og:image:width"  content="720"/>
+	<meta property="og:image:height" content="720"/>
+	<meta property="og:image:type"   content="image/jpeg"/>
+
+	<link rel="stylesheet" type="text/css" href="../js/album.css" />
+	<style>
+	@media screen {
+	body {
+		margin: 0px;
+		background-color: #000A14;
+		color: rgb(200, 220, 240);
+	}
+
+	h1 { margin-bottom: 8px; font-family: 'Bebas Neue', sans-serif; letter-spacing: 2px; }
+	a, .number, .duration { color: #00C8FF; }
+	.padding-tr {padding-top: 4px; padding-right: 4px;}
+	a:hover{  color: #00E5FF; transition: color 0.3s; }
+	a:active{  color: #00E5FF; }
+	p.sources { color: #8899AA; }
+
+	div.playlist-template {
+		width: 494px;
+		background-color: rgba(20, 30, 60, 0.85);
+	}
+
+	div.playlist-template .item-text {
+		max-width: 364px;
+	}
+
+	div.playlist-template.inactive {
+		background-color: rgba(15, 20, 40, 0.6);
+	}
+
+	div.active {
+		background-color: rgba(0, 120, 180, 0.6);
+	}
+}
+
+a, .bold { font-weight: bold; cursor: pointer; }
+
+body {
+	font-family: 'Courier Prime', monospace;
+	text-align: center;
+}
+
+.align-center{ text-align: center; }
+.align-left  { text-align: left; }
+.align-right { text-align: right; }
+.float-left  { float: left; text-align: left; }
+.float-right, img.icon { float: right; text-align: right; }
+
+img.player-image[src] { max-width: 720px; border: solid 4px rgba(0, 200, 255, 0.4);  }
+div.toolbar audio {	width: 600px; height: 24px; }
+
+.logo-container, a.link-template, a.play-link-template { margin-left: 1em; margin-right: 1em; }
+
+div.repeater {
+	max-width: 1400px;
+}
+
+div.toolbar > * {
+	vertical-align: middle;
+}
+
+div.playlist-template {
+	font-size: 12pt;
+	cursor: pointer;
+	text-align: left;
+	border: 1px solid #CCC;
+	padding: 2px;
+	margin-top: -1px;
+	margin-left: auto;
+	margin-right: -1px;
+}
+
+div.playlist-template div.item-text {
+	vertical-align: middle;
+	display: inline-block;
+}
+
+div.playlist-template div.item-text a {
+	margin-inline-end: 1em;
+}
+
+div.playlist-template img.artwork[src] {
+	height: 0.8in;
+	max-width: 0.8in;
+	vertical-align: middle;
+}
+
+div.tile-template, div.image-template, div.small-image-template {
+	display: inline-block;
+	vertical-align: top;
+	cursor: pointer;
+}
+
+div.tile-template {
+	width: 4in;
+	padding: .25in;
+}
+
+div.image-template {
+	width: 40%;
+	margin: 20px;
+}
+
+.white-border { border: solid 4px rgba(0, 200, 255, 0.3); }
+
+div.image-template img.artwork[src] {
+	width: 100%;
+	max-width: 900px;
+	border: solid 4px rgba(0, 200, 255, 0.3);
+}
+
+div.tile-template img.artwork[src] {
+	width: 100%;
+	border: solid 4px rgba(0, 200, 255, 0.3);
+}
+
+div.small-image-template img.artwork[src] {
+	width: 2in;
+	transform: rotate(-5deg);
+}
+
+@media screen {
+.column {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.print-only { display: none; }
+}
+.column.column-2 {
+	width: 48%;
+}
+
+.column.column-3 {
+	width: 30%;
+}
+
+.column.column-4 {
+	width: 24%;
+}
+
+.pre {
+	white-space: pre-line;
+}
+
+p {
+	white-space: pre-line;
+	margin-block-start: .5em;
+	margin-block-end: 0em;
+}
+
+a { text-decoration: none; }
+a.logo img {
+	max-height: 76px;
+	max-width: 90%;
+	margin-top: 10px;
+	display: inline-block;
+}
+.hidden { display: none; }
+
+@media only screen and (max-width: 2140px)
+{
+	img.player-image[src] { max-width: 600px;   border: solid 4px rgba(0, 200, 255, 0.3);  }
+	div.toolbar audio {	width: 480px; }
+	div.repeater { 	max-width: 1000px;	}
+}
+
+@media only screen and (max-width: 1600px)
+{
+	img.player-image[src] { max-width: 360px;   border: solid 4px rgba(0, 200, 255, 0.3);  }
+	div.toolbar audio {	width: 300px; }
+	div.repeater { 	max-width: 1000px;	}
+}
+
+@media only screen and (max-width: 1400px)
+{
+	div.repeater { 	max-width: 600px; }
+}
+
+/* Mobile */
+@media only screen and (max-width: 800px)
+{
+	img.player-image[src] { max-width: 320px; }
+
+	div.tile-template, div.image-template {
+		width: 80%;
+		margin: 6px;
+	}
+
+	div.toolbar audio {	width: 240px; }
+	div.repeater { max-width: none; }
+	div.playlist-template { width: 340px; font-size: 10pt; }
+	div.playlist-template .item-text { width: auto; }
+	div.playlist-template img.artwork[src] { height: .5in; }
+
+	a.link-template, a.play-link-template { margin-left: .5em; margin-right: .5em; }
+	.no-mobile { display: none; }
+}
+
+@media print {
+	.no-print { display: none; }
+}
+
+@media screen {
+	body{
+		background-color: #000A14;
+		color: rgb(200, 220, 240);
+	}
+	p.sources { color: #8899AA; font-size: 10pt; }
+
+	div.playlist-template {
+			background-color: rgba(20, 30, 60, 0.85);
+	}
+
+	div.active {
+		background-color: rgba(0, 120, 180, 0.6);
+	}
+
+	#playlist-links { max-width: 960px; }
+}
+	</style>
+</head>
+<body>
+<header>
+	<div class="logo-container float-left">
+		<a class="logo"><img/></a>
+	</div>
+	<div class="column">
+		<h1><a target="download" class="album-title album-link"></a></h1>
+		<div class="album-description"></div>
+	</div>
+</header>
+
+<div class="toolbar no-print column">
+	<h4><a target="download" class="album-link">DOWNLOAD ALBUM</a></h4>
+	<img class="player-image"/>
+	<br/><br/>
+	<button onclick="playPrevious()" title="Previous track"> &lt;&lt; </button>
+	<audio id="audioPlayer" controls></audio>
+	<button onclick="playNext()" title="Next track"> &gt;&gt; </button>
+	<br/>
+	<audio id="hiddenPlayer" class="hidden" controls></audio>
+	<div class="bold player-label"></div>
+	<br/>
+	<div class="align-left">
+		Show:
+		<select id="view-mode" onchange="refreshList()">
+			<option value="playlist-template">playlist</option>
+			<option value="playlist-template.details">playlist with details</option>
+			<option value="tile-template">tiles</option>
+			<option value="image-template">large images</option>
+			<option value="small-image-template">small images</option>
+		</select>
+		<button onclick="loadDurations()" title="Shuffle playlist">Duration</button>
+		<i class="total-duration number"></i>
+		<br/>
+		<br/>
+		Order:
+		<button onclick="shuffle()" title="Shuffle playlist">Shuffle</button>
+		<button onclick="reverse()" title="Reverse playlist">Reverse</button>
+		<button onclick="reorder()" title="Reset playlist order">Reset</button>
+		<br/><br/>
+	</div>
+</div>
+
+<div class="column">
+	<h4 id="playlist-links" class="no-print"></h4>
+	<div class="repeater align-left"></div>
+</div>
+<br/><br/>
+<div class="links"></div>
+
+<div id="templates" class="hidden">
+	<a class="link-template"></a>
+	<a class="play-link-template"></a>
+
+	<div class="category-template align-center">
+		<a class="url">
+			<h3 class="pre title"></h3>
+		</a>
+	</div>
+
+	<div class="separator-template">
+		<hr/>
+		<b class="title"></b>
+	</div>
+
+	<div class="image-template">
+		<img class="artwork"/>
+	</div>
+
+	<div class="small-image-template">
+		<img class="artwork"/>
+	</div>
+
+	<div class="tile-template align-center">
+		<img class="artwork"/>
+		<div class="float-right padding-tr">
+			<a class="remix-audio" target="video" onclick="stopPropagation(event)"><img class="icon no-print" src="../img/remixaudio.png"/></a>
+			<br/><i class="duration"></i>
+		</div>
+		<p><i class="number"></i>. <b class="title"></b></p>
+		<p class="sources"></p>
+	</div>
+
+	<div class="playlist-template column">
+		<img class="artwork"/>
+		<div class="float-right padding-tr no-mobile">
+			<a class="remix-audio" target="video" onclick="stopPropagation(event)"><img class="icon no-print" src="../img/remixaudio.png"/></a>
+			<br/><i class="duration"></i>
+		</div>
+		<div class="item-text pre"><i class="number"></i>. <b class="title"></b></div>
+	</div>
+
+	<div class="playlist-template details column">
+		<img class="artwork"/>
+		<div class="float-right padding-tr no-mobile">
+			<a class="remix-audio" target="video" onclick="stopPropagation(event)"><img class="icon no-print" src="../img/remixaudio.png"/></a>
+			<br/><i class="duration"></i>
+		</div>
+		<div class="item-text pre"><i class="number"></i>. <b class="title"></b>
+		<p class="sources"></p></div>
+	</div>
+</div>
+</body>
+
+<script src="../js/album.js"></script>
+<script src="MashingTooMuchTV.js"></script>
+</html>
