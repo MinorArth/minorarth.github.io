@@ -88,6 +88,7 @@ function loadPlaylist()
 			allPlaylists.all.push({ type: "category", title: key });
 			allPlaylists.all = allPlaylists.all.concat(items[key]);
 		}
+		allPlaylists.stream = allPlaylists.all.filter(i => i.file);
 	}
 	else if(items.length)
 	{
