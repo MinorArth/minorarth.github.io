@@ -50,7 +50,6 @@ var items = {
 	{
 		"id": 88854,
 		"file": "1561430440_1177208682_1732140218.mp3",
-		"title": "MasheteMixes - Gasoline (David Bowie vs Audioslave)",
 		"localFile": "04 - MasheteMixes - Gasoline ( David Bowie vs Audioslave )",
 		"image": "841654616_749917391_1512496248.jpg",
 		"sources": [
@@ -136,7 +135,6 @@ var items = {
 	{
 		"id": 88853,
 		"file": "1865928658_895525731_1517075988.mp3",
-		"title": "MasheteMixes - Burning Time (Survivor vs Robin Beck)",
 		"localFile": "14 - MasheteMixes - Burning Time ( Survivor vs Robin Beck )",
 		"image": "127551728_997145553_485702902.jpg",
 		"sources": [
