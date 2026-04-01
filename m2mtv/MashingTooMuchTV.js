@@ -172,7 +172,10 @@ var items = {
 ],
 "Disc 2": [
 	{
+		"id": 89002,
+		"file": "1440382498_871060729_1213936025.mp3",
 		"localFile": "01 - DoM - Sedated Misirlou ( Ramones vs Dick Dale )",
+		"image": "1464285015_1794259392_1782085642.png",
 		"sources": [
 			"Dick Dale - Misirlou | 1962 | Pulp Fiction | 1994",
 			"Ramones - I Wanna Be Sedated | 1978"
