@@ -161,7 +161,10 @@ var items = {
 		]
 	},
 	{
+		"id": 88767,
+		"file": "1118516316_335376483_785042880.mp3",
 		"localFile": "17 - DJ Useo - Theme From Doctor Detroit's Weird Science ( Oingo Boingo vs Devo )",
+		"image": "745977018_607983017_2045004989.jpg",
 		"sources": [
 			"Oingo Boingo - Weird Science | Weird Science | 1985",
 			"Devo - Theme from Doctor Detroit | Doctor Detroit | 1983"
