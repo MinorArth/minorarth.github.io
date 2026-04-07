@@ -66,7 +66,11 @@ var items = {
 		]
 	},
 	{
+
+		"id": 89226,
+		"file": "1172460014_479457178_1124364838.mp3",
 		"localFile": "06 - Minor Arth - Clubbed You To Death ( Rob Dougan vs Type O Negative )",
+		"image": "1041443355_1192348589_2129404809.jpg",
 		"sources": [
 			"Rob Dougan - Clubbed To Death | The Matrix | 1998",
 			"Type O Negative - Love You To Death | 1996"
