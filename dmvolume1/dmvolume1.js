@@ -191,7 +191,8 @@ var items = [
 			"Berlin - Take My Breath Away | 1986",
 			"Depeche Mode - A Question Of Lust | 1986"
 		],
-		"image": "450943454_968738645_1625833535.jpg"
+		"image": "450943454_968738645_1625833535.jpg",
+		"links": { "Mash Celebration": "../dmmashcelebration" }
 	},
 	{
 		"id": 18124,
@@ -203,7 +204,8 @@ var items = [
 		],
 		"title": "Surrender Celebration",
 		"artists": "Curses / Depeche Mode",
-		"video": "https://youtu.be/AHcUZkA1zsE"
+		"video": "https://youtu.be/AHcUZkA1zsE",
+		"links": { "Mash Celebration": "../dmmashcelebration" }
 	},
 	{
 		"id": 34466,
@@ -215,7 +217,8 @@ var items = [
 		],
 		"title": "Love On The Windscreen",
 		"artists": "Chromatics / Depeche Mode",
-		"video": "https://youtu.be/msqqXcLB5jI"
+		"video": "https://youtu.be/msqqXcLB5jI",
+		"links": { "Mash Celebration": "../dmmashcelebration" }
 	},
 	{
 		"id": 63256,
