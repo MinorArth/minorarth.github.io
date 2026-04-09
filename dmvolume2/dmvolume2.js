@@ -49,7 +49,8 @@ var items = {
 			],
 			"songTitle": "Running Stripped",
 			"artists": "Depeche Mode / Kate Bush",
-			"video": "https://youtu.be/RDwHZ9A_aww"
+			"video": "https://youtu.be/RDwHZ9A_aww",
+			"links": { "Mash Celebration": "../dmmashcelebration" }
 		},
 		{
 			"id": 18641,
@@ -89,7 +90,7 @@ var items = {
 			"songTitle": "A Question Of Time And Space, Boy",
 			"artists": "David Bowie / Depeche Mode",
 			"video": "https://youtu.be/Gz4_Tn0pmf0",
-			"links": { "Bowie mashups": "../bowie" }
+			"links": { "Mash Celebration": "../dmmashcelebration", "Bowie mashups": "../bowie" }
 		},
 		{
 			"id": 86892,
@@ -123,7 +124,8 @@ var items = {
 				"Depeche Mode - Here Is The House | 1986"
 			],
 			"songTitle": "Here Is A Prayer To Save The House",
-			"artists": "Duran Duran / Depeche Mode"
+			"artists": "Duran Duran / Depeche Mode",
+			"links": { "Mash Celebration": "../dmmashcelebration" }
 		},
 		{
 			"id": 83386,
@@ -137,8 +139,7 @@ var items = {
 			"songTitle": "New Dress | Defender mix",
 			"artists": "Mesh / Depeche Mode",
 			"video": "https://youtu.be/8JjinVvgMnQ",
-			"links": { "Download": "https://mega.nz/folder/QxVglBCY#t7g1p9OZGuhoAApYMyxNWg/folder/Fl8zAIrK" }
-
+			"links": { "Mash Celebration": "../dmmashcelebration", "Download": "https://mega.nz/folder/QxVglBCY#t7g1p9OZGuhoAApYMyxNWg/folder/Fl8zAIrK" }
 		},
 		{
 			"id": 84141,
@@ -163,7 +164,8 @@ var items = {
 			],
 			"songTitle": "Wednesday's Dressed In Black",
 			"artists": "Danny Elfman / Depeche Mode",
-			"video": "https://youtu.be/1m3Xct6_BEM"
+			"video": "https://youtu.be/1m3Xct6_BEM",
+			"links": { "Mash Celebration": "../dmmashcelebration" }
 		},
 		{
 			"id": 61518,
@@ -175,7 +177,8 @@ var items = {
 				"Depeche Mode - It Doesn't Matter Two | 1986"
 			],
 			"songTitle": "It Doesn't Matter Two | Gnossienne 1 mix",
-			"artists": "Erik Satie / Depeche Mode"
+			"artists": "Erik Satie / Depeche Mode",
+			"links": { "Mash Celebration": "../dmmashcelebration" }
 		},
 	],
 	"Part 2": [
@@ -292,6 +295,8 @@ var items = {
 			"links": { "GTA Los Santos / Live 2000": "https://remix.audio/explore/filter/afraidofagun", "Bowie mashups": "../bowie" }
 		},
 		{
+			"id": 89321,
+			"file": "934432182_1767507942_1028361083.mp3",
 			"image": "Type O Negative - Depeche Mode - One Caress To Death.jpg",
 			"localFile": "Type O Negative - Depeche Mode - One Caress To Death.mp3",
 			"sources": [
@@ -324,7 +329,8 @@ var items = {
 				"Depeche Mode - Sometimes | 1986",
 			],
 			"songTitle": "Song For Sometimes",
-			"artists": "Elton John / Depeche Mode"
+			"artists": "Elton John / Depeche Mode",
+			"links": { "Mash Celebration": "../dmmashcelebration" }
 		}
 	]
 };
