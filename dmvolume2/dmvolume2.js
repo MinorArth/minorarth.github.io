@@ -304,7 +304,8 @@ var items = {
 				"Depeche Mode - One Caress | 1993"
 			],
 			"songTitle": "One Caress To Death",
-			"artists": "Type O Negative / Depeche Mode"
+			"artists": "Type O Negative / Depeche Mode",
+			"video": "https://vimeo.com/1182566048"
 		},
 		{
 			"id": 86309,
