@@ -25,9 +25,10 @@
 		background-color: #222;
 	}
 
-	div.active {
-		background-color: #043;
+	div.playlist-template.active, div.active {
+		background-color: #0A5;
 	}
+
 }
 
 a, .bold { font-weight: bold; cursor: pointer; }
