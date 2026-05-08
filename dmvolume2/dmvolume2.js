@@ -190,7 +190,8 @@ var items = {
 				"Depeche Mode - Halo | 1990"
 			],
 			"songTitle": "Halo | Shaft mix",
-			"artists": "Isaac Hayes / Depeche Mode"
+			"artists": "Isaac Hayes / Depeche Mode",
+			"video": "https://youtu.be/zlrVC7qUu3g"
 		},
 		{
 			"id": 86605,
@@ -205,6 +206,8 @@ var items = {
 			"artists": "The Hu / Depeche Mode"
 		},
 		{
+			"id":"90697",
+			"file": "366768191_279510113_444035936.mp3",
 			"image": "Didier Marouani - Depeche Mode - Little 15 -- Space Opera mix.jpg",
 			"localFile": "Didier Marouani - Depeche Mode - Little 15 -- Space Opera mix.mp3",
 			"sources": [
