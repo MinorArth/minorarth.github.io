@@ -191,7 +191,7 @@ var items = {
 			],
 			"songTitle": "Halo | Shaft mix",
 			"artists": "Isaac Hayes / Depeche Mode",
-			"video": "https://youtu.be/zlrVC7qUu3g"
+			"video": "https://youtu.be/d4BN58njT5g"
 		},
 		{
 			"id": 86605,
