@@ -183,6 +183,8 @@ var items = {
 	],
 	"Part 2": [
 		{
+			"id": 91469,
+			"file": "1529318096_1376555518_1791564281.mp3",
 			"image": "Isaac Hayes - Depeche Mode - Halo -- Shaft mix.jpg",
 			"localFile": "Isaac Hayes - Depeche Mode - Halo -- Shaft mix.mp3",
 			"sources": [
@@ -191,7 +193,12 @@ var items = {
 			],
 			"songTitle": "Halo | Shaft mix",
 			"artists": "Isaac Hayes / Depeche Mode",
-			"video": "https://youtu.be/d4BN58njT5g"
+			"video": "https://youtu.be/d4BN58njT5g",
+			"links": { 
+				"Download": "https://mega.nz/folder/QxVglBCY#t7g1p9OZGuhoAApYMyxNWg/folder/Fl8zAIrK",
+				"Boot Of The Day": "https://www.facebook.com/bootoftheday/posts/pfbid09eHPwBQXbTGG9M5XMX5w5ASEfXYL1PBoAAexkbZcoAF5auvcPjNFY5wzwiMnGW9tl",
+				"Halo Robots": "../dmvolume1"
+			}
 		},
 		{
 			"id": 86605,
