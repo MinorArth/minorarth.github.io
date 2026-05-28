@@ -223,7 +223,8 @@ var items = {
 				"Depeche Mode - Pimpf | 1987"
 			],
 			"songTitle": "Little 15 | Space Opera mix",
-			"artists": "Didier Marouani / Depeche Mode"
+			"artists": "Didier Marouani / Depeche Mode",
+			"links": { "Amour & Violence mix": "../dmvolume1" }
 		},
 		{
 			"id": 18059,
