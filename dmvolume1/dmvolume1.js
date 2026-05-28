@@ -255,7 +255,8 @@ var items = [
 		],
 		"title": "Halo Robots",
 		"artists": "Kraftwerk / Depeche Mode",
-		"video": "https://youtu.be/pz83tO_aTyM"
+		"video": "https://youtu.be/pz83tO_aTyM",
+		"links": { "Shaft mix": "../dmvolume2" }
 	},
 	{
 		"id": 78083,
@@ -290,7 +291,8 @@ var items = [
 			"Depeche Mode - Little 15 | 1987"
 		],
 		"title": "Little 15 | Amour & Violence mix",
-		"artists": "Sébastien Tellier / Depeche Mode"
+		"artists": "Sébastien Tellier / Depeche Mode",
+		"links": { "Space Opera mix": "../dmvolume2" }
 	}
 ];
 
