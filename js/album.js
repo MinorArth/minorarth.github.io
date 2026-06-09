@@ -141,7 +141,12 @@ function getMeta(key)
 
 function setImage(img, src) {
 	if(!img || !src) return;
-	return img.src = (isUrl(src) || src.includes("/")) ? src : IMAGE_PATH + src;
+
+	src = (isUrl(src) || src.includes("/")) ? src : IMAGE_PATH + src;
+	const resolved = URL.parse(src);
+	if(resolved && resolved.href != img.src)
+		return img.src = resolved.href;
+	else img.src = src;
 }
 
 function setPlaylist(index) {
@@ -183,8 +188,15 @@ function hideBrokenImages() {
 }
 
 function hideBrokenImage(img) {
-	img.onerror = () => PLAYER_IMAGE ? img.src = setImage(playerImage, PLAYER_IMAGE) : img.style.display = "none";
+	img.onerror = () => {
+		if(PLAYER_IMAGE)
+			setImage(img, PLAYER_IMAGE); 
+		else
+			img.style.display = "none"; 
+	}
 }
+
+
 
 function shuffle() {
 	items = items.filter(i => i.file);
