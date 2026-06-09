@@ -183,7 +183,11 @@ function hideBrokenImages() {
 }
 
 function hideBrokenImage(img) {
-	img.onerror = () => PLAYER_IMAGE ? img.src = setImage(playerImage, PLAYER_IMAGE) : img.style.display = "none";
+	img.onerror = () => {
+		img.onerror = () => img.style.display = "none";
+		if(PLAYER_IMAGE)
+			setImage(img, PLAYER_IMAGE);
+	}
 }
 
 function shuffle() {
