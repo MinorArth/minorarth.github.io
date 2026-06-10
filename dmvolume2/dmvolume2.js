@@ -35,7 +35,7 @@ var items = {
 			],
 			"songTitle": "Nothing | Sirius mix",
 			"artists": "The Alan Parsons Project / Depeche Mode",
-			"links": { "Desireless French version": "https://remix.audio/track/79582" }
+			"links": { "French version | Desireless": "https://remix.audio/track/79582" }
 		},
 		{
 			"id": 34091,
@@ -105,6 +105,8 @@ var items = {
 			"artists": "Dido / Depeche Mode"
 		},
 		{
+			"id": 92189,
+			"file": "1858886387_1609241534_483624491.mp3",
 			"image": "Garbage - Depeche Mode - The World Is Not Enough When I Lose Myself.jpg",
 			"localFile": "Garbage - Depeche Mode - The World Is Not Enough When I Lose Myself.mp3",
 			"sources": [
@@ -112,7 +114,8 @@ var items = {
 				"Depeche Mode - Only When I Lose Myself | 1998"
 			],
 			"songTitle": "The World Is Not Enough When I Lose Myself",
-			"artists": "Garbage / Depeche Mode"
+			"artists": "Garbage / Depeche Mode",
+			"links": { "Mashing Too Much TV": "../m2mtv" }
 		},
 		{
 			"id": 85225,
