@@ -9,8 +9,8 @@
 	h1 { margin-bottom: 8px; }
 	a, .number, .duration { color: #e7d1ac; }
 	.padding-tr {padding-top: 4px; padding-right: 4px;}
-	a:active{  color: white; }
-	p.sources { color: #DDD; }
+	a:active { color: white; }
+	p.sources { color: #DDD; font-size: 10pt; }
 
 	div.playlist-template {
 		width: 494px;
@@ -111,6 +111,10 @@ div.image-template img.artwork[src] {
 div.tile-template img.artwork[src] {
 	width: 100%;
 	border: solid 4px white;
+}
+
+div.small-image-template {
+	width: 2in;
 }
 
 div.small-image-template img.artwork[src] {
