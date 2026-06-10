@@ -20,6 +20,10 @@ var items = [
 		"artists": "Jamiroquai / Fontaines DC",
 		"title": "Starburster Underground",
 		"image": "1297376066_1274330096_1533861312.jpg",
+		"sources": [
+			"Jamiroquai - Deeper Underground | 1998",
+			"Fontaines DC - Starburster | 2024"
+		],
 		"links": { "Mashing Too Much TV": "https://audioboots.org/Albums/TooMuchTV" }
 	},
 	{
@@ -29,6 +33,11 @@ var items = [
 		"artists": "The Clash / The Rolling Stones / Blondie",
 		"title": "The Magnificent Miss Rapture",
 		"image": "540094267_1004121154_1969074518.jpg",
+		"sources": [
+			"The Clash - The Magnificent Seven | 1981",
+			"The Rolling Stones - Miss You | 1978 / live 1989",
+			"Blondie - Rapture | 1980"
+		],
 		"links": {
 			"Boot Of The Day": "https://www.facebook.com/bootoftheday/posts/pfbid0Mzi1DyRVTFVK7EQe21yEKyzePHySJFxN8F1DUVpBpph1WPVcgkJimWXifc7pJGcBl",
 			"80s Mashed vol. 7": "https://audioboots.org/Albums/80sMashed7"
@@ -41,6 +50,10 @@ var items = [
 		"artists": "Garbage / Lady Gaga",
 		"title": "No Future In Bad Romance",
 		"image": "1812613738_1092426343_115107876.jpg",
+		"sources": [
+			"Garbage - There’s No Future In Optimism | 2025",
+			"Lady Gaga - Bad Romance | 2009"
+		],
 		"links": { "Summer Booty 2025": "https://audioboots.org/Albums/SB2025" }
 	},
 	{
@@ -51,6 +64,10 @@ var items = [
 		"title": "Spaceman Oddity",
 		"image": "571778401_1371646042_270440403.jpg",
 		"video": "https://youtu.be/CLNil-TOSYU",
+		"sources": [
+			"Babylon Zoo - Spaceman | 1996",
+			"David Bowie - Space Oddity | 1969"
+		],
 		"links": { "Maggiore on Bowie": "https://maggioreonbowie.com/xxx-9" }
 	},
 	{
@@ -60,6 +77,10 @@ var items = [
 		"artists": "Pendulum / Zanias",
 		"title": "9000 Serpent Miles",
 		"image": "62424416_1457729924_465811239.jpg",
+		"sources": [
+			"Pendulum - 9,000 Miles | 2008",
+			"Zanias - Serpentsmile | Cataclysm | 2025"
+		],
 		"links": { "Phil B mashup show | Select Radio": "https://www.mixcloud.com/philb-mashup/phil-b-mashups-84-destination-unknown-27th-may-2026-on-select-radio" }
 	},
 	{
@@ -68,7 +89,12 @@ var items = [
 		"producer": "Minor Arth",
 		"artists": "Tycho / Joy Division / PJ Harvey",
 		"title": "Love Will Tear Us Apart | Daydream mix",
-		"image": "827500937_1023543336_538303676.jpg"
+		"image": "827500937_1023543336_538303676.jpg",
+		"sources": [
+			"Tycho - Daydream | 2011",
+			"Joy Division - Love Will Tear Us Apart | 1980",
+			"PJ Harvey & Tim Phillips - Love Will Tear Us Apart | 2024 cover"
+		],
 	},
 	{
 		"id": 71368,
@@ -76,7 +102,11 @@ var items = [
 		"producer": "Minor Arth",
 		"artists": "Tears For Fears / Imagine Dragons",
 		"title": "I Don't Know Why Everybody Wants To Rule The World",
-		"image": "1339719309_853193426_1137913115.jpg"
+		"image": "1339719309_853193426_1137913115.jpg",
+		"sources": [
+			"Tears For Fears - Everybody Wants To Rule The World | 1985",
+			"Imagine Dragons - I Don't Know Why | 2017"
+		]
 	},
 	{
 		"id": 88711,
@@ -86,6 +116,10 @@ var items = [
 		"title": "Fight The Power's Extreme Ways",
 		"image": "871074345_2012512590_963641934.jpg",
 		"video": "https://youtube.com/shorts/o_bteVRXh0I",
+		"sources": [
+			"Moby - Extreme Ways | 2002 + Jason Bourne version | 2016",
+			"Public Enemy - Fight The Power | Do The Right Thing | 1989"
+		],
 		"links": { "Mashing Too Much TV": "https://audioboots.org/Albums/TooMuchTV" }
 	},
 	{
@@ -94,6 +128,10 @@ var items = [
 		"producer": "Minor Arth",
 		"artists": "Air / Massive Attack / Shara Nelson",
 		"title": "Silver Woman's Safe From Harm",
+		"sources": [
+			"Air - La Femme d'Argent | 1998",
+			"Massive Attack / Shara Nelson - Safe From Harm | 1991"
+		],
 		"image": "2050854018_1512159394_1216791351.jpg"
 	},
 	{
@@ -102,6 +140,10 @@ var items = [
 		"producer": "Minor Arth",
 		"artists": "Womack & Womack / Gorillaz",
 		"title": "Andromeda's Teardrops",
+		"sources": [
+			"Womack & Womack - Teardrops | 1988",
+			"Gorillaz ft. DRAM - Andromeda | 2017"
+		],
 		"image": "1564648277_695565599_1631581346.jpg"
 	},
 	{
@@ -110,6 +152,10 @@ var items = [
 		"producer": "Minor Arth",
 		"artists": "Kavinsky / Don Toliver / Doja Cat",
 		"title": "Lose My Odd Look | F1 mix",
+		"sources": [
+			"Kavinsky - Odd Look | 2013",
+			"Don Toliver & Doja Cat - Lose My Mind | F1 | 2025"
+		],
 		"image": "458380788_468501545_28912752.jpg"
 	},
 	{
@@ -118,6 +164,10 @@ var items = [
 		"producer": "Minor Arth",
 		"artists": "AWOLNATION / Portishead",
 		"title": "Glory Sail",
+		"sources": [
+			"AWOLNATION - Sail | 2011",
+			"Portishead - Glory Box | 1994"
+		],
 		"image": "778163889_84060144_2100268417.jpg"
 	},
 	{
@@ -127,6 +177,10 @@ var items = [
 		"artists": "Hooverphonic / The Cure",
 		"title": "Last Day In Eden",
 		"image": "1325731059_1479326090_526601115.jpg",
+		"sources": [
+			"Hooverphonic - Eden | 1998",
+			"The Cure - The Last Day of Summer | 2000"
+		],
 		"video": "https://youtu.be/x-0afDBrLlc"
 	},
 	{
@@ -135,6 +189,10 @@ var items = [
 		"producer": "Minor Arth",
 		"artists": "The Smiths / The Kiffness / The Smithness",
 		"title": "Sometimes I'm Alone | never ever mix",
+		"sources": [
+			"The Smiths - Never Had No One Ever | 1986",
+			"The Kiffness - Sometimes I'm Alone | 2023"
+		],
 		"image": "1532747727_46729518_665663610.jpg"
 	},
 	{
@@ -157,6 +215,11 @@ var items = [
 		"producer": "Minor Arth",
 		"artists": "Giorgio Moroder / Marianne Faithfull",
 		"title": "Broken English | Chase mix",
+		"sources": [
+			"Giorgio Moroder - Chase | Midnight Express | 1978",
+			"Marianne Faithfull - Broken English | 1979",
+			"Daft Punk - Giorgio by Moroder | 2013"
+		],
 		"image": "197895655_34485075_632884523.jpg"
 	},
 	{
@@ -166,7 +229,11 @@ var items = [
 		"artists": "Depeche Mode / The Beatles",
 		"title": "The Things We Said Today",
 		"image": "92876396_71318353_1684204332.jpg",
-		"links": { "Inverse | The Things You Said Today": "../dmvolume1", "VIDEO": "https://youtu.be/Nq3D8LNCNm0" },
+		"sources": [
+			"The Beatles - Things We Said Today | 1963",
+			"Depeche Mode - The Things You Said | 1987"
+		],
+		"links": { "The Things You Said Today | inverse": "../dmvolume1", "VIDEO": "https://youtu.be/Nq3D8LNCNm0" },
 	},
 	{
 		"id": 84340,
@@ -175,6 +242,10 @@ var items = [
 		"artists": "Stranger Things / MGMT",
 		"title": "Stranger Kids",
 		"image": "1137948349_1136657195_15624229.jpg",
+		"sources": [
+			"Kyle Dixon / Michael Stein - Kids | Stranger Things | 2016",
+			"MGMT - Kids | 2007"
+		],
 		"links": { "My Favourite Stranger Things": "https://youtu.be/erbi-qdekBY" }
 	}
 ];
