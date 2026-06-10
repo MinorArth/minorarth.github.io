@@ -33,7 +33,7 @@ var items = {
 				"Sirius | Disco Demolition remix | 2017",
 				"Depeche Mode - Nothing | 1987" 
 			],
-			"songTitle": "Nothing | Sirius mix",
+			"title": "Nothing | Sirius mix",
 			"artists": "The Alan Parsons Project / Depeche Mode",
 			"links": { "French version | Desireless": "https://remix.audio/track/79582" }
 		},
@@ -47,7 +47,7 @@ var items = {
 				"Kate Bush - Running Up That Hill | 1985", 
 				"Placebo - Running Up That Hill | 2003"
 			],
-			"songTitle": "Running Stripped",
+			"title": "Running Stripped",
 			"artists": "Depeche Mode / Kate Bush",
 			"video": "https://youtu.be/RDwHZ9A_aww",
 			"links": { "Mash Celebration": "../dmmashcelebration" }
@@ -61,7 +61,7 @@ var items = {
 				"The Cure - Burn | 1994",
 				"Depeche Mode - Walking In My Shoes | 1993"
 			],
-			"songTitle": "Burn In My Shoes",
+			"title": "Burn In My Shoes",
 			"artists": "The Cure / Depeche Mode",
 			"video": "https://youtu.be/TFOJ7QWNnqw"
 		},
@@ -75,7 +75,7 @@ var items = {
 				"Depeche Mode - Never Let Me Down Again | 1987",
 				"Depeche Mode - Behind The Wheel | 1987"
 			],
-			"songTitle": "Never Let Me Down Behind The Wheel | F1 mix",
+			"title": "Never Let Me Down Behind The Wheel | F1 mix",
 			"artists": "Hans Zimmer / Depeche Mode"
 		},
 		{
@@ -87,7 +87,7 @@ var items = {
 				"David Bowie - Hallo Spaceboy | 1995",
 				"Depeche Mode - A Question Of Time | 1986"
 			],
-			"songTitle": "A Question Of Time And Space, Boy",
+			"title": "A Question Of Time And Space, Boy",
 			"artists": "David Bowie / Depeche Mode",
 			"video": "https://youtu.be/Gz4_Tn0pmf0",
 			"links": { "Mash Celebration": "../dmmashcelebration", "Bowie mashups": "../bowie" }
@@ -101,7 +101,7 @@ var items = {
 				"Dido - Hunter | 1999", 
 				"Depeche Mode - Enjoy The Silence | 1990"
 			],
-			"songTitle": "Enjoy The Silence | Hunter mix",
+			"title": "Enjoy The Silence | Hunter mix",
 			"artists": "Dido / Depeche Mode"
 		},
 		{
@@ -113,7 +113,7 @@ var items = {
 				"Garbage - The World Is Not Enough | 1999",
 				"Depeche Mode - Only When I Lose Myself | 1998"
 			],
-			"songTitle": "The World Is Not Enough When I Lose Myself",
+			"title": "The World Is Not Enough When I Lose Myself",
 			"artists": "Garbage / Depeche Mode",
 			"links": { "Mashing Too Much TV": "../m2mtv" }
 		},
@@ -126,7 +126,7 @@ var items = {
 				"Duran Duran - Save A Prayer | 1982",
 				"Depeche Mode - Here Is The House | 1986"
 			],
-			"songTitle": "Here Is A Prayer To Save The House",
+			"title": "Here Is A Prayer To Save The House",
 			"artists": "Duran Duran / Depeche Mode",
 			"links": { "Mash Celebration": "../dmmashcelebration" }
 		},
@@ -139,7 +139,7 @@ var items = {
 				"mesh - My Defender | 1999",
 				"Depeche Mode - New Dress | 1986"
 			],
-			"songTitle": "New Dress | Defender mix",
+			"title": "New Dress | Defender mix",
 			"artists": "Mesh / Depeche Mode",
 			"video": "https://youtu.be/8JjinVvgMnQ",
 			"links": { "Mash Celebration": "../dmmashcelebration", "Download": "https://mega.nz/folder/QxVglBCY#t7g1p9OZGuhoAApYMyxNWg/folder/Fl8zAIrK" }
@@ -153,7 +153,7 @@ var items = {
 				"Massive Attack - Angel | 1998",
 				"Depeche Mode - In Your Room | 1993"
 			],
-			"songTitle": "Angel In Your Room",
+			"title": "Angel In Your Room",
 			"artists": "Massive Attack / Depeche Mode"
 		},
 		{
@@ -165,7 +165,7 @@ var items = {
 				"Danny Elfman - Wednesday theme | 2022",
 				"Depeche Mode - Dressed In Black | 1986"
 			],
-			"songTitle": "Wednesday's Dressed In Black",
+			"title": "Wednesday's Dressed In Black",
 			"artists": "Danny Elfman / Depeche Mode",
 			"video": "https://youtu.be/1m3Xct6_BEM",
 			"links": { "Mash Celebration": "../dmmashcelebration" }
@@ -179,7 +179,7 @@ var items = {
 				"Erik Satie - Gnossienne No. 1",
 				"Depeche Mode - It Doesn't Matter Two | 1986"
 			],
-			"songTitle": "It Doesn't Matter Two | Gnossienne 1 mix",
+			"title": "It Doesn't Matter Two | Gnossienne 1 mix",
 			"artists": "Erik Satie / Depeche Mode",
 			"links": { "Mash Celebration": "../dmmashcelebration" }
 		},
@@ -194,7 +194,7 @@ var items = {
 				"Isaac Hayes - Shaft theme | 1971",
 				"Depeche Mode - Halo | 1990"
 			],
-			"songTitle": "Halo | Shaft mix",
+			"title": "Halo | Shaft mix",
 			"artists": "Isaac Hayes / Depeche Mode",
 			"video": "https://youtu.be/d4BN58njT5g",
 			"links": { 
@@ -212,7 +212,7 @@ var items = {
 				"The Hu - Yuve Yuve Yu | 2019",
 				"Depeche Mode - Personal Jesus | 1989",
 			],
-			"songTitle": "Yuve Yu Jesus",
+			"title": "Yuve Yu Jesus",
 			"artists": "The Hu / Depeche Mode"
 		},
 		{
@@ -225,7 +225,7 @@ var items = {
 				"Depeche Mode - Little 15 | 1987",
 				"Depeche Mode - Pimpf | 1987"
 			],
-			"songTitle": "Little 15 | Space Opera mix",
+			"title": "Little 15 | Space Opera mix",
 			"artists": "Didier Marouani / Depeche Mode",
 			"links": { "Amour & Violence mix": "../dmvolume1" }
 		},
@@ -238,7 +238,7 @@ var items = {
 				"U2 - Lemon | 1993",
 				"Depeche Mode - World In My Eyes | 1990"
 			],
-			"songTitle": "Lemon In My Eyes",
+			"title": "Lemon In My Eyes",
 			"artists": "U2 / Depeche Mode",
 			"video": "https://youtu.be/W8N-BNBRn00"
 		},
@@ -251,7 +251,7 @@ var items = {
 				"DNA - La Serenissima | 1990",
 				"Depeche Mode - Sea Of Sin | 1990"
 			],
-			"songTitle": "Serenissima Of Sin",
+			"title": "Serenissima Of Sin",
 			"artists": "DNA / Depeche Mode"
 		},
 		{
@@ -263,7 +263,7 @@ var items = {
 				"Depeche Mode - Mercy In You | 1993",
 				"Garbage - #1 Crush | 1995" 
 			],
-			"songTitle": "Mercy Crush",
+			"title": "Mercy Crush",
 			"artists": "Depeche Mode / Garbage",
 			"video": "https://youtu.be/S_fdlsUJuz8" 
 		},
@@ -276,7 +276,7 @@ var items = {
 				"Massive Attack / Shara Nelson - Safe From Harm | 1991",
 				"Depeche Mode - It's No Good | 1997"
 			],
-			"songTitle": "Harm's No Good",
+			"title": "Harm's No Good",
 			"artists": "Massive Attack / Depeche Mode",
 			"video": "https://youtu.be/8AtPH5C1qdc"
 		},
@@ -290,7 +290,7 @@ var items = {
 				"Depeche Mode - I Feel You | 1993",
 				"Mélanie De Biasio - I Feel You | 2013"
 			],
-			"songTitle": "I Feel The Levee Break",
+			"title": "I Feel The Levee Break",
 			"artists": "Led Zeppelin / Depeche Mode",
 			"video": "https://youtu.be/_TcU5wb0Vsc"
 		},
@@ -303,7 +303,7 @@ var items = {
 				"Depeche Mode - Barrel Of A Gun | 1997",
 				"David Bowie - I'm Afraid Of Americans | 1997"
 			],
-			"songTitle": "I'm Afraid Of A Gun",
+			"title": "I'm Afraid Of A Gun",
 			"artists": "Depeche Mode / David Bowie",
 			"video": "https://youtu.be/XdMTSEDxo0M",
 			"links": { "GTA Los Santos / Live 2000": "https://remix.audio/explore/filter/afraidofagun", "Bowie mashups": "../bowie" }
@@ -317,7 +317,7 @@ var items = {
 				"Type O Negative - Love You To Death | 1996",
 				"Depeche Mode - One Caress | 1993"
 			],
-			"songTitle": "One Caress To Death",
+			"title": "One Caress To Death",
 			"artists": "Type O Negative / Depeche Mode",
 			"video": "https://vimeo.com/1182566048"
 		},
@@ -330,7 +330,7 @@ var items = {
 				"The Korgis - Everybody's Got To Learn Sometime | 1980",
 				"Depeche Mode - Policy Of Truth | 1990"
 			],
-			"songTitle": "Everybody's Got To Learn The Truth",
+			"title": "Everybody's Got To Learn The Truth",
 			"artists": "The Korgis / Depeche Mode",
 			"video": "https://youtu.be/UOpZ-wO-DBY"
 		},
@@ -343,7 +343,7 @@ var items = {
 				"Elton John - Song For Guy | 1977",
 				"Depeche Mode - Sometimes | 1986",
 			],
-			"songTitle": "Song For Sometimes",
+			"title": "Song For Sometimes",
 			"artists": "Elton John / Depeche Mode",
 			"links": { "Mash Celebration": "../dmmashcelebration" }
 		}
