@@ -304,6 +304,7 @@ var items = {
 		"id": 92189,
 		"file": "1858886387_1609241534_483624491.mp3",
 		"localFile": "15 - Minor Arth - The World Is Not Enough When I Lose Myself ( Garbage / Depeche Mode )",
+		"image": "258328423_1643025691_123156871.jpg",
 		"sources": [
 			"Garbage - The World Is Not Enough | James Bond - The World Is Not Enough | 1999",
 			"Depeche Mode - Only When I Lose Myself | 1998"
