@@ -308,7 +308,8 @@ var items = {
 		"sources": [
 			"Garbage - The World Is Not Enough | James Bond - The World Is Not Enough | 1999",
 			"Depeche Mode - Only When I Lose Myself | 1998"
-		]
+		],
+		"links": { "DM Mashups vol. 2": "../dmvolume2" }
 	},
 	{
 		"localFile": "16 - DJ Useo - Boss Of Ziggy ( David Bowie / They Might Be Giants )",
