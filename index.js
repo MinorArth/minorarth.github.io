@@ -58,9 +58,18 @@ var items = [
 		title: "Collaborative Albums" 
 	},
 	{
+		url: "https://audioboots.org/Albums/SB2026/",
+		title: "Summer Booty 2026",
+		description: "The Eternal Summer Mashup Compilation | 20th edition",
+		producer: "AudioBoots",
+		image: "https://audioboots.org/Albums/SB2026/assets/album_cover.jpg",
+		release: "June 2026",
+		nbTracks: 58
+	},
+	{
 		url: "./m2mtv",
 		title: "Mashing Too Much TV",
-		description: "The Movie and TV soundtrack compilation | 2026",
+		description: "The Movie and TV soundtrack compilation",
 		producer: "AudioBoots",
 		image: "./m2mtv/MashingTooMuchTV.jpg",
 		release: "March 2026",
