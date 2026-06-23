@@ -247,7 +247,7 @@ var items = [
 			"The Beatles - Things We Said Today | 1963",
 			"Depeche Mode - The Things You Said | 1987"
 		],
-		"links": { "The Things You Said Today | inverse": "../dmvolume1/?beatles", "VIDEO": "https://youtu.be/Nq3D8LNCNm0" },
+		"links": { "The Things You Said Today": "../dmvolume1/?beatles", "VIDEO": "https://youtu.be/Nq3D8LNCNm0" },
 	},
 
 	{
