@@ -192,7 +192,7 @@ var items = [
 			"Depeche Mode - A Question Of Lust | 1986"
 		],
 		"image": "450943454_968738645_1625833535.jpg",
-		"links": { "Mash Celebration": "../dmmashcelebration" }
+		"links": { "Mash Celebration": "../dmmashcelebration?berlin" }
 	},
 	{
 		"id": 18124,
@@ -205,12 +205,12 @@ var items = [
 		"title": "Surrender Celebration",
 		"artists": "Curses / Depeche Mode",
 		"video": "https://youtu.be/AHcUZkA1zsE",
-		"links": { "Mash Celebration": "../dmmashcelebration" }
+		"links": { "Mash Celebration": "../dmmashcelebration?curses" }
 	},
 	{
 		"id": 34466,
 		"file": "880225046_1980996943_302683165.mp3",
-		"image": "1074895215_811649611_1245966278.jpg",
+		"image": "362413417_2117028290_242313076.jpg",
 		"sources": [
 			"Chromatics - Looking For Love | 2012",
 			"Depeche Mode - Love On The Windscreen | 1986"
@@ -218,7 +218,7 @@ var items = [
 		"title": "Love On The Windscreen",
 		"artists": "Chromatics / Depeche Mode",
 		"video": "https://youtu.be/msqqXcLB5jI",
-		"links": { "Mash Celebration": "../dmmashcelebration" }
+		"links": { "Mash Celebration": "../dmmashcelebration?chromatics" }
 	},
 	{
 		"id": 63256,
@@ -241,7 +241,7 @@ var items = [
 			"The Beatles - Things We Said Today | 1963",
 			"Depeche Mode - The Things You Said | 1987"
 		],
-		"links": { "Inverse | The Things We Said Today": "https://remix.audio/track/69552" },
+		"links": { "The Things We Said Today": "https://remix.audio/track/69552" },
 		"video": "https://youtu.be/Nq3D8LNCNm0",
 		"image": "893997111_672924943_400995054.jpg"
 	},
@@ -256,7 +256,7 @@ var items = [
 		"title": "Halo Robots",
 		"artists": "Kraftwerk / Depeche Mode",
 		"video": "https://youtu.be/pz83tO_aTyM",
-		"links": { "Shaft mix": "../dmvolume2" }
+		"links": { "Shaft mix": "../dmvolume2?halo" }
 	},
 	{
 		"id": 78083,
@@ -292,7 +292,7 @@ var items = [
 		],
 		"title": "Little 15 | Amour & Violence mix",
 		"artists": "Sébastien Tellier / Depeche Mode",
-		"links": { "Space Opera mix": "../dmvolume2" }
+		"links": { "Space Opera mix": "../dmvolume2?marouani" }
 	}
 ];
 
