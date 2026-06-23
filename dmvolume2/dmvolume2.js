@@ -50,7 +50,7 @@ var items = {
 			"title": "Running Stripped",
 			"artists": "Depeche Mode / Kate Bush",
 			"video": "https://youtu.be/RDwHZ9A_aww",
-			"links": { "Mash Celebration": "../dmmashcelebration" }
+			"links": { "Mash Celebration": "../dmmashcelebration?kate" }
 		},
 		{
 			"id": 18641,
@@ -90,7 +90,7 @@ var items = {
 			"title": "A Question Of Time And Space, Boy",
 			"artists": "David Bowie / Depeche Mode",
 			"video": "https://youtu.be/Gz4_Tn0pmf0",
-			"links": { "Mash Celebration": "../dmmashcelebration", "Bowie mashups": "../bowie" }
+			"links": { "Mash Celebration": "../dmmashcelebration?bowie", "Bowie mashups": "../bowie" }
 		},
 		{
 			"id": 86892,
@@ -128,7 +128,7 @@ var items = {
 			],
 			"title": "Here Is A Prayer To Save The House",
 			"artists": "Duran Duran / Depeche Mode",
-			"links": { "Mash Celebration": "../dmmashcelebration" }
+			"links": { "Mash Celebration": "../dmmashcelebration?duran" }
 		},
 		{
 			"id": 83386,
@@ -142,7 +142,7 @@ var items = {
 			"title": "New Dress | Defender mix",
 			"artists": "Mesh / Depeche Mode",
 			"video": "https://youtu.be/8JjinVvgMnQ",
-			"links": { "Mash Celebration": "../dmmashcelebration", "Download": "https://mega.nz/folder/QxVglBCY#t7g1p9OZGuhoAApYMyxNWg/folder/Fl8zAIrK" }
+			"links": { "Mash Celebration": "../dmmashcelebration?mesh", "Download": "https://mega.nz/folder/QxVglBCY#t7g1p9OZGuhoAApYMyxNWg/folder/Fl8zAIrK" }
 		},
 		{
 			"id": 84141,
@@ -168,7 +168,7 @@ var items = {
 			"title": "Wednesday's Dressed In Black",
 			"artists": "Danny Elfman / Depeche Mode",
 			"video": "https://youtu.be/1m3Xct6_BEM",
-			"links": { "Mash Celebration": "../dmmashcelebration" }
+			"links": { "Mash Celebration": "../dmmashcelebration?wednesday" }
 		},
 		{
 			"id": 61518,
@@ -181,7 +181,7 @@ var items = {
 			],
 			"title": "It Doesn't Matter Two | Gnossienne 1 mix",
 			"artists": "Erik Satie / Depeche Mode",
-			"links": { "Mash Celebration": "../dmmashcelebration" }
+			"links": { "Mash Celebration": "../dmmashcelebration?satie" }
 		},
 	],
 	"Part 2": [
@@ -200,7 +200,7 @@ var items = {
 			"links": { 
 				"Download": "https://mega.nz/folder/QxVglBCY#t7g1p9OZGuhoAApYMyxNWg/folder/Fl8zAIrK",
 				"Boot Of The Day": "https://www.facebook.com/bootoftheday/posts/pfbid09eHPwBQXbTGG9M5XMX5w5ASEfXYL1PBoAAexkbZcoAF5auvcPjNFY5wzwiMnGW9tl",
-				"Halo Robots": "../dmvolume1"
+				"Halo Robots": "../dmvolume1?halo"
 			}
 		},
 		{
@@ -227,7 +227,7 @@ var items = {
 			],
 			"title": "Little 15 | Space Opera mix",
 			"artists": "Didier Marouani / Depeche Mode",
-			"links": { "Amour & Violence mix": "../dmvolume1" }
+			"links": { "Amour & Violence mix": "../dmvolume1?little" }
 		},
 		{
 			"id": 18059,
@@ -345,7 +345,7 @@ var items = {
 			],
 			"title": "Song For Sometimes",
 			"artists": "Elton John / Depeche Mode",
-			"links": { "Mash Celebration": "../dmmashcelebration" }
+			"links": { "Mash Celebration": "../dmmashcelebration?elton" }
 		}
 	]
 };
