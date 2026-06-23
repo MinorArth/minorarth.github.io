@@ -31,7 +31,7 @@ var currentItemIndex = preloadItemIndex = null;
 var allPlaylists = {};
 var producers = [];
 var items = [];
-
+var startItem = null;
 //window.onresize = () => albumTitle.innerText = innerWidth + " px / ";
 //onresize();
 
@@ -39,6 +39,8 @@ const isUrl = s => s && s.includes && s.includes("://");
 const useRemoteAudioFiles = () =>  isUrl(AUDIO_PATH);
 const useLocalAudioFiles  = () => !isUrl(AUDIO_PATH);
 const isObject = o => o && typeof(o) == 'object' && !Array.isArray(o);
+const getQueryString = () => substringBefore( substringAfter(document.location.href, "?"), "#");
+const getHash = () => substringAfter(document.location.hash, "#");
 
 function loadPlaylist()
 {
@@ -129,6 +131,14 @@ function loadPlaylist()
 	if(playerImage) {
 		setImage(playerImage, PLAYER_IMAGE);
 		playerImage.onclick = togglePlay;
+	}
+
+	var startItem = decodeURI(getQueryString() || getHash()).trim().toLowerCase();
+	if(startItem) {
+		var item = items?.find(i => i.n == startItem || i.title?.toLowerCase().includes(startItem) || i.artists?.toLowerCase().includes(startItem));
+		if(item)
+			playFile(item, true);
+			refreshList();
 	}
 }
 
@@ -459,7 +469,7 @@ function togglePlay()
 	else audioPlayer.pause();
 }
 
-function playFile(item)
+function playFile(item, manual)
 {
 	if(typeof item == "number") {
 		currentItemIndex = item;
@@ -484,7 +494,8 @@ function playFile(item)
 	}
 
 	audioPlayer.controls = true;
-	audioPlayer.play();
+	if(!manual)
+		audioPlayer.play();
 
 	//highlight current playlist item
 	if(currentItemElement)
