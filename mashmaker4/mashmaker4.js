@@ -14,6 +14,46 @@ const PLAYER_IMAGE = "./Mashmaker4.jpg";
 
 var items = [
 	{
+		"id": 93053,
+		"file": "1424944979_387566719_1666414772.mp3",
+		"producer": "Minor Arth",
+		"artists": "The Chemical Brothers / Tame Impala / Underworld",
+		"title": "Star Of Summer",
+		"image": "2110265191_1020054077_252067064.jpg",
+		"sources": [
+			"The Chemical Brothers - Star Guitar | 2002",
+			"Underworld - Born Slippy (Nuxx) | 1996",
+			"Tame Impala - End Of Summer | 2025"
+		],
+		"links": { "Summer Booty 2026": "https://audioboots.org/Albums/SB2026", "VIDEO": "https://youtu.be/Rqa0Lc2dFys" }
+	},
+	{
+		"id": 91071,
+		"file": "753517544_590547353_1694923839.mp3",
+		"producer": "Minor Arth",
+		"artists": "Pendulum / Zanias",
+		"title": "9000 Serpent Miles",
+		"image": "62424416_1457729924_465811239.jpg",
+		"sources": [
+			"Pendulum - 9,000 Miles | 2008",
+			"Zanias - Serpentsmile | Cataclysm | 2025"
+		],
+		"links": { "Phil B mashup show | Select Radio": "https://www.mixcloud.com/philb-mashup/phil-b-mashups-84-destination-unknown-27th-may-2026-on-select-radio" }
+	},
+	{
+		"id": 91826,
+		"file": "566284598_1111181243_1804857679.mp3",
+		"producer": "Minor Arth",
+		"artists": "Tycho / Joy Division / PJ Harvey",
+		"title": "Love Will Tear Us Apart | Daydream mix",
+		"image": "827500937_1023543336_538303676.jpg",
+		"sources": [
+			"Tycho - Daydream | 2011",
+			"Joy Division - Love Will Tear Us Apart | 1980",
+			"PJ Harvey & Tim Phillips - Love Will Tear Us Apart | 2024 cover"
+		],
+	},
+	{
 		"id": 88976,
 		"file": "279720474_120463665_732952616.mp3",
 		"producer": "Minor Arth",
@@ -63,38 +103,11 @@ var items = [
 		"artists": "Babylon Zoo / David Bowie",
 		"title": "Spaceman Oddity",
 		"image": "571778401_1371646042_270440403.jpg",
-		"video": "https://youtu.be/CLNil-TOSYU",
 		"sources": [
 			"Babylon Zoo - Spaceman | 1996",
 			"David Bowie - Space Oddity | 1969"
 		],
-		"links": { "Maggiore on Bowie": "https://maggioreonbowie.com/xxx-9" }
-	},
-	{
-		"id": 91071,
-		"file": "753517544_590547353_1694923839.mp3",
-		"producer": "Minor Arth",
-		"artists": "Pendulum / Zanias",
-		"title": "9000 Serpent Miles",
-		"image": "62424416_1457729924_465811239.jpg",
-		"sources": [
-			"Pendulum - 9,000 Miles | 2008",
-			"Zanias - Serpentsmile | Cataclysm | 2025"
-		],
-		"links": { "Phil B mashup show | Select Radio": "https://www.mixcloud.com/philb-mashup/phil-b-mashups-84-destination-unknown-27th-may-2026-on-select-radio" }
-	},
-	{
-		"id": 91826,
-		"file": "566284598_1111181243_1804857679.mp3",
-		"producer": "Minor Arth",
-		"artists": "Tycho / Joy Division / PJ Harvey",
-		"title": "Love Will Tear Us Apart | Daydream mix",
-		"image": "827500937_1023543336_538303676.jpg",
-		"sources": [
-			"Tycho - Daydream | 2011",
-			"Joy Division - Love Will Tear Us Apart | 1980",
-			"PJ Harvey & Tim Phillips - Love Will Tear Us Apart | 2024 cover"
-		],
+		"links": { "Maggiore on Bowie": "https://maggioreonbowie.com/xxx-9", "VIDEO": "https://youtu.be/CLNil-TOSYU" }
 	},
 	{
 		"id": 71368,
@@ -115,12 +128,11 @@ var items = [
 		"artists": "Moby / Public Enemy",
 		"title": "Fight The Power's Extreme Ways",
 		"image": "871074345_2012512590_963641934.jpg",
-		"video": "https://youtube.com/shorts/o_bteVRXh0I",
 		"sources": [
 			"Moby - Extreme Ways | 2002 + Jason Bourne version | 2016",
 			"Public Enemy - Fight The Power | Do The Right Thing | 1989"
 		],
-		"links": { "Mashing Too Much TV": "https://audioboots.org/Albums/TooMuchTV" }
+		"links": { "Mashing Too Much TV": "https://audioboots.org/Albums/TooMuchTV", "VIDEO": "https://youtube.com/shorts/o_bteVRXh0I" }
 	},
 	{
 		"id": 80741,
@@ -170,19 +182,7 @@ var items = [
 		],
 		"image": "778163889_84060144_2100268417.jpg"
 	},
-	{
-		"id": 65105,
-		"file": "759778726_450361870_966032937.mp3",
-		"producer": "Minor Arth",
-		"artists": "Hooverphonic / The Cure",
-		"title": "Last Day In Eden",
-		"image": "1325731059_1479326090_526601115.jpg",
-		"sources": [
-			"Hooverphonic - Eden | 1998",
-			"The Cure - The Last Day of Summer | 2000"
-		],
-		"video": "https://youtu.be/x-0afDBrLlc"
-	},
+/*
 	{
 		"id": 89819,
 		"file": "841212913_224039459_1599428853.mp3",
@@ -195,6 +195,7 @@ var items = [
 		],
 		"image": "1532747727_46729518_665663610.jpg"
 	},
+*/
 	{
 		"id": 52622,
 		"file": "1877458278_762718265_137194361.mp3",
@@ -207,7 +208,7 @@ var items = [
 			"Gorillaz - Crystalised | 2010 cover"
 		],
 		"image": "1833865417_760292616_45605140.jpg",
-		"video": "https://youtu.be/z20DDnTv07o"
+		"links": {"Boot Of The Day": "https://www.facebook.com/bootoftheday/posts/pfbid02ah7ytDhA1FgbufX5qYxMUPuGLLef4vK1xy1CDP8j8QKaLeAv7eQQsWBiHU3b1wVCl", "VIDEO": "https://youtu.be/z20DDnTv07o",}
 	},
 	{
 		"id": 71590,
@@ -223,6 +224,19 @@ var items = [
 		"image": "197895655_34485075_632884523.jpg"
 	},
 	{
+		"id": 65105,
+		"file": "759778726_450361870_966032937.mp3",
+		"producer": "Minor Arth",
+		"artists": "Hooverphonic / The Cure",
+		"title": "Last Day In Eden",
+		"image": "1325731059_1479326090_526601115.jpg",
+		"sources": [
+			"Hooverphonic - Eden | 1998",
+			"The Cure - The Last Day of Summer | 2000"
+		],
+		"video": "https://youtu.be/x-0afDBrLlc"
+	},
+	{
 		"id": 69552,
 		"file": "280942682_1720566613_1282992463.mp3",
 		"producer": "Minor Arth",
@@ -233,7 +247,21 @@ var items = [
 			"The Beatles - Things We Said Today | 1963",
 			"Depeche Mode - The Things You Said | 1987"
 		],
-		"links": { "The Things You Said Today | inverse": "../dmvolume1", "VIDEO": "https://youtu.be/Nq3D8LNCNm0" },
+		"links": { "The Things You Said Today | inverse": "../dmvolume1/?beatles", "VIDEO": "https://youtu.be/Nq3D8LNCNm0" },
+	},
+
+	{
+//		"id": 65105,
+//		"file": "759778726_450361870_966032937.mp3",
+		"producer": "Minor Arth",
+		"artists": "Chris Rea / Sade",
+		"title": "Hang On To The Beach Operator",
+//		"image": "1325731059_1479326090_526601115.jpg",
+		"sources": [
+			"Chris Rea - On the Beach | 1984",
+			"Sade - Smooth Operator | 1984",
+			"Sade - Hang On To Your Love | 1984"
+		]
 	},
 	{
 		"id": 84340,
@@ -246,7 +274,7 @@ var items = [
 			"Kyle Dixon / Michael Stein - Kids | Stranger Things | 2016",
 			"MGMT - Kids | 2007"
 		],
-		"links": { "My Favourite Stranger Things": "https://youtu.be/erbi-qdekBY" }
+		"links": { "My Favourite Stranger Things": "../dmmashcelebration?stranger", "VIDEO": "https://youtu.be/erbi-qdekBY" }
 	}
 ];
 
