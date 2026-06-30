@@ -14,18 +14,15 @@ const PLAYER_IMAGE = "./Mashmaker4.jpg";
 
 var items = [
 	{
-		"id": 93053,
-		"file": "1424944979_387566719_1666414772.mp3",
+		"file": "./Ennio Morricone - Metallica - The Unforgiven Ecstasy Of Gold.mp3",
 		"producer": "Minor Arth",
-		"artists": "The Chemical Brothers / Tame Impala / Underworld",
-		"title": "Star Of Summer",
-		"image": "2110265191_1020054077_252067064.jpg",
+		"artists": "Ennio Morricone / Metallica",
+		"title": "The Unforgiven Ecstasy Of Gold",
+		"image": "artwork/Ennio Morricone - Metallica - The Unforgiven Ecstasy Of Gold.jpg",
 		"sources": [
-			"The Chemical Brothers - Star Guitar | 2002",
-			"Underworld - Born Slippy (Nuxx) | 1996",
-			"Tame Impala - End Of Summer | 2025"
-		],
-		"links": { "Summer Booty 2026": "https://audioboots.org/Albums/SB2026", "VIDEO": "https://youtu.be/Rqa0Lc2dFys" }
+			"Ennio Morricone - The Ecstasy Of Gold | The Good, The Bad And The Ugly | 1966",
+			"Metallica - The Unforgiven | 1991",
+		]
 	},
 	{
 		"id": 91071,
@@ -39,6 +36,20 @@ var items = [
 			"Zanias - Serpentsmile | Cataclysm | 2025"
 		],
 		"links": { "Phil B mashup show | Select Radio": "https://www.mixcloud.com/philb-mashup/phil-b-mashups-84-destination-unknown-27th-may-2026-on-select-radio" }
+	},
+	{
+		"id": 93053,
+		"file": "1424944979_387566719_1666414772.mp3",
+		"producer": "Minor Arth",
+		"artists": "The Chemical Brothers / Tame Impala / Underworld",
+		"title": "Star Of Summer",
+		"image": "2110265191_1020054077_252067064.jpg",
+		"sources": [
+			"The Chemical Brothers - Star Guitar | 2002",
+			"Underworld - Born Slippy (Nuxx) | 1996",
+			"Tame Impala - End Of Summer | 2025"
+		],
+		"links": { "Summer Booty 2026": "https://audioboots.org/Albums/SB2026", "VIDEO": "https://youtu.be/Rqa0Lc2dFys" }
 	},
 	{
 		"id": 91826,
@@ -251,17 +262,17 @@ var items = [
 	},
 
 	{
-//		"id": 65105,
-//		"file": "759778726_450361870_966032937.mp3",
+		"file": "./Chris Rea - Sade - Hang On To The Beach Operator.mp3",
 		"producer": "Minor Arth",
 		"artists": "Chris Rea / Sade",
 		"title": "Hang On To The Beach Operator",
-//		"image": "1325731059_1479326090_526601115.jpg",
+		"image": "artwork/Chris Rea - Sade - Hang On To The Beach Operator.jpg",
 		"sources": [
 			"Chris Rea - On the Beach | 1984",
 			"Sade - Smooth Operator | 1984",
 			"Sade - Hang On To Your Love | 1984"
-		]
+		],
+		"links": { "Summer Booty 2026": "https://audioboots.org/Albums/SB2026" }
 	},
 	{
 		"id": 84340,
