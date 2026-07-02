@@ -17,7 +17,7 @@ var items = [
 		"id": 93053,
 		"file": "1424944979_387566719_1666414772.mp3",
 		"producer": "Minor Arth",
-		"artists": "The Chemical Brothers / Tame Impala / Underworld",
+		"artists": "Chemical Brothers / Underworld / Tame Impala",
 		"title": "Star Of Summer",
 		"image": "2110265191_1020054077_252067064.jpg",
 		"sources": [
@@ -169,7 +169,8 @@ var items = [
 			"Womack & Womack - Teardrops | 1988",
 			"Gorillaz ft. DRAM - Andromeda | 2017"
 		],
-		"image": "1564648277_695565599_1631581346.jpg"
+		"image": "1564648277_695565599_1631581346.jpg",
+		"links": { "Gorillaz mashups": "../demondetournement" }
 	},
 	{
 		"file": "./Chris Rea - Sade - Hang On To The Beach Operator.mp3",
