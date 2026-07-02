@@ -16,6 +16,7 @@ const PLAYER_IMAGE = "./artwork/MashCelebration.jpg";
 const links = {
 	"<": "..",
 	"DM Mashups vol. 1": "../dmvolume1",
+	"vol. 2": "../dmvolume2",
 	"Mega": "https://mega.nz/folder/QxVglBCY#t7g1p9OZGuhoAApYMyxNWg/folder/IpNljJhK",
 	"remix.audio": "https://remix.audio/playlist/3597",
 	"DM Mashup Videos": "https://www.youtube.com/watch?v=FD4xU1Oj8pE&list=PLUq5Z5VhjxM1p4sMIlk6zFlnBRW5hJt1r",
@@ -35,7 +36,8 @@ var items = {
 			],
 			"title": "Surrender Celebration",
 			"artists": "Curses / Depeche Mode",
-			"video": "https://youtu.be/AHcUZkA1zsE"
+			"video": "https://youtu.be/AHcUZkA1zsE",
+			"links": { "DM volume 1": "../dmvolume1?curses" }
 		},
 		{
 			"id": 34466,
@@ -48,7 +50,8 @@ var items = {
 			],
 			"title": "Love On The Windscreen",
 			"artists": "Chromatics / Depeche Mode",
-			"video": "https://youtu.be/msqqXcLB5jI"
+			"video": "https://youtu.be/msqqXcLB5jI",
+			"links": { "DM volume 1": "../dmvolume1?chromatics" }
 		},
 		{
 			"id": 65880,
@@ -60,7 +63,8 @@ var items = {
 				"Berlin - Take My Breath Away | 1986",
 				"Depeche Mode - A Question Of Lust | 1986"
 			],
-//			"image": "https://remix.audio/uploads/media/450943454_968738645_1625833535.jpg"
+			"links": { "DM volume 1": "../dmvolume1?berlin" }
+			//			"image": "https://remix.audio/uploads/media/450943454_968738645_1625833535.jpg"
 		},
 		{
 			"id": 87367,
@@ -71,7 +75,8 @@ var items = {
 				"Depeche Mode - Sometimes | 1986",
 			],
 			"songTitle": "Song For Sometimes",
-			"artists": "Elton John / Depeche Mode"
+			"artists": "Elton John / Depeche Mode",
+			"links": { "DM volume 2": "../dmvolume2?elton" }
 		},
 		{
 			"id": 61518,
@@ -82,7 +87,8 @@ var items = {
 				"Depeche Mode - It Doesn't Matter Two | 1986"
 			],
 			"songTitle": "It Doesn't Matter Two | Gnossienne 1 mix",
-			"artists": "Erik Satie / Depeche Mode"
+			"artists": "Erik Satie / Depeche Mode",
+			"links": { "DM volume 2": "../dmvolume2?satie" }
 		},
 		{
 			"id": 21884,
@@ -95,7 +101,7 @@ var items = {
 			"songTitle": "A Question Of Time And Space, Boy",
 			"artists": "David Bowie / Depeche Mode",
 			"video": "https://youtu.be/Gz4_Tn0pmf0",
-			"links": { "Bowie mashups": "../bowie" }
+			"links": { "DM volume 2": "../dmvolume2?elton", "Bowie mashups": "../bowie" }
 		},
 		{
 			"id": 34091,
@@ -109,7 +115,8 @@ var items = {
 			],
 			"songTitle": "Running Stripped",
 			"artists": "Depeche Mode / Kate Bush",
-			"video": "https://youtu.be/RDwHZ9A_aww"
+			"video": "https://youtu.be/RDwHZ9A_aww",
+			"links": { "DM volume 2": "../dmvolume2?kate" }
 		},
 		{
 			"id": 85225,
@@ -121,7 +128,8 @@ var items = {
 				"Depeche Mode - Here Is The House | 1986"
 			],
 			"songTitle": "Here Is A Prayer To Save The House",
-			"artists": "Duran Duran / Depeche Mode"
+			"artists": "Duran Duran / Depeche Mode",
+			"links": { "DM volume 2": "../dmvolume2?duran" }
 		},
 		{
 			"id": 87934,
@@ -145,7 +153,8 @@ var items = {
 			],
 			"songTitle": "Wednesday's Dressed In Black",
 			"artists": "Danny Elfman / Depeche Mode",
-			"video": "https://youtu.be/1m3Xct6_BEM"
+			"video": "https://youtu.be/1m3Xct6_BEM",
+			"links": { "DM volume 2": "../dmvolume2?wednesday" }
 		},
 		{
 			"id": 83386,
@@ -156,9 +165,9 @@ var items = {
 				"Depeche Mode - New Dress | 1986"
 			],
 			"songTitle": "New Dress | Defender mix",
-			"artists": "Mesh / Depeche Mode",
+			"artists": "mesh / Depeche Mode",
 			"video": "https://youtu.be/8JjinVvgMnQ",
-			"links": { "Download": "https://mega.nz/folder/QxVglBCY#t7g1p9OZGuhoAApYMyxNWg/folder/IpNljJhK" }
+			"links": { "DM volume 2": "../dmvolume2?mesh", "Download": "https://mega.nz/folder/QxVglBCY#t7g1p9OZGuhoAApYMyxNWg/folder/Fl8zAIrK" }
 		}
 	],
 	"Bonus": [
@@ -206,7 +215,8 @@ var items = {
 				"Sister Of Night | 1997",
 				"The Sun and the Rainfall | 1982"
 			],
-			"video": "https://youtu.be/erbi-qdekBY"
+			"video": "https://youtu.be/erbi-qdekBY",
+			"links": { "Stranger Kids": "https://remix.audio/track/84340" }
 		}
 	]
 };
