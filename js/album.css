@@ -51,7 +51,8 @@ div.toolbar audio {	width: 600px; height: 24px; }
 .logo-container, a.link-template, a.play-link-template { margin-left: 1em; margin-right: 1em; }
 
 div.repeater {
-	max-width: 1400px;
+	max-width: 1380px;
+	padding: 10px;
 }
 
 div.toolbar > * {
