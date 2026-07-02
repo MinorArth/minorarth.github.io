@@ -101,7 +101,7 @@ var items = {
 			"songTitle": "A Question Of Time And Space, Boy",
 			"artists": "David Bowie / Depeche Mode",
 			"video": "https://youtu.be/Gz4_Tn0pmf0",
-			"links": { "DM volume 2": "../dmvolume2?elton", "Bowie mashups": "../bowie" }
+			"links": { "DM volume 2": "../dmvolume2?bowie", "Bowie mashups": "../bowie" }
 		},
 		{
 			"id": 34091,
