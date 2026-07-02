@@ -115,7 +115,7 @@ var items = {
 			],
 			"title": "The World Is Not Enough When I Lose Myself",
 			"artists": "Garbage / Depeche Mode",
-			"links": { "Mashing Too Much TV": "../m2mtv" }
+			"links": { "Mashing Too Much TV": "../m2mtv?world" }
 		},
 		{
 			"id": 85225,
