@@ -69,7 +69,7 @@ var items = [
 		title: "Collaborative Albums" 
 	},
 	{
-		url: ".sb2026/",
+		url: "./sb2026",
 		title: "Summer Booty 2026",
 		description: "The Eternal Summer Mashup Compilation | 20th edition",
 		producer: "AudioBoots",
