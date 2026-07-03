@@ -26,7 +26,7 @@ var items = [
 			"Underworld - Born Slippy (Nuxx) | 1996",
 			"Tame Impala - End Of Summer | 2025"
 		],
-		"links": { "Summer Booty 2026": "https://audioboots.org/Albums/SB2026", "VIDEO": "https://youtu.be/Rqa0Lc2dFys" }
+		"links": { "Summer Booty 2026": "../sb2026?tame", "VIDEO": "https://youtu.be/Rqa0Lc2dFys" }
 	},
 	{
 		"id": 91071,
