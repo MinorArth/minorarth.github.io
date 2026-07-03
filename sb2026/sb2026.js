@@ -64,9 +64,9 @@ var items = [
 	{
 		"id": 93094,
 		"file": "117952051_415785071_1458109778.mp3",
-		"producer": "chocomang",
+		"producer": "Chocomang",
 		"artists": "The Posies / The Stranglers",
-		"title": "Chocomang - Midnight Summer Dream All Day",
+		"title": "Midnight Summer Dream All Day",
 		"image": "1260214598_1367803886_1495765977.png"
 	},
 	{
@@ -123,7 +123,7 @@ var items = [
 		"id": 93051,
 		"file": "1472436626_1765444874_555672232.mp3",
 		"artists": "OMD / Loreena McKennitt",
-		"producer": "konrad useo",
+		"producer": "DJ Useo",
 		"title": "The Mummer's Enola Gay Dance",
 		"image": "1360846199_1734374128_1447193202.jpg"
 	},
