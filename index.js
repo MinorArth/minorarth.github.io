@@ -24,6 +24,17 @@ var items = [
 		type: "category",
 		title: "Latest" 
 	},
+/*
+	{
+		url: "./mashmaker4",
+		title: "The Mashmaker, volume 4",
+		description: "Best of 2024 - 2026",
+		image: "./mashmaker4/Mashmaker4.jpg",
+		producer: "Minor Arth",
+		release: "July 2026",
+		nbTracks: 20
+	},
+*/
 	{
 		url: "./dmmashcelebration",
 		title: "Mash Celebration",
@@ -58,7 +69,7 @@ var items = [
 		title: "Collaborative Albums" 
 	},
 	{
-		url: "https://audioboots.org/Albums/SB2026/",
+		url: ".sb2026/",
 		title: "Summer Booty 2026",
 		description: "The Eternal Summer Mashup Compilation | 20th edition",
 		producer: "AudioBoots",
