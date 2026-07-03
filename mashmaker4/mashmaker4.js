@@ -3,7 +3,7 @@ const LOGO_TITLE = "Minor Arth";
 const LOGO_LINK = "..";
 const ALBUM_TITLE = getMeta("og_title") || document.title;
 const ALBUM_DESCRIPTION = getMeta("og_description");
-const ALBUM_LINK = "https://www.mediafire.com/file/svuy6z9tx3ucomf/MinorArth-DepecheModeMashups-volume1.zip/file";
+const ALBUM_LINK = "https://www.mediafire.com/file/bfz9rl1a905qqqh/MinorArth-TheMashmaker-volume4.zip/file";
 const ALBUM_ARTIST = "Minor Arth";
 const TRACK_LINK_PATH = "https://remix.audio/track/";
 const AUDIO_PATH = "https://remix.audio/uploads/tracks/";
@@ -16,6 +16,7 @@ var items = [
 	{
 		"id": 93053,
 		"file": "1424944979_387566719_1666414772.mp3",
+		"localFile": "Chemical Brothers - Underworld - Tame Impala - Star Of Summer",
 		"producer": "Minor Arth",
 		"artists": "Chemical Brothers / Underworld / Tame Impala",
 		"title": "Star Of Summer",
@@ -30,6 +31,7 @@ var items = [
 	{
 		"id": 91071,
 		"file": "753517544_590547353_1694923839.mp3",
+		"localFile": "Pendulum - Zanias - 9000 Serpent Miles",
 		"producer": "Minor Arth",
 		"artists": "Pendulum / Zanias",
 		"title": "9000 Serpent Miles",
@@ -43,6 +45,7 @@ var items = [
 	{
 		"id": 91826,
 		"file": "566284598_1111181243_1804857679.mp3",
+		"localFile": "Tycho - Joy Division - PJ Harvey - Love Will Tear Us Apart -- Daydream mix",
 		"producer": "Minor Arth",
 		"artists": "Tycho / Joy Division / PJ Harvey",
 		"title": "Love Will Tear Us Apart | Daydream mix",
@@ -56,6 +59,7 @@ var items = [
 	{
 		"id": 84910,
 		"file": "1322039203_1789861087_1519769869.mp3",
+		"localFile": "Babylon Zoo - David Bowie - Spaceman Oddity",
 		"producer": "Minor Arth",
 		"artists": "Babylon Zoo / David Bowie",
 		"title": "Spaceman Oddity",
@@ -69,6 +73,7 @@ var items = [
 	{
 		"id": 77502,
 		"file": "1168746275_867123912_1050153974.mp3",
+		"localFile": "Garbage - Lady Gaga - No Future In Bad Romance",
 		"producer": "Minor Arth",
 		"artists": "Garbage / Lady Gaga",
 		"title": "No Future In Bad Romance",
@@ -82,6 +87,7 @@ var items = [
 	{
 		"id": 88976,
 		"file": "279720474_120463665_732952616.mp3",
+		"localFile": "Jamiroquai - Fontaines DC - Starburster Underground",
 		"producer": "Minor Arth",
 		"artists": "Jamiroquai / Fontaines DC",
 		"title": "Starburster Underground",
@@ -95,6 +101,7 @@ var items = [
 	{
 		"id": 71368,
 		"file": "442705704_690638085_2009540830.mp3",
+		"localFile": "Tears For Fears - Imagine Dragons - I Don't Know Why Everybody Wants To Rule The World",
 		"producer": "Minor Arth",
 		"artists": "Tears For Fears / Imagine Dragons",
 		"title": "I Don't Know Why Everybody Wants To Rule The World",
@@ -107,6 +114,7 @@ var items = [
 	{
 		"id": 59627,
 		"file": "591083440_2134279036_181534057.mp3",
+		"localFile": "The Clash - The Rolling Stones - Blondie - The Magnificent Miss Rapture",
 		"producer": "Minor Arth",
 		"artists": "The Clash / The Rolling Stones / Blondie",
 		"title": "The Magnificent Miss Rapture",
@@ -124,6 +132,7 @@ var items = [
 	{
 		"id": 88711,
 		"file": "1757824873_2037282249_757621320.mp3",
+		"localFile": "Moby - Public Enemy - Fight The Power's Extreme Ways",
 		"producer": "Minor Arth",
 		"artists": "Moby / Public Enemy",
 		"title": "Fight The Power's Extreme Ways",
@@ -137,6 +146,7 @@ var items = [
 	{
 		"id": 78338,
 		"file": "1478390180_1290869314_34766465.mp3",
+		"localFile": "Kavinsky - Don Toliver - Doja Cat - Lose My Odd Look",
 		"producer": "Minor Arth",
 		"artists": "Kavinsky / Don Toliver / Doja Cat",
 		"title": "Lose My Odd Look | F1 mix",
@@ -150,6 +160,7 @@ var items = [
 	{
 		"id": 80741,
 		"file": "2079404799_2127249438_286057817.mp3",
+		"localFile": "Air - Massive Attack - Silver Woman's Safe From Harm",
 		"producer": "Minor Arth",
 		"artists": "Air / Massive Attack / Shara Nelson",
 		"title": "Silver Woman's Safe From Harm",
@@ -162,6 +173,7 @@ var items = [
 	{
 		"id": 57604,
 		"file": "382267701_1398478012_1048426216.mp3",
+		"localFile": "Womack & Womack - Gorillaz - Andromeda's Teardrops",
 		"producer": "Minor Arth",
 		"artists": "Womack & Womack / Gorillaz",
 		"title": "Andromeda's Teardrops",
@@ -173,11 +185,11 @@ var items = [
 		"links": { "Gorillaz mashups": "../demondetournement" }
 	},
 	{
-		"file": "./Chris Rea - Sade - Hang On To The Beach Operator.mp3",
+		"localFile": "./Chris Rea - Sade - Hang On To The Beach Operator",
 		"producer": "Minor Arth",
 		"artists": "Chris Rea / Sade",
 		"title": "Hang On To The Beach Operator",
-		"image": "artwork/Chris Rea - Sade - Hang On To The Beach Operator.jpg",
+//		"image": "artwork/Chris Rea - Sade - Hang On To The Beach Operator.jpg",
 		"sources": [
 			"Chris Rea - On the Beach | 1984",
 			"Sade - Smooth Operator | 1984",
@@ -188,6 +200,7 @@ var items = [
 	{
 		"id": 70738,
 		"file": "969627076_176902464_964996595.mp3",
+		"localFile": "AWOLNATION - Portishead - Glory Sail",
 		"producer": "Minor Arth",
 		"artists": "AWOLNATION / Portishead",
 		"title": "Glory Sail",
@@ -200,6 +213,7 @@ var items = [
 	{
 		"id": 65105,
 		"file": "759778726_450361870_966032937.mp3",
+		"localFile": "Hooverphonic - The Cure - Last Day In Eden",
 		"producer": "Minor Arth",
 		"artists": "Hooverphonic / The Cure",
 		"title": "Last Day In Eden",
@@ -211,11 +225,12 @@ var items = [
 		"video": "https://youtu.be/x-0afDBrLlc"
 	},
 	{
-		"file": "./Ennio Morricone - Metallica - The Unforgiven Ecstasy Of Gold.mp3",
+//	"file": "./Ennio Morricone - Metallica - The Unforgiven Ecstasy Of Gold.mp3",
+		"localFile": "Ennio Morricone - Metallica - The Unforgiven Ecstasy Of Gold",
 		"producer": "Minor Arth",
 		"artists": "Ennio Morricone / Metallica",
 		"title": "The Unforgiven Ecstasy Of Gold",
-		"image": "artwork/Ennio Morricone - Metallica - The Unforgiven Ecstasy Of Gold.jpg",
+//		"image": "artwork/Ennio Morricone - Metallica - The Unforgiven Ecstasy Of Gold.jpg",
 		"sources": [
 			"Ennio Morricone - The Ecstasy Of Gold | The Good, The Bad And The Ugly | 1966",
 			"Metallica - The Unforgiven | 1991",
@@ -224,6 +239,7 @@ var items = [
 	{
 		"id": 52622,
 		"file": "1877458278_762718265_137194361.mp3",
+		"localFile": "New Order - The XX - Crystalised -- Murderised mix",
 		"producer": "Minor Arth",
 		"artists": "New Order / The XX",
 		"title": "Crystalised | Murderised mix",
@@ -238,6 +254,7 @@ var items = [
 	{
 		"id": 71590,
 		"file": "2021658109_1051682180_1421797385.mp3",
+		"localFile": "Giorgio Moroder - Marianne Faithfull - Broken English -- Chase mix",
 		"producer": "Minor Arth",
 		"artists": "Giorgio Moroder / Marianne Faithfull",
 		"title": "Broken English | Chase mix",
@@ -251,6 +268,7 @@ var items = [
 	{
 		"id": 69552,
 		"file": "280942682_1720566613_1282992463.mp3",
+		"localFile": "Depeche Mode - The Beatles - The Things We Said Today",
 		"producer": "Minor Arth",
 		"artists": "Depeche Mode / The Beatles",
 		"title": "The Things We Said Today",
@@ -264,8 +282,9 @@ var items = [
 	{
 		"id": 84340,
 		"file": "313902245_1400201054_653802470.mp3",
+		"localFile": "Kyle Dixon - Michael Stein - MGMT - Stranger Kids",
 		"producer": "Minor Arth",
-		"artists": "Stranger Things / MGMT",
+		"artists": "Kyle Dixon / Michael Stein / MGMT",
 		"title": "Stranger Kids",
 		"image": "1137948349_1136657195_15624229.jpg",
 		"sources": [
