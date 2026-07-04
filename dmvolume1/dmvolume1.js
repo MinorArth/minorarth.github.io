@@ -79,7 +79,7 @@ var items = [
 			"The Cure - Let's Go To Bed | 1983",
 			"Depeche Mode - Master And Servant | 1984"
 		],
-		links: { "Nouvelle Vague / Cure acoustic version": "../acoustic-unplugged/" },
+		links: { "Nouvelle Vague / Cure acoustic version": "../acoustic-unplugged?master" },
 		"image": "438473383_727208601_1640531236.jpg"
 	},
 	{
@@ -92,8 +92,7 @@ var items = [
 		],
 		"title": "Photographic Boy",
 		"artists": "Taxi Girl / Depeche Mode",
-		"links": { "Inverse French version": "https://remix.audio/track/51429" },
-		"video": "https://youtu.be/WXMIItxcu3M"
+		"links": { "Inverse French version": "../mashmaker2?taxi", "VIDEO": "https://youtu.be/WXMIItxcu3M" },
 	},
 	{
 		"id": 18311,
