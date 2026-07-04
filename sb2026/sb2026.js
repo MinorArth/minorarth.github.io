@@ -93,7 +93,7 @@ var items = [
 		"producer": "Masdamind",
 		"artists": "Rihanna / The Vines",
 		"title": "Shut Up and Ride",
-		"image": "1632840788_394177413_530926221.jpg"
+//		"image": "1632840788_394177413_530926221.jpg"
 	},
 	{
 		"id": 93226,
