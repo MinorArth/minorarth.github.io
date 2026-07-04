@@ -59,7 +59,7 @@ var items = [
 		"producer": "Masdamind",
 		"artists": "Keith Urban / The Rolling Stones",
 		"title": "Angry Like You",
-		"image": "139747703_1605968937_54321849.jpg"
+//		"image": "139747703_1605968937_54321849.jpg"
 	},
 	{
 		"id": 93094,
@@ -83,7 +83,7 @@ var items = [
 		"producer": "DAW-GUN",
 		"artists": "PinkPantheress / Right Said Fred",
 		"title": "I'm Too Sexy for my Stateside",
-		"image": "2026225269_692313484_85182114.jpg"
+//		"image": "2026225269_692313484_85182114.jpg"
 	},
 
 // Disc 2
@@ -117,7 +117,7 @@ var items = [
 		"producer": "Masdamind",
 		"artists": "Michael Jackson / Ne-Yo / Estelle / The Power Station / Dua Lipa / Sombr",
 		"title": "6 to 12",
-		"image": "1434866036_1748169063_1510375837.jpg"
+//		"image": "1434866036_1748169063_1510375837.jpg"
 	},
 	{
 		"id": 93051,
@@ -125,7 +125,7 @@ var items = [
 		"artists": "OMD / Loreena McKennitt",
 		"producer": "DJ Useo",
 		"title": "The Mummer's Enola Gay Dance",
-		"image": "1360846199_1734374128_1447193202.jpg"
+//		"image": "1360846199_1734374128_1447193202.jpg"
 	},
 	{
 		"id": 92809,
@@ -149,7 +149,7 @@ var items = [
 		"producer": "DAW-GUN",
 		"artists": "Temper City / Red Hot Chili Peppers",
 		"title": "Self-Aware of My Scar Tissue",
-		"image": "1253490696_1387737020_1897745733.jpg"
+//		"image": "1253490696_1387737020_1897745733.jpg"
 	},
 
 // Disc 3
@@ -175,7 +175,7 @@ var items = [
 		"producer": "oki",
 		"artists": "Zara Larsson / Bicep / Wings",
 		"title": "Midnight Glue",
-		"image": "1622824438_1365072089_1159825783.jpg"
+//		"image": "1622824438_1365072089_1159825783.jpg"
 	},
 	{
 		"id": 93358,
@@ -199,7 +199,7 @@ var items = [
 		"producer": "DAW-GUN",
 		"artists": "Olivia Dean / Bad Bunny",
 		"title": "So Easy to DTMF",
-		"image": "853737360_1293386864_62405077.jpg"
+//		"image": "853737360_1293386864_62405077.jpg"
 	},
 	{
 		"id": 92975,
@@ -211,4 +211,5 @@ var items = [
 	}
 ];
 
+items.forEach(i => i.image = i.image || PLAYER_IMAGE);
 loadPlaylist();
