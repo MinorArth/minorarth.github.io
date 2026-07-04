@@ -42,7 +42,7 @@ var items = [
 		"file": "1392001723_1624618106_521783268.mp3",
 		"producer": "DoM",
 		"artists": "Katy Perry / Depeche Mode",
-		"title": "Just can't get hot n' cold",
+		"title": "Just Can't Get Hot N' Cold",
 		"image": "2115608910_1343042864_1529840393.png"
 	},
 	{
