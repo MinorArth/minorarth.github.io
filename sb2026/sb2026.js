@@ -70,10 +70,18 @@ var items = [
 		"image": "1260214598_1367803886_1495765977.png"
 	},
 	{
+		"id": 93567,
+		"file": "1627342630_56013236_1777878528.mp3",
+		"producer": "DoM",
+		"artists": "Michael Jackson / Boney M",
+		"title": "Gotta Beat It",
+		"image": "673172163_1959203912_475679112.png"
+	},
+	{
 		"id": 93542,
 		"file": "2076919875_584903020_1611430672.mp3",
 		"producer": "Minor Arth",
-		"artists": "Chris Rea / Sade",
+		"artists": "Sade / Chris Rea",
 		"title": "Hang On To The Beach Operator",
 		"image": "2136550805_1013464274_1256933779.jpg"
 	},
