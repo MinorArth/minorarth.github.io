@@ -24,7 +24,6 @@ var items = [
 		type: "category",
 		title: "Latest" 
 	},
-/*
 	{
 		url: "./mashmaker4",
 		title: "The Mashmaker, volume 4",
@@ -34,7 +33,6 @@ var items = [
 		release: "July 2026",
 		nbTracks: 20
 	},
-*/
 	{
 		url: "./dmmashcelebration",
 		title: "Mash Celebration",
