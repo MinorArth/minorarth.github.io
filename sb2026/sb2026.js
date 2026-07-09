@@ -83,7 +83,8 @@ var items = [
 		"producer": "Minor Arth",
 		"artists": "Sade / Chris Rea",
 		"title": "Hang On To The Beach Operator",
-		"image": "2136550805_1013464274_1256933779.jpg"
+		"image": "2136550805_1013464274_1256933779.jpg",
+		"links": { "The Mashmaker, volume 4": "../mashmaker4?sade" }
 	},
 	{
 		"id": 92860,
@@ -199,7 +200,8 @@ var items = [
 		"producer": "Minor Arth",
 		"artists": "Tame Impala / Chemical Brothers / Underworld",
 		"title": "Star Of Summer",
-		"image": "2110265191_1020054077_252067064.jpg"
+		"image": "2110265191_1020054077_252067064.jpg",
+		"links": { "The Mashmaker, volume 4": "../mashmaker4?tame" }
 	},
 	{
 		"id": 92862,
