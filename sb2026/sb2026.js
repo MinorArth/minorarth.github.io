@@ -14,7 +14,7 @@ const PLAYER_IMAGE = "https://audioboots.org/Albums/SB2026/assets/album_cover.jp
 
 const links = {
 	"<": "..",
-	"remix.audio": "https://remix.audio/playlist/3624",
+	"remix.audio": "https://remix.audio/playlist/3739",
 	"AudioBoots": "https://audioboots.org/forum/",
 	"Facebook": "https://www.facebook.com/groups/audioboots"
 };
