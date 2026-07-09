@@ -191,13 +191,13 @@ var items = [
 		"producer": "Minor Arth",
 		"artists": "Chris Rea / Sade",
 		"title": "Hang On To The Beach Operator",
-//		"image": "artwork/Chris Rea - Sade - Hang On To The Beach Operator.jpg",
+		"image": "2136550805_1013464274_1256933779.jpg",
 		"sources": [
 			"Chris Rea - On the Beach | 1984",
 			"Sade - Smooth Operator | 1984",
 			"Sade - Hang On To Your Love | 1984"
 		],
-		"links": { "Summer Booty 2026": "https://audioboots.org/Albums/SB2026" }
+		"links": { "Summer Booty 2026": "../sb2026?sade" }
 	},
 	{
 		"id": 70738,
@@ -224,15 +224,16 @@ var items = [
 			"Hooverphonic - Eden | 1998",
 			"The Cure - The Last Day of Summer | 2000"
 		],
-		"video": "https://youtu.be/x-0afDBrLlc"
+		"links": {"Boot Of The Day": "https://www.facebook.com/bootoftheday/posts/pfbid02Rtu8gpj1cZN9vVYAxZtotBxbqw1ydL3ivKR4LPMwamWZKmqAJuLWH3C7jkQU6af4l", "VIDEO": "https://youtu.be/x-0afDBrLlc" }
 	},
 	{
-//	"file": "./Ennio Morricone - Metallica - The Unforgiven Ecstasy Of Gold.mp3",
+		"id": 93759,
+		"file": "814457622_1561457358_1806659527.mp3",
 		"localFile": "Ennio Morricone - Metallica - The Unforgiven Ecstasy Of Gold",
 		"producer": "Minor Arth",
 		"artists": "Ennio Morricone / Metallica",
 		"title": "The Unforgiven Ecstasy Of Gold",
-//		"image": "artwork/Ennio Morricone - Metallica - The Unforgiven Ecstasy Of Gold.jpg",
+		"image": "1511019123_888599412_710992387.jpg",
 		"sources": [
 			"Ennio Morricone - The Ecstasy Of Gold | The Good, The Bad And The Ugly | 1966",
 			"Metallica - The Unforgiven | 1991",
