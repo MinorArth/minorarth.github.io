@@ -201,7 +201,7 @@ var items = [
 		"artists": "Tame Impala / Chemical Brothers / Underworld",
 		"title": "Star Of Summer",
 		"image": "2110265191_1020054077_252067064.jpg",
-		"links": { "The Mashmaker, volume 4": "../mashmaker4?tame" }
+		"links": { "The Mashmaker, volume 4": "../mashmaker4?tame", "VIDEO": "https://youtu.be/Rqa0Lc2dFys" }
 	},
 	{
 		"id": 92862,
