@@ -70,6 +70,13 @@ var items = [
 		"image": "1260214598_1367803886_1495765977.png"
 	},
 	{
+		"id": 94393,
+		"file": "1447396135_1177946839_517572340.mp3",
+		"producer": "Minor Arth",
+		"title": "David Guetta / Depeche Mode - The Sea Of Sin Is Mine | Summer Booty 2026",
+		"image": "1750082681_939595694_1254164265.jpg"
+	},
+	{
 		"id": 93567,
 		"file": "1627342630_56013236_1777878528.mp3",
 		"producer": "DoM",
