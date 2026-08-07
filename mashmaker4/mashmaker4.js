@@ -182,8 +182,7 @@ var items = [
 			"Gorillaz ft. DRAM - Andromeda | 2017"
 		],
 		"image": "1564648277_695565599_1631581346.jpg",
-		"video": "https://youtu.be/_lpNqOghjQw",
-		"links": { "Gorillaz mashups": "../demondetournement" }
+		"links": { "Gorillaz mashups": "../demondetournement", "VIDEO": "https://youtu.be/_lpNqOghjQw" }
 	},
 	{
 		"id": 93542,
