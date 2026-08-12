@@ -52,16 +52,6 @@ var items = [
 		release: "January 2026",
 		nbTracks: 11
 	},
-	{
-		url: "./dmvolume2",
-		title: "Ultra Faith And Violation",
-		artists: "Depeche Mode",
-		description: "Depeche Mode mashups volume 2",
-		producer: "Minor Arth",
-		image: "./dmvolume2/artwork/dmmashups-volume2.jpg",
-		release: "November 2025",
-		nbTracks: 24
-	},
 	{ 
 		type: "category",
 		title: "Collaborative Albums" 
@@ -155,6 +145,16 @@ var items = [
 	{ 
 		type: "category",
 		title: "Depeche Mode"
+	},
+	{
+		url: "./dmvolume2",
+		title: "Ultra Faith And Violation",
+		artists: "Depeche Mode",
+		description: "Depeche Mode mashups volume 2",
+		producer: "Minor Arth",
+		image: "./dmvolume2/artwork/dmmashups-volume2.jpg",
+		release: "November 2025",
+		nbTracks: 24
 	},
 	{
 		url: "./dmvolume1",
