@@ -252,7 +252,7 @@ var items = [
 			"Gorillaz - Crystalised | 2010 cover"
 		],
 		"image": "1833865417_760292616_45605140.jpg",
-		"links": {"Boot Of The Day": "https://www.facebook.com/bootoftheday/posts/pfbid02ah7ytDhA1FgbufX5qYxMUPuGLLef4vK1xy1CDP8j8QKaLeAv7eQQsWBiHU3b1wVCl", "VIDEO": "https://youtu.be/z20DDnTv07o",}
+		"links": {"Boot Of The Day": "https://www.facebook.com/bootoftheday/posts/pfbid02Rtu8gpj1cZN9vVYAxZtotBxbqw1ydL3ivKR4LPMwamWZKmqAJuLWH3C7jkQU6af4l", "VIDEO": "https://youtu.be/x-0afDBrLlc", "Download": "https://mega.nz/folder/QxVglBCY#t7g1p9OZGuhoAApYMyxNWg/folder/p5Fk0BhZ" }
 	},
 	{
 		"id": 71590,
@@ -301,6 +301,7 @@ var items = [
 var links = {
 	"<": "..",
 	"remix.audio": "https://remix.audio/playlist/3085",
+	"mega.nz": "https://mega.nz/folder/QxVglBCY#t7g1p9OZGuhoAApYMyxNWg/folder/p5Fk0BhZ",
 	"YouTube": "https://www.youtube.com/@MinorArth",
 	"Facebook": "https://www.facebook.com/MinorArthMashups"
 };
