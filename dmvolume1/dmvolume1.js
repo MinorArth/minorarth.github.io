@@ -240,7 +240,7 @@ var items = [
 			"The Beatles - Things We Said Today | 1963",
 			"Depeche Mode - The Things You Said | 1987"
 		],
-		"links": { "The Things We Said Today": "https://remix.audio/track/69552" },
+		"links": { "The Things We Said Today": "../mashmaker4/?beatles", "VIDEO": "https://youtu.be/Nq3D8LNCNm0" },
 		"video": "https://youtu.be/Nq3D8LNCNm0",
 		"image": "893997111_672924943_400995054.jpg"
 	},
