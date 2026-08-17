@@ -22,7 +22,7 @@ var items = [
 		"sources": [ "Hotei - Battle Without Honor Or Humanity | 1999", "U2 - Bullet The Blue Sky | 1987" ],
 		"video": "https://youtu.be/DxEtu0rZvBY",
 		"links": {
-			"Boot Of The Day": "https://www.facebook.com/bootoftheday/posts/pfbid02Afb7z4eJBRuXmCgX4wgcLNJXj76J8TxfFwfbzsbpkKXifNnPPnbcN8dkuM41b6xml",
+			"Boot Of The Day": "https://www.facebook.com/bootoftheday/posts/pfbid0RkMzHRL81qDjtMt4SojRyWYSMdkmXhpWRQTTqVppP5iSMyZYLGHmFYDWXCHdRUA5l",
 			"Bootie Mashup Top 10": "https://bootiemashup.com/bootie-mashup-top-10-september-2024" },
 		"image": "1357411145_1780532464_205394299.jpg"
 	},
