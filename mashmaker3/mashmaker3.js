@@ -20,10 +20,8 @@ var items = [
 		"title": "Battle The Blue Sky | Kill Bill mix",
 		"artists": "U2 / Tomoyasu Hotei",
 		"sources": [ "Hotei - Battle Without Honor Or Humanity | 1999", "U2 - Bullet The Blue Sky | 1987" ],
-		"links": {
-			"Bootie Mashup Top 10, September 2024": "https://bootiemashup.com/bootie-mashup-top-10-september-2024",
-			"VIDEO": "https://youtu.be/DxEtu0rZvBY"
-		},
+		"video": "https://youtu.be/DxEtu0rZvBY",
+		"links": { "Bootie Mashup Top 10, September 2024": "https://bootiemashup.com/bootie-mashup-top-10-september-2024" },
 		"image": "1357411145_1780532464_205394299.jpg"
 	},
 	{
@@ -36,6 +34,7 @@ var items = [
 			"Fatal Error - Fatal Error | 1988",
 			"Green Velvet & Harvard Bass - Lazer Beams | 2012"
 		],
+		"links": { "Boot Of The Day": "https://www.facebook.com/bootoftheday/posts/pfbid02Afb7z4eJBRuXmCgX4wgcLNJXj76J8TxfFwfbzsbpkKXifNnPPnbcN8dkuM41b6xml" },
 		"image": "1908483259_1709103045_111135057.jpg"
 	},
 	{
@@ -45,7 +44,7 @@ var items = [
 		"title": "Emily, There's No Other Play",
 		"artists": "Blur / Pink Floyd",
 		"sources": [ "Blur - There's No Other Way | 1991", "Pink Floyd - See Emily Play | 1967" ],
-		links: { "B Side": "https://remix.audio/track/56318" },
+		"links": { "B Side": "https://remix.audio/track/56318", "Boot Of The Day": "https://www.facebook.com/bootoftheday/posts/pfbid0fM5Uu62UhZ1k4gMUgUqZmBVNsRvYaMNX4UF2PSErmss87XTEXrtCykuN4ZyQDiYFl" },
 		"image": "2083563027_726887975_1926822169.jpg"
 	},
 	{
@@ -73,6 +72,7 @@ var items = [
 		"title": "Heaven Under You",
 		"artists": "Foo Fighters / The Cure",
 		"sources": [ "Foo Fighters - Under You | 2023", "The Cure - Just Like Heaven | 1987" ],
+		"links": { "Boot Of The Day": "https://www.facebook.com/bootoftheday/posts/pfbid02LGn7cqfLtDimbjoxY5BzjMzCafNsWR8npypLG6BwhVyuyXV7UC1mQm1Jm76qzu1wl" },
 		"image": "1651095853_1791131150_194561761.jpg"
 	},
 	{
@@ -112,7 +112,6 @@ var items = [
 		"links": { "AudioBoots Summer Booty 2024": "https://audioboots.org/Albums/SB2024" },
 		"image": "678783498_1418337008_317980991.jpg"
 	},
-
 	{
 		"id": 56646,
 		"file": "1989424467_1849690767_25611228.mp3",
@@ -141,7 +140,6 @@ var items = [
 		"sources": [ "Zombie Nation / Tryouts | 2012", "Justice / Tame Impala - Neverender | 2024" ],
 		"image": "127650123_1678949698_1731942285.jpg"
 	},
-
 	{
 		"id": 60714,
 		"file": "1297555536_1564794754_1150085028.mp3",
@@ -152,6 +150,7 @@ var items = [
 			"Iggy Pop - The Passenger | 1977",
 			"Goldfrapp - Strict Machine | 2003 + Ooh La La | 2005"
 		],
+		"links": { "Boot Of The Day": "https://www.facebook.com/bootoftheday/posts/pfbid04VjWg21wt4jk6CxWrEh8sJjLgyfmVdZuzUGDM1EqTCQjjC8NZQnDU9Mg5LuYaUzcl" },
 		"image": "1679237025_542222153_1884917710.jpg"
 	},
 	{
