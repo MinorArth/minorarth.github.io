@@ -17,7 +17,8 @@ var items = [
 		"id": 97425,
 		"file": "2046391232_788476097_339679126.mp3",
 		"producer": "Elea Rigby",
-		"title": "You & Me - SKiBiLiBoP (Disclosure vs Zero 7 & Sophie Barker)",
+		"title": "You & Me - SKiBiLiBoP",
+		"artists": "Disclosure / Zero 7 / Sophie Barker",
 		"image": "1170299058_655743859_1059535128.jpg"
 	},
 	{
