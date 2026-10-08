@@ -25,6 +25,14 @@ var items = [
 		title: "Latest" 
 	},
 	{
+		url: "./skibilibop",
+		title: "Anniversaire SKiBiLiBoP",
+		producer: "Boot Of The Day",
+		image: "https://remix.audio/uploads/media/1170299058_655743859_1059535128.jpg",
+		release: "October 2026",
+		nbTracks: 6
+	},
+	{
 		url: "./mashmaker4",
 		title: "The Mashmaker, volume 4",
 		description: "Best of 2024 - 2026",
@@ -32,16 +40,6 @@ var items = [
 		producer: "Minor Arth",
 		release: "July 2026",
 		nbTracks: 20
-	},
-	{
-		url: "./dmmashcelebration",
-		title: "Mash Celebration",
-		artists: "Depeche Mode",
-		description: "Black Celebration | 40th anniversary mashup album",
-		producer: "Minor Arth",
-		image: "./dmmashcelebration/artwork/MashCelebration.jpg",
-		release: "March 2026",
-		nbTracks: 14
 	},
 	{
 		url: "./bowie",
@@ -145,6 +143,16 @@ var items = [
 	{ 
 		type: "category",
 		title: "Depeche Mode"
+	},
+	{
+		url: "./dmmashcelebration",
+		title: "Mash Celebration",
+		artists: "Depeche Mode",
+		description: "Black Celebration | 40th anniversary mashup album",
+		producer: "Minor Arth",
+		image: "./dmmashcelebration/artwork/MashCelebration.jpg",
+		release: "March 2026",
+		nbTracks: 14
 	},
 	{
 		url: "./dmvolume2",
