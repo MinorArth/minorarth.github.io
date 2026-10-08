@@ -24,7 +24,7 @@ var items = [
 		"id": 97330,
 		"file": "343575455_829944949_1064754177.mp3",
 		"producer": "SKiBiLiBoP",
-		"title": "SKiBiLiBoP - Raggamuffin Family",
+		"title": "Raggamuffin Family",
 		"artists": "Mary J Blige / L'Entourloop",
 		"image": "1320227999_1297153257_632898479.jpg",
 		"links": { "Boot Of The Day": "https://fb.watch/v/7Dzgp4KlN" }
