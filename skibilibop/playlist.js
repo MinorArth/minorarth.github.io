@@ -25,8 +25,8 @@ var items = [
 		"id": 97330,
 		"file": "343575455_829944949_1064754177.mp3",
 		"producer": "SKiBiLiBoP",
-		"title": "Raggamuffin Family",
 		"artists": "Mary J Blige / L'Entourloop",
+		"title": "Raggamuffin Family",
 		"image": "1320227999_1297153257_632898479.jpg",
 		"links": { "Boot Of The Day": "https://fb.watch/v/7Dzgp4KlN" }
 	},
@@ -42,6 +42,7 @@ var items = [
 		"id": 97448,
 		"file": "772429497_848592957_835228235.mp3",
 		"producer": "Michmash",
+		"artists": "Bob Marley / Nirvana / Beastie Boys",
 		"title": "50 nuances de zik",
 		"image": "893004245_1793836563_70981805.jpeg",
 		"links": { "Boot Of The Day": "https://www.facebook.com/bootoftheday/posts/pfbid02a1yUNPJAFxqEm7Bvv1ff2562cjfk1yxZY52QhKLgNqwJ3BwUKcAKw2ZuLNfhnGFxl" }
