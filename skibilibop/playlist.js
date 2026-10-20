@@ -76,7 +76,7 @@ var links = {
 	"<": "..",
 	"remix.audio": "https://remix.audio/playlist/3899",
 	"YouTube": "https://www.youtube.com/@Skibilibop",
-	"Facebook": "https://www.facebook.com/skibilibop"
+	"Facebook": "https://www.facebook.com/bootoftheday"
 };
 
 loadPlaylist();
