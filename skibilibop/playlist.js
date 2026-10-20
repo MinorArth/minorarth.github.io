@@ -62,6 +62,13 @@ var items = [
 		"producer": "Minor Arth",
 		"title": "MC Solaar / Arlo Parks - Caroline",
 		"image": "1577102287_1234688910_836529446.jpg"
+	},
+	{
+		"file": "https://podcast.grafhit.net/20261017_laBoiteAMashups_grafhit.mp3",
+		"producer": "SKiBiLiBoP",
+		"title": "La boite à Mashups, 17 octobre 2026",
+		"image": "https://grafhit.net/wp-content/themes/grafhit/img/logo_grafhit_mini_920.png",
+		"links": { "Radio Graf'hit": "https://grafhit.net/emission/la-boite-a-mashups/diffusion-du-17-octobre-2026-4"}
 	}
 ];
 
