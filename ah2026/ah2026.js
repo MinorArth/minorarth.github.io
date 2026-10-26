@@ -14,7 +14,7 @@ const PLAYER_IMAGE = getMeta("og_image");
 
 var links = {
 	"<": "..",
-	"remix.audio": "https://remix.audio/playlist/3437",
+	"remix.audio": "https://remix.audio/playlist/3912",
 	"AudioBoots": "https://audioboots.org",
 	"Facebook": "https://www.facebook.com/groups/audioboots"
 };
