@@ -67,7 +67,8 @@ var items = {
 			"producer": "Minor Arth",
 			"artists": "Tame Impala / Bat For Lashes",
 			"title": "What's A Girl To Dracula ?",
-			"image": "1303135874_1236503960_1426903226.jpg"
+			"image": "1303135874_1236503960_1426903226.jpg",
+			"video": "https://youtu.be/CU_BwFUL0x0"
 		},
 		{
 			"id": 97782,
@@ -116,7 +117,8 @@ var items = {
 			"producer": "DJ Useo",
 			"artists": "Motley Crue / Muse",
 			"title": "Shout At The Halloween Devil",
-			"image": "671462608_2100798140_1116353713.jpg"
+			"image": "671462608_2100798140_1116353713.jpg",
+			"links": { "Boot Of The Day": "https://www.facebook.com/bootoftheday/posts/pfbid02HEpA5HqyYoJ33e1SKTzdyeXiVHJsouikfihE3x8s3ihcvRYkJUGA8fNm4g446pD3l" }
 		},
 		{
 			"id": 97774,
@@ -132,7 +134,8 @@ var items = {
 			"producer": "Minor Arth",
 			"artists": "Nick Cave / PJ Harvey / Depeche Mode",
 			"title": "Don't Say You Love Henry Lee",
-			"image": "1567046635_695427697_458683917.jpg"
+			"image": "1567046635_695427697_458683917.jpg",
+			"video": "https://youtu.be/LXJ3ojKEfuA"
 		},
 		{
 			"id": 97783,
