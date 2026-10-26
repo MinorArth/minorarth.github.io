@@ -154,7 +154,7 @@ p {
 }
 
 a { text-decoration: none; }
-a.logo img {
+a.logo img, a.site-logo img {
 	max-height: 76px;
 	max-width: 90%;
 	margin-top: 10px;
