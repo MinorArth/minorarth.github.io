@@ -55,6 +55,15 @@ var items = [
 		title: "Collaborative Albums" 
 	},
 	{
+		url: "./ah2026",
+		title: "AudioBoots Halloween 2026",
+		description: "28 new Halloween mashups!",
+		producer: "AudioBoots",
+		image: "https://audioboots.org/Albums/AH2026/social/AH2026%20coming%20October%2013%20-%20square%201080x1080.jpg",
+		release: "October 2026",
+		nbTracks: 41
+	},
+	{
 		url: "./sb2026",
 		title: "Summer Booty 2026",
 		description: "The Eternal Summer Mashup Compilation | 20th edition",
