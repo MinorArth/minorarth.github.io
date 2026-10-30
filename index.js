@@ -30,7 +30,7 @@ var items = [
 		producer: "Boot Of The Day",
 		image: "https://remix.audio/uploads/media/1170299058_655743859_1059535128.jpg",
 		release: "October 2026",
-		nbTracks: 6
+		nbTracks: 8
 	},
 	{
 		url: "./mashmaker4",
@@ -61,7 +61,7 @@ var items = [
 		producer: "AudioBoots",
 		image: "https://audioboots.org/Albums/AH2026/social/AH2026%20coming%20October%2013%20-%20square%201080x1080.jpg",
 		release: "October 2026",
-		nbTracks: 41
+		nbTracks: 28
 	},
 	{
 		url: "./sb2026",
