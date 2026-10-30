@@ -3,8 +3,8 @@ const LOGO_TITLE = "Minor Arth";
 const LOGO_LINK = "..";
 const ALBUM_TITLE = getMeta("og_title") || document.title;
 const ALBUM_DESCRIPTION = getMeta("og_description");
-const ALBUM_LINK = "https://www.mediafire.com/file/bfz9rl1a905qqqh/MinorArth-TheMashmaker-volume4.zip/file";
-const ALBUM_ARTIST = "Boot Of The Day";
+const ALBUM_LINK = "";
+const ALBUM_ARTIST = "";
 const TRACK_LINK_PATH = "https://remix.audio/track/";
 const AUDIO_PATH = "https://remix.audio/uploads/tracks/";
 const IMAGE_PATH = "https://remix.audio/uploads/media/";
@@ -62,6 +62,15 @@ var items = [
 		"producer": "Minor Arth",
 		"title": "MC Solaar / Arlo Parks - Caroline",
 		"image": "1577102287_1234688910_836529446.jpg"
+	},
+	{
+		"id": 98458,
+		"file": "1225708280_288971385_535326264.mp3",
+		"producer": "Mighty Mike",
+		"artists": "Renaud / JVKE",
+		"title": "Golden cloque",
+		"image": "736554457_1977642049_1902240139.jpg",
+		"links": { "Boot Of The Day": "https://www.facebook.com/bootoftheday/posts/pfbid0vZUFHmYXPj6NoxmW95TA8NQvm9AsdwZSChpWGd9Jne74zG7T1qSXHfESjoco6aFel" }
 	},
 	{
 		"file": "https://podcast.grafhit.net/20261017_laBoiteAMashups_grafhit.mp3",
