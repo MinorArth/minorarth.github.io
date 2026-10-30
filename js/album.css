@@ -143,7 +143,7 @@ div.small-image-template img.artwork[src] {
 	width: 24%;
 }
 
-.pre {
+.pre, .album-description {
 	white-space: pre-line;
 }
 
