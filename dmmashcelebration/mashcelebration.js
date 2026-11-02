@@ -216,7 +216,7 @@ var items = {
 				"The Sun and the Rainfall | 1982"
 			],
 			"video": "https://youtu.be/erbi-qdekBY",
-			"links": { "Stranger Kids": "https://remix.audio/track/84340" }
+			"links": { "Instrumental": "https://remix.audio/track/84389", "Stranger Kids": "https://minorarth.github.io/mashmaker4/?kids" }
 		}
 	]
 };
