@@ -74,7 +74,7 @@ var items = {
 				"Elton John - Song For Guy | 1977",
 				"Depeche Mode - Sometimes | 1986",
 			],
-			"songTitle": "Song For Sometimes",
+			"title": "Song For Sometimes",
 			"artists": "Elton John / Depeche Mode",
 			"links": { "DM volume 2": "../dmvolume2?elton" }
 		},
@@ -86,7 +86,7 @@ var items = {
 				"Erik Satie - Gnossienne No. 1",
 				"Depeche Mode - It Doesn't Matter Two | 1986"
 			],
-			"songTitle": "It Doesn't Matter Two | Gnossienne 1 mix",
+			"title": "It Doesn't Matter Two | Gnossienne 1 mix",
 			"artists": "Erik Satie / Depeche Mode",
 			"links": { "DM volume 2": "../dmvolume2?satie" }
 		},
@@ -98,7 +98,7 @@ var items = {
 				"David Bowie - Hallo Spaceboy | 1995",
 				"Depeche Mode - A Question Of Time | 1986"
 			],
-			"songTitle": "A Question Of Time And Space, Boy",
+			"title": "A Question Of Time And Space, Boy",
 			"artists": "David Bowie / Depeche Mode",
 			"video": "https://youtu.be/Gz4_Tn0pmf0",
 			"links": { "DM volume 2": "../dmvolume2?bowie", "Bowie mashups": "../bowie" }
@@ -113,7 +113,7 @@ var items = {
 				"Kate Bush - Running Up That Hill | 1985", 
 				"Placebo - Running Up That Hill | 2003"
 			],
-			"songTitle": "Running Stripped",
+			"title": "Running Stripped",
 			"artists": "Depeche Mode / Kate Bush",
 			"video": "https://youtu.be/RDwHZ9A_aww",
 			"links": { "DM volume 2": "../dmvolume2?kate" }
@@ -127,7 +127,7 @@ var items = {
 				"Duran Duran - Save A Prayer | 1982",
 				"Depeche Mode - Here Is The House | 1986"
 			],
-			"songTitle": "Here Is A Prayer To Save The House",
+			"title": "Here Is A Prayer To Save The House",
 			"artists": "Duran Duran / Depeche Mode",
 			"links": { "DM volume 2": "../dmvolume2?duran" }
 		},
@@ -151,7 +151,7 @@ var items = {
 				"Danny Elfman - Wednesday theme | 2022",
 				"Depeche Mode - Dressed In Black | 1986"
 			],
-			"songTitle": "Wednesday's Dressed In Black",
+			"title": "Wednesday's Dressed In Black",
 			"artists": "Danny Elfman / Depeche Mode",
 			"video": "https://youtu.be/1m3Xct6_BEM",
 			"links": { "DM volume 2": "../dmvolume2?wednesday" }
@@ -164,7 +164,7 @@ var items = {
 				"mesh - My Defender | 1999",
 				"Depeche Mode - New Dress | 1986"
 			],
-			"songTitle": "New Dress | Defender mix",
+			"title": "New Dress | Defender mix",
 			"artists": "mesh / Depeche Mode",
 			"video": "https://youtu.be/8JjinVvgMnQ",
 			"links": { "DM volume 2": "../dmvolume2?mesh", "Download": "https://mega.nz/folder/QxVglBCY#t7g1p9OZGuhoAApYMyxNWg/folder/Fl8zAIrK" }
